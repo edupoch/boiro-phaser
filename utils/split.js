@@ -52,12 +52,9 @@ const styles = $('svg > style').toString();
 const defs = $('defs').toString();
 const sharedSvgContent = [styles, defs].filter(Boolean).join('\n');
 
-const groups = $('svg g').filter((_, el) => {
-  const hasNestedGroups = $(el).find('g').length > 0;
+const groups = $('svg > * > *').filter((_, el) => {
   const label = $(el).attr('inkscape:label');
-  const hasLabel = typeof label === 'string' && label.length > 0;
-
-  return !hasNestedGroups && hasLabel && !/^g\d+$/.test(label);
+  return typeof label === 'string' && label.length > 0;
 });
 
 const positions = [];
@@ -74,14 +71,14 @@ const getElementPathSegments = (el) => {
   let current = el;
 
   while (current && current.tagName !== 'svg') {
-    if (current.tagName === 'g') {
+    if (current.tagName === 'g' || current.tagName === 'path') {
       const group = $(current);
       const label = group.attr('inkscape:label');
       const id = group.attr('id');
       const parent = group.parent();
-      const sameTagSiblings = parent.children('g');
+      const sameTagSiblings = parent.children(current.tagName);
       const siblingIndex = sameTagSiblings.index(current);
-      const fallbackName = `g_${siblingIndex >= 0 ? siblingIndex : 0}`;
+      const fallbackName = `${current.tagName}_${siblingIndex >= 0 ? siblingIndex : 0}`;
       segments.push(sanitizeSegment(label || id || fallbackName));
     }
 
