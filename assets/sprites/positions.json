@@ -1,0 +1,1312 @@
+[
+  {
+    "label": "canaleta?",
+    "file": "canaleta?.png",
+    "bounds": null
+  },
+  {
+    "label": "escalera",
+    "file": "escalera.png",
+    "bounds": {
+      "x": 3443,
+      "y": 1502,
+      "width": 347,
+      "height": 406
+    }
+  },
+  {
+    "label": "muelle_inclinado",
+    "file": "muelle_inclinado.png",
+    "bounds": {
+      "x": 2141,
+      "y": 841,
+      "width": 1394,
+      "height": 860
+    }
+  },
+  {
+    "label": "pecera",
+    "file": "pecera.png",
+    "bounds": null
+  },
+  {
+    "label": "mov_arbol_casas_2",
+    "file": "mov_arbol_casas_2.png",
+    "bounds": {
+      "x": 864,
+      "y": 6,
+      "width": 818,
+      "height": 820
+    }
+  },
+  {
+    "label": "mov_arbol_casas_1",
+    "file": "mov_arbol_casas_1.png",
+    "bounds": {
+      "x": 201,
+      "y": 473,
+      "width": 662,
+      "height": 783
+    }
+  },
+  {
+    "label": "pajaro",
+    "file": "pajaro.png",
+    "bounds": {
+      "x": 264,
+      "y": 1611,
+      "width": 113,
+      "height": 80
+    }
+  },
+  {
+    "label": "mono_quique",
+    "file": "mono_quique.png",
+    "bounds": {
+      "x": 841,
+      "y": 692,
+      "width": 185,
+      "height": 268
+    }
+  },
+  {
+    "label": "mono_iago",
+    "file": "mono_iago.png",
+    "bounds": {
+      "x": 1652,
+      "y": 152,
+      "width": 115,
+      "height": 268
+    }
+  },
+  {
+    "label": "hierba",
+    "file": "hierba.png",
+    "bounds": {
+      "x": 94,
+      "y": 633,
+      "width": 1530,
+      "height": 908
+    }
+  },
+  {
+    "label": "palmera",
+    "file": "palmera.png",
+    "bounds": {
+      "x": 0,
+      "y": 688,
+      "width": 344,
+      "height": 754
+    }
+  },
+  {
+    "label": "toallas",
+    "file": "toallas.png",
+    "bounds": {
+      "x": 1644,
+      "y": 936,
+      "width": 349,
+      "height": 300
+    }
+  },
+  {
+    "label": "mono_carmen",
+    "file": "mono_carmen.png",
+    "bounds": {
+      "x": 1522,
+      "y": 967,
+      "width": 174,
+      "height": 245
+    }
+  },
+  {
+    "label": "mono_luisa",
+    "file": "mono_luisa.png",
+    "bounds": {
+      "x": 1670,
+      "y": 941,
+      "width": 206,
+      "height": 277
+    }
+  },
+  {
+    "label": "mono_flotador",
+    "file": "mono_flotador.png",
+    "bounds": {
+      "x": 2007,
+      "y": 1495,
+      "width": 138,
+      "height": 112
+    }
+  },
+  {
+    "label": "mono_nadador",
+    "file": "mono_nadador.png",
+    "bounds": {
+      "x": 2184,
+      "y": 1550,
+      "width": 323,
+      "height": 161
+    }
+  },
+  {
+    "label": "mono_juan",
+    "file": "mono_juan.png",
+    "bounds": {
+      "x": 790,
+      "y": 1430,
+      "width": 361,
+      "height": 233
+    }
+  },
+  {
+    "label": "mono_tito",
+    "file": "mono_tito.png",
+    "bounds": {
+      "x": 636,
+      "y": 1516,
+      "width": 360,
+      "height": 232
+    }
+  },
+  {
+    "label": "mono_alvaro",
+    "file": "mono_alvaro.png",
+    "bounds": {
+      "x": 1354,
+      "y": 1272,
+      "width": 187,
+      "height": 195
+    }
+  },
+  {
+    "label": "mono_martin",
+    "file": "mono_martin.png",
+    "bounds": {
+      "x": 1129,
+      "y": 1328,
+      "width": 256,
+      "height": 229
+    }
+  },
+  {
+    "label": "roca",
+    "file": "roca.png",
+    "bounds": {
+      "x": 2028,
+      "y": 633,
+      "width": 279,
+      "height": 315
+    }
+  },
+  {
+    "label": "mono_javi",
+    "file": "mono_javi.png",
+    "bounds": {
+      "x": 2338,
+      "y": 853,
+      "width": 147,
+      "height": 177
+    }
+  },
+  {
+    "label": "ob_faro",
+    "file": "ob_faro.png",
+    "bounds": {
+      "x": 2221,
+      "y": 3088,
+      "width": 311,
+      "height": 459
+    }
+  },
+  {
+    "label": "flotadores",
+    "file": "flotadores.png",
+    "bounds": {
+      "x": 2991,
+      "y": 2947,
+      "width": 999,
+      "height": 588
+    }
+  },
+  {
+    "label": "flotadores",
+    "file": "flotadores.png",
+    "bounds": {
+      "x": 2525,
+      "y": 1823,
+      "width": 1133,
+      "height": 688
+    }
+  },
+  {
+    "label": "flotador",
+    "file": "flotador.png",
+    "bounds": {
+      "x": 2400,
+      "y": 1903,
+      "width": 241,
+      "height": 299
+    }
+  },
+  {
+    "label": "flotador",
+    "file": "flotador.png",
+    "bounds": {
+      "x": 2863,
+      "y": 1636,
+      "width": 241,
+      "height": 300
+    }
+  },
+  {
+    "label": "ob_cuerda",
+    "file": "ob_cuerda.png",
+    "bounds": {
+      "x": 2717,
+      "y": 2280,
+      "width": 121,
+      "height": 108
+    }
+  },
+  {
+    "label": "mono_xan",
+    "file": "mono_xan.png",
+    "bounds": {
+      "x": 2734,
+      "y": 2443,
+      "width": 154,
+      "height": 188
+    }
+  },
+  {
+    "label": "mono_isa",
+    "file": "mono_isa.png",
+    "bounds": {
+      "x": 2803,
+      "y": 1965,
+      "width": 152,
+      "height": 227
+    }
+  },
+  {
+    "label": "mono_fermin",
+    "file": "mono_fermin.png",
+    "bounds": {
+      "x": 3099,
+      "y": 1731,
+      "width": 165,
+      "height": 242
+    }
+  },
+  {
+    "label": "suelo",
+    "file": "suelo.png",
+    "bounds": {
+      "x": 4139,
+      "y": 2750,
+      "width": 943,
+      "height": 607
+    }
+  },
+  {
+    "label": "varanda",
+    "file": "varanda.png",
+    "bounds": {
+      "x": 3671,
+      "y": 2217,
+      "width": 1067,
+      "height": 640
+    }
+  },
+  {
+    "label": "mono_marinero",
+    "file": "mono_marinero.png",
+    "bounds": {
+      "x": 4468,
+      "y": 2884,
+      "width": 151,
+      "height": 221
+    }
+  },
+  {
+    "label": "mono_faenando",
+    "file": "mono_faenando.png",
+    "bounds": {
+      "x": 4524,
+      "y": 2967,
+      "width": 167,
+      "height": 235
+    }
+  },
+  {
+    "label": "ob_cuerda",
+    "file": "ob_cuerda.png",
+    "bounds": {
+      "x": 4048,
+      "y": 2526,
+      "width": 124,
+      "height": 109
+    }
+  },
+  {
+    "label": "ob_boya",
+    "file": "ob_boya.png",
+    "bounds": {
+      "x": 1360,
+      "y": 3503,
+      "width": 87,
+      "height": 59
+    }
+  },
+  {
+    "label": "ob_boya",
+    "file": "ob_boya.png",
+    "bounds": {
+      "x": 1831,
+      "y": 3234,
+      "width": 87,
+      "height": 60
+    }
+  },
+  {
+    "label": "ob_boya_amarilla",
+    "file": "ob_boya_amarilla.png",
+    "bounds": {
+      "x": 2283,
+      "y": 2972,
+      "width": 64,
+      "height": 53
+    }
+  },
+  {
+    "label": "ob_pala",
+    "file": "ob_pala.png",
+    "bounds": {
+      "x": 3597,
+      "y": 2475,
+      "width": 139,
+      "height": 93
+    }
+  },
+  {
+    "label": "velero",
+    "file": "velero.png",
+    "bounds": {
+      "x": 3184,
+      "y": 1328,
+      "width": 633,
+      "height": 1070
+    }
+  },
+  {
+    "label": "piramide",
+    "file": "piramide.png",
+    "bounds": {
+      "x": 2194,
+      "y": 173,
+      "width": 503,
+      "height": 332
+    }
+  },
+  {
+    "label": "puente",
+    "file": "puente.png",
+    "bounds": {
+      "x": 2912,
+      "y": 327,
+      "width": 360,
+      "height": 287
+    }
+  },
+  {
+    "label": "mono_irene",
+    "file": "mono_irene.png",
+    "bounds": {
+      "x": 2730,
+      "y": 524,
+      "width": 151,
+      "height": 199
+    }
+  },
+  {
+    "label": "mono_tintin",
+    "file": "mono_tintin.png",
+    "bounds": {
+      "x": 2482,
+      "y": 60,
+      "width": 226,
+      "height": 277
+    }
+  },
+  {
+    "label": "mono_tintin",
+    "file": "mono_tintin.png",
+    "bounds": null
+  },
+  {
+    "label": "mono_coco",
+    "file": "mono_coco.png",
+    "bounds": {
+      "x": 2709,
+      "y": 0,
+      "width": 208,
+      "height": 153
+    }
+  },
+  {
+    "label": "mono_ivan",
+    "file": "mono_ivan.png",
+    "bounds": {
+      "x": 2055,
+      "y": 71,
+      "width": 213,
+      "height": 231
+    }
+  },
+  {
+    "label": "mono_nemo",
+    "file": "mono_nemo.png",
+    "bounds": {
+      "x": 2601,
+      "y": 0,
+      "width": 167,
+      "height": 33
+    }
+  },
+  {
+    "label": "baldosas",
+    "file": "baldosas.png",
+    "bounds": {
+      "x": 2360,
+      "y": 605,
+      "width": 253,
+      "height": 174
+    }
+  },
+  {
+    "label": "baldosas",
+    "file": "baldosas.png",
+    "bounds": {
+      "x": 2747,
+      "y": 835,
+      "width": 252,
+      "height": 174
+    }
+  },
+  {
+    "label": "ob_fuente",
+    "file": "ob_fuente.png",
+    "bounds": {
+      "x": 2727,
+      "y": 572,
+      "width": 138,
+      "height": 171
+    }
+  },
+  {
+    "label": "ob_banco",
+    "file": "ob_banco.png",
+    "bounds": {
+      "x": 4534,
+      "y": 457,
+      "width": 315,
+      "height": 292
+    }
+  },
+  {
+    "label": "mono_elena",
+    "file": "mono_elena.png",
+    "bounds": {
+      "x": 4605,
+      "y": 447,
+      "width": 129,
+      "height": 254
+    }
+  },
+  {
+    "label": "roble",
+    "file": "roble.png",
+    "bounds": {
+      "x": 2808,
+      "y": 188,
+      "width": 641,
+      "height": 680
+    }
+  },
+  {
+    "label": "mono_detective",
+    "file": "mono_detective.png",
+    "bounds": {
+      "x": 3897,
+      "y": 399,
+      "width": 234,
+      "height": 273
+    }
+  },
+  {
+    "label": "losas",
+    "file": "losas.png",
+    "bounds": {
+      "x": 3665,
+      "y": 1437,
+      "width": 393,
+      "height": 228
+    }
+  },
+  {
+    "label": "agujero",
+    "file": "agujero.png",
+    "bounds": {
+      "x": 3518,
+      "y": 1123,
+      "width": 137,
+      "height": 91
+    }
+  },
+  {
+    "label": "mono_alcantarilla",
+    "file": "mono_alcantarilla.png",
+    "bounds": {
+      "x": 3355,
+      "y": 1029,
+      "width": 200,
+      "height": 126
+    }
+  },
+  {
+    "label": "losas",
+    "file": "losas.png",
+    "bounds": {
+      "x": 4573,
+      "y": 1739,
+      "width": 393,
+      "height": 228
+    }
+  },
+  {
+    "label": "losas",
+    "file": "losas.png",
+    "bounds": {
+      "x": 4174,
+      "y": 1849,
+      "width": 393,
+      "height": 228
+    }
+  },
+  {
+    "label": "losas",
+    "file": "losas.png",
+    "bounds": {
+      "x": 3584,
+      "y": 1214,
+      "width": 393,
+      "height": 228
+    }
+  },
+  {
+    "label": "losas",
+    "file": "losas.png",
+    "bounds": {
+      "x": 3977,
+      "y": 1527,
+      "width": 393,
+      "height": 228
+    }
+  },
+  {
+    "label": "losas",
+    "file": "losas.png",
+    "bounds": {
+      "x": 3895,
+      "y": 1214,
+      "width": 393,
+      "height": 228
+    }
+  },
+  {
+    "label": "losas",
+    "file": "losas.png",
+    "bounds": {
+      "x": 4207,
+      "y": 944,
+      "width": 393,
+      "height": 228
+    }
+  },
+  {
+    "label": "losas",
+    "file": "losas.png",
+    "bounds": {
+      "x": 5000,
+      "y": 1958,
+      "width": 393,
+      "height": 228
+    }
+  },
+  {
+    "label": "losas",
+    "file": "losas.png",
+    "bounds": {
+      "x": 4686,
+      "y": 2146,
+      "width": 393,
+      "height": 228
+    }
+  },
+  {
+    "label": "losas",
+    "file": "losas.png",
+    "bounds": {
+      "x": 4288,
+      "y": 1527,
+      "width": 393,
+      "height": 228
+    }
+  },
+  {
+    "label": "mono_fede",
+    "file": "mono_fede.png",
+    "bounds": {
+      "x": 4532,
+      "y": 1750,
+      "width": 203,
+      "height": 314
+    }
+  },
+  {
+    "label": "ob_cupula",
+    "file": "ob_cupula.png",
+    "bounds": {
+      "x": 5048,
+      "y": 1392,
+      "width": 122,
+      "height": 83
+    }
+  },
+  {
+    "label": "ob_cupula",
+    "file": "ob_cupula.png",
+    "bounds": {
+      "x": 4990,
+      "y": 1426,
+      "width": 122,
+      "height": 82
+    }
+  },
+  {
+    "label": "ob_cubo",
+    "file": "ob_cubo.png",
+    "bounds": {
+      "x": 5321,
+      "y": 1587,
+      "width": 232,
+      "height": 197
+    }
+  },
+  {
+    "label": "ob_cubo",
+    "file": "ob_cubo.png",
+    "bounds": {
+      "x": 5222,
+      "y": 1646,
+      "width": 232,
+      "height": 197
+    }
+  },
+  {
+    "label": "ob_cubo",
+    "file": "ob_cubo.png",
+    "bounds": {
+      "x": 5123,
+      "y": 1702,
+      "width": 231,
+      "height": 197
+    }
+  },
+  {
+    "label": "ob_cubo",
+    "file": "ob_cubo.png",
+    "bounds": {
+      "x": 3194,
+      "y": 2970,
+      "width": 230,
+      "height": 198
+    }
+  },
+  {
+    "label": "ob_newjersey",
+    "file": "ob_newjersey.png",
+    "bounds": {
+      "x": 4491,
+      "y": 1544,
+      "width": 170,
+      "height": 148
+    }
+  },
+  {
+    "label": "ob_newjersey",
+    "file": "ob_newjersey.png",
+    "bounds": {
+      "x": 4392,
+      "y": 1608,
+      "width": 170,
+      "height": 149
+    }
+  },
+  {
+    "label": "mono_esther",
+    "file": "mono_esther.png",
+    "bounds": {
+      "x": 4411,
+      "y": 1178,
+      "width": 152,
+      "height": 226
+    }
+  },
+  {
+    "label": "mono_luisa",
+    "file": "mono_luisa.png",
+    "bounds": {
+      "x": 4137,
+      "y": 1027,
+      "width": 129,
+      "height": 227
+    }
+  },
+  {
+    "label": "ob_macetero",
+    "file": "ob_macetero.png",
+    "bounds": {
+      "x": 3893,
+      "y": 910,
+      "width": 237,
+      "height": 303
+    }
+  },
+  {
+    "label": "mono_rachel",
+    "file": "mono_rachel.png",
+    "bounds": {
+      "x": 4061,
+      "y": 1053,
+      "width": 132,
+      "height": 215
+    }
+  },
+  {
+    "label": "mono_sandra",
+    "file": "mono_sandra.png",
+    "bounds": {
+      "x": 4119,
+      "y": 1405,
+      "width": 126,
+      "height": 197
+    }
+  },
+  {
+    "label": "mono_bea",
+    "file": "mono_bea.png",
+    "bounds": {
+      "x": 3037,
+      "y": 928,
+      "width": 151,
+      "height": 216
+    }
+  },
+  {
+    "label": "mono_paleta",
+    "file": "mono_paleta.png",
+    "bounds": {
+      "x": 4700,
+      "y": 1304,
+      "width": 145,
+      "height": 343
+    }
+  },
+  {
+    "label": "mostrador",
+    "file": "mostrador.png",
+    "bounds": {
+      "x": 4197,
+      "y": 1034,
+      "width": 403,
+      "height": 543
+    }
+  },
+  {
+    "label": "limones",
+    "file": "limones.png",
+    "bounds": {
+      "x": 427,
+      "y": 1142,
+      "width": 81,
+      "height": 69
+    }
+  },
+  {
+    "label": "ob_caja_porex_cerrada",
+    "file": "ob_caja_porex_cerrada.png",
+    "bounds": {
+      "x": 4416,
+      "y": 988,
+      "width": 154,
+      "height": 120
+    }
+  },
+  {
+    "label": "caja",
+    "file": "caja.png",
+    "bounds": {
+      "x": 844,
+      "y": 977,
+      "width": 139,
+      "height": 110
+    }
+  },
+  {
+    "label": "noray",
+    "file": "noray.png",
+    "bounds": {
+      "x": 3989,
+      "y": 1743,
+      "width": 214,
+      "height": 156
+    }
+  },
+  {
+    "label": "mono_stop",
+    "file": "mono_stop.png",
+    "bounds": {
+      "x": 3867,
+      "y": 1604,
+      "width": 234,
+      "height": 231
+    }
+  },
+  {
+    "label": "mono_marido",
+    "file": "mono_marido.png",
+    "bounds": {
+      "x": 4196,
+      "y": 1409,
+      "width": 129,
+      "height": 232
+    }
+  },
+  {
+    "label": "ob_bolardo",
+    "file": "ob_bolardo.png",
+    "bounds": {
+      "x": 3570,
+      "y": 958,
+      "width": 81,
+      "height": 116
+    }
+  },
+  {
+    "label": "ob_bolardo",
+    "file": "ob_bolardo.png",
+    "bounds": {
+      "x": 3645,
+      "y": 1010,
+      "width": 79,
+      "height": 117
+    }
+  },
+  {
+    "label": "ob_bolardo",
+    "file": "ob_bolardo.png",
+    "bounds": {
+      "x": 3719,
+      "y": 1053,
+      "width": 80,
+      "height": 117
+    }
+  },
+  {
+    "label": "escalera",
+    "file": "escalera.png",
+    "bounds": {
+      "x": 4604,
+      "y": 2271,
+      "width": 320,
+      "height": 339
+    }
+  },
+  {
+    "label": "piedras_esquina",
+    "file": "piedras_esquina.png",
+    "bounds": {
+      "x": 5474,
+      "y": 1186,
+      "width": 905,
+      "height": 1079
+    }
+  },
+  {
+    "label": "empedrado",
+    "file": "empedrado.png",
+    "bounds": {
+      "x": 4919,
+      "y": 2356,
+      "width": 712,
+      "height": 475
+    }
+  },
+  {
+    "label": "ob_macetero",
+    "file": "ob_macetero.png",
+    "bounds": {
+      "x": 5370,
+      "y": 1881,
+      "width": 237,
+      "height": 345
+    }
+  },
+  {
+    "label": "mono_camarero",
+    "file": "mono_camarero.png",
+    "bounds": {
+      "x": 5418,
+      "y": 2145,
+      "width": 191,
+      "height": 259
+    }
+  },
+  {
+    "label": "ob_ancla",
+    "file": "ob_ancla.png",
+    "bounds": {
+      "x": 5008,
+      "y": 2012,
+      "width": 215,
+      "height": 266
+    }
+  },
+  {
+    "label": "lona",
+    "file": "lona.png",
+    "bounds": {
+      "x": 5290,
+      "y": 1646,
+      "width": 1015,
+      "height": 824
+    }
+  },
+  {
+    "label": "ob_caja_porex_vino",
+    "file": "ob_caja_porex_vino.png",
+    "bounds": {
+      "x": 4195,
+      "y": 1143,
+      "width": 153,
+      "height": 110
+    }
+  },
+  {
+    "label": "mono_moncho",
+    "file": "mono_moncho.png",
+    "bounds": {
+      "x": 4618,
+      "y": 3137,
+      "width": 193,
+      "height": 247
+    }
+  },
+  {
+    "label": "silla",
+    "file": "silla.png",
+    "bounds": {
+      "x": 5267,
+      "y": 2219,
+      "width": 147,
+      "height": 192
+    }
+  },
+  {
+    "label": "mono_sentada",
+    "file": "mono_sentada.png",
+    "bounds": {
+      "x": 5239,
+      "y": 2175,
+      "width": 193,
+      "height": 254
+    }
+  },
+  {
+    "label": "mesa",
+    "file": "mesa.png",
+    "bounds": {
+      "x": 5369,
+      "y": 2285,
+      "width": 218,
+      "height": 228
+    }
+  },
+  {
+    "label": "silla",
+    "file": "silla.png",
+    "bounds": {
+      "x": 5480,
+      "y": 2381,
+      "width": 151,
+      "height": 167
+    }
+  },
+  {
+    "label": "silla",
+    "file": "silla.png",
+    "bounds": {
+      "x": 5288,
+      "y": 2370,
+      "width": 151,
+      "height": 167
+    }
+  },
+  {
+    "label": "mono_manix",
+    "file": "mono_manix.png",
+    "bounds": {
+      "x": 3864,
+      "y": 0,
+      "width": 164,
+      "height": 100
+    }
+  },
+  {
+    "label": "perro_york",
+    "file": "perro_york.png",
+    "bounds": null
+  },
+  {
+    "label": "perro_salta",
+    "file": "perro_salta.png",
+    "bounds": {
+      "x": 3629,
+      "y": 16,
+      "width": 159,
+      "height": 135
+    }
+  },
+  {
+    "label": "I",
+    "file": "I.png",
+    "bounds": {
+      "x": 4860,
+      "y": 917,
+      "width": 94,
+      "height": 225
+    }
+  },
+  {
+    "label": "mono_abuelo",
+    "file": "mono_abuelo.png",
+    "bounds": {
+      "x": 4996,
+      "y": 456,
+      "width": 134,
+      "height": 181
+    }
+  },
+  {
+    "label": "mono_abuela",
+    "file": "mono_abuela.png",
+    "bounds": {
+      "x": 4929,
+      "y": 411,
+      "width": 94,
+      "height": 194
+    }
+  },
+  {
+    "label": "fondo",
+    "file": "fondo.png",
+    "bounds": {
+      "x": 6074,
+      "y": 1011,
+      "width": 82,
+      "height": 192
+    }
+  },
+  {
+    "label": "fondo",
+    "file": "fondo.png",
+    "bounds": {
+      "x": 6074,
+      "y": 1011,
+      "width": 82,
+      "height": 192
+    }
+  },
+  {
+    "label": "ventana_cuadrada",
+    "file": "ventana_cuadrada.png",
+    "bounds": {
+      "x": 6462,
+      "y": 1162,
+      "width": 112,
+      "height": 357
+    }
+  },
+  {
+    "label": "escudo",
+    "file": "escudo.png",
+    "bounds": {
+      "x": 6659,
+      "y": 1376,
+      "width": 104,
+      "height": 165
+    }
+  },
+  {
+    "label": "vomitorio",
+    "file": "vomitorio.png",
+    "bounds": {
+      "x": 6305,
+      "y": 461,
+      "width": 35,
+      "height": 57
+    }
+  },
+  {
+    "label": "vomitorio",
+    "file": "vomitorio.png",
+    "bounds": {
+      "x": 5888,
+      "y": 223,
+      "width": 35,
+      "height": 58
+    }
+  },
+  {
+    "label": "piedras_esquina",
+    "file": "piedras_esquina.png",
+    "bounds": {
+      "x": 5816,
+      "y": 501,
+      "width": 649,
+      "height": 931
+    }
+  },
+  {
+    "label": "seto",
+    "file": "seto.png",
+    "bounds": {
+      "x": 4419,
+      "y": 0,
+      "width": 913,
+      "height": 413
+    }
+  },
+  {
+    "label": "varanda",
+    "file": "varanda.png",
+    "bounds": {
+      "x": 4210,
+      "y": 225,
+      "width": 1274,
+      "height": 945
+    }
+  },
+  {
+    "label": "mono_grande",
+    "file": "mono_grande.png",
+    "bounds": {
+      "x": 5652,
+      "y": 1000,
+      "width": 166,
+      "height": 240
+    }
+  },
+  {
+    "label": "mono_sabela",
+    "file": "mono_sabela.png",
+    "bounds": {
+      "x": 5858,
+      "y": 3215,
+      "width": 206,
+      "height": 255
+    }
+  },
+  {
+    "label": "mono_durmiente",
+    "file": "mono_durmiente.png",
+    "bounds": {
+      "x": 6320,
+      "y": 2786,
+      "width": 237,
+      "height": 159
+    }
+  },
+  {
+    "label": "roca",
+    "file": "roca.png",
+    "bounds": {
+      "x": 5772,
+      "y": 2064,
+      "width": 190,
+      "height": 156
+    }
+  },
+  {
+    "label": "roca",
+    "file": "roca.png",
+    "bounds": {
+      "x": 6108,
+      "y": 3450,
+      "width": 189,
+      "height": 157
+    }
+  },
+  {
+    "label": "arbol_roble",
+    "file": "arbol_roble.png",
+    "bounds": {
+      "x": 5825,
+      "y": 1473,
+      "width": 706,
+      "height": 793
+    }
+  },
+  {
+    "label": "mono_fumado",
+    "file": "mono_fumado.png",
+    "bounds": {
+      "x": 6229,
+      "y": 2130,
+      "width": 177,
+      "height": 245
+    }
+  },
+  {
+    "label": "mono_feliz",
+    "file": "mono_feliz.png",
+    "bounds": {
+      "x": 4548,
+      "y": 466,
+      "width": 174,
+      "height": 161
+    }
+  },
+  {
+    "label": "ob_saco_malla",
+    "file": "ob_saco_malla.png",
+    "bounds": {
+      "x": 2731,
+      "y": 2091,
+      "width": 134,
+      "height": 156
+    }
+  },
+  {
+    "label": "ob_papelera",
+    "file": "ob_papelera.png",
+    "bounds": {
+      "x": 3206,
+      "y": 874,
+      "width": 132,
+      "height": 144
+    }
+  }
+]
