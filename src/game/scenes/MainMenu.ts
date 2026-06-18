@@ -47,7 +47,7 @@ export class MainMenu extends Scene
 
             // const scaleX = sceneWidth / sourceWidth;
             // const scaleY = sceneHeight / sourceHeight;
-            const scaleX = 1;
+            const scaleX = 0.5;
             const worldWidth = sourceWidth * scaleX;
             const worldHeight = sourceHeight * scaleX;
 
