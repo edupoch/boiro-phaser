@@ -52,10 +52,9 @@ const styles = $('svg > style').toString();
 const defs = $('defs').toString();
 const sharedSvgContent = [styles, defs].filter(Boolean).join('\n');
 
-const groups = $('svg > * > *').filter((_, el) => {
-  const label = $(el).attr('inkscape:label');
-  return typeof label === 'string' && label.length > 0;
-});
+const groups = $('svg > * > *')
+  .filter((_, el) => ['g', 'path'].includes(el.tagName))
+  .filter((_, el) => $(el).closest('defs, clipPath').length === 0);
 
 const positions = [];
 

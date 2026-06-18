@@ -84,24 +84,22 @@ export class MainMenu extends Phaser.Scene
                 const spriteImage = this.add.image(centerX, centerY, sprite.label).setDepth(50);
                 spriteImage.setDisplaySize(bounds.width * scaleX, bounds.height * scaleX);
 
-                const swingAmplitude = Phaser.Math.FloatBetween(1.2, 2.8);
-                const swingDuration = Phaser.Math.Between(2200, 3800);
-                spriteImage.setAngle(Phaser.Math.FloatBetween(-swingAmplitude, swingAmplitude));
+                // const swingAmplitude = Phaser.Math.FloatBetween(1.2, 2.8);
+                // const swingDuration = Phaser.Math.Between(2200, 3800);
+                // spriteImage.setAngle(Phaser.Math.FloatBetween(-swingAmplitude, swingAmplitude));
 
-                console.log()
-
-                this.tweens.add({
-                    targets: spriteImage,
-                    angle: {
-                        from: -swingAmplitude,
-                        to: swingAmplitude
-                    },
-                    duration: swingDuration,
-                    ease: 'Sine.easeInOut',
-                    yoyo: true,
-                    repeat: -1,
-                    delay: Phaser.Math.Between(0, 900)
-                });
+                // this.tweens.add({
+                //     targets: spriteImage,
+                //     angle: {
+                //         from: -swingAmplitude,
+                //         to: swingAmplitude
+                //     },
+                //     duration: swingDuration,
+                //     ease: 'Sine.easeInOut',
+                //     yoyo: true,
+                //     repeat: -1,
+                //     delay: Phaser.Math.Between(0, 900)
+                // });
             });
         }
 
