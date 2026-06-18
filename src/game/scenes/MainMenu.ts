@@ -1,4 +1,4 @@
-import { GameObjects, Scene } from 'phaser';
+import * as Phaser from 'phaser';
 
 import { EventBus } from '../EventBus';
 
@@ -15,11 +15,11 @@ type PositionedSprite = {
     bounds: SpriteBounds | null;
 };
 
-export class MainMenu extends Scene
+export class MainMenu extends Phaser.Scene
 {
-    background: GameObjects.Image;
-    logo: GameObjects.Image;
-    title: GameObjects.Text;
+    background: Phaser.GameObjects.Image;
+    logo: Phaser.GameObjects.Image;
+    title: Phaser.GameObjects.Text;
     logoTween: Phaser.Tweens.Tween | null;
     camera: Phaser.Cameras.Scene2D.Camera;
 
@@ -70,6 +70,8 @@ export class MainMenu extends Scene
                 this.input.off('pointermove', updateCameraFromPointer);
             });
 
+            let i = 0;
+
             positions.forEach((sprite) => {
                 if (!sprite.bounds || !sprite.file) {
                     return;
@@ -81,6 +83,25 @@ export class MainMenu extends Scene
 
                 const spriteImage = this.add.image(centerX, centerY, sprite.label).setDepth(50);
                 spriteImage.setDisplaySize(bounds.width * scaleX, bounds.height * scaleX);
+
+                const swingAmplitude = Phaser.Math.FloatBetween(1.2, 2.8);
+                const swingDuration = Phaser.Math.Between(2200, 3800);
+                spriteImage.setAngle(Phaser.Math.FloatBetween(-swingAmplitude, swingAmplitude));
+
+                console.log()
+
+                this.tweens.add({
+                    targets: spriteImage,
+                    angle: {
+                        from: -swingAmplitude,
+                        to: swingAmplitude
+                    },
+                    duration: swingDuration,
+                    ease: 'Sine.easeInOut',
+                    yoyo: true,
+                    repeat: -1,
+                    delay: Phaser.Math.Between(0, 900)
+                });
             });
         }
 
@@ -102,39 +123,5 @@ export class MainMenu extends Scene
         }
 
         this.scene.start('Game');
-    }
-
-    moveLogo (vueCallback: ({ x, y }: { x: number, y: number }) => void)
-    {
-        if (this.logoTween)
-        {
-            if (this.logoTween.isPlaying())
-            {
-                this.logoTween.pause();
-            }
-            else
-            {
-                this.logoTween.play();
-            }
-        } 
-        else
-        {
-            this.logoTween = this.tweens.add({
-                targets: this.logo,
-                x: { value: 750, duration: 3000, ease: 'Back.easeInOut' },
-                y: { value: 80, duration: 1500, ease: 'Sine.easeOut' },
-                yoyo: true,
-                repeat: -1,
-                onUpdate: () => {
-                    if (vueCallback)
-                    {
-                        vueCallback({
-                            x: Math.floor(this.logo.x),
-                            y: Math.floor(this.logo.y)
-                        });
-                    }
-                }
-            });
-        }
     }
 }
