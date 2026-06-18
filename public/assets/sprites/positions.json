@@ -1,12 +1,12 @@
 [
   {
-    "label": "canaleta?",
-    "file": "canaleta?.png",
+    "label": "Fondo__canaleta__g28",
+    "file": "Fondo__canaleta__g28.png",
     "bounds": null
   },
   {
-    "label": "escalera",
-    "file": "escalera.png",
+    "label": "Fondo__piedras__escalera__g637",
+    "file": "Fondo__piedras__escalera__g637.png",
     "bounds": {
       "x": 3443,
       "y": 1502,
@@ -15,8 +15,8 @@
     }
   },
   {
-    "label": "muelle_inclinado",
-    "file": "muelle_inclinado.png",
+    "label": "Fondo__piedras__muelle_inclinado__g638",
+    "file": "Fondo__piedras__muelle_inclinado__g638.png",
     "bounds": {
       "x": 2141,
       "y": 841,
@@ -25,13 +25,13 @@
     }
   },
   {
-    "label": "pecera",
-    "file": "pecera.png",
+    "label": "Fondo__pecera__g92",
+    "file": "Fondo__pecera__g92.png",
     "bounds": null
   },
   {
-    "label": "mov_arbol_casas_2",
-    "file": "mov_arbol_casas_2.png",
+    "label": "Casas__arboles__mov_arbol_casas_2__g269",
+    "file": "Casas__arboles__mov_arbol_casas_2__g269.png",
     "bounds": {
       "x": 864,
       "y": 6,
@@ -40,8 +40,8 @@
     }
   },
   {
-    "label": "mov_arbol_casas_1",
-    "file": "mov_arbol_casas_1.png",
+    "label": "Casas__arboles__mov_arbol_casas_1__g271",
+    "file": "Casas__arboles__mov_arbol_casas_1__g271.png",
     "bounds": {
       "x": 201,
       "y": 473,
@@ -50,8 +50,8 @@
     }
   },
   {
-    "label": "pajaro",
-    "file": "pajaro.png",
+    "label": "Casas__pajaro__g283",
+    "file": "Casas__pajaro__g283.png",
     "bounds": {
       "x": 264,
       "y": 1611,
@@ -60,8 +60,8 @@
     }
   },
   {
-    "label": "mono_quique",
-    "file": "mono_quique.png",
+    "label": "Casas__mono_quique__g294",
+    "file": "Casas__mono_quique__g294.png",
     "bounds": {
       "x": 841,
       "y": 692,
@@ -70,8 +70,8 @@
     }
   },
   {
-    "label": "mono_iago",
-    "file": "mono_iago.png",
+    "label": "Casas__mono_iago__g306",
+    "file": "Casas__mono_iago__g306.png",
     "bounds": {
       "x": 1652,
       "y": 152,
@@ -80,8 +80,8 @@
     }
   },
   {
-    "label": "hierba",
-    "file": "hierba.png",
+    "label": "Casas__hierba__g309",
+    "file": "Casas__hierba__g309.png",
     "bounds": {
       "x": 94,
       "y": 633,
@@ -90,8 +90,8 @@
     }
   },
   {
-    "label": "palmera",
-    "file": "palmera.png",
+    "label": "Casas__palmera__g53",
+    "file": "Casas__palmera__g53.png",
     "bounds": {
       "x": 0,
       "y": 688,
@@ -100,8 +100,8 @@
     }
   },
   {
-    "label": "toallas",
-    "file": "toallas.png",
+    "label": "Playa__toallas__g313",
+    "file": "Playa__toallas__g313.png",
     "bounds": {
       "x": 1644,
       "y": 936,
@@ -110,8 +110,8 @@
     }
   },
   {
-    "label": "mono_carmen",
-    "file": "mono_carmen.png",
+    "label": "Playa__mono_carmen__g323",
+    "file": "Playa__mono_carmen__g323.png",
     "bounds": {
       "x": 1522,
       "y": 967,
@@ -120,8 +120,8 @@
     }
   },
   {
-    "label": "mono_luisa",
-    "file": "mono_luisa.png",
+    "label": "Playa__mono_luisa__g339",
+    "file": "Playa__mono_luisa__g339.png",
     "bounds": {
       "x": 1670,
       "y": 941,
@@ -130,8 +130,8 @@
     }
   },
   {
-    "label": "mono_flotador",
-    "file": "mono_flotador.png",
+    "label": "Playa__mono_flotador__g350",
+    "file": "Playa__mono_flotador__g350.png",
     "bounds": {
       "x": 2007,
       "y": 1495,
@@ -140,8 +140,8 @@
     }
   },
   {
-    "label": "mono_nadador",
-    "file": "mono_nadador.png",
+    "label": "Playa__mono_nadador__g356",
+    "file": "Playa__mono_nadador__g356.png",
     "bounds": {
       "x": 2184,
       "y": 1550,
@@ -150,8 +150,8 @@
     }
   },
   {
-    "label": "mono_juan",
-    "file": "mono_juan.png",
+    "label": "Playa__mono_juan__g366",
+    "file": "Playa__mono_juan__g366.png",
     "bounds": {
       "x": 790,
       "y": 1430,
@@ -160,8 +160,8 @@
     }
   },
   {
-    "label": "mono_tito",
-    "file": "mono_tito.png",
+    "label": "Playa__mono_tito__g378",
+    "file": "Playa__mono_tito__g378.png",
     "bounds": {
       "x": 636,
       "y": 1516,
@@ -170,8 +170,8 @@
     }
   },
   {
-    "label": "mono_alvaro",
-    "file": "mono_alvaro.png",
+    "label": "Playa__mono_alvaro__g391",
+    "file": "Playa__mono_alvaro__g391.png",
     "bounds": {
       "x": 1354,
       "y": 1272,
@@ -180,8 +180,8 @@
     }
   },
   {
-    "label": "mono_martin",
-    "file": "mono_martin.png",
+    "label": "Playa__mono_martin__g402",
+    "file": "Playa__mono_martin__g402.png",
     "bounds": {
       "x": 1129,
       "y": 1328,
@@ -190,8 +190,8 @@
     }
   },
   {
-    "label": "roca",
-    "file": "roca.png",
+    "label": "Playa__roca__g436",
+    "file": "Playa__roca__g436.png",
     "bounds": {
       "x": 2028,
       "y": 633,
@@ -200,8 +200,8 @@
     }
   },
   {
-    "label": "mono_javi",
-    "file": "mono_javi.png",
+    "label": "Playa__mono_javi__g456",
+    "file": "Playa__mono_javi__g456.png",
     "bounds": {
       "x": 2338,
       "y": 853,
@@ -210,8 +210,8 @@
     }
   },
   {
-    "label": "ob_faro",
-    "file": "ob_faro.png",
+    "label": "Mar__ob_faro__g923",
+    "file": "Mar__ob_faro__g923.png",
     "bounds": {
       "x": 2221,
       "y": 3088,
@@ -220,8 +220,8 @@
     }
   },
   {
-    "label": "flotadores",
-    "file": "flotadores.png",
+    "label": "Mar__batea__flotadores__g627",
+    "file": "Mar__batea__flotadores__g627.png",
     "bounds": {
       "x": 2991,
       "y": 2947,
@@ -230,8 +230,8 @@
     }
   },
   {
-    "label": "flotadores",
-    "file": "flotadores.png",
+    "label": "Mar__pasarela__flotadores__g996",
+    "file": "Mar__pasarela__flotadores__g996.png",
     "bounds": {
       "x": 2525,
       "y": 1823,
@@ -240,8 +240,8 @@
     }
   },
   {
-    "label": "flotador",
-    "file": "flotador.png",
+    "label": "Mar__pasarela__flotador__g1000",
+    "file": "Mar__pasarela__flotador__g1000.png",
     "bounds": {
       "x": 2400,
       "y": 1903,
@@ -250,8 +250,8 @@
     }
   },
   {
-    "label": "flotador",
-    "file": "flotador.png",
+    "label": "Mar__pasarela__flotador__g1004",
+    "file": "Mar__pasarela__flotador__g1004.png",
     "bounds": {
       "x": 2863,
       "y": 1636,
@@ -260,8 +260,8 @@
     }
   },
   {
-    "label": "ob_cuerda",
-    "file": "ob_cuerda.png",
+    "label": "Mar__ob_cuerda__g1630",
+    "file": "Mar__ob_cuerda__g1630.png",
     "bounds": {
       "x": 2717,
       "y": 2280,
@@ -270,8 +270,8 @@
     }
   },
   {
-    "label": "mono_xan",
-    "file": "mono_xan.png",
+    "label": "Mar__mono_xan__g1113",
+    "file": "Mar__mono_xan__g1113.png",
     "bounds": {
       "x": 2734,
       "y": 2443,
@@ -280,8 +280,8 @@
     }
   },
   {
-    "label": "mono_isa",
-    "file": "mono_isa.png",
+    "label": "Mar__mono_isa__g1142",
+    "file": "Mar__mono_isa__g1142.png",
     "bounds": {
       "x": 2803,
       "y": 1965,
@@ -290,8 +290,8 @@
     }
   },
   {
-    "label": "mono_fermin",
-    "file": "mono_fermin.png",
+    "label": "Mar__mono_fermin__g1153",
+    "file": "Mar__mono_fermin__g1153.png",
     "bounds": {
       "x": 3099,
       "y": 1731,
@@ -300,8 +300,8 @@
     }
   },
   {
-    "label": "suelo",
-    "file": "suelo.png",
+    "label": "Mar__barco__g1186__g1185__nasas__suelo__g62",
+    "file": "Mar__barco__g1186__g1185__nasas__suelo__g62.png",
     "bounds": {
       "x": 4139,
       "y": 2750,
@@ -310,8 +310,8 @@
     }
   },
   {
-    "label": "varanda",
-    "file": "varanda.png",
+    "label": "Mar__barco__varanda__g136",
+    "file": "Mar__barco__varanda__g136.png",
     "bounds": {
       "x": 3671,
       "y": 2217,
@@ -320,8 +320,8 @@
     }
   },
   {
-    "label": "mono_marinero",
-    "file": "mono_marinero.png",
+    "label": "Mar__barco__mono_marinero__g35",
+    "file": "Mar__barco__mono_marinero__g35.png",
     "bounds": {
       "x": 4468,
       "y": 2884,
@@ -330,8 +330,8 @@
     }
   },
   {
-    "label": "mono_faenando",
-    "file": "mono_faenando.png",
+    "label": "Mar__barco__mono_faenando__g15-7",
+    "file": "Mar__barco__mono_faenando__g15-7.png",
     "bounds": {
       "x": 4524,
       "y": 2967,
@@ -340,8 +340,8 @@
     }
   },
   {
-    "label": "ob_cuerda",
-    "file": "ob_cuerda.png",
+    "label": "Mar__ob_cuerda__g1630-5",
+    "file": "Mar__ob_cuerda__g1630-5.png",
     "bounds": {
       "x": 4048,
       "y": 2526,
@@ -350,8 +350,8 @@
     }
   },
   {
-    "label": "ob_boya",
-    "file": "ob_boya.png",
+    "label": "Mar__ob_boya__g57-2",
+    "file": "Mar__ob_boya__g57-2.png",
     "bounds": {
       "x": 1360,
       "y": 3503,
@@ -360,8 +360,8 @@
     }
   },
   {
-    "label": "ob_boya",
-    "file": "ob_boya.png",
+    "label": "Mar__ob_boya__g57-2-1",
+    "file": "Mar__ob_boya__g57-2-1.png",
     "bounds": {
       "x": 1831,
       "y": 3234,
@@ -370,8 +370,8 @@
     }
   },
   {
-    "label": "ob_boya_amarilla",
-    "file": "ob_boya_amarilla.png",
+    "label": "Mar__ob_boya_amarilla__g618",
+    "file": "Mar__ob_boya_amarilla__g618.png",
     "bounds": {
       "x": 2283,
       "y": 2972,
@@ -380,8 +380,8 @@
     }
   },
   {
-    "label": "ob_pala",
-    "file": "ob_pala.png",
+    "label": "Mar__ob_pala__g62-3",
+    "file": "Mar__ob_pala__g62-3.png",
     "bounds": {
       "x": 3597,
       "y": 2475,
@@ -390,8 +390,8 @@
     }
   },
   {
-    "label": "velero",
-    "file": "velero.png",
+    "label": "Mar__velero__g1165",
+    "file": "Mar__velero__g1165.png",
     "bounds": {
       "x": 3184,
       "y": 1328,
@@ -400,8 +400,8 @@
     }
   },
   {
-    "label": "piramide",
-    "file": "piramide.png",
+    "label": "Juegos__piramide__g465",
+    "file": "Juegos__piramide__g465.png",
     "bounds": {
       "x": 2194,
       "y": 173,
@@ -410,8 +410,8 @@
     }
   },
   {
-    "label": "puente",
-    "file": "puente.png",
+    "label": "Juegos__puente__g482",
+    "file": "Juegos__puente__g482.png",
     "bounds": {
       "x": 2912,
       "y": 327,
@@ -420,8 +420,8 @@
     }
   },
   {
-    "label": "mono_irene",
-    "file": "mono_irene.png",
+    "label": "Juegos__columpio__mono_irene__g508",
+    "file": "Juegos__columpio__mono_irene__g508.png",
     "bounds": {
       "x": 2730,
       "y": 524,
@@ -430,8 +430,8 @@
     }
   },
   {
-    "label": "mono_tintin",
-    "file": "mono_tintin.png",
+    "label": "P_del__g815__g813__g752__mono_tintin__g728",
+    "file": "P_del__g815__g813__g752__mono_tintin__g728.png",
     "bounds": {
       "x": 2482,
       "y": 60,
@@ -440,13 +440,13 @@
     }
   },
   {
-    "label": "mono_tintin",
-    "file": "mono_tintin.png",
+    "label": "P_del__g815__g813__g752__mono_tintin__layer2",
+    "file": "P_del__g815__g813__g752__mono_tintin__layer2.png",
     "bounds": null
   },
   {
-    "label": "mono_coco",
-    "file": "mono_coco.png",
+    "label": "P_del__g815__g813__g752__mono_coco__g791",
+    "file": "P_del__g815__g813__g752__mono_coco__g791.png",
     "bounds": {
       "x": 2709,
       "y": 0,
@@ -455,8 +455,8 @@
     }
   },
   {
-    "label": "mono_ivan",
-    "file": "mono_ivan.png",
+    "label": "P_del__g815__g813__g752__mono_ivan__g812",
+    "file": "P_del__g815__g813__g752__mono_ivan__g812.png",
     "bounds": {
       "x": 2055,
       "y": 71,
@@ -465,8 +465,8 @@
     }
   },
   {
-    "label": "mono_nemo",
-    "file": "mono_nemo.png",
+    "label": "P_del__g815__g813__g752__mono_nemo__g737",
+    "file": "P_del__g815__g813__g752__mono_nemo__g737.png",
     "bounds": {
       "x": 2601,
       "y": 0,
@@ -475,8 +475,8 @@
     }
   },
   {
-    "label": "baldosas",
-    "file": "baldosas.png",
+    "label": "plaza__baldosas__g91",
+    "file": "plaza__baldosas__g91.png",
     "bounds": {
       "x": 2360,
       "y": 605,
@@ -485,8 +485,8 @@
     }
   },
   {
-    "label": "baldosas",
-    "file": "baldosas.png",
+    "label": "plaza__baldosas__g91-5",
+    "file": "plaza__baldosas__g91-5.png",
     "bounds": {
       "x": 2747,
       "y": 835,
@@ -495,8 +495,8 @@
     }
   },
   {
-    "label": "ob_fuente",
-    "file": "ob_fuente.png",
+    "label": "plaza__ob_fuente__g702",
+    "file": "plaza__ob_fuente__g702.png",
     "bounds": {
       "x": 2727,
       "y": 572,
@@ -505,8 +505,8 @@
     }
   },
   {
-    "label": "ob_banco",
-    "file": "ob_banco.png",
+    "label": "plaza__g1716__ob_banco__g3",
+    "file": "plaza__g1716__ob_banco__g3.png",
     "bounds": {
       "x": 4534,
       "y": 457,
@@ -515,8 +515,8 @@
     }
   },
   {
-    "label": "mono_elena",
-    "file": "mono_elena.png",
+    "label": "plaza__g1716__mono_elena__g1715",
+    "file": "plaza__g1716__mono_elena__g1715.png",
     "bounds": {
       "x": 4605,
       "y": 447,
@@ -525,8 +525,8 @@
     }
   },
   {
-    "label": "roble",
-    "file": "roble.png",
+    "label": "plaza__roble__g46-9-0",
+    "file": "plaza__roble__g46-9-0.png",
     "bounds": {
       "x": 2808,
       "y": 188,
@@ -535,8 +535,8 @@
     }
   },
   {
-    "label": "mono_detective",
-    "file": "mono_detective.png",
+    "label": "plaza__mono_detective__g66-0",
+    "file": "plaza__mono_detective__g66-0.png",
     "bounds": {
       "x": 3897,
       "y": 399,
@@ -545,8 +545,8 @@
     }
   },
   {
-    "label": "losas",
-    "file": "losas.png",
+    "label": "plaza__losas__g1488-9-0-8",
+    "file": "plaza__losas__g1488-9-0-8.png",
     "bounds": {
       "x": 3665,
       "y": 1437,
@@ -555,8 +555,8 @@
     }
   },
   {
-    "label": "agujero",
-    "file": "agujero.png",
+    "label": "plaza__agujero__g1406",
+    "file": "plaza__agujero__g1406.png",
     "bounds": {
       "x": 3518,
       "y": 1123,
@@ -565,8 +565,8 @@
     }
   },
   {
-    "label": "mono_alcantarilla",
-    "file": "mono_alcantarilla.png",
+    "label": "plaza__mono_alcantarilla__g233",
+    "file": "plaza__mono_alcantarilla__g233.png",
     "bounds": {
       "x": 3355,
       "y": 1029,
@@ -575,8 +575,8 @@
     }
   },
   {
-    "label": "losas",
-    "file": "losas.png",
+    "label": "Puerto__losas__g1488",
+    "file": "Puerto__losas__g1488.png",
     "bounds": {
       "x": 4573,
       "y": 1739,
@@ -585,8 +585,8 @@
     }
   },
   {
-    "label": "losas",
-    "file": "losas.png",
+    "label": "Puerto__losas__g1488-9",
+    "file": "Puerto__losas__g1488-9.png",
     "bounds": {
       "x": 4174,
       "y": 1849,
@@ -595,8 +595,8 @@
     }
   },
   {
-    "label": "losas",
-    "file": "losas.png",
+    "label": "Puerto__losas__g1488-9-0",
+    "file": "Puerto__losas__g1488-9-0.png",
     "bounds": {
       "x": 3584,
       "y": 1214,
@@ -605,8 +605,8 @@
     }
   },
   {
-    "label": "losas",
-    "file": "losas.png",
+    "label": "Puerto__losas__g1488-4",
+    "file": "Puerto__losas__g1488-4.png",
     "bounds": {
       "x": 3977,
       "y": 1527,
@@ -615,8 +615,8 @@
     }
   },
   {
-    "label": "losas",
-    "file": "losas.png",
+    "label": "Puerto__losas__g1488-4-1",
+    "file": "Puerto__losas__g1488-4-1.png",
     "bounds": {
       "x": 3895,
       "y": 1214,
@@ -625,8 +625,8 @@
     }
   },
   {
-    "label": "losas",
-    "file": "losas.png",
+    "label": "Puerto__losas__g1488-4-1-7",
+    "file": "Puerto__losas__g1488-4-1-7.png",
     "bounds": {
       "x": 4207,
       "y": 944,
@@ -635,8 +635,8 @@
     }
   },
   {
-    "label": "losas",
-    "file": "losas.png",
+    "label": "Puerto__losas__g1488-4-1-3",
+    "file": "Puerto__losas__g1488-4-1-3.png",
     "bounds": {
       "x": 5000,
       "y": 1958,
@@ -645,8 +645,8 @@
     }
   },
   {
-    "label": "losas",
-    "file": "losas.png",
+    "label": "Puerto__losas__g1488-4-1-3-7",
+    "file": "Puerto__losas__g1488-4-1-3-7.png",
     "bounds": {
       "x": 4686,
       "y": 2146,
@@ -655,8 +655,8 @@
     }
   },
   {
-    "label": "losas",
-    "file": "losas.png",
+    "label": "Puerto__losas__g1488-7",
+    "file": "Puerto__losas__g1488-7.png",
     "bounds": {
       "x": 4288,
       "y": 1527,
@@ -665,8 +665,8 @@
     }
   },
   {
-    "label": "mono_fede",
-    "file": "mono_fede.png",
+    "label": "Puerto__mono_fede__g1442",
+    "file": "Puerto__mono_fede__g1442.png",
     "bounds": {
       "x": 4532,
       "y": 1750,
@@ -675,8 +675,8 @@
     }
   },
   {
-    "label": "ob_cupula",
-    "file": "ob_cupula.png",
+    "label": "Puerto__ob_cupula__g309-9",
+    "file": "Puerto__ob_cupula__g309-9.png",
     "bounds": {
       "x": 5048,
       "y": 1392,
@@ -685,8 +685,8 @@
     }
   },
   {
-    "label": "ob_cupula",
-    "file": "ob_cupula.png",
+    "label": "Puerto__ob_cupula__g309-9-2",
+    "file": "Puerto__ob_cupula__g309-9-2.png",
     "bounds": {
       "x": 4990,
       "y": 1426,
@@ -695,8 +695,8 @@
     }
   },
   {
-    "label": "ob_cubo",
-    "file": "ob_cubo.png",
+    "label": "Puerto__ob_cubo__g1327-8",
+    "file": "Puerto__ob_cubo__g1327-8.png",
     "bounds": {
       "x": 5321,
       "y": 1587,
@@ -705,8 +705,8 @@
     }
   },
   {
-    "label": "ob_cubo",
-    "file": "ob_cubo.png",
+    "label": "Puerto__ob_cubo__g1327",
+    "file": "Puerto__ob_cubo__g1327.png",
     "bounds": {
       "x": 5222,
       "y": 1646,
@@ -715,8 +715,8 @@
     }
   },
   {
-    "label": "ob_cubo",
-    "file": "ob_cubo.png",
+    "label": "Puerto__ob_cubo__g1327-4",
+    "file": "Puerto__ob_cubo__g1327-4.png",
     "bounds": {
       "x": 5123,
       "y": 1702,
@@ -725,8 +725,8 @@
     }
   },
   {
-    "label": "ob_cubo",
-    "file": "ob_cubo.png",
+    "label": "Puerto__ob_cubo__g1327-4-3",
+    "file": "Puerto__ob_cubo__g1327-4-3.png",
     "bounds": {
       "x": 3194,
       "y": 2970,
@@ -735,8 +735,8 @@
     }
   },
   {
-    "label": "ob_newjersey",
-    "file": "ob_newjersey.png",
+    "label": "Puerto__ob_newjersey__g1386",
+    "file": "Puerto__ob_newjersey__g1386.png",
     "bounds": {
       "x": 4491,
       "y": 1544,
@@ -745,8 +745,8 @@
     }
   },
   {
-    "label": "ob_newjersey",
-    "file": "ob_newjersey.png",
+    "label": "Puerto__ob_newjersey__g1386-7",
+    "file": "Puerto__ob_newjersey__g1386-7.png",
     "bounds": {
       "x": 4392,
       "y": 1608,
@@ -755,8 +755,8 @@
     }
   },
   {
-    "label": "mono_esther",
-    "file": "mono_esther.png",
+    "label": "Puerto__mono_esther__g74",
+    "file": "Puerto__mono_esther__g74.png",
     "bounds": {
       "x": 4411,
       "y": 1178,
@@ -765,8 +765,8 @@
     }
   },
   {
-    "label": "mono_luisa",
-    "file": "mono_luisa.png",
+    "label": "Puerto__mono_luisa__g94",
+    "file": "Puerto__mono_luisa__g94.png",
     "bounds": {
       "x": 4137,
       "y": 1027,
@@ -775,8 +775,8 @@
     }
   },
   {
-    "label": "ob_macetero",
-    "file": "ob_macetero.png",
+    "label": "Puerto__ob_macetero__g382",
+    "file": "Puerto__ob_macetero__g382.png",
     "bounds": {
       "x": 3893,
       "y": 910,
@@ -785,8 +785,8 @@
     }
   },
   {
-    "label": "mono_rachel",
-    "file": "mono_rachel.png",
+    "label": "Puerto__mono_rachel__g103-6",
+    "file": "Puerto__mono_rachel__g103-6.png",
     "bounds": {
       "x": 4061,
       "y": 1053,
@@ -795,8 +795,8 @@
     }
   },
   {
-    "label": "mono_sandra",
-    "file": "mono_sandra.png",
+    "label": "Puerto__mono_sandra__g110",
+    "file": "Puerto__mono_sandra__g110.png",
     "bounds": {
       "x": 4119,
       "y": 1405,
@@ -805,8 +805,8 @@
     }
   },
   {
-    "label": "mono_bea",
-    "file": "mono_bea.png",
+    "label": "Puerto__mono_bea__g116",
+    "file": "Puerto__mono_bea__g116.png",
     "bounds": {
       "x": 3037,
       "y": 928,
@@ -815,8 +815,8 @@
     }
   },
   {
-    "label": "mono_paleta",
-    "file": "mono_paleta.png",
+    "label": "Puerto__mono_paleta__g222",
+    "file": "Puerto__mono_paleta__g222.png",
     "bounds": {
       "x": 4700,
       "y": 1304,
@@ -825,8 +825,8 @@
     }
   },
   {
-    "label": "mostrador",
-    "file": "mostrador.png",
+    "label": "Puerto__mostrador__g1410",
+    "file": "Puerto__mostrador__g1410.png",
     "bounds": {
       "x": 4197,
       "y": 1034,
@@ -835,8 +835,8 @@
     }
   },
   {
-    "label": "limones",
-    "file": "limones.png",
+    "label": "Puerto__ob_malla_limones__limones__g619",
+    "file": "Puerto__ob_malla_limones__limones__g619.png",
     "bounds": {
       "x": 427,
       "y": 1142,
@@ -845,8 +845,8 @@
     }
   },
   {
-    "label": "ob_caja_porex_cerrada",
-    "file": "ob_caja_porex_cerrada.png",
+    "label": "Puerto__ob_caja_porex_cerrada__g262",
+    "file": "Puerto__ob_caja_porex_cerrada__g262.png",
     "bounds": {
       "x": 4416,
       "y": 988,
@@ -855,8 +855,8 @@
     }
   },
   {
-    "label": "caja",
-    "file": "caja.png",
+    "label": "Puerto__ob_caja_porex_pulpo__caja__g265",
+    "file": "Puerto__ob_caja_porex_pulpo__caja__g265.png",
     "bounds": {
       "x": 844,
       "y": 977,
@@ -865,8 +865,8 @@
     }
   },
   {
-    "label": "noray",
-    "file": "noray.png",
+    "label": "Puerto__noray__g950",
+    "file": "Puerto__noray__g950.png",
     "bounds": {
       "x": 3989,
       "y": 1743,
@@ -875,8 +875,8 @@
     }
   },
   {
-    "label": "mono_stop",
-    "file": "mono_stop.png",
+    "label": "Puerto__mono_stop__g43-0",
+    "file": "Puerto__mono_stop__g43-0.png",
     "bounds": {
       "x": 3867,
       "y": 1604,
@@ -885,8 +885,8 @@
     }
   },
   {
-    "label": "mono_marido",
-    "file": "mono_marido.png",
+    "label": "Puerto__mono_marido__g122",
+    "file": "Puerto__mono_marido__g122.png",
     "bounds": {
       "x": 4196,
       "y": 1409,
@@ -895,8 +895,8 @@
     }
   },
   {
-    "label": "ob_bolardo",
-    "file": "ob_bolardo.png",
+    "label": "Puerto__ob_bolardo__g372",
+    "file": "Puerto__ob_bolardo__g372.png",
     "bounds": {
       "x": 3570,
       "y": 958,
@@ -905,8 +905,8 @@
     }
   },
   {
-    "label": "ob_bolardo",
-    "file": "ob_bolardo.png",
+    "label": "Puerto__ob_bolardo__g372-8",
+    "file": "Puerto__ob_bolardo__g372-8.png",
     "bounds": {
       "x": 3645,
       "y": 1010,
@@ -915,8 +915,8 @@
     }
   },
   {
-    "label": "ob_bolardo",
-    "file": "ob_bolardo.png",
+    "label": "Puerto__ob_bolardo__g372-8-7",
+    "file": "Puerto__ob_bolardo__g372-8-7.png",
     "bounds": {
       "x": 3719,
       "y": 1053,
@@ -925,8 +925,8 @@
     }
   },
   {
-    "label": "escalera",
-    "file": "escalera.png",
+    "label": "Puerto__escalera__g1415",
+    "file": "Puerto__escalera__g1415.png",
     "bounds": {
       "x": 4604,
       "y": 2271,
@@ -935,8 +935,8 @@
     }
   },
   {
-    "label": "piedras_esquina",
-    "file": "piedras_esquina.png",
+    "label": "puerto_viejo__piedras_esquina__g692-2",
+    "file": "puerto_viejo__piedras_esquina__g692-2.png",
     "bounds": {
       "x": 5474,
       "y": 1186,
@@ -945,8 +945,8 @@
     }
   },
   {
-    "label": "empedrado",
-    "file": "empedrado.png",
+    "label": "puerto_viejo__empedrado__g1476",
+    "file": "puerto_viejo__empedrado__g1476.png",
     "bounds": {
       "x": 4919,
       "y": 2356,
@@ -955,8 +955,8 @@
     }
   },
   {
-    "label": "ob_macetero",
-    "file": "ob_macetero.png",
+    "label": "puerto_viejo__ob_macetero__g382-5",
+    "file": "puerto_viejo__ob_macetero__g382-5.png",
     "bounds": {
       "x": 5370,
       "y": 1881,
@@ -965,8 +965,8 @@
     }
   },
   {
-    "label": "mono_camarero",
-    "file": "mono_camarero.png",
+    "label": "puerto_viejo__mono_camarero__g8",
+    "file": "puerto_viejo__mono_camarero__g8.png",
     "bounds": {
       "x": 5418,
       "y": 2145,
@@ -975,8 +975,8 @@
     }
   },
   {
-    "label": "ob_ancla",
-    "file": "ob_ancla.png",
+    "label": "puerto_viejo__ob_ancla__g896",
+    "file": "puerto_viejo__ob_ancla__g896.png",
     "bounds": {
       "x": 5008,
       "y": 2012,
@@ -985,8 +985,8 @@
     }
   },
   {
-    "label": "lona",
-    "file": "lona.png",
+    "label": "puerto_viejo__lona__g90",
+    "file": "puerto_viejo__lona__g90.png",
     "bounds": {
       "x": 5290,
       "y": 1646,
@@ -995,8 +995,8 @@
     }
   },
   {
-    "label": "ob_caja_porex_vino",
-    "file": "ob_caja_porex_vino.png",
+    "label": "puerto_viejo__ob_caja_porex_vino__g278",
+    "file": "puerto_viejo__ob_caja_porex_vino__g278.png",
     "bounds": {
       "x": 4195,
       "y": 1143,
@@ -1005,8 +1005,8 @@
     }
   },
   {
-    "label": "mono_moncho",
-    "file": "mono_moncho.png",
+    "label": "puerto_viejo__mono_moncho__g27-8",
+    "file": "puerto_viejo__mono_moncho__g27-8.png",
     "bounds": {
       "x": 4618,
       "y": 3137,
@@ -1015,8 +1015,8 @@
     }
   },
   {
-    "label": "silla",
-    "file": "silla.png",
+    "label": "puerto_viejo__silla__g1402-5",
+    "file": "puerto_viejo__silla__g1402-5.png",
     "bounds": {
       "x": 5267,
       "y": 2219,
@@ -1025,8 +1025,8 @@
     }
   },
   {
-    "label": "mono_sentada",
-    "file": "mono_sentada.png",
+    "label": "puerto_viejo__mono_sentada__g1715-5",
+    "file": "puerto_viejo__mono_sentada__g1715-5.png",
     "bounds": {
       "x": 5239,
       "y": 2175,
@@ -1035,8 +1035,8 @@
     }
   },
   {
-    "label": "mesa",
-    "file": "mesa.png",
+    "label": "puerto_viejo__mesa__g1157",
+    "file": "puerto_viejo__mesa__g1157.png",
     "bounds": {
       "x": 5369,
       "y": 2285,
@@ -1045,8 +1045,8 @@
     }
   },
   {
-    "label": "silla",
-    "file": "silla.png",
+    "label": "puerto_viejo__silla__g1402",
+    "file": "puerto_viejo__silla__g1402.png",
     "bounds": {
       "x": 5480,
       "y": 2381,
@@ -1055,8 +1055,8 @@
     }
   },
   {
-    "label": "silla",
-    "file": "silla.png",
+    "label": "puerto_viejo__silla__g1402-3",
+    "file": "puerto_viejo__silla__g1402-3.png",
     "bounds": {
       "x": 5288,
       "y": 2370,
@@ -1065,8 +1065,8 @@
     }
   },
   {
-    "label": "mono_manix",
-    "file": "mono_manix.png",
+    "label": "Bosque__ob_canodromo__mono_manix__g1563",
+    "file": "Bosque__ob_canodromo__mono_manix__g1563.png",
     "bounds": {
       "x": 3864,
       "y": 0,
@@ -1075,13 +1075,13 @@
     }
   },
   {
-    "label": "perro_york",
-    "file": "perro_york.png",
+    "label": "Bosque__ob_canodromo__perro_york__g1574",
+    "file": "Bosque__ob_canodromo__perro_york__g1574.png",
     "bounds": null
   },
   {
-    "label": "perro_salta",
-    "file": "perro_salta.png",
+    "label": "Bosque__ob_canodromo__perro_salta__g1529",
+    "file": "Bosque__ob_canodromo__perro_salta__g1529.png",
     "bounds": {
       "x": 3629,
       "y": 16,
@@ -1090,8 +1090,8 @@
     }
   },
   {
-    "label": "I",
-    "file": "I.png",
+    "label": "Bosque__boiro__I__g1687",
+    "file": "Bosque__boiro__I__g1687.png",
     "bounds": {
       "x": 4860,
       "y": 917,
@@ -1100,8 +1100,8 @@
     }
   },
   {
-    "label": "mono_abuelo",
-    "file": "mono_abuelo.png",
+    "label": "Bosque__mono_abuelo__g259",
+    "file": "Bosque__mono_abuelo__g259.png",
     "bounds": {
       "x": 4996,
       "y": 456,
@@ -1110,8 +1110,8 @@
     }
   },
   {
-    "label": "mono_abuela",
-    "file": "mono_abuela.png",
+    "label": "Bosque__mono_abuela__g282",
+    "file": "Bosque__mono_abuela__g282.png",
     "bounds": {
       "x": 4929,
       "y": 411,
@@ -1120,8 +1120,8 @@
     }
   },
   {
-    "label": "fondo",
-    "file": "fondo.png",
+    "label": "Bosque__castillo__arco_ventana__fondo__g1861",
+    "file": "Bosque__castillo__arco_ventana__fondo__g1861.png",
     "bounds": {
       "x": 6074,
       "y": 1011,
@@ -1130,8 +1130,8 @@
     }
   },
   {
-    "label": "fondo",
-    "file": "fondo.png",
+    "label": "Bosque__castillo__arco_ventana__fondo__g1861-6",
+    "file": "Bosque__castillo__arco_ventana__fondo__g1861-6.png",
     "bounds": {
       "x": 6074,
       "y": 1011,
@@ -1140,8 +1140,8 @@
     }
   },
   {
-    "label": "ventana_cuadrada",
-    "file": "ventana_cuadrada.png",
+    "label": "Bosque__castillo__ventana_cuadrada__g1882",
+    "file": "Bosque__castillo__ventana_cuadrada__g1882.png",
     "bounds": {
       "x": 6462,
       "y": 1162,
@@ -1150,8 +1150,8 @@
     }
   },
   {
-    "label": "escudo",
-    "file": "escudo.png",
+    "label": "Bosque__castillo__escudo__g7",
+    "file": "Bosque__castillo__escudo__g7.png",
     "bounds": {
       "x": 6659,
       "y": 1376,
@@ -1160,8 +1160,8 @@
     }
   },
   {
-    "label": "vomitorio",
-    "file": "vomitorio.png",
+    "label": "Bosque__castillo__vomitorio__g673",
+    "file": "Bosque__castillo__vomitorio__g673.png",
     "bounds": {
       "x": 6305,
       "y": 461,
@@ -1170,8 +1170,8 @@
     }
   },
   {
-    "label": "vomitorio",
-    "file": "vomitorio.png",
+    "label": "Bosque__castillo__vomitorio__g673-8",
+    "file": "Bosque__castillo__vomitorio__g673-8.png",
     "bounds": {
       "x": 5888,
       "y": 223,
@@ -1180,8 +1180,8 @@
     }
   },
   {
-    "label": "piedras_esquina",
-    "file": "piedras_esquina.png",
+    "label": "Bosque__castillo__piedras_esquina__g692",
+    "file": "Bosque__castillo__piedras_esquina__g692.png",
     "bounds": {
       "x": 5816,
       "y": 501,
@@ -1190,8 +1190,8 @@
     }
   },
   {
-    "label": "seto",
-    "file": "seto.png",
+    "label": "Bosque__seto__g29",
+    "file": "Bosque__seto__g29.png",
     "bounds": {
       "x": 4419,
       "y": 0,
@@ -1200,8 +1200,8 @@
     }
   },
   {
-    "label": "varanda",
-    "file": "varanda.png",
+    "label": "Bosque__varanda__g31",
+    "file": "Bosque__varanda__g31.png",
     "bounds": {
       "x": 4210,
       "y": 225,
@@ -1210,8 +1210,8 @@
     }
   },
   {
-    "label": "mono_grande",
-    "file": "mono_grande.png",
+    "label": "Bosque__mono_grande__g128",
+    "file": "Bosque__mono_grande__g128.png",
     "bounds": {
       "x": 5652,
       "y": 1000,
@@ -1220,8 +1220,8 @@
     }
   },
   {
-    "label": "mono_sabela",
-    "file": "mono_sabela.png",
+    "label": "costa__mono_sabela__g216-8",
+    "file": "costa__mono_sabela__g216-8.png",
     "bounds": {
       "x": 5858,
       "y": 3215,
@@ -1230,8 +1230,8 @@
     }
   },
   {
-    "label": "mono_durmiente",
-    "file": "mono_durmiente.png",
+    "label": "costa__mono_durmiente__g190",
+    "file": "costa__mono_durmiente__g190.png",
     "bounds": {
       "x": 6320,
       "y": 2786,
@@ -1240,8 +1240,8 @@
     }
   },
   {
-    "label": "roca",
-    "file": "roca.png",
+    "label": "costa__roca__g1154",
+    "file": "costa__roca__g1154.png",
     "bounds": {
       "x": 5772,
       "y": 2064,
@@ -1250,8 +1250,8 @@
     }
   },
   {
-    "label": "roca",
-    "file": "roca.png",
+    "label": "costa__roca__g1154-7",
+    "file": "costa__roca__g1154-7.png",
     "bounds": {
       "x": 6108,
       "y": 3450,
@@ -1260,8 +1260,8 @@
     }
   },
   {
-    "label": "arbol_roble",
-    "file": "arbol_roble.png",
+    "label": "costa__arbol_roble__g46-9",
+    "file": "costa__arbol_roble__g46-9.png",
     "bounds": {
       "x": 5825,
       "y": 1473,
@@ -1270,8 +1270,8 @@
     }
   },
   {
-    "label": "mono_fumado",
-    "file": "mono_fumado.png",
+    "label": "costa__mono_fumado__g20",
+    "file": "costa__mono_fumado__g20.png",
     "bounds": {
       "x": 6229,
       "y": 2130,
@@ -1280,8 +1280,8 @@
     }
   },
   {
-    "label": "mono_feliz",
-    "file": "mono_feliz.png",
+    "label": "Layer_1__mono_feliz__g207-7",
+    "file": "Layer_1__mono_feliz__g207-7.png",
     "bounds": {
       "x": 4548,
       "y": 466,
@@ -1290,8 +1290,8 @@
     }
   },
   {
-    "label": "ob_saco_malla",
-    "file": "ob_saco_malla.png",
+    "label": "ob_saco_malla__g32",
+    "file": "ob_saco_malla__g32.png",
     "bounds": {
       "x": 2731,
       "y": 2091,
@@ -1300,8 +1300,8 @@
     }
   },
   {
-    "label": "ob_papelera",
-    "file": "ob_papelera.png",
+    "label": "ob_papelera__g353",
+    "file": "ob_papelera__g353.png",
     "bounds": {
       "x": 3206,
       "y": 874,

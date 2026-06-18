@@ -21,6 +21,7 @@ export class MainMenu extends Scene
     logo: GameObjects.Image;
     title: GameObjects.Text;
     logoTween: Phaser.Tweens.Tween | null;
+    camera: Phaser.Cameras.Scene2D.Camera;
 
     constructor ()
     {
@@ -32,6 +33,8 @@ export class MainMenu extends Scene
         //this.background = this.add.image(512, 384, 'background');
 
         //this.logo = this.add.image(512, 300, 'logo').setDepth(100);
+
+        this.camera = this.cameras.main;
 
         const positions = this.cache.json.get('positions') as PositionedSprite[];
         if (Array.isArray(positions)) {
@@ -45,6 +48,27 @@ export class MainMenu extends Scene
             // const scaleX = sceneWidth / sourceWidth;
             // const scaleY = sceneHeight / sourceHeight;
             const scaleX = 1;
+            const worldWidth = sourceWidth * scaleX;
+            const worldHeight = sourceHeight * scaleX;
+
+            this.camera.setBounds(0, 0, worldWidth, worldHeight);
+
+            const clamp01 = (value: number) => Math.max(0, Math.min(1, value));
+            const updateCameraFromPointer = (pointer: Phaser.Input.Pointer) => {
+                const maxScrollX = Math.max(0, worldWidth - sceneWidth);
+                const maxScrollY = Math.max(0, worldHeight - sceneHeight);
+
+                const pointerRatioX = clamp01(pointer.x / sceneWidth);
+                const pointerRatioY = clamp01(pointer.y / sceneHeight);
+
+                this.camera.scrollX = pointerRatioX * maxScrollX;
+                this.camera.scrollY = pointerRatioY * maxScrollY;
+            };
+
+            this.input.on('pointermove', updateCameraFromPointer);
+            this.events.once('shutdown', () => {
+                this.input.off('pointermove', updateCameraFromPointer);
+            });
 
             positions.forEach((sprite) => {
                 if (!sprite.bounds || !sprite.file) {

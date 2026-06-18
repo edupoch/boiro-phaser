@@ -56,10 +56,39 @@ const groups = $('svg g').filter((_, el) => {
 
 const positions = [];
 
+const sanitizeSegment = (value) => value
+  .replace(/[\\/]/g, '_')
+  .replace(/\s+/g, '_')
+  .replace(/[^A-Za-z0-9_.-]/g, '_')
+  .replace(/_+/g, '_')
+  .replace(/^_+|_+$/g, '') || 'unnamed';
+
+const getElementPathSegments = (el) => {
+  const segments = [];
+  let current = el;
+
+  while (current && current.tagName !== 'svg') {
+    if (current.tagName === 'g') {
+      const group = $(current);
+      const label = group.attr('inkscape:label');
+      const id = group.attr('id');
+      const parent = group.parent();
+      const sameTagSiblings = parent.children('g');
+      const siblingIndex = sameTagSiblings.index(current);
+      const fallbackName = `g_${siblingIndex >= 0 ? siblingIndex : 0}`;
+      segments.push(sanitizeSegment(label || id || fallbackName));
+    }
+
+    current = current.parent;
+  }
+
+  return segments.reverse();
+};
+
 for (const el of groups) {
-  const label = $(el).attr('inkscape:label') ?? `group_${groups.index(el)}`;
   const groupContent = $.html(el);
-  const fileName = label.replace(/[\\/]/g, '_');
+  const elementId = sanitizeSegment($(el).attr('id') || `noid_${groups.index(el)}`);
+  const fileName = `${getElementPathSegments(el).join('__')}__${elementId}`;
 
   const isolated = `<svg ${svgNamespaces}
     viewBox="${viewBox}" width="${width}" height="${height}">
@@ -120,7 +149,7 @@ for (const el of groups) {
   await image.clone().png().toFile(outputPath);
 
   positions.push({
-    label,
+    label: fileName,
     file: `${fileName}.png`,
     bounds,
   });
