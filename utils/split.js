@@ -67,42 +67,57 @@ for (const el of groups) {
     ${groupContent}
   </svg>`;
 
-  const outputPath = path.join(outputDir, `${fileName}.png`);
-  const image = sharp(Buffer.from(isolated));
+  // First pass: calculate bounds
+  let bounds = null;
+  {
+    const image = sharp(Buffer.from(isolated));
+    const { data, info } = await image
+      .ensureAlpha()
+      .raw()
+      .toBuffer({ resolveWithObject: true });
 
-  await image.clone().png().toFile(outputPath);
+    let minX = info.width;
+    let minY = info.height;
+    let maxX = -1;
+    let maxY = -1;
 
-  const { data, info } = await image
-    .ensureAlpha()
-    .raw()
-    .toBuffer({ resolveWithObject: true });
+    for (let y = 0; y < info.height; y += 1) {
+      for (let x = 0; x < info.width; x += 1) {
+        const alpha = data[(y * info.width + x) * info.channels + (info.channels - 1)];
 
-  let minX = info.width;
-  let minY = info.height;
-  let maxX = -1;
-  let maxY = -1;
-
-  for (let y = 0; y < info.height; y += 1) {
-    for (let x = 0; x < info.width; x += 1) {
-      const alpha = data[(y * info.width + x) * info.channels + (info.channels - 1)];
-
-      if (alpha > 0) {
-        if (x < minX) minX = x;
-        if (y < minY) minY = y;
-        if (x > maxX) maxX = x;
-        if (y > maxY) maxY = y;
+        if (alpha > 0) {
+          if (x < minX) minX = x;
+          if (y < minY) minY = y;
+          if (x > maxX) maxX = x;
+          if (y > maxY) maxY = y;
+        }
       }
     }
+
+    bounds = maxX >= 0
+      ? {
+          x: minX,
+          y: minY,
+          width: maxX - minX + 1,
+          height: maxY - minY + 1,
+        }
+      : null;
   }
 
-  const bounds = maxX >= 0
-    ? {
-        x: minX,
-        y: minY,
-        width: maxX - minX + 1,
-        height: maxY - minY + 1,
-      }
-    : null;
+  // Create cropped SVG if bounds exist
+  const finalSvg = bounds
+    ? `<svg ${svgNamespaces}
+    viewBox="0 0 ${bounds.width} ${bounds.height}" width="${bounds.width}" height="${bounds.height}">
+    ${defs}
+    <g transform="translate(${-bounds.x}, ${-bounds.y})">
+      ${groupContent}
+    </g>
+  </svg>`
+    : isolated;
+
+  const outputPath = path.join(outputDir, `${fileName}.png`);
+  const image = sharp(Buffer.from(finalSvg));
+  await image.clone().png().toFile(outputPath);
 
   positions.push({
     label,
