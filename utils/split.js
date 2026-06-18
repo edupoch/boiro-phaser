@@ -42,9 +42,15 @@ const inferredNamespaceAttrs = [...usedAttrPrefixes]
 
 const fallbackNamespaces = 'xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"';
 const svgNamespaces = [namespaceAttrs || fallbackNamespaces, inferredNamespaceAttrs].filter(Boolean).join(' ');
+const rootPresentationAttrs = Object.entries(rootAttrs)
+  .filter(([name]) => !['width', 'height', 'viewBox'].includes(name) && name !== 'xmlns' && !name.startsWith('xmlns:'))
+  .map(([name, value]) => `${name}="${value}"`)
+  .join(' ');
 
-// Extraer <defs> para preservar gradientes, clipPaths, etc.
+// Extraer <style> y <defs> para preservar clases CSS, gradientes, clipPaths, etc.
+const styles = $('svg > style').toString();
 const defs = $('defs').toString();
+const sharedSvgContent = [styles, defs].filter(Boolean).join('\n');
 
 const groups = $('svg g').filter((_, el) => {
   const hasNestedGroups = $(el).find('g').length > 0;
@@ -90,9 +96,9 @@ for (const el of groups) {
   const elementId = sanitizeSegment($(el).attr('id') || `noid_${groups.index(el)}`);
   const fileName = `${getElementPathSegments(el).join('__')}__${elementId}`;
 
-  const isolated = `<svg ${svgNamespaces}
+  const isolated = `<svg ${svgNamespaces} ${rootPresentationAttrs}
     viewBox="${viewBox}" width="${width}" height="${height}">
-    ${defs}
+    ${sharedSvgContent}
     ${groupContent}
   </svg>`;
 
@@ -135,9 +141,9 @@ for (const el of groups) {
 
   // Create cropped SVG if bounds exist
   const finalSvg = bounds
-    ? `<svg ${svgNamespaces}
+    ? `<svg ${svgNamespaces} ${rootPresentationAttrs}
     viewBox="0 0 ${bounds.width} ${bounds.height}" width="${bounds.width}" height="${bounds.height}">
-    ${defs}
+    ${sharedSvgContent}
     <g transform="translate(${-bounds.x}, ${-bounds.y})">
       ${groupContent}
     </g>
