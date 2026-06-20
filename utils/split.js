@@ -52,7 +52,13 @@ const styles = $('svg > style').toString();
 const defs = $('defs').toString();
 const sharedSvgContent = [styles, defs].filter(Boolean).join('\n');
 
-const groups = $('svg > * > *')
+
+const juegosGroup = $('g')
+.filter((_, el) => $(el).attr('id') === 'Juegos')
+.first();
+
+const groups = juegosGroup.children()
+// const groups = $('svg > * > *')
   .filter((_, el) => ['g', 'path'].includes(el.tagName))
   .filter((_, el) => $(el).closest('defs, clipPath').length === 0);
 
@@ -89,6 +95,7 @@ const getElementPathSegments = (el) => {
 
 for (const el of groups) {
   const groupContent = $.html(el);
+  
   const elementId = sanitizeSegment($(el).attr('id') || `noid_${groups.index(el)}`);
   const fileName = `${getElementPathSegments(el).join('__')}__${elementId}`;
 
