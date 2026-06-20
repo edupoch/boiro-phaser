@@ -144,7 +144,7 @@ export class MainMenu extends Phaser.Scene
             this.spriteTree = sprites;
             sprites.forEach(renderSpriteNode);
 
-            this.animateGroup('velero', (image) => {
+            this.animateElements(['barco', 'velero'], (image) => {
                 this.tweens.add({
                     targets: image,
                     y: image.y - 20,
@@ -154,6 +154,22 @@ export class MainMenu extends Phaser.Scene
                     repeat: -1,
                 });
             });
+
+            this.animateElements('mov_arbol', (image) => {
+                image.setOrigin(0.5, 1);
+                image.y += image.displayHeight / 2;
+
+                this.tweens.add({
+                    targets: image,
+                    angle: { from: -1, to: 1 },
+                    duration: 2800,
+                    ease: 'Sine.inOut',
+                    yoyo: true,
+                    repeat: -1,
+                });
+            });
+
+            
         }
 
         // this.title = this.add.text(512, 460, 'Main Menu', {
@@ -165,10 +181,12 @@ export class MainMenu extends Phaser.Scene
         EventBus.emit('current-scene-ready', this);
     }
     
-    animateGroup (label: string, animFn: (image: Phaser.GameObjects.Image) => void): void
+    animateElements (label: string | string[], animFn: (image: Phaser.GameObjects.Image) => void): void
     {
+        const searchTerms = Array.isArray(label) ? label : [label];
+
         const collectLeafImages = (node: PositionedSprite, targetFound: boolean): void => {
-            const matched = targetFound || node.label === label;
+            const matched = targetFound || searchTerms.some((term) => term.length > 0 && node.label.includes(term));
             const children = Array.isArray(node.children)
                 ? node.children
                 : (Array.isArray(node.childen) ? node.childen : []);

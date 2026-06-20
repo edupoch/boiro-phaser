@@ -6,6 +6,8 @@ import sharp from 'sharp';
 const inputFile = process.argv[2];
 const outputDir = process.argv[3] ?? './output';
 
+const groupsToProcess = ['arboles'];
+
 const svgContent = fs.readFileSync(inputFile, 'utf-8');
 const $ = cheerio.load(svgContent, { xmlMode: true });
 
@@ -114,11 +116,15 @@ const createPathSprite = async (el) => {
   const elementId = sanitizeSegment($(el).attr('id') || `noid_${fallbackPathCounter++}`);
   const fileName = `${getElementPathSegments(el).join('__')}__${elementId}`;
 
+  console.log('Processing element:', fileName);
+
   const isolated = `<svg ${svgNamespaces} ${rootPresentationAttrs}
     viewBox="${viewBox}" width="${width}" height="${height}">
     ${sharedSvgContent}
     ${contentWithParent}
   </svg>`;
+
+  console.log('\tCalculate bounds');
 
   // First pass: calculate bounds
   let bounds = null;
@@ -157,6 +163,7 @@ const createPathSprite = async (el) => {
       : null;
   }
 
+  console.log('\tCropping SVG');
   // Create cropped SVG if bounds exist
   const finalSvg = bounds
     ? `<svg ${svgNamespaces} ${rootPresentationAttrs}
@@ -168,11 +175,12 @@ const createPathSprite = async (el) => {
   </svg>`
     : isolated;
 
+  console.log('\tSaving PNG');
   const outputPath = path.join(outputDir, `${fileName}.png`);
   const image = sharp(Buffer.from(finalSvg));
   await image.clone().png().toFile(outputPath);
 
-  console.log(`✓ ${outputPath}`);
+  console.log(`\t✓ ${outputPath}`);
 
   return {
     label: fileName,
@@ -181,7 +189,7 @@ const createPathSprite = async (el) => {
   };
 };
 
-const processNode = async (el) => {
+const processNode = async (el, depth = 0) => {
   if (!el || !el.tagName) {
     return null;
   }
@@ -191,18 +199,43 @@ const processNode = async (el) => {
   }
 
   if (el.tagName === 'g') {
-    const children = [];
-    for (const child of $(el).children().toArray()) {
-      const childData = await processNode(child);
-      if (childData) {
-        children.push(childData);
+    console.log('Processing group:', $(el).attr('id') || 'unnamed');
+    const label = getNodeLabel(el);
+
+    // Los <g> de primer nivel (hijos directos de <svg>) siempre se desglosan.
+    if (depth === 0) {
+      const children = [];
+      for (const child of $(el).children().toArray()) {
+        const childData = await processNode(child, depth + 1);
+        if (childData) {
+          children.push(childData);
+        }
       }
+
+      return {
+        label,
+        children,
+      };
     }
 
-    return {
-      label: getNodeLabel(el),
-      children,
-    };
+    // Si el label está en groupsToProcess, procesar recursivamente sus hijos
+    if (label && groupsToProcess.includes(label)) {
+      const children = [];
+      for (const child of $(el).children().toArray()) {
+        const childData = await processNode(child, depth + 1);
+        if (childData) {
+          children.push(childData);
+        }
+      }
+
+      return {
+        label,
+        children,
+      };
+    }
+
+    // Si no está en groupsToProcess, crear sprite del grupo
+    return createPathSprite(el);
   }
 
   if (el.tagName === 'path') {
@@ -216,7 +249,7 @@ const processRoot = rootSvg;
 // const processRoot = $("#Juegos");
 
 for (const child of processRoot.children().toArray()) {
-  const nodeData = await processNode(child);
+  const nodeData = await processNode(child, 0);
   if (nodeData) {
     sprites.push(nodeData);
   }
