@@ -57,8 +57,8 @@ const juegosGroup = $('g')
 .filter((_, el) => $(el).attr('id') === 'Juegos')
 .first();
 
-const groups = juegosGroup.children()
-// const groups = $('svg > * > *')
+// const groups = juegosGroup.children()
+const groups = $('svg > * > *')
   .filter((_, el) => ['g', 'path'].includes(el.tagName))
   .filter((_, el) => $(el).closest('defs, clipPath').length === 0);
 
@@ -70,6 +70,22 @@ const sanitizeSegment = (value) => value
   .replace(/[^A-Za-z0-9_.-]/g, '_')
   .replace(/_+/g, '_')
   .replace(/^_+|_+$/g, '') || 'unnamed';
+
+const wrapWithParentCode = (el, content) => {
+  const parent = el.parent;
+
+  if (!parent || parent.tagName === 'svg') {
+    return content;
+  }
+
+  const parentAttrs = Object.entries(parent.attribs ?? {})
+    .map(([name, value]) => `${name}="${value}"`)
+    .join(' ');
+
+  const openTag = parentAttrs ? `<${parent.tagName} ${parentAttrs}>` : `<${parent.tagName}>`;
+
+  return `${openTag}${content}</${parent.tagName}>`;
+};
 
 const getElementPathSegments = (el) => {
   const segments = [];
@@ -95,6 +111,7 @@ const getElementPathSegments = (el) => {
 
 for (const el of groups) {
   const groupContent = $.html(el);
+  const contentWithParent = wrapWithParentCode(el, groupContent);
   
   const elementId = sanitizeSegment($(el).attr('id') || `noid_${groups.index(el)}`);
   const fileName = `${getElementPathSegments(el).join('__')}__${elementId}`;
@@ -102,7 +119,7 @@ for (const el of groups) {
   const isolated = `<svg ${svgNamespaces} ${rootPresentationAttrs}
     viewBox="${viewBox}" width="${width}" height="${height}">
     ${sharedSvgContent}
-    ${groupContent}
+    ${contentWithParent}
   </svg>`;
 
   // First pass: calculate bounds
@@ -148,7 +165,7 @@ for (const el of groups) {
     viewBox="0 0 ${bounds.width} ${bounds.height}" width="${bounds.width}" height="${bounds.height}">
     ${sharedSvgContent}
     <g transform="translate(${-bounds.x}, ${-bounds.y})">
-      ${groupContent}
+      ${contentWithParent}
     </g>
   </svg>`
     : isolated;
