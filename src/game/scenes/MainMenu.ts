@@ -11,8 +11,10 @@ type SpriteBounds = {
 
 type PositionedSprite = {
     label: string;
-    file: string;
+    file?: string;
     bounds: SpriteBounds | null;
+    children?: PositionedSprite[];
+    childen?: PositionedSprite[];
 };
 
 export class MainMenu extends Phaser.Scene
@@ -22,6 +24,9 @@ export class MainMenu extends Phaser.Scene
     title: Phaser.GameObjects.Text;
     logoTween: Phaser.Tweens.Tween | null;
     camera: Phaser.Cameras.Scene2D.Camera;
+
+    private spriteTree: PositionedSprite[] = [];
+    private spriteImageMap = new Map<string, Phaser.GameObjects.Image>();
 
     constructor ()
     {
@@ -113,8 +118,17 @@ export class MainMenu extends Phaser.Scene
                 this.input.off('wheel', handleWheel);
             });
 
-            sprites.forEach((sprite) => {
-                if (!sprite.bounds || !sprite.file) {
+            const renderSpriteNode = (sprite: PositionedSprite) => {
+                const nestedChildren = Array.isArray(sprite.children)
+                    ? sprite.children
+                    : (Array.isArray(sprite.childen) ? sprite.childen : []);
+
+                if (nestedChildren.length > 0) {
+                    nestedChildren.forEach(renderSpriteNode);
+                    return;
+                }
+
+                if (!sprite.bounds || !sprite.file || !sprite.label) {
                     return;
                 }
 
@@ -124,23 +138,21 @@ export class MainMenu extends Phaser.Scene
 
                 const spriteImage = this.add.image(centerX, centerY, sprite.label).setDepth(50);
                 spriteImage.setDisplaySize(bounds.width * scaleX, bounds.height * scaleX);
+                this.spriteImageMap.set(sprite.label, spriteImage);
+            };
 
-                // const swingAmplitude = Phaser.Math.FloatBetween(1.2, 2.8);
-                // const swingDuration = Phaser.Math.Between(2200, 3800);
-                // spriteImage.setAngle(Phaser.Math.FloatBetween(-swingAmplitude, swingAmplitude));
+            this.spriteTree = sprites;
+            sprites.forEach(renderSpriteNode);
 
-                // this.tweens.add({
-                //     targets: spriteImage,
-                //     angle: {
-                //         from: -swingAmplitude,
-                //         to: swingAmplitude
-                //     },
-                //     duration: swingDuration,
-                //     ease: 'Sine.easeInOut',
-                //     yoyo: true,
-                //     repeat: -1,
-                //     delay: Phaser.Math.Between(0, 900)
-                // });
+            this.animateGroup('velero', (image) => {
+                this.tweens.add({
+                    targets: image,
+                    y: image.y - 20,
+                    duration: 2500,
+                    ease: 'Sine.inOut',
+                    yoyo: true,
+                    repeat: -1,
+                });
             });
         }
 
@@ -153,6 +165,30 @@ export class MainMenu extends Phaser.Scene
         EventBus.emit('current-scene-ready', this);
     }
     
+    animateGroup (label: string, animFn: (image: Phaser.GameObjects.Image) => void): void
+    {
+        const collectLeafImages = (node: PositionedSprite, targetFound: boolean): void => {
+            const matched = targetFound || node.label === label;
+            const children = Array.isArray(node.children)
+                ? node.children
+                : (Array.isArray(node.childen) ? node.childen : []);
+
+            if (children.length > 0) {
+                children.forEach((child) => collectLeafImages(child, matched));
+                return;
+            }
+
+            if (matched && node.label) {
+                const image = this.spriteImageMap.get(node.label);
+                if (image) {
+                    animFn(image);
+                }
+            }
+        };
+
+        this.spriteTree.forEach((root) => collectLeafImages(root, false));
+    }
+
     changeScene ()
     {
         if (this.logoTween)

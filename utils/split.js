@@ -52,16 +52,6 @@ const styles = $('svg > style').toString();
 const defs = $('defs').toString();
 const sharedSvgContent = [styles, defs].filter(Boolean).join('\n');
 
-
-const juegosGroup = $('g')
-.filter((_, el) => $(el).attr('id') === 'Juegos')
-.first();
-
-// const groups = juegosGroup.children()
-const groups = $('svg > * > *')
-  .filter((_, el) => ['g', 'path'].includes(el.tagName))
-  .filter((_, el) => $(el).closest('defs, clipPath').length === 0);
-
 const sprites = [];
 
 const sanitizeSegment = (value) => value
@@ -71,20 +61,23 @@ const sanitizeSegment = (value) => value
   .replace(/_+/g, '_')
   .replace(/^_+|_+$/g, '') || 'unnamed';
 
-const wrapWithParentCode = (el, content) => {
-  const parent = el.parent;
+let fallbackPathCounter = 0;
 
-  if (!parent || parent.tagName === 'svg') {
-    return content;
+const wrapWithParentCode = (el, content) => {
+  let wrapped = content;
+  let current = el.parent;
+
+  while (current && current.tagName && current.tagName !== 'svg') {
+    const currentAttrs = Object.entries(current.attribs ?? {})
+      .map(([name, value]) => `${name}="${value}"`)
+      .join(' ');
+
+    const openTag = currentAttrs ? `<${current.tagName} ${currentAttrs}>` : `<${current.tagName}>`;
+    wrapped = `${openTag}${wrapped}</${current.tagName}>`;
+    current = current.parent;
   }
 
-  const parentAttrs = Object.entries(parent.attribs ?? {})
-    .map(([name, value]) => `${name}="${value}"`)
-    .join(' ');
-
-  const openTag = parentAttrs ? `<${parent.tagName} ${parentAttrs}>` : `<${parent.tagName}>`;
-
-  return `${openTag}${content}</${parent.tagName}>`;
+  return wrapped;
 };
 
 const getElementPathSegments = (el) => {
@@ -109,11 +102,16 @@ const getElementPathSegments = (el) => {
   return segments.reverse();
 };
 
-for (const el of groups) {
+const getNodeLabel = (el) => {
+  const node = $(el);
+  return node.attr('inkscape:label') || node.attr('id') || null;
+};
+
+const createPathSprite = async (el) => {
   const groupContent = $.html(el);
   const contentWithParent = wrapWithParentCode(el, groupContent);
-  
-  const elementId = sanitizeSegment($(el).attr('id') || `noid_${groups.index(el)}`);
+
+  const elementId = sanitizeSegment($(el).attr('id') || `noid_${fallbackPathCounter++}`);
   const fileName = `${getElementPathSegments(el).join('__')}__${elementId}`;
 
   const isolated = `<svg ${svgNamespaces} ${rootPresentationAttrs}
@@ -174,13 +172,54 @@ for (const el of groups) {
   const image = sharp(Buffer.from(finalSvg));
   await image.clone().png().toFile(outputPath);
 
-  sprites.push({
+  console.log(`✓ ${outputPath}`);
+
+  return {
     label: fileName,
     file: `${fileName}.png`,
     bounds,
-  });
+  };
+};
 
-  console.log(`✓ ${outputPath}`);
+const processNode = async (el) => {
+  if (!el || !el.tagName) {
+    return null;
+  }
+
+  if ($(el).closest('defs, clipPath').length > 0) {
+    return null;
+  }
+
+  if (el.tagName === 'g') {
+    const children = [];
+    for (const child of $(el).children().toArray()) {
+      const childData = await processNode(child);
+      if (childData) {
+        children.push(childData);
+      }
+    }
+
+    return {
+      label: getNodeLabel(el),
+      children,
+    };
+  }
+
+  if (el.tagName === 'path') {
+    return createPathSprite(el);
+  }
+
+  return null;
+};
+
+const processRoot = rootSvg;
+// const processRoot = $("#Juegos");
+
+for (const child of processRoot.children().toArray()) {
+  const nodeData = await processNode(child);
+  if (nodeData) {
+    sprites.push(nodeData);
+  }
 }
 
 const spritesPath = path.join(outputDir, 'sprites.json');
