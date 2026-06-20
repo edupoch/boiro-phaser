@@ -35,13 +35,13 @@ export class Preloader extends Scene
         this.load.image('logo', 'logo.png');
         this.load.image('star', 'star.png');
 
-        //  Load images from positions.json
-        this.load.json('positions', 'sprites/positions.json');
+        //  Load images from sprites.json
+        this.load.json('sprites', 'sprites/sprites.json');
 
-        this.load.on('filecomplete-json-positions', () => {
-            const positions = this.cache.json.get('positions');
-            if (Array.isArray(positions)) {
-                positions.forEach((sprite: any) => {
+        this.load.on('filecomplete-json-sprites', () => {
+            const sprites = this.cache.json.get('sprites');
+            if (Array.isArray(sprites)) {
+                sprites.forEach((sprite: any) => {
                     console.log(`Loading sprite: ${sprite.label} from file: ${sprite.file}`);
                     if (sprite.file && sprite.bounds) {
                         this.load.image(sprite.label, `sprites/${sprite.file}`);

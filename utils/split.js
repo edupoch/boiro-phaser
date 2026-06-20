@@ -62,7 +62,7 @@ const groups = $('svg > * > *')
   .filter((_, el) => ['g', 'path'].includes(el.tagName))
   .filter((_, el) => $(el).closest('defs, clipPath').length === 0);
 
-const positions = [];
+const sprites = [];
 
 const sanitizeSegment = (value) => value
   .replace(/[\\/]/g, '_')
@@ -174,7 +174,7 @@ for (const el of groups) {
   const image = sharp(Buffer.from(finalSvg));
   await image.clone().png().toFile(outputPath);
 
-  positions.push({
+  sprites.push({
     label: fileName,
     file: `${fileName}.png`,
     bounds,
@@ -183,6 +183,6 @@ for (const el of groups) {
   console.log(`✓ ${outputPath}`);
 }
 
-const positionsPath = path.join(outputDir, 'positions.json');
-fs.writeFileSync(positionsPath, `${JSON.stringify(positions, null, 2)}\n`, 'utf-8');
-console.log(`✓ ${positionsPath}`);
+const spritesPath = path.join(outputDir, 'sprites.json');
+fs.writeFileSync(spritesPath, `${JSON.stringify(sprites, null, 2)}\n`, 'utf-8');
+console.log(`✓ ${spritesPath}`);

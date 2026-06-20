@@ -36,8 +36,8 @@ export class MainMenu extends Phaser.Scene
 
         this.camera = this.cameras.main;
 
-        const positions = this.cache.json.get('positions') as PositionedSprite[];
-        if (Array.isArray(positions)) {
+        const sprites = this.cache.json.get('sprites') as PositionedSprite[];
+        if (Array.isArray(sprites)) {
             // Base artwork size from escena.svg viewBox.
             const sourceWidth = 6804;
             const sourceHeight = 3742.2;
@@ -113,7 +113,7 @@ export class MainMenu extends Phaser.Scene
                 this.input.off('wheel', handleWheel);
             });
 
-            positions.forEach((sprite) => {
+            sprites.forEach((sprite) => {
                 if (!sprite.bounds || !sprite.file) {
                     return;
                 }
