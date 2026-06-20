@@ -47,30 +47,68 @@ export class MainMenu extends Phaser.Scene
 
             // const scaleX = sceneWidth / sourceWidth;
             // const scaleY = sceneHeight / sourceHeight;
-            const scaleX = 0.5;
+            const scaleX = 1;
             const worldWidth = sourceWidth * scaleX;
             const worldHeight = sourceHeight * scaleX;
+            const fitWidthZoom = sceneWidth / worldWidth;
+            const fitHeightZoom = sceneHeight / worldHeight;
+            const minZoom = Math.max(fitWidthZoom, fitHeightZoom);
+            const maxZoom = 2.5;
+            const fitWorldZoom = Math.min(fitWidthZoom, fitHeightZoom);
+            const initialZoom = Phaser.Math.Clamp(fitWorldZoom, minZoom, maxZoom);
 
             this.camera.setBounds(0, 0, worldWidth, worldHeight);
+            this.camera.setZoom(initialZoom);
 
-            const clamp01 = (value: number) => Math.max(0, Math.min(1, value));
-            const updateCameraFromPointer = (pointer: Phaser.Input.Pointer) => {
-                const maxScrollX = Math.max(0, worldWidth - sceneWidth);
-                const maxScrollY = Math.max(0, worldHeight - sceneHeight);
+            const clampCameraScroll = () => {
+                const visibleWidth = sceneWidth / this.camera.zoom;
+                const visibleHeight = sceneHeight / this.camera.zoom;
+                const maxScrollX = Math.max(0, worldWidth - visibleWidth);
+                const maxScrollY = Math.max(0, worldHeight - visibleHeight);
 
-                const pointerRatioX = clamp01(pointer.x / sceneWidth);
-                const pointerRatioY = clamp01(pointer.y / sceneHeight);
-
-                this.camera.scrollX = pointerRatioX * maxScrollX;
-                this.camera.scrollY = pointerRatioY * maxScrollY;
+                this.camera.scrollX = Phaser.Math.Clamp(this.camera.scrollX, 0, maxScrollX);
+                this.camera.scrollY = Phaser.Math.Clamp(this.camera.scrollY, 0, maxScrollY);
             };
 
-            this.input.on('pointermove', updateCameraFromPointer);
-            this.events.once('shutdown', () => {
-                this.input.off('pointermove', updateCameraFromPointer);
-            });
+            const handlePointerMove = (pointer: Phaser.Input.Pointer) => {
+                if (!pointer.isDown) {
+                    return;
+                }
 
-            let i = 0;
+                this.camera.scrollX -= (pointer.x - pointer.prevPosition.x) / this.camera.zoom;
+                this.camera.scrollY -= (pointer.y - pointer.prevPosition.y) / this.camera.zoom;
+                clampCameraScroll();
+            };
+
+            const handleWheel = (
+                pointer: Phaser.Input.Pointer,
+                _gameObjects: Phaser.GameObjects.GameObject[],
+                _deltaX: number,
+                deltaY: number,
+            ) => {
+                const zoomFactor = deltaY > 0 ? 0.9 : 1.1;
+                const previousZoom = this.camera.zoom;
+                const nextZoom = Phaser.Math.Clamp(this.camera.zoom * zoomFactor, minZoom, maxZoom);
+
+                if (nextZoom === previousZoom) {
+                    return;
+                }
+
+                const worldPointX = this.camera.scrollX + (pointer.x / previousZoom);
+                const worldPointY = this.camera.scrollY + (pointer.y / previousZoom);
+
+                this.camera.setZoom(nextZoom);
+                this.camera.scrollX = worldPointX - (pointer.x / nextZoom);
+                this.camera.scrollY = worldPointY - (pointer.y / nextZoom);
+                clampCameraScroll();
+            };
+
+            this.input.on('pointermove', handlePointerMove);
+            this.input.on('wheel', handleWheel);
+            this.events.once('shutdown', () => {
+                this.input.off('pointermove', handlePointerMove);
+                this.input.off('wheel', handleWheel);
+            });
 
             positions.forEach((sprite) => {
                 if (!sprite.bounds || !sprite.file) {
