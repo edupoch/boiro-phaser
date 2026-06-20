@@ -139,12 +139,56 @@ export class MainMenu extends Phaser.Scene
                 const spriteImage = this.add.image(centerX, centerY, sprite.label).setDepth(50);
                 spriteImage.setDisplaySize(bounds.width * scaleX, bounds.height * scaleX);
                 this.spriteImageMap.set(sprite.label, spriteImage);
+
+                if (sprite.label.includes('_ob_')) {
+                    spriteImage.setInteractive({ useHandCursor: true });
+                    spriteImage.on('pointerover', () => {
+                        if (spriteImage.getData('springAnimating')) {
+                            return;
+                        }
+
+                        spriteImage.setData('springAnimating', true);
+
+                        this.tweens.chain({
+                            targets: spriteImage,
+                            tweens: [
+                                {
+                                    scaleX: 1.08,
+                                    scaleY: 0.92,
+                                    duration: 90,
+                                    ease: 'Quad.out',
+                                },
+                                {
+                                    scaleX: 0.96,
+                                    scaleY: 1.06,
+                                    duration: 120,
+                                    ease: 'Sine.inOut',
+                                },
+                                {
+                                    scaleX: 1.02,
+                                    scaleY: 0.98,
+                                    duration: 110,
+                                    ease: 'Sine.inOut',
+                                },
+                                {
+                                    scaleX: 1,
+                                    scaleY: 1,
+                                    duration: 130,
+                                    ease: 'Back.out',
+                                },
+                            ],
+                            onComplete: () => {
+                                spriteImage.setData('springAnimating', false);
+                            },
+                        });
+                    });
+                }
             };
 
             this.spriteTree = sprites;
             sprites.forEach(renderSpriteNode);
 
-            this.animateElements(['barco', 'velero'], (image) => {
+            this.animateElements(['*barco*', '*barca*', '*velero*', '*mono_flotador*', '*kayaks*'], (image) => {
                 this.tweens.add({
                     targets: image,
                     y: image.y - 20,
@@ -155,7 +199,7 @@ export class MainMenu extends Phaser.Scene
                 });
             });
 
-            this.animateElements('mov_arbol', (image) => {
+            this.animateElements('*mov_arbol*', (image) => {
                 image.setOrigin(0.5, 1);
                 image.y += image.displayHeight / 2;
 
@@ -165,6 +209,18 @@ export class MainMenu extends Phaser.Scene
                     duration: 2800,
                     ease: 'Sine.inOut',
                     yoyo: true,
+                    repeat: -1,
+                });
+            });
+
+            this.animateElements('gaviota', (image) => {
+                this.tweens.add({
+                    targets: image,
+                    x: { from: image.x - 2000, to: image.x + 10000 },
+                    y: { from: image.y - 1000, to: image.y + 5000 },
+                    duration: 42000,
+                    ease: 'Sine.inOut',
+                    yoyo: false,
                     repeat: -1,
                 });
             });
@@ -184,9 +240,37 @@ export class MainMenu extends Phaser.Scene
     animateElements (label: string | string[], animFn: (image: Phaser.GameObjects.Image) => void): void
     {
         const searchTerms = Array.isArray(label) ? label : [label];
+        const regexPattern = /^\/(.+)\/([dgimsuvy]*)$/;
+        const escapeRegex = (value: string): string => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const matchers = searchTerms.map((term) => {
+            if (!term) {
+                return (_nodeLabel: string) => false;
+            }
+
+            const regexParts = term.match(regexPattern);
+            if (regexParts) {
+                try {
+                    const compiledRegex = new RegExp(regexParts[1], regexParts[2]);
+                    return (nodeLabel: string) => compiledRegex.test(nodeLabel);
+                } catch {
+                    return (nodeLabel: string) => nodeLabel === term;
+                }
+            }
+
+            if (term.includes('*') || term.includes('?')) {
+                const wildcardRegex = new RegExp(
+                    `^${escapeRegex(term).replace(/\\\*/g, '.*').replace(/\\\?/g, '.')}$`,
+                );
+
+                return (nodeLabel: string) => wildcardRegex.test(nodeLabel);
+            }
+
+            return (nodeLabel: string) => nodeLabel === term;
+        });
 
         const collectLeafImages = (node: PositionedSprite, targetFound: boolean): void => {
-            const matched = targetFound || searchTerms.some((term) => term.length > 0 && node.label.includes(term));
+            const nodeLabel = typeof node.label === 'string' ? node.label : '';
+            const matched = targetFound || matchers.some((matchesLabel) => matchesLabel(nodeLabel));
             const children = Array.isArray(node.children)
                 ? node.children
                 : (Array.isArray(node.childen) ? node.childen : []);

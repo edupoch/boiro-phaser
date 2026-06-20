@@ -12,11 +12,14 @@ export class Preloader extends Scene
         //  We loaded this image in our Boot Scene, so we can display it here
         //this.add.image(512, 384, 'background');
 
+        const centerX = this.scale.width / 2;
+        const centerY = this.scale.height / 2;
+
         //  A simple progress bar. This is the outline of the bar.
-        this.add.rectangle(512, 384, 468, 32).setStrokeStyle(1, 0x028af8);
+        this.add.rectangle(centerX, centerY, 468, 32).setStrokeStyle(1, 0x028af8);
 
         //  This is the progress bar itself. It will increase in size from the left based on the % of progress.
-        const bar = this.add.rectangle(512-230, 384, 4, 28, 0x028af8);
+        const bar = this.add.rectangle(centerX - 230, centerY, 4, 28, 0x028af8).setOrigin(0, 0.5);
 
         //  Use the 'progress' event emitted by the LoaderPlugin to update the loading bar
         this.load.on('progress', (progress: number) => {

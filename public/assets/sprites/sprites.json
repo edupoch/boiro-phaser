@@ -398,16 +398,6 @@
         }
       },
       {
-        "label": "Playa__gaviota__g412",
-        "file": "Playa__gaviota__g412.png",
-        "bounds": {
-          "x": 951,
-          "y": 1031,
-          "width": 391,
-          "height": 234
-        }
-      },
-      {
         "label": "Playa__sombrilla__g424",
         "file": "Playa__sombrilla__g424.png",
         "bounds": {
@@ -2453,5 +2443,70 @@
       "width": 4,
       "height": 127
     }
+  },
+  {
+    "label": "gaviota",
+    "children": [
+      {
+        "label": "gaviota__g408__g408",
+        "file": "gaviota__g408__g408.png",
+        "bounds": {
+          "x": 1063,
+          "y": 1072,
+          "width": 303,
+          "height": 189
+        }
+      },
+      {
+        "label": "gaviota__path408__path408",
+        "file": "gaviota__path408__path408.png",
+        "bounds": {
+          "x": 1220,
+          "y": 1215,
+          "width": 9,
+          "height": 8
+        }
+      },
+      {
+        "label": "gaviota__path409__path409",
+        "file": "gaviota__path409__path409.png",
+        "bounds": {
+          "x": 1206,
+          "y": 1180,
+          "width": 15,
+          "height": 13
+        }
+      },
+      {
+        "label": "gaviota__g411__g411",
+        "file": "gaviota__g411__g411.png",
+        "bounds": {
+          "x": 974,
+          "y": 1167,
+          "width": 216,
+          "height": 139
+        }
+      },
+      {
+        "label": "gaviota__path411__path411",
+        "file": "gaviota__path411__path411.png",
+        "bounds": {
+          "x": 1016,
+          "y": 1078,
+          "width": 330,
+          "height": 219
+        }
+      },
+      {
+        "label": "gaviota__path412__path412",
+        "file": "gaviota__path412__path412.png",
+        "bounds": {
+          "x": 1221,
+          "y": 1231,
+          "width": 27,
+          "height": 22
+        }
+      }
+    ]
   }
 ]
