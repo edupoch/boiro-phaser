@@ -24,9 +24,9 @@
     "file": "Fondo__mar__path135.png",
     "bounds": {
       "x": 0,
-      "y": 1185,
+      "y": 1183,
       "width": 6803,
-      "height": 2557
+      "height": 2559
     }
   },
   {
@@ -48,20 +48,20 @@
     "label": "Fondo__hoyo_orilla__g1925",
     "file": "Fondo__hoyo_orilla__g1925.png",
     "bounds": {
-      "x": 17,
-      "y": 1341,
-      "width": 2054,
-      "height": 1322
+      "x": 16,
+      "y": 1340,
+      "width": 2056,
+      "height": 1324
     }
   },
   {
     "label": "Fondo__hoyo_mar__g1924",
     "file": "Fondo__hoyo_mar__g1924.png",
     "bounds": {
-      "x": 733,
-      "y": 1258,
-      "width": 1525,
-      "height": 1026
+      "x": 732,
+      "y": 1256,
+      "width": 1527,
+      "height": 1030
     }
   },
   {
@@ -90,14 +90,69 @@
     "bounds": null
   },
   {
+    "label": "Fondo__path1850__path1850",
+    "file": "Fondo__path1850__path1850.png",
+    "bounds": {
+      "x": 1128,
+      "y": 721,
+      "width": 819,
+      "height": 504
+    }
+  },
+  {
+    "label": "Fondo__path1850-0__path1850-0",
+    "file": "Fondo__path1850-0__path1850-0.png",
+    "bounds": {
+      "x": 797,
+      "y": 1158,
+      "width": 819,
+      "height": 504
+    }
+  },
+  {
+    "label": "Fondo__path1850-0-6__path1850-0-6",
+    "file": "Fondo__path1850-0-6__path1850-0-6.png",
+    "bounds": {
+      "x": 0,
+      "y": 1574,
+      "width": 751,
+      "height": 504
+    }
+  },
+  {
+    "label": "Fondo__path2378-9-3__path2378-9-3",
+    "file": "Fondo__path2378-9-3__path2378-9-3.png",
+    "bounds": {
+      "x": 4109,
+      "y": 2623,
+      "width": 1335,
+      "height": 1031
+    }
+  },
+  {
+    "label": "Fondo__path2378-9-3-6__path2378-9-3-6",
+    "file": "Fondo__path2378-9-3-6__path2378-9-3-6.png",
+    "bounds": {
+      "x": 1591,
+      "y": 2490,
+      "width": 1329,
+      "height": 1028
+    }
+  },
+  {
     "label": "Casas__suelo__g135",
     "file": "Casas__suelo__g135.png",
     "bounds": {
       "x": 0,
       "y": 0,
-      "width": 2512,
+      "width": 2130,
       "height": 1592
     }
+  },
+  {
+    "label": "Casas__suelo__layer4",
+    "file": "Casas__suelo__layer4.png",
+    "bounds": null
   },
   {
     "label": "Casas__path96__path96",
@@ -135,7 +190,7 @@
     "bounds": {
       "x": 0,
       "y": 106,
-      "width": 599,
+      "width": 690,
       "height": 1211
     }
   },
@@ -403,9 +458,9 @@
     "label": "Mar__gaviota_pie__g279-3",
     "file": "Mar__gaviota_pie__g279-3.png",
     "bounds": {
-      "x": 4366,
-      "y": 3254,
-      "width": 118,
+      "x": 4350,
+      "y": 3256,
+      "width": 117,
       "height": 90
     }
   },
@@ -419,9 +474,9 @@
     "file": "Mar__pasarela__g1089.png",
     "bounds": {
       "x": 2155,
-      "y": 1709,
+      "y": 1708,
       "width": 1434,
-      "height": 875
+      "height": 876
     }
   },
   {
@@ -445,33 +500,23 @@
     }
   },
   {
-    "label": "Mar__ob_cuerda__g1630",
-    "file": "Mar__ob_cuerda__g1630.png",
-    "bounds": {
-      "x": 2718,
-      "y": 2280,
-      "width": 120,
-      "height": 108
-    }
-  },
-  {
     "label": "Mar__mono_eloy__g1104",
     "file": "Mar__mono_eloy__g1104.png",
     "bounds": {
-      "x": 2616,
-      "y": 2003,
-      "width": 125,
-      "height": 227
+      "x": 2282,
+      "y": 2204,
+      "width": 126,
+      "height": 229
     }
   },
   {
     "label": "Mar__mono_xan__g1113",
     "file": "Mar__mono_xan__g1113.png",
     "bounds": {
-      "x": 2735,
-      "y": 2443,
+      "x": 2718,
+      "y": 2427,
       "width": 153,
-      "height": 188
+      "height": 187
     }
   },
   {
@@ -479,17 +524,17 @@
     "file": "Mar__mono_pepe__g1128.png",
     "bounds": {
       "x": 2898,
-      "y": 2207,
+      "y": 2206,
       "width": 143,
-      "height": 247
+      "height": 249
     }
   },
   {
     "label": "Mar__mono_isa__g1142",
     "file": "Mar__mono_isa__g1142.png",
     "bounds": {
-      "x": 2804,
-      "y": 1965,
+      "x": 2470,
+      "y": 2167,
       "width": 151,
       "height": 227
     }
@@ -608,9 +653,9 @@
     "label": "Mar__ob_caja_plastico__g89",
     "file": "Mar__ob_caja_plastico__g89.png",
     "bounds": {
-      "x": 2991,
-      "y": 3179,
-      "width": 191,
+      "x": 2408,
+      "y": 2321,
+      "width": 190,
       "height": 138
     }
   },
@@ -628,10 +673,10 @@
     "label": "Mar__velero__g1165",
     "file": "Mar__velero__g1165.png",
     "bounds": {
-      "x": 3184,
-      "y": 1328,
-      "width": 633,
-      "height": 1070
+      "x": 2754,
+      "y": 1183,
+      "width": 1065,
+      "height": 1194
     }
   },
   {
@@ -642,6 +687,16 @@
       "y": 0,
       "width": 1743,
       "height": 674
+    }
+  },
+  {
+    "label": "Juegos__puntos__path2635",
+    "file": "Juegos__puntos__path2635.png",
+    "bounds": {
+      "x": 2117,
+      "y": 0,
+      "width": 999,
+      "height": 411
     }
   },
   {
@@ -750,8 +805,8 @@
     "bounds": {
       "x": 2855,
       "y": 0,
-      "width": 841,
-      "height": 2275
+      "width": 264,
+      "height": 321
     }
   },
   {
@@ -775,6 +830,16 @@
     }
   },
   {
+    "label": "plaza__path2652__path2652",
+    "file": "plaza__path2652__path2652.png",
+    "bounds": {
+      "x": 3168,
+      "y": 1114,
+      "width": 2027,
+      "height": 1151
+    }
+  },
+  {
     "label": "plaza__fondo__path592",
     "file": "plaza__fondo__path592.png",
     "bounds": {
@@ -785,26 +850,6 @@
     }
   },
   {
-    "label": "plaza__baldosas__g91",
-    "file": "plaza__baldosas__g91.png",
-    "bounds": {
-      "x": 2360,
-      "y": 605,
-      "width": 253,
-      "height": 174
-    }
-  },
-  {
-    "label": "plaza__baldosas__g91-5",
-    "file": "plaza__baldosas__g91-5.png",
-    "bounds": {
-      "x": 2747,
-      "y": 835,
-      "width": 252,
-      "height": 174
-    }
-  },
-  {
     "label": "plaza__path1086__path1086",
     "file": "plaza__path1086__path1086.png",
     "bounds": {
@@ -812,6 +857,26 @@
       "y": 389,
       "width": 1061,
       "height": 618
+    }
+  },
+  {
+    "label": "plaza__path2637__path2637",
+    "file": "plaza__path2637__path2637.png",
+    "bounds": {
+      "x": 3339,
+      "y": 557,
+      "width": 322,
+      "height": 261
+    }
+  },
+  {
+    "label": "plaza__dots__path2636",
+    "file": "plaza__dots__path2636.png",
+    "bounds": {
+      "x": 3080,
+      "y": 719,
+      "width": 406,
+      "height": 220
     }
   },
   {
@@ -849,9 +914,9 @@
     "file": "plaza__roble__g46-9-0.png",
     "bounds": {
       "x": 2808,
-      "y": 188,
+      "y": 187,
       "width": 641,
-      "height": 680
+      "height": 681
     }
   },
   {
@@ -872,16 +937,6 @@
       "y": 399,
       "width": 233,
       "height": 273
-    }
-  },
-  {
-    "label": "plaza__losas__g1488-9-0-8",
-    "file": "plaza__losas__g1488-9-0-8.png",
-    "bounds": {
-      "x": 3665,
-      "y": 1437,
-      "width": 393,
-      "height": 228
     }
   },
   {
@@ -925,93 +980,23 @@
     }
   },
   {
-    "label": "Puerto__losas__g1488",
-    "file": "Puerto__losas__g1488.png",
+    "label": "plaza__path2699__path2699",
+    "file": "plaza__path2699__path2699.png",
     "bounds": {
-      "x": 4573,
-      "y": 1739,
-      "width": 393,
-      "height": 228
+      "x": 4300,
+      "y": 1663,
+      "width": 335,
+      "height": 471
     }
   },
   {
-    "label": "Puerto__losas__g1488-9",
-    "file": "Puerto__losas__g1488-9.png",
+    "label": "plaza__path1611__path1611",
+    "file": "plaza__path1611__path1611.png",
     "bounds": {
-      "x": 4174,
-      "y": 1849,
-      "width": 393,
-      "height": 228
-    }
-  },
-  {
-    "label": "Puerto__losas__g1488-9-0",
-    "file": "Puerto__losas__g1488-9-0.png",
-    "bounds": {
-      "x": 3584,
-      "y": 1214,
-      "width": 393,
-      "height": 228
-    }
-  },
-  {
-    "label": "Puerto__losas__g1488-4",
-    "file": "Puerto__losas__g1488-4.png",
-    "bounds": {
-      "x": 3977,
-      "y": 1527,
-      "width": 393,
-      "height": 228
-    }
-  },
-  {
-    "label": "Puerto__losas__g1488-4-1",
-    "file": "Puerto__losas__g1488-4-1.png",
-    "bounds": {
-      "x": 3895,
-      "y": 1214,
-      "width": 393,
-      "height": 228
-    }
-  },
-  {
-    "label": "Puerto__losas__g1488-4-1-7",
-    "file": "Puerto__losas__g1488-4-1-7.png",
-    "bounds": {
-      "x": 4207,
-      "y": 944,
-      "width": 393,
-      "height": 228
-    }
-  },
-  {
-    "label": "Puerto__losas__g1488-4-1-3",
-    "file": "Puerto__losas__g1488-4-1-3.png",
-    "bounds": {
-      "x": 5000,
-      "y": 1958,
-      "width": 393,
-      "height": 228
-    }
-  },
-  {
-    "label": "Puerto__losas__g1488-4-1-3-7",
-    "file": "Puerto__losas__g1488-4-1-3-7.png",
-    "bounds": {
-      "x": 4686,
-      "y": 2146,
-      "width": 393,
-      "height": 228
-    }
-  },
-  {
-    "label": "Puerto__losas__g1488-7",
-    "file": "Puerto__losas__g1488-7.png",
-    "bounds": {
-      "x": 4288,
-      "y": 1527,
-      "width": 393,
-      "height": 228
+      "x": 2949,
+      "y": 566,
+      "width": 216,
+      "height": 134
     }
   },
   {
@@ -1028,28 +1013,28 @@
     "label": "Puerto__ob_carro__g1323",
     "file": "Puerto__ob_carro__g1323.png",
     "bounds": {
-      "x": 4681,
-      "y": 1815,
-      "width": 198,
-      "height": 196
+      "x": 5204,
+      "y": 1754,
+      "width": 197,
+      "height": 195
     }
   },
   {
     "label": "Puerto__mono_fede__g1442",
     "file": "Puerto__mono_fede__g1442.png",
     "bounds": {
-      "x": 4533,
-      "y": 1750,
-      "width": 202,
-      "height": 314
+      "x": 5056,
+      "y": 1688,
+      "width": 201,
+      "height": 315
     }
   },
   {
     "label": "Puerto__ob_pale_plastico__g1348",
     "file": "Puerto__ob_pale_plastico__g1348.png",
     "bounds": {
-      "x": 5154,
-      "y": 1722,
+      "x": 4728,
+      "y": 1812,
       "width": 309,
       "height": 218
     }
@@ -1185,22 +1170,12 @@
     }
   },
   {
-    "label": "Puerto__ob_cubo__g1327-8",
-    "file": "Puerto__ob_cubo__g1327-8.png",
-    "bounds": {
-      "x": 5322,
-      "y": 1587,
-      "width": 231,
-      "height": 197
-    }
-  },
-  {
     "label": "Puerto__ob_cubo__g1327",
     "file": "Puerto__ob_cubo__g1327.png",
     "bounds": {
-      "x": 5224,
-      "y": 1646,
-      "width": 230,
+      "x": 4792,
+      "y": 1741,
+      "width": 231,
       "height": 197
     }
   },
@@ -1208,9 +1183,9 @@
     "label": "Puerto__ob_cubo__g1327-4",
     "file": "Puerto__ob_cubo__g1327-4.png",
     "bounds": {
-      "x": 5124,
-      "y": 1702,
-      "width": 230,
+      "x": 4692,
+      "y": 1797,
+      "width": 231,
       "height": 197
     }
   },
@@ -1225,23 +1200,13 @@
     }
   },
   {
-    "label": "Puerto__ob_newjersey__g1386",
-    "file": "Puerto__ob_newjersey__g1386.png",
+    "label": "Puerto__ob_bigbag__g23-5",
+    "file": "Puerto__ob_bigbag__g23-5.png",
     "bounds": {
-      "x": 4491,
-      "y": 1544,
-      "width": 169,
-      "height": 148
-    }
-  },
-  {
-    "label": "Puerto__ob_newjersey__g1386-7",
-    "file": "Puerto__ob_newjersey__g1386-7.png",
-    "bounds": {
-      "x": 4392,
-      "y": 1608,
-      "width": 169,
-      "height": 149
+      "x": 3336,
+      "y": 3067,
+      "width": 137,
+      "height": 156
     }
   },
   {
@@ -1268,9 +1233,9 @@
     "label": "Puerto__ob_macetero__g382",
     "file": "Puerto__ob_macetero__g382.png",
     "bounds": {
-      "x": 3893,
+      "x": 3826,
       "y": 910,
-      "width": 237,
+      "width": 304,
       "height": 303
     }
   },
@@ -1418,30 +1383,40 @@
     "label": "Puerto__path1159__path1159",
     "file": "Puerto__path1159__path1159.png",
     "bounds": {
-      "x": 4195,
-      "y": 443,
-      "width": 1289,
-      "height": 787
+      "x": 4192,
+      "y": 438,
+      "width": 1292,
+      "height": 792
+    }
+  },
+  {
+    "label": "Puerto__ob_cuerda__g1630-5-9",
+    "file": "Puerto__ob_cuerda__g1630-5-9.png",
+    "bounds": {
+      "x": 4377,
+      "y": 1806,
+      "width": 185,
+      "height": 164
     }
   },
   {
     "label": "Puerto__noray__g950",
     "file": "Puerto__noray__g950.png",
     "bounds": {
-      "x": 3990,
-      "y": 1743,
+      "x": 4338,
+      "y": 1927,
       "width": 213,
-      "height": 156
+      "height": 155
     }
   },
   {
     "label": "Puerto__mono_stop__g43-0",
     "file": "Puerto__mono_stop__g43-0.png",
     "bounds": {
-      "x": 3868,
-      "y": 1604,
-      "width": 233,
-      "height": 231
+      "x": 4172,
+      "y": 1770,
+      "width": 234,
+      "height": 232
     }
   },
   {
@@ -1495,6 +1470,26 @@
     }
   },
   {
+    "label": "Puerto__ob_newjersey__g1386",
+    "file": "Puerto__ob_newjersey__g1386.png",
+    "bounds": {
+      "x": 4589,
+      "y": 1579,
+      "width": 169,
+      "height": 148
+    }
+  },
+  {
+    "label": "Puerto__ob_newjersey__g1386-7",
+    "file": "Puerto__ob_newjersey__g1386-7.png",
+    "bounds": {
+      "x": 4688,
+      "y": 1643,
+      "width": 169,
+      "height": 149
+    }
+  },
+  {
     "label": "puerto_viejo__muro__path616",
     "file": "puerto_viejo__muro__path616.png",
     "bounds": {
@@ -1525,6 +1520,11 @@
     }
   },
   {
+    "label": "puerto_viejo__dots__path1725",
+    "file": "puerto_viejo__dots__path1725.png",
+    "bounds": null
+  },
+  {
     "label": "puerto_viejo__ob_macetero__g382-5",
     "file": "puerto_viejo__ob_macetero__g382-5.png",
     "bounds": {
@@ -1548,10 +1548,10 @@
     "label": "puerto_viejo__ob_ancla__g896",
     "file": "puerto_viejo__ob_ancla__g896.png",
     "bounds": {
-      "x": 5010,
-      "y": 2012,
+      "x": 5038,
+      "y": 2057,
       "width": 213,
-      "height": 266
+      "height": 267
     }
   },
   {
@@ -1568,8 +1568,8 @@
     "label": "puerto_viejo__ob_caja_porex_vino__g278",
     "file": "puerto_viejo__ob_caja_porex_vino__g278.png",
     "bounds": {
-      "x": 4196,
-      "y": 1143,
+      "x": 2538,
+      "y": 2452,
       "width": 152,
       "height": 110
     }
@@ -1658,10 +1658,10 @@
     "label": "Bosque__boiro__g1688",
     "file": "Bosque__boiro__g1688.png",
     "bounds": {
-      "x": 4383,
-      "y": 749,
-      "width": 518,
-      "height": 399
+      "x": 4355,
+      "y": 743,
+      "width": 582,
+      "height": 429
     }
   },
   {
@@ -1692,6 +1692,16 @@
       "y": 1790,
       "width": 21,
       "height": 13
+    }
+  },
+  {
+    "label": "Bosque__dots__path2614",
+    "file": "Bosque__dots__path2614.png",
+    "bounds": {
+      "x": 4420,
+      "y": 370,
+      "width": 1233,
+      "height": 793
     }
   },
   {
@@ -1778,10 +1788,10 @@
     "label": "Bosque__varanda__g31",
     "file": "Bosque__varanda__g31.png",
     "bounds": {
-      "x": 4210,
+      "x": 4196,
       "y": 225,
-      "width": 1274,
-      "height": 945
+      "width": 1288,
+      "height": 966
     }
   },
   {
@@ -1812,6 +1822,36 @@
       "y": 1150,
       "width": 9,
       "height": 14
+    }
+  },
+  {
+    "label": "Bosque__path2618__path2618",
+    "file": "Bosque__path2618__path2618.png",
+    "bounds": {
+      "x": 4960,
+      "y": 917,
+      "width": 265,
+      "height": 246
+    }
+  },
+  {
+    "label": "Bosque__path2763__path2763",
+    "file": "Bosque__path2763__path2763.png",
+    "bounds": {
+      "x": 4957,
+      "y": 956,
+      "width": 245,
+      "height": 182
+    }
+  },
+  {
+    "label": "Bosque__path2767__path2767",
+    "file": "Bosque__path2767__path2767.png",
+    "bounds": {
+      "x": 4466,
+      "y": 7,
+      "width": 846,
+      "height": 385
     }
   },
   {
@@ -1885,6 +1925,26 @@
     }
   },
   {
+    "label": "costa__path1725-7__path1725-7",
+    "file": "costa__path1725-7__path1725-7.png",
+    "bounds": {
+      "x": 5725,
+      "y": 2281,
+      "width": 902,
+      "height": 466
+    }
+  },
+  {
+    "label": "costa__path1725-7-0__path1725-7-0",
+    "file": "costa__path1725-7-0__path1725-7-0.png",
+    "bounds": {
+      "x": 6578,
+      "y": 3047,
+      "width": 225,
+      "height": 393
+    }
+  },
+  {
     "label": "costa__calva__path1085-2",
     "file": "costa__calva__path1085-2.png",
     "bounds": {
@@ -1925,6 +1985,16 @@
     }
   },
   {
+    "label": "costa__path1725-7-1__path1725-7-1",
+    "file": "costa__path1725-7-1__path1725-7-1.png",
+    "bounds": {
+      "x": 5841,
+      "y": 3218,
+      "width": 471,
+      "height": 377
+    }
+  },
+  {
     "label": "costa__seto__path215-5",
     "file": "costa__seto__path215-5.png",
     "bounds": {
@@ -1932,6 +2002,16 @@
       "y": 2573,
       "width": 244,
       "height": 224
+    }
+  },
+  {
+    "label": "costa__path1619__path1619",
+    "file": "costa__path1619__path1619.png",
+    "bounds": {
+      "x": 6179,
+      "y": 2651,
+      "width": 547,
+      "height": 516
     }
   },
   {
@@ -1968,10 +2048,10 @@
     "label": "costa__cormoran__g75",
     "file": "costa__cormoran__g75.png",
     "bounds": {
-      "x": 5322,
-      "y": 3240,
-      "width": 444,
-      "height": 355
+      "x": 4965,
+      "y": 2791,
+      "width": 301,
+      "height": 240
     }
   },
   {
@@ -2068,49 +2148,49 @@
     "label": "Layer_1__g243__g243",
     "file": "Layer_1__g243__g243.png",
     "bounds": {
-      "x": 4740,
+      "x": 4739,
       "y": 2400,
-      "width": 126,
-      "height": 271
+      "width": 127,
+      "height": 239
     }
   },
   {
     "label": "ob_saco_malla__sombra__path626",
     "file": "ob_saco_malla__sombra__path626.png",
     "bounds": {
-      "x": 2732,
-      "y": 2148,
+      "x": 4452,
+      "y": 1493,
       "width": 90,
-      "height": 81
+      "height": 80
     }
   },
   {
     "label": "ob_saco_malla__path24-5__path24-5",
     "file": "ob_saco_malla__path24-5__path24-5.png",
     "bounds": {
-      "x": 2771,
-      "y": 2122,
-      "width": 94,
-      "height": 125
+      "x": 4490,
+      "y": 1466,
+      "width": 95,
+      "height": 126
     }
   },
   {
     "label": "ob_saco_malla__path25-90__path25-90",
     "file": "ob_saco_malla__path25-90__path25-90.png",
     "bounds": {
-      "x": 2793,
-      "y": 2091,
-      "width": 48,
-      "height": 148
+      "x": 4512,
+      "y": 1435,
+      "width": 50,
+      "height": 149
     }
   },
   {
     "label": "ob_saco_malla__path26-9__path26-9",
     "file": "ob_saco_malla__path26-9__path26-9.png",
     "bounds": {
-      "x": 2771,
-      "y": 2123,
-      "width": 94,
+      "x": 4490,
+      "y": 1468,
+      "width": 95,
       "height": 124
     }
   },
@@ -2118,60 +2198,60 @@
     "label": "ob_saco_malla__path27-3__path27-3",
     "file": "ob_saco_malla__path27-3__path27-3.png",
     "bounds": {
-      "x": 2777,
-      "y": 2187,
-      "width": 88,
-      "height": 29
+      "x": 4496,
+      "y": 1531,
+      "width": 89,
+      "height": 30
     }
   },
   {
     "label": "ob_saco_malla__path28-4__path28-4",
     "file": "ob_saco_malla__path28-4__path28-4.png",
     "bounds": {
-      "x": 2774,
-      "y": 2138,
-      "width": 89,
-      "height": 93
+      "x": 4493,
+      "y": 1482,
+      "width": 91,
+      "height": 95
     }
   },
   {
     "label": "ob_saco_malla__path29-0__path29-0",
     "file": "ob_saco_malla__path29-0__path29-0.png",
     "bounds": {
-      "x": 2778,
-      "y": 2131,
-      "width": 79,
-      "height": 45
+      "x": 4497,
+      "y": 1475,
+      "width": 81,
+      "height": 46
     }
   },
   {
     "label": "ob_saco_malla__path30-7__path30-7",
     "file": "ob_saco_malla__path30-7__path30-7.png",
     "bounds": {
-      "x": 2788,
-      "y": 2142,
-      "width": 44,
-      "height": 104
+      "x": 4507,
+      "y": 1486,
+      "width": 45,
+      "height": 106
     }
   },
   {
     "label": "ob_saco_malla__path31-5__path31-5",
     "file": "ob_saco_malla__path31-5__path31-5.png",
     "bounds": {
-      "x": 2776,
-      "y": 2140,
-      "width": 71,
-      "height": 100
+      "x": 4495,
+      "y": 1484,
+      "width": 73,
+      "height": 101
     }
   },
   {
     "label": "ob_saco_malla__path32-7__path32-7",
     "file": "ob_saco_malla__path32-7__path32-7.png",
     "bounds": {
-      "x": 2800,
-      "y": 2103,
-      "width": 55,
-      "height": 130
+      "x": 4519,
+      "y": 1447,
+      "width": 56,
+      "height": 131
     }
   },
   {
