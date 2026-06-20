@@ -86,7 +86,8 @@ export class MainMenu extends Phaser.Scene
                 _deltaX: number,
                 deltaY: number,
             ) => {
-                const zoomFactor = deltaY > 0 ? 0.9 : 1.1;
+                const zoomSensitivity = 0.008;
+                const zoomFactor = Math.exp(-deltaY * zoomSensitivity);
                 const previousZoom = this.camera.zoom;
                 const nextZoom = Phaser.Math.Clamp(this.camera.zoom * zoomFactor, minZoom, maxZoom);
 
@@ -94,12 +95,14 @@ export class MainMenu extends Phaser.Scene
                     return;
                 }
 
-                const worldPointX = this.camera.scrollX + (pointer.x / previousZoom);
-                const worldPointY = this.camera.scrollY + (pointer.y / previousZoom);
+                const worldPoint = pointer.positionToCamera(this.camera) as Phaser.Math.Vector2;
 
                 this.camera.setZoom(nextZoom);
-                this.camera.scrollX = worldPointX - (pointer.x / nextZoom);
-                this.camera.scrollY = worldPointY - (pointer.y / nextZoom);
+                this.camera.preRender();
+
+                const worldPointAfterZoom = pointer.positionToCamera(this.camera) as Phaser.Math.Vector2;
+                this.camera.scrollX += worldPoint.x - worldPointAfterZoom.x;
+                this.camera.scrollY += worldPoint.y - worldPointAfterZoom.y;
                 clampCameraScroll();
             };
 
