@@ -22,6 +22,13 @@ export interface GameStateSnapshot {
     remaining: number;
 }
 
+export interface FoundTargetResult {
+    id: string;
+    name: string;
+    found: number;
+    total: number;
+}
+
 type Listener = () => void;
 
 const normalizeTargetId = (label: string): string => {
@@ -143,8 +150,9 @@ class GameStateStore {
         this.emit();
     }
 
-    markFound(targetKey: string, amount = 1): void {
+    markFound(targetKey: string, amount = 1): FoundTargetResult | null {
         let updated = false;
+        let foundTarget: FoundTargetResult | null = null;
 
         this.targets = this.targets.map((target) => {
             const matchesTarget = target.id === targetKey || target.labels.includes(targetKey);
@@ -155,15 +163,25 @@ class GameStateStore {
 
             updated = true;
 
+            const nextFound = Math.min(target.total, target.found + amount);
+            foundTarget = {
+                id: target.id,
+                name: target.name,
+                found: nextFound,
+                total: target.total,
+            };
+
             return {
                 ...target,
-                found: Math.min(target.total, target.found + amount),
+                found: nextFound,
             };
         });
 
         if (updated) {
             this.emit();
         }
+
+        return foundTarget;
     }
 
     private emit(): void {

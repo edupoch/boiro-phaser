@@ -161,7 +161,15 @@ export class GameScene extends Phaser.Scene
                 if (sprite.label.includes('_ob_')) {
                     spriteImage.setInteractive({ useHandCursor: true });
                     spriteImage.on('pointerdown', () => {
-                        gameState.markFound(sprite.label);
+                        const foundTarget = gameState.markFound(sprite.label);
+
+                        if (foundTarget) {
+                            this.sound.play('success', { volume: 1 });
+                            EventBus.emit('object-found', foundTarget);
+                            return;
+                        }
+
+                        this.sound.play('error', { volume: 1 });
                     });
                     spriteImage.on('pointerover', () => {
 
