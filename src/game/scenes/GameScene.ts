@@ -39,6 +39,8 @@ export class GameScene extends Phaser.Scene
 
         //this.logo = this.add.image(512, 300, 'logo').setDepth(100);
 
+        this.sound.add('praia', { loop: true, volume: 0.5 }).play();
+
         this.camera = this.cameras.main;
 
         const sprites = this.cache.json.get('sprites') as PositionedSprite[];

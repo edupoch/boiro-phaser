@@ -38,6 +38,8 @@ export class Preloader extends Scene
         this.load.image('logo', 'logo.png');
         this.load.image('star', 'star.png');
 
+        this.load.audio('praia', 'audio/praia.mp3');
+
         //  Load images from sprites.json
         this.load.json('sprites', 'sprites/sprites.json');
 
