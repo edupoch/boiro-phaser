@@ -39,6 +39,8 @@ export class GameScene extends Phaser.Scene
 
         //this.logo = this.add.image(512, 300, 'logo').setDepth(100);
 
+        this.input.setDefaultCursor('grab');
+
         this.sound.add('praia', { loop: true, volume: 0.5 }).play();
 
         this.camera = this.cameras.main;
@@ -87,6 +89,14 @@ export class GameScene extends Phaser.Scene
                 clampCameraScroll();
             };
 
+            const handlePointerDown = () => {
+                this.input.setDefaultCursor('grabbing');
+            };
+
+            const handlePointerUp = () => {
+                this.input.setDefaultCursor('grab');
+            };
+
             const handleWheel = (
                 pointer: Phaser.Input.Pointer,
                 _gameObjects: Phaser.GameObjects.GameObject[],
@@ -114,9 +124,13 @@ export class GameScene extends Phaser.Scene
             };
 
             this.input.on('pointermove', handlePointerMove);
+            this.input.on('pointerdown', handlePointerDown);
+            this.input.on('pointerup', handlePointerUp);
             this.input.on('wheel', handleWheel);
             this.events.once('shutdown', () => {
                 this.input.off('pointermove', handlePointerMove);
+                this.input.off('pointerdown', handlePointerDown);
+                this.input.off('pointerup', handlePointerUp);
                 this.input.off('wheel', handleWheel);
             });
 
@@ -190,7 +204,15 @@ export class GameScene extends Phaser.Scene
             this.spriteTree = sprites;
             sprites.forEach(renderSpriteNode);
 
-            this.animateElements(['*barco*', '*barca*', '*velero*', '*mono_flotador*', '*kayaks*'], (image) => {
+            this.animateElements([
+                '*barco*', 
+                '*barca*', 
+                '*velero*', 
+                '*mono_flotador*', 
+                '*kayaks*', 
+                '*ob_boya*', 
+                '*ob_faro*'
+            ], (image) => {
                 this.tweens.add({
                     targets: image,
                     y: image.y - 20,
@@ -201,7 +223,12 @@ export class GameScene extends Phaser.Scene
                 });
             });
 
-            this.animateElements('*mov_arbol*', (image) => {
+            this.animateElements([
+                '*mov_arbol*', 
+                '*palmera*', 
+                '*roble*', 
+                '*arbol*'
+            ], (image) => {
                 image.setOrigin(0.5, 1);
                 image.y += image.displayHeight / 2;
 
@@ -259,7 +286,8 @@ export class GameScene extends Phaser.Scene
                 }
             }
 
-            if (term.includes('*') || term.includes('?')) {
+            if (term.includes(
+                '*') || term.includes('?')) {
                 const wildcardRegex = new RegExp(
                     `^${escapeRegex(term).replace(/\\\*/g, '.*').replace(/\\\?/g, '.')}$`,
                 );
