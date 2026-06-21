@@ -159,6 +159,9 @@ export class GameScene extends Phaser.Scene
                 if (sprite.label.includes('_ob_')) {
                     spriteImage.setInteractive({ useHandCursor: true });
                     spriteImage.on('pointerover', () => {
+
+                        this.sound.play('hover_' + Phaser.Math.Between(1, 4), { volume: 0.5 });
+
                         if (spriteImage.getData('springAnimating')) {
                             return;
                         }

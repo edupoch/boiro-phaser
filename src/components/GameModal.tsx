@@ -18,8 +18,19 @@ const tabsList: Tab[] = [
 function GameModal() {
   const [activeTab, setActiveTab] = useState<TabId>('tab-inicio');
 
+  const playClickSound = () => {
+    const audio = new Audio('/assets/audio/click.mp3');
+    audio.play();
+  };
+
   const handleComezamos = () => {
     setActiveTab('tab-xogo1');
+    playClickSound();
+  };
+
+  const handleTabClick = (tabId: TabId) => {
+    setActiveTab(tabId);
+    playClickSound();
   };
 
   return (
@@ -29,7 +40,7 @@ function GameModal() {
         {tabsList.map((tab) => (
           <button
             key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
+            onClick={() => handleTabClick(tab.id)}
             className={`rounded-2xl px-4 py-2 text-sm font-bold transition-all ${
               activeTab === tab.id
                 ? `${tab.color} scale-105 text-white opacity-100 shadow-md`
@@ -41,6 +52,7 @@ function GameModal() {
         ))}
 
         <button
+          onClick={playClickSound}
           className="ml-auto rounded-2xl bg-sky-100 px-3 py-2 text-sky-700 transition-all hover:bg-sky-200"
           aria-label="Configuración"
         >

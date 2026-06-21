@@ -39,6 +39,11 @@ export class Preloader extends Scene
         this.load.image('star', 'star.png');
 
         this.load.audio('praia', 'audio/praia.mp3');
+        this.load.audio('hover_1', 'audio/hover_1.mp3');
+        this.load.audio('hover_2', 'audio/hover_2.mp3');
+        this.load.audio('hover_3', 'audio/hover_3.mp3');
+        this.load.audio('hover_4', 'audio/hover_4.mp3');
+        this.load.audio('click', 'audio/click.mp3');
 
         //  Load images from sprites.json
         this.load.json('sprites', 'sprites/sprites.json');
