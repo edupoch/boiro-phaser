@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { gameState, type GameStateSnapshot } from '../game/GameState';
 
 type TabId = 'tab-inicio' | 'tab-xogo1' | 'tab-xogo2' | 'tab-xogo3';
 
@@ -17,6 +18,15 @@ const tabsList: Tab[] = [
 
 function GameModal() {
   const [activeTab, setActiveTab] = useState<TabId>('tab-inicio');
+  const [gameSnapshot, setGameSnapshot] = useState<GameStateSnapshot>(() => gameState.getSnapshot());
+
+  useEffect(() => {
+    setGameSnapshot(gameState.getSnapshot());
+
+    return gameState.subscribe(() => {
+      setGameSnapshot(gameState.getSnapshot());
+    });
+  }, []);
 
   const playClickSound = () => {
     const audio = new Audio('/assets/audio/click.mp3');
@@ -178,8 +188,28 @@ function GameModal() {
 
         {/* Pestaña XOGO 1 */}
         {activeTab === 'tab-xogo1' && (
-          <div className="text-center">
-            <p className="text-sky-600 font-semibold">Xogo 1 - MiniGame</p>
+          <div className="space-y-4 text-left">
+            <div className="text-center">
+              <p className="text-sky-600 font-semibold">Atopa os obxectos!</p>
+              <p className="mt-1 text-sm text-sky-500">
+                Quédanche {gameSnapshot.remaining} de {gameSnapshot.totalToFind}
+              </p>
+            </div>
+
+            <div className="max-h-56 overflow-y-auto rounded-2xl bg-sky-50 p-4">
+              <ul className="space-y-2">
+                {gameSnapshot.targets.map((target) => (
+                  <li key={target.id} className="flex items-center justify-between gap-3 rounded-xl bg-white px-3 py-2 shadow-sm">
+                    <div>
+                      <p className="text-sm font-bold text-sky-800">{target.name}</p>
+                    </div>
+                    <span className="text-sm font-semibold text-sky-600">
+                      {target.found}/{target.total}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         )}
 
