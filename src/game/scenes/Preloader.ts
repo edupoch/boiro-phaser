@@ -15,6 +15,12 @@ export class Preloader extends Scene
         const centerX = this.scale.width / 2;
         const centerY = this.scale.height / 2;
 
+        this.add.text(centerX, centerY - 40, 'Cargando recursos...', {
+            fontFamily: 'Plus Jakarta Sans',
+            fontSize: '24px',
+            color: '#028af8',
+        }).setOrigin(0.5);
+
         //  A simple progress bar. This is the outline of the bar.
         this.add.rectangle(centerX, centerY, 468, 32).setStrokeStyle(1, 0x028af8);
 
@@ -25,7 +31,7 @@ export class Preloader extends Scene
         this.load.on('progress', (progress: number) => {
 
             //  Update the progress bar (our bar is 464px wide, so 100% = 464px)
-            bar.width = 4 + (460 * progress);
+            bar.width = 4 + (455 * progress);
 
         });
     }

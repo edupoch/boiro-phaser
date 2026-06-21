@@ -173,7 +173,7 @@ export class GameScene extends Phaser.Scene
                     });
                     spriteImage.on('pointerover', () => {
 
-                        this.sound.play('hover_' + Phaser.Math.Between(1, 4), { volume: 0.5 });
+                        this.sound.play('hover_' + Phaser.Math.Between(1, 4), { volume: 0.25 });
 
                         if (spriteImage.getData('springAnimating')) {
                             return;

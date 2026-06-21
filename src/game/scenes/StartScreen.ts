@@ -14,7 +14,7 @@ export class StartScreen extends Scene
 
         const startButtonElement = document.createElement('button');
         startButtonElement.type = 'button';
-        startButtonElement.textContent = 'Comezar';
+        startButtonElement.textContent = 'Comezar xogo';
         startButtonElement.className = 'rounded-2xl bg-amber-400 px-16 py-6 text-5xl font-extrabold text-white shadow-lg hover:bg-amber-300';
 
         this.add.dom(centerX, centerY, startButtonElement)
