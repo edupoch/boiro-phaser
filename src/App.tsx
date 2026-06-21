@@ -1,6 +1,8 @@
 import { useRef, useState } from 'react';
 import { IRefPhaserGame, PhaserGame } from './PhaserGame';
 import { MainMenu } from './game/scenes/MainMenu';
+import ObjectFoundModal from './components/ObjectFoundModal';
+import GameModal from './components/GameModal';
 
 function App()
 {
@@ -27,7 +29,9 @@ function App()
 
     return (
         <div id="app">
-            <PhaserGame ref={phaserRef} currentActiveScene={currentScene} />            
+            <PhaserGame ref={phaserRef} currentActiveScene={currentScene} />
+            <ObjectFoundModal isOpen={false} onClose={() => console.log('Modal closed')} />
+            <GameModal />
         </div>
     )
 }
