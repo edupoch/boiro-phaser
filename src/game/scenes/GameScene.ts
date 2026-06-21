@@ -216,7 +216,7 @@ export class GameScene extends Phaser.Scene
                 this.tweens.add({
                     targets: image,
                     y: image.y - 20,
-                    duration: 2500,
+                    duration: Phaser.Math.Between(2000, 4000),
                     ease: 'Sine.inOut',
                     yoyo: true,
                     repeat: -1,
@@ -227,7 +227,8 @@ export class GameScene extends Phaser.Scene
                 '*mov_arbol*', 
                 '*palmera*', 
                 '*roble*', 
-                '*arbol*'
+                '*arbol*',
+                '*sombrilla*'
             ], (image) => {
                 image.setOrigin(0.5, 1);
                 image.y += image.displayHeight / 2;
@@ -235,7 +236,7 @@ export class GameScene extends Phaser.Scene
                 this.tweens.add({
                     targets: image,
                     angle: { from: -1, to: 1 },
-                    duration: 2800,
+                    duration: Phaser.Math.Between(2000, 4000),
                     ease: 'Sine.inOut',
                     yoyo: true,
                     repeat: -1,
