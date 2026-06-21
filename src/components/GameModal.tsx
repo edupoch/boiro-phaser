@@ -156,7 +156,7 @@ function GameModal() {
                     onClick={handleComezamos}
                     className="mt-6 rounded-2xl bg-amber-400 px-8 py-3 text-lg font-extrabold text-white shadow-lg transition-transform hover:scale-105 hover:bg-amber-300"
                   >
-                    Comezemos!
+                    Comecemos!
                   </button>
                 </div>
               </div>

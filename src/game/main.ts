@@ -1,7 +1,7 @@
 import { Boot } from './scenes/Boot';
 import { GameOver } from './scenes/GameOver';
-import { Game as MainGame } from './scenes/Game';
-import { MainMenu } from './scenes/MainMenu';
+import { GameScene } from './scenes/GameScene';
+import { StartScreen } from './scenes/StartScreen';
 import { AUTO, Game, Scale } from 'phaser';
 import { Preloader } from './scenes/Preloader';
 
@@ -17,11 +17,14 @@ const config: Phaser.Types.Core.GameConfig = {
         mode: Scale.RESIZE,
         autoCenter: Scale.CENTER_BOTH
     },
+    dom: {
+        createContainer: true,
+    },
     scene: [
         Boot,
         Preloader,
-        MainMenu,
-        MainGame,
+        StartScreen,
+        GameScene,
         GameOver
     ]
 };

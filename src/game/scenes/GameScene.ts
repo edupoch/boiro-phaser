@@ -17,7 +17,7 @@ type PositionedSprite = {
     childen?: PositionedSprite[];
 };
 
-export class MainMenu extends Phaser.Scene
+export class GameScene extends Phaser.Scene
 {
     background: Phaser.GameObjects.Image;
     logo: Phaser.GameObjects.Image;
@@ -30,7 +30,7 @@ export class MainMenu extends Phaser.Scene
 
     constructor ()
     {
-        super('MainMenu');
+        super('Game');
     }
 
     create ()
