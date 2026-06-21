@@ -8,6 +8,7 @@ function App()
 {
     //  References to the PhaserGame component (game and scene are exposed)
     const phaserRef = useRef<IRefPhaserGame | null>(null);
+    const [isMainMenuScene, setIsMainMenuScene] = useState(false);
 
     const changeScene = () => {
 
@@ -24,14 +25,14 @@ function App()
 
     // Event emitted from the PhaserGame component
     const currentScene = (scene: Phaser.Scene) => {
-
+        setIsMainMenuScene(scene.scene.key === 'MainMenu');
     }
 
     return (
         <div id="app">
             <PhaserGame ref={phaserRef} currentActiveScene={currentScene} />
             <ObjectFoundModal isOpen={false} onClose={() => console.log('Modal closed')} />
-            <GameModal />
+            {isMainMenuScene && <GameModal />}
         </div>
     )
 }
