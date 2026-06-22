@@ -221,7 +221,6 @@ export class GameScene extends Phaser.Scene
             sprites.forEach(renderSpriteNode);
 
             this.animateElements([
-                '*barco*', 
                 '*barca*', 
                 '*velero*', 
                 '*mono_flotador*', 
@@ -233,6 +232,23 @@ export class GameScene extends Phaser.Scene
                     targets: image,
                     y: image.y - 20,
                     duration: Phaser.Math.Between(2000, 4000),
+                    ease: 'Sine.inOut',
+                    yoyo: true,
+                    repeat: -1,
+                });
+            });
+
+            this.animateElements([
+                '*barco*', 
+                'Puerto__ob_bigbag__g23-5',
+                'Puerto__ob_cubo__g1327-4-3',
+                'Mar__ob_cuerda__g1630-5',
+                'Mar__ob_pala__g62-3'
+            ], (image) => {
+                this.tweens.add({
+                    targets: image,
+                    y: image.y - 20,
+                    duration: 3600,
                     ease: 'Sine.inOut',
                     yoyo: true,
                     repeat: -1,

@@ -16,8 +16,8 @@ export class Preloader extends Scene
         const centerY = this.scale.height / 2;
 
         this.add.text(centerX, centerY - 40, 'Cargando recursos...', {
-            fontFamily: 'Plus Jakarta Sans',
-            fontSize: '24px',
+            fontFamily: 'monospace',
+            fontSize: '16px',
             color: '#028af8',
         }).setOrigin(0.5);
 
