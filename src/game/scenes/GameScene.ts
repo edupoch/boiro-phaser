@@ -11,10 +11,15 @@ type SpriteBounds = {
 
 type PositionedSprite = {
     label: string;
-    file?: string;
+    frame?: string;
     bounds: SpriteBounds | null;
     children?: PositionedSprite[];
     childen?: PositionedSprite[];
+};
+
+type AtlasData = {
+    frameToAtlasKey?: Record<string, string>;
+    sprites?: PositionedSprite[];
 };
 
 export class GameScene extends Phaser.Scene
@@ -46,7 +51,9 @@ export class GameScene extends Phaser.Scene
 
         this.camera = this.cameras.main;
 
-        const sprites = this.cache.json.get('sprites') as PositionedSprite[];
+        const atlasData = this.cache.json.get('sprites-atlas-index') as AtlasData | undefined;
+        const frameToAtlasKey = atlasData?.frameToAtlasKey ?? {};
+        const sprites = Array.isArray(atlasData?.sprites) ? atlasData.sprites : [];
         if (Array.isArray(sprites)) {
             // Base artwork size from escena.svg viewBox.
             const sourceWidth = 6804;
@@ -145,7 +152,7 @@ export class GameScene extends Phaser.Scene
                     return;
                 }
 
-                if (!sprite.bounds || !sprite.file || !sprite.label) {
+                if (!sprite.bounds || !sprite.label) {
                     return;
                 }
 
@@ -153,7 +160,14 @@ export class GameScene extends Phaser.Scene
                 const centerX = (bounds.x + bounds.width / 2) * scaleX;
                 const centerY = (bounds.y + bounds.height / 2) * scaleX;
 
-                const spriteImage = this.add.image(centerX, centerY, sprite.label).setDepth(50);
+                const frameKey = sprite.frame ?? sprite.label;
+                const atlasTextureKey = frameToAtlasKey[frameKey];
+
+                if (!atlasTextureKey || !this.textures.exists(atlasTextureKey)) {
+                    return;
+                }
+
+                const spriteImage = this.add.image(centerX, centerY, atlasTextureKey, frameKey).setDepth(50);
                 spriteImage.setDisplaySize(bounds.width * scaleX, bounds.height * scaleX);
                 this.spriteImageMap.set(sprite.label, spriteImage);
 

@@ -1,10 +1,14 @@
-import spriteCatalog from '../../public/assets/sprites/sprites.json';
+import atlasCatalog from '../../public/assets/sprites/atlas-index.json';
 import { getSpriteLabelText } from './SpriteLabelText.ts';
 
 type SpriteNode = {
     label?: string;
     children?: SpriteNode[];
     childen?: SpriteNode[];
+};
+
+type AtlasCatalog = {
+    sprites?: SpriteNode[];
 };
 
 export interface GameTargetState {
@@ -109,7 +113,19 @@ const pickRandomTargets = (targets: GameTargetState[], count: number): GameTarge
     return shuffledTargets.slice(0, Math.min(count, shuffledTargets.length));
 };
 
-const initialTargets = collectTargets(spriteCatalog as SpriteNode[]);
+const resolveSpriteNodes = (catalog: AtlasCatalog | SpriteNode[]): SpriteNode[] => {
+    if (Array.isArray(catalog)) {
+        return catalog;
+    }
+
+    if (Array.isArray(catalog?.sprites)) {
+        return catalog.sprites;
+    }
+
+    return [];
+};
+
+const initialTargets = collectTargets(resolveSpriteNodes(atlasCatalog as AtlasCatalog));
 
 const buildSnapshot = (targets: GameTargetState[]): GameStateSnapshot => {
     const totalToFind = targets.reduce((sum, target) => sum + target.total, 0);

@@ -53,31 +53,7 @@ export class Preloader extends Scene
         this.load.audio('success', 'audio/success.mp3');
         this.load.audio('error', 'audio/error.mp3');
 
-        //  Load images from sprites.json
-        this.load.json('sprites', 'sprites/sprites.json');
-
-        this.load.on('filecomplete-json-sprites', () => {
-            const sprites = this.cache.json.get('sprites');
-
-            const loadSpriteNode = (sprite: any) => {
-                if (!sprite) {
-                    return;
-                }
-
-                if (Array.isArray(sprite.children)) {
-                    sprite.children.forEach(loadSpriteNode);
-                    return;
-                }
-
-                if (sprite.file && sprite.label) {
-                    this.load.image(sprite.label, `sprites/${sprite.file}`);
-                }
-            };
-
-            if (Array.isArray(sprites)) {
-                sprites.forEach(loadSpriteNode);
-            }
-        });
+        this.load.json('sprites-atlas-index', 'sprites/atlas-index.json');
     }
 
     create ()
@@ -85,7 +61,24 @@ export class Preloader extends Scene
         //  When all the assets have loaded, it's often worth creating global objects here that the rest of the game can use.
         //  For example, you can define global animations here, so we can use them in other scenes.
 
-        //  Move to StartScreen before opening Game.
-        this.scene.start('StartScreen');
+        const atlasIndex = this.cache.json.get('sprites-atlas-index') as {
+            atlases?: Array<{ key: string; image: string; data: string }>;
+        } | undefined;
+        const atlases = Array.isArray(atlasIndex?.atlases) ? atlasIndex.atlases : [];
+
+        if (atlases.length === 0) {
+            this.scene.start('StartScreen');
+            return;
+        }
+
+        this.load.once('complete', () => {
+            this.scene.start('StartScreen');
+        });
+
+        atlases.forEach((atlas) => {
+            this.load.atlas(atlas.key, `sprites/${atlas.image}`, `sprites/${atlas.data}`);
+        });
+
+        this.load.start();
     }
 }

@@ -1,0 +1,42 @@
+{
+  "frames": {
+    "patron__path10-0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 2048,
+        "h": 1126
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 2048,
+        "h": 1126
+      },
+      "sourceSize": {
+        "w": 2048,
+        "h": 1126
+      }
+    }
+  },
+  "meta": {
+    "app": "boiro split atlas generator",
+    "version": "1.0",
+    "image": "atlas-10.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2048,
+      "h": 2048
+    },
+    "scale": "1"
+  },
+  "sprites": [
+    {
+      "label": "patron__path10-0",
+      "frame": "patron__path10-0",
+      "bounds": null
+    }
+  ]
+}

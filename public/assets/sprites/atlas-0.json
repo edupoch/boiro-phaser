@@ -1,0 +1,52 @@
+{
+  "frames": {
+    "puerto_viejo__muro__path616": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 1519,
+        "h": 2048
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1519,
+        "h": 2048
+      },
+      "sourceSize": {
+        "w": 1519,
+        "h": 2048
+      }
+    }
+  },
+  "meta": {
+    "app": "boiro split atlas generator",
+    "version": "1.0",
+    "image": "atlas-0.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2048,
+      "h": 2048
+    },
+    "scale": "1"
+  },
+  "sprites": [
+    {
+      "label": "puerto_viejo",
+      "children": [
+        {
+          "label": "puerto_viejo__muro__path616",
+          "frame": "puerto_viejo__muro__path616",
+          "bounds": {
+            "x": 4921,
+            "y": 1139,
+            "width": 1882,
+            "height": 2536
+          }
+        }
+      ]
+    }
+  ]
+}

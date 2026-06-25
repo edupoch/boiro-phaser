@@ -5,6 +5,9 @@ import sharp from 'sharp';
 
 const inputFile = process.argv[2];
 const outputDir = process.argv[3] ?? './output';
+const isTestMode = process.argv.includes('--test')
+  || process.env.npm_config_test === 'true'
+  || process.env.npm_config_test === '1';
 
 const groupsToProcess = ['arboles'];
 
@@ -55,6 +58,9 @@ const defs = $('defs').toString();
 const sharedSvgContent = [styles, defs].filter(Boolean).join('\n');
 
 const sprites = [];
+const atlasSprites = [];
+const atlasPadding = 2;
+const maxAtlasSize = 2048;
 
 const sanitizeSegment = (value) => value
   .replace(/[\\/]/g, '_')
@@ -175,18 +181,366 @@ const createPathSprite = async (el) => {
   </svg>`
     : isolated;
 
-  console.log('\tSaving PNG');
-  const outputPath = path.join(outputDir, `${fileName}.png`);
+  console.log('\tRendering sprite');
   const image = sharp(Buffer.from(finalSvg));
-  await image.clone().png().toFile(outputPath);
+  const { data: pngBuffer, info } = await image
+    .png()
+    .toBuffer({ resolveWithObject: true });
 
-  console.log(`\t✓ ${outputPath}`);
+  atlasSprites.push({
+    key: fileName,
+    buffer: pngBuffer,
+    width: info.width,
+    height: info.height,
+    bounds,
+    dedicatedAtlas: false,
+  });
+
+  if (info.width > maxAtlasSize || info.height > maxAtlasSize) {
+    const fitScale = Math.min(maxAtlasSize / info.width, maxAtlasSize / info.height);
+    const resizedWidth = Math.max(1, Math.floor(info.width * fitScale));
+    const resizedHeight = Math.max(1, Math.floor(info.height * fitScale));
+    const resizedBuffer = await sharp(pngBuffer)
+      .resize({
+        width: resizedWidth,
+        height: resizedHeight,
+        fit: 'fill',
+      })
+      .png()
+      .toBuffer();
+
+    atlasSprites[atlasSprites.length - 1] = {
+      key: fileName,
+      buffer: resizedBuffer,
+      width: resizedWidth,
+      height: resizedHeight,
+      bounds,
+      dedicatedAtlas: true,
+    };
+
+    console.log(
+      `\t! oversized sprite adapted ${fileName}: ${info.width}x${info.height} -> ${resizedWidth}x${resizedHeight} (atlas dedicado)`,
+    );
+  }
+
+  console.log(`\t✓ queued ${fileName} (${info.width}x${info.height})`);
 
   return {
     label: fileName,
-    file: `${fileName}.png`,
+    frame: fileName,
     bounds,
   };
+};
+
+const nextPowerOfTwo = (value) => {
+  if (value <= 1) {
+    return 1;
+  }
+
+  return 2 ** Math.ceil(Math.log2(value));
+};
+
+const packSprites = (inputSprites, atlasWidth, padding) => {
+  const packNode = (node, requiredWidth, requiredHeight) => {
+    if (!node) {
+      return null;
+    }
+
+    if (node.used) {
+      return packNode(node.right, requiredWidth, requiredHeight)
+        ?? packNode(node.down, requiredWidth, requiredHeight);
+    }
+
+    if (requiredWidth > node.w || requiredHeight > node.h) {
+      return null;
+    }
+
+    node.used = true;
+    node.down = {
+      x: node.x,
+      y: node.y + requiredHeight,
+      w: node.w,
+      h: node.h - requiredHeight,
+    };
+    node.right = {
+      x: node.x + requiredWidth,
+      y: node.y,
+      w: node.w - requiredWidth,
+      h: requiredHeight,
+    };
+
+    return node;
+  };
+
+  return (atlasHeight) => {
+    const root = {
+      x: 0,
+      y: 0,
+      w: atlasWidth,
+      h: atlasHeight,
+    };
+
+    const placements = [];
+    let usedWidth = 0;
+    let usedHeight = 0;
+
+    for (const sprite of inputSprites) {
+      const requiredWidth = sprite.width + padding;
+      const requiredHeight = sprite.height + padding;
+      const node = packNode(root, requiredWidth, requiredHeight);
+
+      if (!node) {
+        return null;
+      }
+
+      placements.push({
+        ...sprite,
+        x: node.x,
+        y: node.y,
+      });
+
+      usedWidth = Math.max(usedWidth, node.x + sprite.width);
+      usedHeight = Math.max(usedHeight, node.y + sprite.height);
+    }
+
+    return {
+      placements,
+      usedWidth,
+      usedHeight,
+    };
+  };
+};
+
+const findBestLayout = (inputSprites, padding = atlasPadding) => {
+  if (!inputSprites.length) {
+    return null;
+  }
+
+  const widestSprite = inputSprites.reduce((max, sprite) => Math.max(max, sprite.width), 0);
+  const tallestSprite = inputSprites.reduce((max, sprite) => Math.max(max, sprite.height), 0);
+  const widthStart = nextPowerOfTwo(widestSprite);
+  const heightStart = nextPowerOfTwo(tallestSprite);
+
+  let bestLayout = null;
+
+  for (let width = widthStart; width <= maxAtlasSize; width *= 2) {
+    const effectivePadding = inputSprites.length <= 1 ? 0 : padding;
+    const packAtHeight = packSprites(inputSprites, width, effectivePadding);
+
+    for (let height = heightStart; height <= maxAtlasSize; height *= 2) {
+      const packed = packAtHeight(height);
+      if (!packed) {
+        continue;
+      }
+
+      const area = width * height;
+      if (!bestLayout || area < bestLayout.area) {
+        bestLayout = {
+          width,
+          height,
+          placements: packed.placements,
+          area,
+        };
+      }
+
+      break;
+    }
+  }
+
+  return bestLayout;
+};
+
+const filterSpriteTreeByFrames = (nodes, frameSet) => {
+  const filteredNodes = [];
+
+  for (const node of nodes) {
+    const children = Array.isArray(node.children)
+      ? node.children
+      : (Array.isArray(node.childen) ? node.childen : []);
+
+    if (children.length > 0) {
+      const filteredChildren = filterSpriteTreeByFrames(children, frameSet);
+      if (filteredChildren.length > 0) {
+        filteredNodes.push({
+          label: node.label,
+          children: filteredChildren,
+        });
+      }
+
+      continue;
+    }
+
+    if (node.frame && frameSet.has(node.frame)) {
+      filteredNodes.push(node);
+    }
+  }
+
+  return filteredNodes;
+};
+
+const buildAtlases = async () => {
+  if (atlasSprites.length === 0) {
+    throw new Error('No hay sprites para generar atlas.');
+  }
+
+  const sortedSprites = [...atlasSprites].sort((a, b) => {
+    const maxDiff = Math.max(b.width, b.height) - Math.max(a.width, a.height);
+    if (maxDiff !== 0) {
+      return maxDiff;
+    }
+
+    return b.height - a.height;
+  });
+
+  const widestSprite = sortedSprites.reduce((max, sprite) => Math.max(max, sprite.width), 0);
+  const tallestSprite = sortedSprites.reduce((max, sprite) => Math.max(max, sprite.height), 0);
+
+  if (widestSprite > maxAtlasSize || tallestSprite > maxAtlasSize) {
+    throw new Error(
+      `Hay sprites que exceden ${maxAtlasSize}px incluso tras adaptación (max ancho: ${widestSprite}, max alto: ${tallestSprite}).`,
+    );
+  }
+
+  const atlasPages = [];
+  const dedicatedSprites = sortedSprites.filter((sprite) => sprite.dedicatedAtlas);
+  let remainingSprites = sortedSprites.filter((sprite) => !sprite.dedicatedAtlas);
+  const atlasManifest = {
+    atlases: [],
+    frameToAtlasKey: {},
+    sprites,
+  };
+
+  for (const sprite of dedicatedSprites) {
+    const dedicatedLayout = findBestLayout([sprite], 0);
+    if (!dedicatedLayout) {
+      throw new Error(`No se pudo calcular layout para sprite dedicado "${sprite.key}".`);
+    }
+
+    atlasPages.push({
+      sprites: [sprite],
+      layout: dedicatedLayout,
+    });
+  }
+
+  while (remainingSprites.length > 0) {
+    const pageSprites = [];
+    const nextRemainingSprites = [];
+
+    for (const sprite of remainingSprites) {
+      const candidateSprites = [...pageSprites, sprite];
+      const canFitInCurrentPage = !!findBestLayout(candidateSprites);
+
+      if (canFitInCurrentPage) {
+        pageSprites.push(sprite);
+      } else {
+        nextRemainingSprites.push(sprite);
+      }
+    }
+
+    if (pageSprites.length === 0) {
+      throw new Error('No se pudo crear una página de atlas válida con los sprites restantes.');
+    }
+
+    const pageLayout = findBestLayout(pageSprites);
+    if (!pageLayout) {
+      throw new Error('No se pudo calcular un layout válido para una página de atlas.');
+    }
+
+    atlasPages.push({
+      sprites: pageSprites,
+      layout: pageLayout,
+    });
+
+    remainingSprites = nextRemainingSprites;
+  }
+
+  for (let pageIndex = 0; pageIndex < atlasPages.length; pageIndex += 1) {
+    const page = atlasPages[pageIndex];
+    const pageName = `atlas-${pageIndex}`;
+    const textureKey = `sprites-atlas-${pageIndex}`;
+    const atlasPngPath = path.join(outputDir, `${pageName}.png`);
+    const atlasJsonPath = path.join(outputDir, `${pageName}.json`);
+
+    await sharp({
+      create: {
+        width: page.layout.width,
+        height: page.layout.height,
+        channels: 4,
+        background: { r: 0, g: 0, b: 0, alpha: 0 },
+      },
+    })
+      .composite(
+        page.layout.placements.map((sprite) => ({
+          input: sprite.buffer,
+          left: sprite.x,
+          top: sprite.y,
+        })),
+      )
+      .png()
+      .toFile(atlasPngPath);
+
+    const atlasFrames = Object.fromEntries(
+      page.layout.placements.map((sprite) => [
+        sprite.key,
+        {
+          frame: {
+            x: sprite.x,
+            y: sprite.y,
+            w: sprite.width,
+            h: sprite.height,
+          },
+          rotated: false,
+          trimmed: false,
+          spriteSourceSize: {
+            x: 0,
+            y: 0,
+            w: sprite.width,
+            h: sprite.height,
+          },
+          sourceSize: {
+            w: sprite.width,
+            h: sprite.height,
+          },
+        },
+      ]),
+    );
+
+    const pageFrameSet = new Set(page.layout.placements.map((sprite) => sprite.key));
+    const atlasData = {
+      frames: atlasFrames,
+      meta: {
+        app: 'boiro split atlas generator',
+        version: '1.0',
+        image: `${pageName}.png`,
+        format: 'RGBA8888',
+        size: {
+          w: page.layout.width,
+          h: page.layout.height,
+        },
+        scale: '1',
+      },
+      sprites: filterSpriteTreeByFrames(sprites, pageFrameSet),
+    };
+
+    fs.writeFileSync(atlasJsonPath, `${JSON.stringify(atlasData, null, 2)}\n`, 'utf-8');
+
+    atlasManifest.atlases.push({
+      key: textureKey,
+      image: `${pageName}.png`,
+      data: `${pageName}.json`,
+    });
+
+    for (const sprite of page.layout.placements) {
+      atlasManifest.frameToAtlasKey[sprite.key] = textureKey;
+    }
+
+    console.log(`✓ ${atlasPngPath}`);
+    console.log(`✓ ${atlasJsonPath}`);
+  }
+
+  const atlasIndexPath = path.join(outputDir, 'atlas-index.json');
+  fs.writeFileSync(atlasIndexPath, `${JSON.stringify(atlasManifest, null, 2)}\n`, 'utf-8');
+  console.log(`✓ ${atlasIndexPath}`);
 };
 
 const processNode = async (el, depth = 0) => {
@@ -245,8 +599,15 @@ const processNode = async (el, depth = 0) => {
   return null;
 };
 
-const processRoot = rootSvg;
-// const processRoot = $("#Juegos");
+const processRoot = isTestMode ? $('#Juegos').first() : rootSvg;
+
+if (isTestMode && processRoot.length === 0) {
+  throw new Error('Modo test activo, pero no se encontro <g id="Juegos"> en el SVG.');
+}
+
+if (isTestMode) {
+  console.log('Modo test activo: procesando solo los hijos de <g id="Juegos">.');
+}
 
 for (const child of processRoot.children().toArray()) {
   const nodeData = await processNode(child, 0);
@@ -255,6 +616,4 @@ for (const child of processRoot.children().toArray()) {
   }
 }
 
-const spritesPath = path.join(outputDir, 'sprites.json');
-fs.writeFileSync(spritesPath, `${JSON.stringify(sprites, null, 2)}\n`, 'utf-8');
-console.log(`✓ ${spritesPath}`);
+await buildAtlases();
