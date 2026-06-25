@@ -19,2916 +19,560 @@
       "key": "sprites-atlas-3",
       "image": "atlas-3.png",
       "data": "atlas-3.json"
-    },
-    {
-      "key": "sprites-atlas-4",
-      "image": "atlas-4.png",
-      "data": "atlas-4.json"
-    },
-    {
-      "key": "sprites-atlas-5",
-      "image": "atlas-5.png",
-      "data": "atlas-5.json"
-    },
-    {
-      "key": "sprites-atlas-6",
-      "image": "atlas-6.png",
-      "data": "atlas-6.json"
-    },
-    {
-      "key": "sprites-atlas-7",
-      "image": "atlas-7.png",
-      "data": "atlas-7.json"
-    },
-    {
-      "key": "sprites-atlas-8",
-      "image": "atlas-8.png",
-      "data": "atlas-8.json"
-    },
-    {
-      "key": "sprites-atlas-9",
-      "image": "atlas-9.png",
-      "data": "atlas-9.json"
-    },
-    {
-      "key": "sprites-atlas-10",
-      "image": "atlas-10.png",
-      "data": "atlas-10.json"
-    },
-    {
-      "key": "sprites-atlas-11",
-      "image": "atlas-11.png",
-      "data": "atlas-11.json"
-    },
-    {
-      "key": "sprites-atlas-12",
-      "image": "atlas-12.png",
-      "data": "atlas-12.json"
-    },
-    {
-      "key": "sprites-atlas-13",
-      "image": "atlas-13.png",
-      "data": "atlas-13.json"
-    },
-    {
-      "key": "sprites-atlas-14",
-      "image": "atlas-14.png",
-      "data": "atlas-14.json"
-    },
-    {
-      "key": "sprites-atlas-15",
-      "image": "atlas-15.png",
-      "data": "atlas-15.json"
-    },
-    {
-      "key": "sprites-atlas-16",
-      "image": "atlas-16.png",
-      "data": "atlas-16.json"
-    },
-    {
-      "key": "sprites-atlas-17",
-      "image": "atlas-17.png",
-      "data": "atlas-17.json"
-    },
-    {
-      "key": "sprites-atlas-18",
-      "image": "atlas-18.png",
-      "data": "atlas-18.json"
-    },
-    {
-      "key": "sprites-atlas-19",
-      "image": "atlas-19.png",
-      "data": "atlas-19.json"
-    },
-    {
-      "key": "sprites-atlas-20",
-      "image": "atlas-20.png",
-      "data": "atlas-20.json"
-    },
-    {
-      "key": "sprites-atlas-21",
-      "image": "atlas-21.png",
-      "data": "atlas-21.json"
-    },
-    {
-      "key": "sprites-atlas-22",
-      "image": "atlas-22.png",
-      "data": "atlas-22.json"
-    },
-    {
-      "key": "sprites-atlas-23",
-      "image": "atlas-23.png",
-      "data": "atlas-23.json"
-    },
-    {
-      "key": "sprites-atlas-24",
-      "image": "atlas-24.png",
-      "data": "atlas-24.json"
-    },
-    {
-      "key": "sprites-atlas-25",
-      "image": "atlas-25.png",
-      "data": "atlas-25.json"
-    },
-    {
-      "key": "sprites-atlas-26",
-      "image": "atlas-26.png",
-      "data": "atlas-26.json"
-    },
-    {
-      "key": "sprites-atlas-27",
-      "image": "atlas-27.png",
-      "data": "atlas-27.json"
-    },
-    {
-      "key": "sprites-atlas-28",
-      "image": "atlas-28.png",
-      "data": "atlas-28.json"
-    },
-    {
-      "key": "sprites-atlas-29",
-      "image": "atlas-29.png",
-      "data": "atlas-29.json"
-    },
-    {
-      "key": "sprites-atlas-30",
-      "image": "atlas-30.png",
-      "data": "atlas-30.json"
-    },
-    {
-      "key": "sprites-atlas-31",
-      "image": "atlas-31.png",
-      "data": "atlas-31.json"
-    },
-    {
-      "key": "sprites-atlas-32",
-      "image": "atlas-32.png",
-      "data": "atlas-32.json"
-    },
-    {
-      "key": "sprites-atlas-33",
-      "image": "atlas-33.png",
-      "data": "atlas-33.json"
     }
   ],
   "frameToAtlasKey": {
-    "puerto_viejo__muro__path616": "sprites-atlas-0",
-    "Puerto__muro__path1432": "sprites-atlas-1",
-    "Fondo__playa__path404": "sprites-atlas-2",
-    "Puerto__suelo_tierra__path618": "sprites-atlas-3",
-    "Casas__suelo__g135": "sprites-atlas-4",
-    "Bosque__tierra__path629": "sprites-atlas-5",
-    "Fondo__hoyo_orilla__g1925": "sprites-atlas-6",
-    "Mar__barco__g1283": "sprites-atlas-7",
-    "Fondo__borde__path76": "sprites-atlas-8",
-    "fondo__path10": "sprites-atlas-9",
-    "patron__path10-0": "sprites-atlas-10",
-    "Fondo__canaleta__g28": "sprites-atlas-11",
-    "Fondo__pecera__g92": "sprites-atlas-12",
-    "Casas__suelo__layer4": "sprites-atlas-13",
-    "Mar__g949__g949": "sprites-atlas-14",
-    "puerto_viejo__dots__path1725": "sprites-atlas-15",
-    "plaza__carretera__g617": "sprites-atlas-16",
-    "Fondo__mar__path135": "sprites-atlas-17",
-    "Fondo__orilla__use22": "sprites-atlas-18",
-    "plaza__path2652__path2652": "sprites-atlas-19",
-    "Juegos__fondo__path95": "sprites-atlas-19",
-    "costa__path685__path685": "sprites-atlas-19",
-    "Juegos__path967-0-0__path967-0-0": "sprites-atlas-19",
-    "Playa__mono_nadador__g356": "sprites-atlas-19",
-    "costa__mono_durmiente__g190": "sprites-atlas-19",
-    "Puerto__arena_obra__path66": "sprites-atlas-19",
-    "gaviota__g411__g411": "sprites-atlas-19",
-    "plaza__path1611__path1611": "sprites-atlas-19",
-    "plaza__mono_alcantarilla__g233": "sprites-atlas-19",
-    "plaza__path1408__path1408": "sprites-atlas-19",
-    "path2624__path2624": "sprites-atlas-19",
-    "ob_saco_malla__path30-7__path30-7": "sprites-atlas-19",
-    "ob_papelera__path353-3__path353-3": "sprites-atlas-19",
-    "ob_saco_malla__path27-3__path27-3": "sprites-atlas-19",
-    "Puerto__path81__path81": "sprites-atlas-19",
-    "ob_papelera__path351-7__path351-7": "sprites-atlas-19",
-    "gaviota__path412__path412": "sprites-atlas-19",
-    "Bosque__path431__path431": "sprites-atlas-19",
-    "gaviota__path409__path409": "sprites-atlas-19",
-    "Bosque__path1443__path1443": "sprites-atlas-19",
-    "gaviota__path408__path408": "sprites-atlas-19",
-    "costa__path202__path202": "sprites-atlas-20",
-    "Casas__casa_1__g267": "sprites-atlas-20",
-    "Fondo__path1850__path1850": "sprites-atlas-20",
-    "costa__seto__path215-5-7": "sprites-atlas-20",
-    "Playa__mono_juan__g366": "sprites-atlas-20",
-    "Bosque__path423__path423": "sprites-atlas-20",
-    "Casas__mono_iago__g306": "sprites-atlas-20",
-    "Layer_1__g243__g243": "sprites-atlas-20",
-    "Puerto__mono_marido__g122": "sprites-atlas-20",
-    "ob_saco_malla__path25-90__path25-90": "sprites-atlas-20",
-    "ob_papelera__path347-2__path347-2": "sprites-atlas-20",
-    "Mar__ob_boya__g57-2-1": "sprites-atlas-20",
-    "Mar__ob_boya__g57-2": "sprites-atlas-20",
-    "ob_saco_malla__path29-0__path29-0": "sprites-atlas-20",
-    "ob_papelera__path350-9__path350-9": "sprites-atlas-20",
-    "ob_papelera__path349-9__path349-9": "sprites-atlas-20",
-    "Fondo__piedras__g137": "sprites-atlas-21",
-    "Juegos__g672__g672": "sprites-atlas-21",
-    "plaza__path2699__path2699": "sprites-atlas-21",
-    "Puerto__path67__path67": "sprites-atlas-21",
-    "costa__path1725-7-0__path1725-7-0": "sprites-atlas-21",
-    "puerto_viejo__ob_macetero__g382-5": "sprites-atlas-21",
-    "Bosque__path2763__path2763": "sprites-atlas-21",
-    "Juegos__piramide__g465": "sprites-atlas-21",
-    "ob_saco_malla__path32-7__path32-7": "sprites-atlas-21",
-    "ob_saco_malla__path24-5__path24-5": "sprites-atlas-21",
-    "Casas__pajaro__g283": "sprites-atlas-21",
-    "ob_saco_malla__path31-5__path31-5": "sprites-atlas-21",
-    "ob_papelera__path352-0__path352-0": "sprites-atlas-21",
-    "ob_papelera__path348-3__path348-3": "sprites-atlas-21",
-    "Mar__ob_boya_amarilla__g618": "sprites-atlas-21",
-    "costa__fondo_roca__path185": "sprites-atlas-22",
-    "Fondo__g17__g17": "sprites-atlas-22",
-    "costa__mov_arbol_costa_1__g1693-2": "sprites-atlas-22",
-    "Juegos__path967__path967": "sprites-atlas-22",
-    "Casas__path96__path96": "sprites-atlas-22",
-    "Mar__linea__path632": "sprites-atlas-22",
-    "Mar__linea__path632-4": "sprites-atlas-22",
-    "Puerto__mono_bea__g116": "sprites-atlas-22",
-    "Bosque__castillo__g1923": "sprites-atlas-23",
-    "puerto_viejo__piedras_esquina__g692-2": "sprites-atlas-23",
-    "Juegos__puntos__path2635": "sprites-atlas-23",
-    "Bosque__path2767__path2767": "sprites-atlas-23",
-    "Juegos__path967-0-03-5__path967-0-03-5": "sprites-atlas-23",
-    "costa__castro__g1608": "sprites-atlas-23",
-    "Puerto__mono_paleta__g222": "sprites-atlas-23",
-    "Mar__mono_pepe__g1128": "sprites-atlas-23",
-    "Mar__mono_eloy__g1104": "sprites-atlas-23",
-    "Puerto__mono_luisa__g94": "sprites-atlas-23",
-    "Puerto__noray__g950": "sprites-atlas-23",
-    "Mar__ob_caja_plastico__g89": "sprites-atlas-23",
-    "Puerto__ob_caja_porex_cerrada__g262": "sprites-atlas-23",
-    "puerto_viejo__ob_caja_porex_vino__g278": "sprites-atlas-23",
-    "plaza__ob_alcantarilla__g682-1": "sprites-atlas-23",
-    "Playa__ob_alcantarilla__g682": "sprites-atlas-23",
-    "P_del__g815__g815": "sprites-atlas-24",
-    "Casas__hierba__g309": "sprites-atlas-24",
-    "Mar__kayaks__g892": "sprites-atlas-24",
-    "Casas__palmera__g53": "sprites-atlas-24",
-    "path2619__path2619": "sprites-atlas-24",
-    "costa__path1725-7-1__path1725-7-1": "sprites-atlas-24",
-    "Playa__mono_tito__g378": "sprites-atlas-24",
-    "Mar__mono_fermin__g1153": "sprites-atlas-24",
-    "Bosque__mono_grande__g128": "sprites-atlas-24",
-    "Mar__mono_isa__g1142": "sprites-atlas-24",
-    "Puerto__ob_newjersey__g1386-7": "sprites-atlas-24",
-    "Puerto__ob_newjersey__g1386": "sprites-atlas-24",
-    "Playa__castillo_arena__g432": "sprites-atlas-24",
-    "Puerto__ob_caja_madera__g377": "sprites-atlas-24",
-    "Puerto__ob_caja_porex_pulpo__g378-3": "sprites-atlas-24",
-    "ob_saco_malla__path28-4__path28-4": "sprites-atlas-24",
-    "ob_saco_malla__sombra__path626": "sprites-atlas-24",
-    "Puerto__ob_malla_limones__g376": "sprites-atlas-24",
-    "Puerto__ob_malla_naranjas__g375": "sprites-atlas-24",
-    "Fondo__hoyo_mar__g1924": "sprites-atlas-25",
-    "Mar__pasarela__g1089": "sprites-atlas-25",
-    "costa__mov_arbol_costa_2__g1693-2-7": "sprites-atlas-25",
-    "Bosque__boiro__g1688": "sprites-atlas-25",
-    "costa__calva__path1085-2": "sprites-atlas-25",
-    "Juegos__path967-0-03-5-2__path967-0-03-5-2": "sprites-atlas-25",
-    "Puerto__mono_esther__g74": "sprites-atlas-25",
-    "Bosque__mono_abuela__g282": "sprites-atlas-25",
-    "Playa__mono_flotador__g350": "sprites-atlas-25",
-    "Puerto__ob_caja_plastico__g89-3": "sprites-atlas-25",
-    "Mar__ob_pala__g62-3": "sprites-atlas-25",
-    "plaza__agujero__g1406": "sprites-atlas-25",
-    "Puerto__ob_caja_plastico__g89-3-8": "sprites-atlas-25",
-    "ob_papelera__path1397__path1397": "sprites-atlas-25",
-    "Puerto__ob_cupula__g309-9": "sprites-atlas-25",
-    "Puerto__ob_cupula__g309-9-2": "sprites-atlas-25",
-    "Fondo__path2378-9-3__path2378-9-3": "sprites-atlas-26",
-    "Puerto__path1159__path1159": "sprites-atlas-26",
-    "costa__path700__path700": "sprites-atlas-26",
-    "costa__arbol_roble__g46-9": "sprites-atlas-26",
-    "Juegos__puente__g482": "sprites-atlas-26",
-    "Juegos__columpio__g509": "sprites-atlas-26",
-    "Mar__linea__path632-4-6": "sprites-atlas-26",
-    "gaviota__g408__g408": "sprites-atlas-26",
-    "Playa__mono_marcos__g445": "sprites-atlas-26",
-    "costa__roca__g1154-7": "sprites-atlas-26",
-    "costa__roca__g1154": "sprites-atlas-26",
-    "Puerto__ob_bigbag__g23-5": "sprites-atlas-26",
-    "ob_saco_malla__path26-9__path26-9": "sprites-atlas-26",
-    "Bosque__ob_papelera__g1758-1": "sprites-atlas-26",
-    "Puerto__ob_bolardo__g372-8": "sprites-atlas-26",
-    "Puerto__ob_bolardo__g372-8-7": "sprites-atlas-26",
-    "Casas__gaviota_pie__g279": "sprites-atlas-26",
-    "Mar__gaviota_pie__g279-3": "sprites-atlas-26",
-    "Bosque__gaviota_pie__g279-3-9": "sprites-atlas-26",
-    "Puerto__ob_bolardo__g372": "sprites-atlas-26",
-    "Mar__ob_botas__g379": "sprites-atlas-26",
-    "Fondo__path2378-9-3-6__path2378-9-3-6": "sprites-atlas-27",
-    "Bosque__varanda__g31": "sprites-atlas-27",
-    "costa__path700-1__path700-1": "sprites-atlas-27",
-    "Bosque__arbol__g1693": "sprites-atlas-27",
-    "Puerto__ob_cuerda__g1630-5-9": "sprites-atlas-27",
-    "Playa__mono_javi__g456": "sprites-atlas-27",
-    "Puerto__ob_panel_porex__g301-3": "sprites-atlas-27",
-    "Puerto__ob_panel_porex__g301-3-5": "sprites-atlas-27",
-    "Puerto__ob_panel_porex__g301": "sprites-atlas-27",
-    "Layer_1__mono_feliz__g207-7": "sprites-atlas-27",
-    "Mar__ob_bigbag__g23": "sprites-atlas-27",
-    "Mar__ob_cuerda__g1630-5": "sprites-atlas-27",
-    "Puerto__ob_cono__g1391-0": "sprites-atlas-27",
-    "Puerto__ob_cono__g1391": "sprites-atlas-27",
-    "Mar__batea__g948": "sprites-atlas-28",
-    "Bosque__dots__path2614": "sprites-atlas-28",
-    "Bosque__seto__g29": "sprites-atlas-28",
-    "Casas__arboles__mov_arbol_casas_1__g271": "sprites-atlas-28",
-    "Fondo__path1850-0-6__path1850-0-6": "sprites-atlas-28",
-    "Mar__barca_1__g971": "sprites-atlas-28",
-    "Mar__barca_2__g992": "sprites-atlas-28",
-    "plaza__dots__path2636": "sprites-atlas-28",
-    "gaviota__path411__path411": "sprites-atlas-28",
-    "Puerto__mono_fede__g1442": "sprites-atlas-28",
-    "Puerto__mono_rachel__g103-6": "sprites-atlas-28",
-    "Puerto__mono_sandra__g110": "sprites-atlas-28",
-    "Bosque__mono_abuelo__g259": "sprites-atlas-28",
-    "plaza__ob_fuente__g702": "sprites-atlas-28",
-    "costa__path700-1-4__path700-1-4": "sprites-atlas-29",
-    "Mar__velero__g1165": "sprites-atlas-29",
-    "costa__path1725-7__path1725-7": "sprites-atlas-29",
-    "Juegos__path967-0-03__path967-0-03": "sprites-atlas-29",
-    "Fondo__path1850-0__path1850-0": "sprites-atlas-29",
-    "Puerto__ob_pale_porex__g1374": "sprites-atlas-29",
-    "plaza__ob_contenedor__g1654": "sprites-atlas-29",
-    "Puerto__ob_cubo__g1327": "sprites-atlas-29",
-    "Puerto__ob_cubo__g1327-4": "sprites-atlas-29",
-    "Puerto__ob_carro__g1323": "sprites-atlas-29",
-    "Playa__mono_alvaro__g391": "sprites-atlas-29",
-    "puerto_viejo__silla__g1402-5": "sprites-atlas-29",
-    "Mar__mono_xan__g1113": "sprites-atlas-29",
-    "Casas__casa_3__g186": "sprites-atlas-30",
-    "plaza__fondo__path592": "sprites-atlas-30",
-    "Bosque__ob_canodromo__g1575": "sprites-atlas-30",
-    "Juegos__path967-0__path967-0": "sprites-atlas-30",
-    "costa__path691__path691": "sprites-atlas-30",
-    "puerto_viejo__empedrado__g1476": "sprites-atlas-30",
-    "Puerto__ob_pale_plastico__g1348": "sprites-atlas-30",
-    "Playa__mono_luisa__g339": "sprites-atlas-30",
-    "Puerto__ob_cubo__g1327-4-3": "sprites-atlas-30",
-    "puerto_viejo__silla__g1402": "sprites-atlas-30",
-    "puerto_viejo__silla__g1402-3": "sprites-atlas-30",
-    "Puerto__path628__path628": "sprites-atlas-31",
-    "Casas__casa_2__g232": "sprites-atlas-31",
-    "Casas__arboles__mov_arbol_casas_2__g269": "sprites-atlas-31",
-    "plaza__roble__g46-9-0": "sprites-atlas-31",
-    "Mar__ob_faro__g923": "sprites-atlas-31",
-    "Playa__toallas__g313": "sprites-atlas-31",
-    "plaza__path2637__path2637": "sprites-atlas-31",
-    "costa__cormoran__g75": "sprites-atlas-31",
-    "Bosque__ob_banco_jardinera__g381-2": "sprites-atlas-31",
-    "plaza__path1086__path1086": "sprites-atlas-32",
-    "puerto_viejo__lona__g90": "sprites-atlas-32",
-    "costa__path1619__path1619": "sprites-atlas-32",
-    "Puerto__mostrador__g1410": "sprites-atlas-32",
-    "Puerto__pared_interior__path1433-8": "sprites-atlas-32",
-    "Juegos__hexagonos__g537": "sprites-atlas-32",
-    "Playa__sombrilla__g424": "sprites-atlas-32",
-    "Puerto__escalera__g1415": "sprites-atlas-32",
-    "Juegos__casita__g590": "sprites-atlas-32",
-    "Playa__roca__g436": "sprites-atlas-32",
-    "plaza__g1716__g1716": "sprites-atlas-32",
-    "Bosque__ob_banco_ola__g380": "sprites-atlas-32",
-    "costa__calva__path1085": "sprites-atlas-32",
-    "plaza__mono_detective__g66-0": "sprites-atlas-32",
-    "Casas__mono_quique__g294": "sprites-atlas-32",
-    "Playa__mono_martin__g402": "sprites-atlas-32",
-    "costa__path630__path630": "sprites-atlas-33",
-    "Puerto__ob_macetero__g382": "sprites-atlas-33",
-    "puerto_viejo__ob_ancla__g896": "sprites-atlas-33",
-    "Bosque__path2618__path2618": "sprites-atlas-33",
-    "puerto_viejo__mono_camarero__g8": "sprites-atlas-33",
-    "costa__mono_sabela__g216-8": "sprites-atlas-33",
-    "puerto_viejo__mono_sentada__g1715-5": "sprites-atlas-33",
-    "costa__path701__path701": "sprites-atlas-33",
-    "puerto_viejo__mono_moncho__g27-8": "sprites-atlas-33",
-    "Puerto__path1166__path1166": "sprites-atlas-33",
-    "Playa__mono_carmen__g323": "sprites-atlas-33",
-    "costa__mono_fumado__g20": "sprites-atlas-33",
-    "costa__seto__path215-5": "sprites-atlas-33",
-    "costa__seto__path215": "sprites-atlas-33",
-    "Puerto__mono_stop__g43-0": "sprites-atlas-33",
-    "puerto_viejo__mesa__g1157": "sprites-atlas-33",
-    "Bosque__ob_banco_jardinera__g381-2-9": "sprites-atlas-33"
+    "Puerto__muro__path1432": "sprites-atlas-0",
+    "Puerto__suelo_tierra__path618": "sprites-atlas-1",
+    "P_del__g815__g815": "sprites-atlas-2",
+    "Puerto__path1159__path1159": "sprites-atlas-2",
+    "Puerto__mostrador__g1410": "sprites-atlas-2",
+    "Puerto__pared_interior__path1433-8": "sprites-atlas-2",
+    "Puerto__path67__path67": "sprites-atlas-2",
+    "Puerto__mono_paleta__g222": "sprites-atlas-2",
+    "Puerto__escalera__g1415": "sprites-atlas-2",
+    "Puerto__mono_fede__g1442": "sprites-atlas-2",
+    "Puerto__ob_pale_plastico__g1348": "sprites-atlas-2",
+    "Puerto__ob_macetero__g382": "sprites-atlas-2",
+    "Puerto__ob_pale_porex__g1374": "sprites-atlas-2",
+    "Puerto__arena_obra__path66": "sprites-atlas-2",
+    "Puerto__mono_stop__g43-0": "sprites-atlas-2",
+    "Puerto__mono_marido__g122": "sprites-atlas-2",
+    "Puerto__ob_cubo__g1327": "sprites-atlas-2",
+    "Puerto__ob_cubo__g1327-4": "sprites-atlas-2",
+    "Puerto__mono_bea__g116": "sprites-atlas-2",
+    "Puerto__noray__g950": "sprites-atlas-2",
+    "Puerto__ob_newjersey__g1386-7": "sprites-atlas-2",
+    "Puerto__ob_newjersey__g1386": "sprites-atlas-2",
+    "Puerto__ob_caja_porex_cerrada__g262": "sprites-atlas-2",
+    "Puerto__ob_caja_madera__g377": "sprites-atlas-2",
+    "Puerto__ob_caja_porex_pulpo__g378-3": "sprites-atlas-2",
+    "Puerto__ob_caja_plastico__g89-3": "sprites-atlas-2",
+    "Puerto__ob_caja_plastico__g89-3-8": "sprites-atlas-2",
+    "Puerto__ob_cupula__g309-9": "sprites-atlas-2",
+    "Puerto__ob_cupula__g309-9-2": "sprites-atlas-2",
+    "Puerto__ob_cono__g1391-0": "sprites-atlas-2",
+    "Puerto__ob_cono__g1391": "sprites-atlas-2",
+    "Puerto__ob_malla_limones__g376": "sprites-atlas-2",
+    "Puerto__ob_malla_naranjas__g375": "sprites-atlas-2",
+    "Puerto__path81__path81": "sprites-atlas-2",
+    "Puerto__path628__path628": "sprites-atlas-3",
+    "Puerto__path1166__path1166": "sprites-atlas-3",
+    "Puerto__ob_cubo__g1327-4-3": "sprites-atlas-3",
+    "Puerto__mono_luisa__g94": "sprites-atlas-3",
+    "Puerto__mono_esther__g74": "sprites-atlas-3",
+    "Puerto__mono_rachel__g103-6": "sprites-atlas-3",
+    "Puerto__mono_sandra__g110": "sprites-atlas-3",
+    "Puerto__ob_carro__g1323": "sprites-atlas-3",
+    "Puerto__ob_cuerda__g1630-5-9": "sprites-atlas-3",
+    "Puerto__ob_panel_porex__g301-3": "sprites-atlas-3",
+    "Puerto__ob_panel_porex__g301-3-5": "sprites-atlas-3",
+    "Puerto__ob_panel_porex__g301": "sprites-atlas-3",
+    "Puerto__ob_bigbag__g23-5": "sprites-atlas-3",
+    "Puerto__ob_bolardo__g372-8": "sprites-atlas-3",
+    "Puerto__ob_bolardo__g372-8-7": "sprites-atlas-3",
+    "Puerto__ob_bolardo__g372": "sprites-atlas-3"
   },
   "sprites": [
     {
-      "label": "fondo__path10",
-      "frame": "fondo__path10",
+      "label": "P_del__g815__g815",
+      "frame": "P_del__g815__g815",
       "bounds": {
-        "x": 0,
+        "x": 3411,
         "y": 0,
-        "width": 6803,
-        "height": 3742
+        "width": 1625,
+        "height": 649
       }
     },
     {
-      "label": "patron__path10-0",
-      "frame": "patron__path10-0",
-      "bounds": null
-    },
-    {
-      "label": "Fondo",
-      "children": [
-        {
-          "label": "Fondo__g17__g17",
-          "frame": "Fondo__g17__g17",
-          "bounds": {
-            "x": 0,
-            "y": 569,
-            "width": 534,
-            "height": 893
-          }
-        },
-        {
-          "label": "Fondo__playa__path404",
-          "frame": "Fondo__playa__path404",
-          "bounds": {
-            "x": 0,
-            "y": 399,
-            "width": 2580,
-            "height": 2309
-          }
-        },
-        {
-          "label": "Fondo__mar__path135",
-          "frame": "Fondo__mar__path135",
-          "bounds": {
-            "x": 0,
-            "y": 1183,
-            "width": 6803,
-            "height": 2559
-          }
-        },
-        {
-          "label": "Fondo__orilla__use22",
-          "frame": "Fondo__orilla__use22",
-          "bounds": {
-            "x": 0,
-            "y": 1183,
-            "width": 6803,
-            "height": 2559
-          }
-        },
-        {
-          "label": "Fondo__canaleta__g28",
-          "frame": "Fondo__canaleta__g28",
-          "bounds": null
-        },
-        {
-          "label": "Fondo__hoyo_orilla__g1925",
-          "frame": "Fondo__hoyo_orilla__g1925",
-          "bounds": {
-            "x": 16,
-            "y": 1340,
-            "width": 2056,
-            "height": 1324
-          }
-        },
-        {
-          "label": "Fondo__hoyo_mar__g1924",
-          "frame": "Fondo__hoyo_mar__g1924",
-          "bounds": {
-            "x": 732,
-            "y": 1256,
-            "width": 1527,
-            "height": 1030
-          }
-        },
-        {
-          "label": "Fondo__piedras__g137",
-          "frame": "Fondo__piedras__g137",
-          "bounds": {
-            "x": 2028,
-            "y": 574,
-            "width": 1762,
-            "height": 1334
-          }
-        },
-        {
-          "label": "Fondo__borde__path76",
-          "frame": "Fondo__borde__path76",
-          "bounds": {
-            "x": 3646,
-            "y": 1673,
-            "width": 3157,
-            "height": 1828
-          }
-        },
-        {
-          "label": "Fondo__pecera__g92",
-          "frame": "Fondo__pecera__g92",
-          "bounds": null
-        },
-        {
-          "label": "Fondo__path1850__path1850",
-          "frame": "Fondo__path1850__path1850",
-          "bounds": {
-            "x": 1128,
-            "y": 721,
-            "width": 819,
-            "height": 504
-          }
-        },
-        {
-          "label": "Fondo__path1850-0__path1850-0",
-          "frame": "Fondo__path1850-0__path1850-0",
-          "bounds": {
-            "x": 797,
-            "y": 1158,
-            "width": 819,
-            "height": 504
-          }
-        },
-        {
-          "label": "Fondo__path1850-0-6__path1850-0-6",
-          "frame": "Fondo__path1850-0-6__path1850-0-6",
-          "bounds": {
-            "x": 0,
-            "y": 1574,
-            "width": 751,
-            "height": 504
-          }
-        },
-        {
-          "label": "Fondo__path2378-9-3__path2378-9-3",
-          "frame": "Fondo__path2378-9-3__path2378-9-3",
-          "bounds": {
-            "x": 4109,
-            "y": 2623,
-            "width": 1335,
-            "height": 1031
-          }
-        },
-        {
-          "label": "Fondo__path2378-9-3-6__path2378-9-3-6",
-          "frame": "Fondo__path2378-9-3-6__path2378-9-3-6",
-          "bounds": {
-            "x": 1591,
-            "y": 2490,
-            "width": 1329,
-            "height": 1028
-          }
-        }
-      ]
-    },
-    {
-      "label": "Casas",
-      "children": [
-        {
-          "label": "Casas__suelo__g135",
-          "frame": "Casas__suelo__g135",
-          "bounds": {
-            "x": 0,
-            "y": 0,
-            "width": 2130,
-            "height": 1592
-          }
-        },
-        {
-          "label": "Casas__suelo__layer4",
-          "frame": "Casas__suelo__layer4",
-          "bounds": null
-        },
-        {
-          "label": "Casas__path96__path96",
-          "frame": "Casas__path96__path96",
-          "bounds": {
-            "x": 0,
-            "y": 0,
-            "width": 477,
-            "height": 269
-          }
-        },
-        {
-          "label": "Casas__casa_3__g186",
-          "frame": "Casas__casa_3__g186",
-          "bounds": {
-            "x": 643,
-            "y": 0,
-            "width": 1151,
-            "height": 727
-          }
-        },
-        {
-          "label": "Casas__casa_2__g232",
-          "frame": "Casas__casa_2__g232",
-          "bounds": {
-            "x": 50,
-            "y": 0,
-            "width": 1066,
-            "height": 1025
-          }
-        },
-        {
-          "label": "Casas__casa_1__g267",
-          "frame": "Casas__casa_1__g267",
-          "bounds": {
-            "x": 0,
-            "y": 106,
-            "width": 690,
-            "height": 1211
-          }
-        },
-        {
-          "label": "arboles",
-          "children": [
-            {
-              "label": "Casas__arboles__mov_arbol_casas_2__g269",
-              "frame": "Casas__arboles__mov_arbol_casas_2__g269",
-              "bounds": {
-                "x": 786,
-                "y": 50,
-                "width": 818,
-                "height": 821
-              }
-            },
-            {
-              "label": "Casas__arboles__mov_arbol_casas_1__g271",
-              "frame": "Casas__arboles__mov_arbol_casas_1__g271",
-              "bounds": {
-                "x": 123,
-                "y": 518,
-                "width": 663,
-                "height": 783
-              }
-            }
-          ]
-        },
-        {
-          "label": "Casas__gaviota_pie__g279",
-          "frame": "Casas__gaviota_pie__g279",
-          "bounds": {
-            "x": 179,
-            "y": 273,
-            "width": 117,
-            "height": 90
-          }
-        },
-        {
-          "label": "Casas__pajaro__g283",
-          "frame": "Casas__pajaro__g283",
-          "bounds": {
-            "x": 264,
-            "y": 1611,
-            "width": 113,
-            "height": 80
-          }
-        },
-        {
-          "label": "Casas__mono_quique__g294",
-          "frame": "Casas__mono_quique__g294",
-          "bounds": {
-            "x": 841,
-            "y": 692,
-            "width": 185,
-            "height": 268
-          }
-        },
-        {
-          "label": "Casas__mono_iago__g306",
-          "frame": "Casas__mono_iago__g306",
-          "bounds": {
-            "x": 1652,
-            "y": 152,
-            "width": 115,
-            "height": 268
-          }
-        },
-        {
-          "label": "Casas__hierba__g309",
-          "frame": "Casas__hierba__g309",
-          "bounds": {
-            "x": 94,
-            "y": 633,
-            "width": 1530,
-            "height": 908
-          }
-        },
-        {
-          "label": "Casas__palmera__g53",
-          "frame": "Casas__palmera__g53",
-          "bounds": {
-            "x": 0,
-            "y": 688,
-            "width": 344,
-            "height": 754
-          }
-        }
-      ]
-    },
-    {
-      "label": "Playa",
-      "children": [
-        {
-          "label": "Playa__toallas__g313",
-          "frame": "Playa__toallas__g313",
-          "bounds": {
-            "x": 1644,
-            "y": 936,
-            "width": 349,
-            "height": 300
-          }
-        },
-        {
-          "label": "Playa__mono_carmen__g323",
-          "frame": "Playa__mono_carmen__g323",
-          "bounds": {
-            "x": 1522,
-            "y": 967,
-            "width": 174,
-            "height": 245
-          }
-        },
-        {
-          "label": "Playa__mono_luisa__g339",
-          "frame": "Playa__mono_luisa__g339",
-          "bounds": {
-            "x": 1670,
-            "y": 941,
-            "width": 206,
-            "height": 277
-          }
-        },
-        {
-          "label": "Playa__mono_flotador__g350",
-          "frame": "Playa__mono_flotador__g350",
-          "bounds": {
-            "x": 2007,
-            "y": 1495,
-            "width": 138,
-            "height": 112
-          }
-        },
-        {
-          "label": "Playa__mono_nadador__g356",
-          "frame": "Playa__mono_nadador__g356",
-          "bounds": {
-            "x": 2184,
-            "y": 1550,
-            "width": 323,
-            "height": 161
-          }
-        },
-        {
-          "label": "Playa__mono_juan__g366",
-          "frame": "Playa__mono_juan__g366",
-          "bounds": {
-            "x": 790,
-            "y": 1430,
-            "width": 361,
-            "height": 233
-          }
-        },
-        {
-          "label": "Playa__mono_tito__g378",
-          "frame": "Playa__mono_tito__g378",
-          "bounds": {
-            "x": 636,
-            "y": 1516,
-            "width": 360,
-            "height": 232
-          }
-        },
-        {
-          "label": "Playa__mono_alvaro__g391",
-          "frame": "Playa__mono_alvaro__g391",
-          "bounds": {
-            "x": 1354,
-            "y": 1272,
-            "width": 187,
-            "height": 195
-          }
-        },
-        {
-          "label": "Playa__mono_martin__g402",
-          "frame": "Playa__mono_martin__g402",
-          "bounds": {
-            "x": 1129,
-            "y": 1328,
-            "width": 256,
-            "height": 229
-          }
-        },
-        {
-          "label": "Playa__sombrilla__g424",
-          "frame": "Playa__sombrilla__g424",
-          "bounds": {
-            "x": 514,
-            "y": 1334,
-            "width": 366,
-            "height": 387
-          }
-        },
-        {
-          "label": "Playa__castillo_arena__g432",
-          "frame": "Playa__castillo_arena__g432",
-          "bounds": {
-            "x": 1385,
-            "y": 1488,
-            "width": 149,
-            "height": 123
-          }
-        },
-        {
-          "label": "Playa__roca__g436",
-          "frame": "Playa__roca__g436",
-          "bounds": {
-            "x": 2028,
-            "y": 633,
-            "width": 279,
-            "height": 315
-          }
-        },
-        {
-          "label": "Playa__mono_marcos__g445",
-          "frame": "Playa__mono_marcos__g445",
-          "bounds": {
-            "x": 2138,
-            "y": 626,
-            "width": 192,
-            "height": 170
-          }
-        },
-        {
-          "label": "Playa__mono_javi__g456",
-          "frame": "Playa__mono_javi__g456",
-          "bounds": {
-            "x": 2339,
-            "y": 853,
-            "width": 146,
-            "height": 177
-          }
-        },
-        {
-          "label": "Playa__ob_alcantarilla__g682",
-          "frame": "Playa__ob_alcantarilla__g682",
-          "bounds": {
-            "x": 2077,
-            "y": 458,
-            "width": 148,
-            "height": 99
-          }
-        }
-      ]
-    },
-    {
-      "label": "Mar",
-      "children": [
-        {
-          "label": "Mar__kayaks__g892",
-          "frame": "Mar__kayaks__g892",
-          "bounds": {
-            "x": 280,
-            "y": 3164,
-            "width": 1180,
-            "height": 402
-          }
-        },
-        {
-          "label": "Mar__ob_faro__g923",
-          "frame": "Mar__ob_faro__g923",
-          "bounds": {
-            "x": 2222,
-            "y": 3088,
-            "width": 310,
-            "height": 459
-          }
-        },
-        {
-          "label": "Mar__batea__g948",
-          "frame": "Mar__batea__g948",
-          "bounds": {
-            "x": 4332,
-            "y": 2875,
-            "width": 1280,
-            "height": 746
-          }
-        },
-        {
-          "label": "Mar__gaviota_pie__g279-3",
-          "frame": "Mar__gaviota_pie__g279-3",
-          "bounds": {
-            "x": 4350,
-            "y": 3256,
-            "width": 117,
-            "height": 90
-          }
-        },
-        {
-          "label": "Mar__g949__g949",
-          "frame": "Mar__g949__g949",
-          "bounds": null
-        },
-        {
-          "label": "Mar__pasarela__g1089",
-          "frame": "Mar__pasarela__g1089",
-          "bounds": {
-            "x": 2155,
-            "y": 1708,
-            "width": 1434,
-            "height": 876
-          }
-        },
-        {
-          "label": "Mar__barca_1__g971",
-          "frame": "Mar__barca_1__g971",
-          "bounds": {
-            "x": 2526,
-            "y": 2455,
-            "width": 441,
-            "height": 319
-          }
-        },
-        {
-          "label": "Mar__barca_2__g992",
-          "frame": "Mar__barca_2__g992",
-          "bounds": {
-            "x": 2712,
-            "y": 2317,
-            "width": 440,
-            "height": 319
-          }
-        },
-        {
-          "label": "Mar__mono_eloy__g1104",
-          "frame": "Mar__mono_eloy__g1104",
-          "bounds": {
-            "x": 2282,
-            "y": 2204,
-            "width": 126,
-            "height": 229
-          }
-        },
-        {
-          "label": "Mar__mono_xan__g1113",
-          "frame": "Mar__mono_xan__g1113",
-          "bounds": {
-            "x": 2718,
-            "y": 2427,
-            "width": 153,
-            "height": 187
-          }
-        },
-        {
-          "label": "Mar__mono_pepe__g1128",
-          "frame": "Mar__mono_pepe__g1128",
-          "bounds": {
-            "x": 2898,
-            "y": 2206,
-            "width": 143,
-            "height": 249
-          }
-        },
-        {
-          "label": "Mar__mono_isa__g1142",
-          "frame": "Mar__mono_isa__g1142",
-          "bounds": {
-            "x": 2470,
-            "y": 2167,
-            "width": 151,
-            "height": 227
-          }
-        },
-        {
-          "label": "Mar__mono_fermin__g1153",
-          "frame": "Mar__mono_fermin__g1153",
-          "bounds": {
-            "x": 3100,
-            "y": 1731,
-            "width": 164,
-            "height": 242
-          }
-        },
-        {
-          "label": "Mar__barco__g1283",
-          "frame": "Mar__barco__g1283",
-          "bounds": {
-            "x": 2864,
-            "y": 2210,
-            "width": 2327,
-            "height": 1370
-          }
-        },
-        {
-          "label": "Mar__ob_cuerda__g1630-5",
-          "frame": "Mar__ob_cuerda__g1630-5",
-          "bounds": {
-            "x": 4049,
-            "y": 2526,
-            "width": 123,
-            "height": 109
-          }
-        },
-        {
-          "label": "Mar__linea__path632",
-          "frame": "Mar__linea__path632",
-          "bounds": {
-            "x": 1433,
-            "y": 3285,
-            "width": 409,
-            "height": 225
-          }
-        },
-        {
-          "label": "Mar__linea__path632-4",
-          "frame": "Mar__linea__path632-4",
-          "bounds": {
-            "x": 1905,
-            "y": 3018,
-            "width": 408,
-            "height": 225
-          }
-        },
-        {
-          "label": "Mar__linea__path632-4-6",
-          "frame": "Mar__linea__path632-4-6",
-          "bounds": {
-            "x": 1057,
-            "y": 3551,
-            "width": 311,
-            "height": 191
-          }
-        },
-        {
-          "label": "Mar__ob_boya__g57-2",
-          "frame": "Mar__ob_boya__g57-2",
-          "bounds": {
-            "x": 1361,
-            "y": 3503,
-            "width": 86,
-            "height": 59
-          }
-        },
-        {
-          "label": "Mar__ob_boya__g57-2-1",
-          "frame": "Mar__ob_boya__g57-2-1",
-          "bounds": {
-            "x": 1832,
-            "y": 3234,
-            "width": 86,
-            "height": 60
-          }
-        },
-        {
-          "label": "Mar__ob_boya_amarilla__g618",
-          "frame": "Mar__ob_boya_amarilla__g618",
-          "bounds": {
-            "x": 2284,
-            "y": 2972,
-            "width": 63,
-            "height": 53
-          }
-        },
-        {
-          "label": "Mar__ob_pala__g62-3",
-          "frame": "Mar__ob_pala__g62-3",
-          "bounds": {
-            "x": 3599,
-            "y": 2475,
-            "width": 137,
-            "height": 93
-          }
-        },
-        {
-          "label": "Mar__ob_botas__g379",
-          "frame": "Mar__ob_botas__g379",
-          "bounds": {
-            "x": 4835,
-            "y": 3286,
-            "width": 107,
-            "height": 101
-          }
-        },
-        {
-          "label": "Mar__ob_caja_plastico__g89",
-          "frame": "Mar__ob_caja_plastico__g89",
-          "bounds": {
-            "x": 2408,
-            "y": 2321,
-            "width": 190,
-            "height": 138
-          }
-        },
-        {
-          "label": "Mar__ob_bigbag__g23",
-          "frame": "Mar__ob_bigbag__g23",
-          "bounds": {
-            "x": 4833,
-            "y": 3102,
-            "width": 138,
-            "height": 155
-          }
-        },
-        {
-          "label": "Mar__velero__g1165",
-          "frame": "Mar__velero__g1165",
-          "bounds": {
-            "x": 2754,
-            "y": 1183,
-            "width": 1065,
-            "height": 1194
-          }
-        }
-      ]
-    },
-    {
-      "label": "Juegos",
-      "children": [
-        {
-          "label": "Juegos__fondo__path95",
-          "frame": "Juegos__fondo__path95",
-          "bounds": {
-            "x": 1764,
-            "y": 0,
-            "width": 1743,
-            "height": 674
-          }
-        },
-        {
-          "label": "Juegos__puntos__path2635",
-          "frame": "Juegos__puntos__path2635",
-          "bounds": {
-            "x": 2117,
-            "y": 0,
-            "width": 999,
-            "height": 411
-          }
-        },
-        {
-          "label": "Juegos__path967__path967",
-          "frame": "Juegos__path967__path967",
-          "bounds": {
-            "x": 2072,
-            "y": 0,
-            "width": 581,
-            "height": 335
-          }
-        },
-        {
-          "label": "Juegos__path967-0__path967-0",
-          "frame": "Juegos__path967-0__path967-0",
-          "bounds": {
-            "x": 2337,
-            "y": 0,
-            "width": 846,
-            "height": 488
-          }
-        },
-        {
-          "label": "Juegos__path967-0-03__path967-0-03",
-          "frame": "Juegos__path967-0-03__path967-0-03",
-          "bounds": {
-            "x": 2025,
-            "y": 0,
-            "width": 888,
-            "height": 512
-          }
-        },
-        {
-          "label": "Juegos__path967-0-03-5__path967-0-03-5",
-          "frame": "Juegos__path967-0-03-5__path967-0-03-5",
-          "bounds": {
-            "x": 2491,
-            "y": 0,
-            "width": 648,
-            "height": 372
-          }
-        },
-        {
-          "label": "Juegos__path967-0-03-5-2__path967-0-03-5-2",
-          "frame": "Juegos__path967-0-03-5-2__path967-0-03-5-2",
-          "bounds": {
-            "x": 2959,
-            "y": 0,
-            "width": 406,
-            "height": 233
-          }
-        },
-        {
-          "label": "Juegos__path967-0-0__path967-0-0",
-          "frame": "Juegos__path967-0-0__path967-0-0",
-          "bounds": {
-            "x": 1829,
-            "y": 0,
-            "width": 346,
-            "height": 199
-          }
-        },
-        {
-          "label": "Juegos__piramide__g465",
-          "frame": "Juegos__piramide__g465",
-          "bounds": {
-            "x": 1937,
-            "y": 0,
-            "width": 164,
-            "height": 109
-          }
-        },
-        {
-          "label": "Juegos__puente__g482",
-          "frame": "Juegos__puente__g482",
-          "bounds": {
-            "x": 2486,
-            "y": 0,
-            "width": 360,
-            "height": 218
-          }
-        },
-        {
-          "label": "Juegos__columpio__g509",
-          "frame": "Juegos__columpio__g509",
-          "bounds": {
-            "x": 2081,
-            "y": 59,
-            "width": 345,
-            "height": 213
-          }
-        },
-        {
-          "label": "Juegos__hexagonos__g537",
-          "frame": "Juegos__hexagonos__g537",
-          "bounds": {
-            "x": 2465,
-            "y": 122,
-            "width": 349,
-            "height": 399
-          }
-        },
-        {
-          "label": "Juegos__casita__g590",
-          "frame": "Juegos__casita__g590",
-          "bounds": {
-            "x": 2855,
-            "y": 0,
-            "width": 264,
-            "height": 321
-          }
-        },
-        {
-          "label": "Juegos__g672__g672",
-          "frame": "Juegos__g672__g672",
-          "bounds": {
-            "x": 1784,
-            "y": 0,
-            "width": 1700,
-            "height": 660
-          }
-        }
-      ]
-    },
-    {
-      "label": "Pádel",
-      "children": [
-        {
-          "label": "P_del__g815__g815",
-          "frame": "P_del__g815__g815",
-          "bounds": {
-            "x": 3411,
-            "y": 0,
-            "width": 1625,
-            "height": 649
-          }
-        }
-      ]
-    },
-    {
-      "label": "plaza",
-      "children": [
-        {
-          "label": "plaza__path2652__path2652",
-          "frame": "plaza__path2652__path2652",
-          "bounds": {
-            "x": 3168,
-            "y": 1114,
-            "width": 2027,
-            "height": 1151
-          }
-        },
-        {
-          "label": "plaza__fondo__path592",
-          "frame": "plaza__fondo__path592",
-          "bounds": {
-            "x": 2737,
-            "y": 380,
-            "width": 1147,
-            "height": 660
-          }
-        },
-        {
-          "label": "plaza__path1086__path1086",
-          "frame": "plaza__path1086__path1086",
-          "bounds": {
-            "x": 2823,
-            "y": 389,
-            "width": 1061,
-            "height": 618
-          }
-        },
-        {
-          "label": "plaza__path2637__path2637",
-          "frame": "plaza__path2637__path2637",
-          "bounds": {
-            "x": 3339,
-            "y": 557,
-            "width": 322,
-            "height": 261
-          }
-        },
-        {
-          "label": "plaza__dots__path2636",
-          "frame": "plaza__dots__path2636",
-          "bounds": {
-            "x": 3080,
-            "y": 719,
-            "width": 406,
-            "height": 220
-          }
-        },
-        {
-          "label": "plaza__ob_contenedor__g1654",
-          "frame": "plaza__ob_contenedor__g1654",
-          "bounds": {
-            "x": 3623,
-            "y": 564,
-            "width": 231,
-            "height": 198
-          }
-        },
-        {
-          "label": "plaza__ob_fuente__g702",
-          "frame": "plaza__ob_fuente__g702",
-          "bounds": {
-            "x": 2727,
-            "y": 572,
-            "width": 138,
-            "height": 171
-          }
-        },
-        {
-          "label": "plaza__g1716__g1716",
-          "frame": "plaza__g1716__g1716",
-          "bounds": {
-            "x": 3329,
-            "y": 373,
-            "width": 315,
-            "height": 302
-          }
-        },
-        {
-          "label": "plaza__roble__g46-9-0",
-          "frame": "plaza__roble__g46-9-0",
-          "bounds": {
-            "x": 2808,
-            "y": 187,
-            "width": 641,
-            "height": 681
-          }
-        },
-        {
-          "label": "plaza__carretera__g617",
-          "frame": "plaza__carretera__g617",
-          "bounds": {
-            "x": 3584,
-            "y": 102,
-            "width": 2183,
-            "height": 1070
-          }
-        },
-        {
-          "label": "plaza__mono_detective__g66-0",
-          "frame": "plaza__mono_detective__g66-0",
-          "bounds": {
-            "x": 3898,
-            "y": 399,
-            "width": 233,
-            "height": 273
-          }
-        },
-        {
-          "label": "plaza__agujero__g1406",
-          "frame": "plaza__agujero__g1406",
-          "bounds": {
-            "x": 3518,
-            "y": 1123,
-            "width": 137,
-            "height": 91
-          }
-        },
-        {
-          "label": "plaza__ob_alcantarilla__g682-1",
-          "frame": "plaza__ob_alcantarilla__g682-1",
-          "bounds": {
-            "x": 3429,
-            "y": 1158,
-            "width": 148,
-            "height": 109
-          }
-        },
-        {
-          "label": "plaza__mono_alcantarilla__g233",
-          "frame": "plaza__mono_alcantarilla__g233",
-          "bounds": {
-            "x": 3355,
-            "y": 1029,
-            "width": 200,
-            "height": 126
-          }
-        },
-        {
-          "label": "plaza__path1408__path1408",
-          "frame": "plaza__path1408__path1408",
-          "bounds": {
-            "x": 3463,
-            "y": 824,
-            "width": 177,
-            "height": 110
-          }
-        },
-        {
-          "label": "plaza__path2699__path2699",
-          "frame": "plaza__path2699__path2699",
-          "bounds": {
-            "x": 4300,
-            "y": 1663,
-            "width": 335,
-            "height": 471
-          }
-        },
-        {
-          "label": "plaza__path1611__path1611",
-          "frame": "plaza__path1611__path1611",
-          "bounds": {
-            "x": 2949,
-            "y": 566,
-            "width": 216,
-            "height": 134
-          }
-        }
-      ]
-    },
-    {
-      "label": "Puerto",
-      "children": [
-        {
-          "label": "Puerto__path628__path628",
-          "frame": "Puerto__path628__path628",
-          "bounds": {
-            "x": 4285,
-            "y": 1034,
-            "width": 1095,
-            "height": 993
-          }
-        },
-        {
-          "label": "Puerto__ob_carro__g1323",
-          "frame": "Puerto__ob_carro__g1323",
-          "bounds": {
-            "x": 5204,
-            "y": 1754,
-            "width": 197,
-            "height": 195
-          }
-        },
-        {
-          "label": "Puerto__mono_fede__g1442",
-          "frame": "Puerto__mono_fede__g1442",
-          "bounds": {
-            "x": 5056,
-            "y": 1688,
-            "width": 201,
-            "height": 315
-          }
-        },
-        {
-          "label": "Puerto__ob_pale_plastico__g1348",
-          "frame": "Puerto__ob_pale_plastico__g1348",
-          "bounds": {
-            "x": 4728,
-            "y": 1812,
-            "width": 309,
-            "height": 218
-          }
-        },
-        {
-          "label": "Puerto__ob_pale_porex__g1374",
-          "frame": "Puerto__ob_pale_porex__g1374",
-          "bounds": {
-            "x": 4822,
-            "y": 1500,
-            "width": 298,
-            "height": 202
-          }
-        },
-        {
-          "label": "Puerto__ob_cono__g1391",
-          "frame": "Puerto__ob_cono__g1391",
-          "bounds": {
-            "x": 3631,
-            "y": 1231,
-            "width": 103,
-            "height": 98
-          }
-        },
-        {
-          "label": "Puerto__ob_cono__g1391-0",
-          "frame": "Puerto__ob_cono__g1391-0",
-          "bounds": {
-            "x": 3754,
-            "y": 1191,
-            "width": 103,
-            "height": 99
-          }
-        },
-        {
-          "label": "Puerto__suelo_tierra__path618",
-          "frame": "Puerto__suelo_tierra__path618",
-          "bounds": {
-            "x": 4201,
-            "y": 0,
-            "width": 2602,
-            "height": 2023
-          }
-        },
-        {
-          "label": "Puerto__pared_interior__path1433-8",
-          "frame": "Puerto__pared_interior__path1433-8",
-          "bounds": {
-            "x": 4674,
-            "y": 1168,
-            "width": 488,
-            "height": 454
-          }
-        },
-        {
-          "label": "Puerto__arena_obra__path66",
-          "frame": "Puerto__arena_obra__path66",
-          "bounds": {
-            "x": 4924,
-            "y": 1385,
-            "width": 237,
-            "height": 147
-          }
-        },
-        {
-          "label": "Puerto__path81__path81",
-          "frame": "Puerto__path81__path81",
-          "bounds": {
-            "x": 4955,
-            "y": 1466,
-            "width": 50,
-            "height": 30
-          }
-        },
-        {
-          "label": "Puerto__ob_cupula__g309-9",
-          "frame": "Puerto__ob_cupula__g309-9",
-          "bounds": {
-            "x": 5048,
-            "y": 1392,
-            "width": 122,
-            "height": 83
-          }
-        },
-        {
-          "label": "Puerto__path67__path67",
-          "frame": "Puerto__path67__path67",
-          "bounds": {
-            "x": 4675,
-            "y": 1169,
-            "width": 206,
-            "height": 453
-          }
-        },
-        {
-          "label": "Puerto__ob_cupula__g309-9-2",
-          "frame": "Puerto__ob_cupula__g309-9-2",
-          "bounds": {
-            "x": 4990,
-            "y": 1426,
-            "width": 122,
-            "height": 82
-          }
-        },
-        {
-          "label": "Puerto__ob_panel_porex__g301",
-          "frame": "Puerto__ob_panel_porex__g301",
-          "bounds": {
-            "x": 4815,
-            "y": 1361,
-            "width": 157,
-            "height": 176
-          }
-        },
-        {
-          "label": "Puerto__ob_panel_porex__g301-3",
-          "frame": "Puerto__ob_panel_porex__g301-3",
-          "bounds": {
-            "x": 4764,
-            "y": 1307,
-            "width": 158,
-            "height": 177
-          }
-        },
-        {
-          "label": "Puerto__ob_panel_porex__g301-3-5",
-          "frame": "Puerto__ob_panel_porex__g301-3-5",
-          "bounds": {
-            "x": 4719,
-            "y": 1249,
-            "width": 158,
-            "height": 177
-          }
-        },
-        {
-          "label": "Puerto__ob_cubo__g1327",
-          "frame": "Puerto__ob_cubo__g1327",
-          "bounds": {
-            "x": 4792,
-            "y": 1741,
-            "width": 231,
-            "height": 197
-          }
-        },
-        {
-          "label": "Puerto__ob_cubo__g1327-4",
-          "frame": "Puerto__ob_cubo__g1327-4",
-          "bounds": {
-            "x": 4692,
-            "y": 1797,
-            "width": 231,
-            "height": 197
-          }
-        },
-        {
-          "label": "Puerto__ob_cubo__g1327-4-3",
-          "frame": "Puerto__ob_cubo__g1327-4-3",
-          "bounds": {
-            "x": 3194,
-            "y": 2970,
-            "width": 230,
-            "height": 198
-          }
-        },
-        {
-          "label": "Puerto__ob_bigbag__g23-5",
-          "frame": "Puerto__ob_bigbag__g23-5",
-          "bounds": {
-            "x": 3336,
-            "y": 3067,
-            "width": 137,
-            "height": 156
-          }
-        },
-        {
-          "label": "Puerto__mono_esther__g74",
-          "frame": "Puerto__mono_esther__g74",
-          "bounds": {
-            "x": 4412,
-            "y": 1178,
-            "width": 151,
-            "height": 226
-          }
-        },
-        {
-          "label": "Puerto__mono_luisa__g94",
-          "frame": "Puerto__mono_luisa__g94",
-          "bounds": {
-            "x": 4137,
-            "y": 1027,
-            "width": 128,
-            "height": 227
-          }
-        },
-        {
-          "label": "Puerto__ob_macetero__g382",
-          "frame": "Puerto__ob_macetero__g382",
-          "bounds": {
-            "x": 3826,
-            "y": 910,
-            "width": 304,
-            "height": 303
-          }
-        },
-        {
-          "label": "Puerto__mono_rachel__g103-6",
-          "frame": "Puerto__mono_rachel__g103-6",
-          "bounds": {
-            "x": 4062,
-            "y": 1053,
-            "width": 131,
-            "height": 215
-          }
-        },
-        {
-          "label": "Puerto__mono_sandra__g110",
-          "frame": "Puerto__mono_sandra__g110",
-          "bounds": {
-            "x": 4120,
-            "y": 1405,
-            "width": 125,
-            "height": 197
-          }
-        },
-        {
-          "label": "Puerto__mono_bea__g116",
-          "frame": "Puerto__mono_bea__g116",
-          "bounds": {
-            "x": 3038,
-            "y": 928,
-            "width": 150,
-            "height": 216
-          }
-        },
-        {
-          "label": "Puerto__mono_paleta__g222",
-          "frame": "Puerto__mono_paleta__g222",
-          "bounds": {
-            "x": 4701,
-            "y": 1304,
-            "width": 144,
-            "height": 343
-          }
-        },
-        {
-          "label": "Puerto__mostrador__g1410",
-          "frame": "Puerto__mostrador__g1410",
-          "bounds": {
-            "x": 4197,
-            "y": 1034,
-            "width": 403,
-            "height": 543
-          }
-        },
-        {
-          "label": "Puerto__ob_caja_plastico__g89-3",
-          "frame": "Puerto__ob_caja_plastico__g89-3",
-          "bounds": {
-            "x": 4346,
-            "y": 1049,
-            "width": 137,
-            "height": 99
-          }
-        },
-        {
-          "label": "Puerto__ob_caja_plastico__g89-3-8",
-          "frame": "Puerto__ob_caja_plastico__g89-3-8",
-          "bounds": {
-            "x": 4293,
-            "y": 1081,
-            "width": 136,
-            "height": 99
-          }
-        },
-        {
-          "label": "Puerto__ob_malla_naranjas__g375",
-          "frame": "Puerto__ob_malla_naranjas__g375",
-          "bounds": {
-            "x": 4458,
-            "y": 1345,
-            "width": 84,
-            "height": 68
-          }
-        },
-        {
-          "label": "Puerto__ob_malla_limones__g376",
-          "frame": "Puerto__ob_malla_limones__g376",
-          "bounds": {
-            "x": 4505,
-            "y": 1372,
-            "width": 87,
-            "height": 72
-          }
-        },
-        {
-          "label": "Puerto__ob_caja_madera__g377",
-          "frame": "Puerto__ob_caja_madera__g377",
-          "bounds": {
-            "x": 4268,
-            "y": 1229,
-            "width": 146,
-            "height": 106
-          }
-        },
-        {
-          "label": "Puerto__ob_caja_porex_cerrada__g262",
-          "frame": "Puerto__ob_caja_porex_cerrada__g262",
-          "bounds": {
-            "x": 4416,
-            "y": 988,
-            "width": 153,
-            "height": 120
-          }
-        },
-        {
-          "label": "Puerto__ob_caja_porex_pulpo__g378-3",
-          "frame": "Puerto__ob_caja_porex_pulpo__g378-3",
-          "bounds": {
-            "x": 4342,
-            "y": 1274,
-            "width": 146,
-            "height": 103
-          }
-        },
-        {
-          "label": "Puerto__path1166__path1166",
-          "frame": "Puerto__path1166__path1166",
-          "bounds": {
-            "x": 4207,
-            "y": 296,
-            "width": 237,
-            "height": 246
-          }
-        },
-        {
-          "label": "Puerto__muro__path1432",
-          "frame": "Puerto__muro__path1432",
-          "bounds": {
-            "x": 4189,
-            "y": 278,
-            "width": 2614,
-            "height": 2608
-          }
-        },
-        {
-          "label": "Puerto__path1159__path1159",
-          "frame": "Puerto__path1159__path1159",
-          "bounds": {
-            "x": 4192,
-            "y": 438,
-            "width": 1292,
-            "height": 792
-          }
-        },
-        {
-          "label": "Puerto__ob_cuerda__g1630-5-9",
-          "frame": "Puerto__ob_cuerda__g1630-5-9",
-          "bounds": {
-            "x": 4377,
-            "y": 1806,
-            "width": 185,
-            "height": 164
-          }
-        },
-        {
-          "label": "Puerto__noray__g950",
-          "frame": "Puerto__noray__g950",
-          "bounds": {
-            "x": 4338,
-            "y": 1927,
-            "width": 213,
-            "height": 155
-          }
-        },
-        {
-          "label": "Puerto__mono_stop__g43-0",
-          "frame": "Puerto__mono_stop__g43-0",
-          "bounds": {
-            "x": 4172,
-            "y": 1770,
-            "width": 234,
-            "height": 232
-          }
-        },
-        {
-          "label": "Puerto__mono_marido__g122",
-          "frame": "Puerto__mono_marido__g122",
-          "bounds": {
-            "x": 4197,
-            "y": 1409,
-            "width": 128,
-            "height": 232
-          }
-        },
-        {
-          "label": "Puerto__ob_bolardo__g372",
-          "frame": "Puerto__ob_bolardo__g372",
-          "bounds": {
-            "x": 3571,
-            "y": 958,
-            "width": 80,
-            "height": 116
-          }
-        },
-        {
-          "label": "Puerto__ob_bolardo__g372-8",
-          "frame": "Puerto__ob_bolardo__g372-8",
-          "bounds": {
-            "x": 3645,
-            "y": 1010,
-            "width": 79,
-            "height": 117
-          }
-        },
-        {
-          "label": "Puerto__ob_bolardo__g372-8-7",
-          "frame": "Puerto__ob_bolardo__g372-8-7",
-          "bounds": {
-            "x": 3719,
-            "y": 1053,
-            "width": 80,
-            "height": 117
-          }
-        },
-        {
-          "label": "Puerto__escalera__g1415",
-          "frame": "Puerto__escalera__g1415",
-          "bounds": {
-            "x": 4606,
-            "y": 2271,
-            "width": 318,
-            "height": 339
-          }
-        },
-        {
-          "label": "Puerto__ob_newjersey__g1386",
-          "frame": "Puerto__ob_newjersey__g1386",
-          "bounds": {
-            "x": 4589,
-            "y": 1579,
-            "width": 169,
-            "height": 148
-          }
-        },
-        {
-          "label": "Puerto__ob_newjersey__g1386-7",
-          "frame": "Puerto__ob_newjersey__g1386-7",
-          "bounds": {
-            "x": 4688,
-            "y": 1643,
-            "width": 169,
-            "height": 149
-          }
-        }
-      ]
-    },
-    {
-      "label": "puerto_viejo",
-      "children": [
-        {
-          "label": "puerto_viejo__muro__path616",
-          "frame": "puerto_viejo__muro__path616",
-          "bounds": {
-            "x": 4921,
-            "y": 1139,
-            "width": 1882,
-            "height": 2536
-          }
-        },
-        {
-          "label": "puerto_viejo__piedras_esquina__g692-2",
-          "frame": "puerto_viejo__piedras_esquina__g692-2",
-          "bounds": {
-            "x": 5474,
-            "y": 1186,
-            "width": 905,
-            "height": 1079
-          }
-        },
-        {
-          "label": "puerto_viejo__empedrado__g1476",
-          "frame": "puerto_viejo__empedrado__g1476",
-          "bounds": {
-            "x": 4919,
-            "y": 2356,
-            "width": 712,
-            "height": 475
-          }
-        },
-        {
-          "label": "puerto_viejo__dots__path1725",
-          "frame": "puerto_viejo__dots__path1725",
-          "bounds": null
-        },
-        {
-          "label": "puerto_viejo__ob_macetero__g382-5",
-          "frame": "puerto_viejo__ob_macetero__g382-5",
-          "bounds": {
-            "x": 5370,
-            "y": 1881,
-            "width": 237,
-            "height": 345
-          }
-        },
-        {
-          "label": "puerto_viejo__mono_camarero__g8",
-          "frame": "puerto_viejo__mono_camarero__g8",
-          "bounds": {
-            "x": 5419,
-            "y": 2145,
-            "width": 190,
-            "height": 259
-          }
-        },
-        {
-          "label": "puerto_viejo__ob_ancla__g896",
-          "frame": "puerto_viejo__ob_ancla__g896",
-          "bounds": {
-            "x": 5038,
-            "y": 2057,
-            "width": 213,
-            "height": 267
-          }
-        },
-        {
-          "label": "puerto_viejo__lona__g90",
-          "frame": "puerto_viejo__lona__g90",
-          "bounds": {
-            "x": 5291,
-            "y": 1646,
-            "width": 1014,
-            "height": 823
-          }
-        },
-        {
-          "label": "puerto_viejo__ob_caja_porex_vino__g278",
-          "frame": "puerto_viejo__ob_caja_porex_vino__g278",
-          "bounds": {
-            "x": 2538,
-            "y": 2452,
-            "width": 152,
-            "height": 110
-          }
-        },
-        {
-          "label": "puerto_viejo__mono_moncho__g27-8",
-          "frame": "puerto_viejo__mono_moncho__g27-8",
-          "bounds": {
-            "x": 4619,
-            "y": 3137,
-            "width": 192,
-            "height": 247
-          }
-        },
-        {
-          "label": "puerto_viejo__silla__g1402-5",
-          "frame": "puerto_viejo__silla__g1402-5",
-          "bounds": {
-            "x": 5267,
-            "y": 2219,
-            "width": 147,
-            "height": 192
-          }
-        },
-        {
-          "label": "puerto_viejo__mono_sentada__g1715-5",
-          "frame": "puerto_viejo__mono_sentada__g1715-5",
-          "bounds": {
-            "x": 5239,
-            "y": 2175,
-            "width": 193,
-            "height": 254
-          }
-        },
-        {
-          "label": "puerto_viejo__mesa__g1157",
-          "frame": "puerto_viejo__mesa__g1157",
-          "bounds": {
-            "x": 5369,
-            "y": 2285,
-            "width": 218,
-            "height": 228
-          }
-        },
-        {
-          "label": "puerto_viejo__silla__g1402",
-          "frame": "puerto_viejo__silla__g1402",
-          "bounds": {
-            "x": 5484,
-            "y": 2381,
-            "width": 147,
-            "height": 167
-          }
-        },
-        {
-          "label": "puerto_viejo__silla__g1402-3",
-          "frame": "puerto_viejo__silla__g1402-3",
-          "bounds": {
-            "x": 5288,
-            "y": 2370,
-            "width": 151,
-            "height": 167
-          }
-        }
-      ]
-    },
-    {
-      "label": "Bosque",
-      "children": [
-        {
-          "label": "Bosque__tierra__path629",
-          "frame": "Bosque__tierra__path629",
-          "bounds": {
-            "x": 4723,
-            "y": 438,
-            "width": 2080,
-            "height": 1436
-          }
-        },
-        {
-          "label": "Bosque__ob_canodromo__g1575",
-          "frame": "Bosque__ob_canodromo__g1575",
-          "bounds": {
-            "x": 4945,
-            "y": 0,
-            "width": 1073,
-            "height": 529
-          }
-        },
-        {
-          "label": "Bosque__boiro__g1688",
-          "frame": "Bosque__boiro__g1688",
-          "bounds": {
-            "x": 4355,
-            "y": 743,
-            "width": 582,
-            "height": 429
-          }
-        },
-        {
-          "label": "Bosque__path423__path423",
-          "frame": "Bosque__path423__path423",
-          "bounds": {
-            "x": 6720,
-            "y": 1342,
-            "width": 83,
-            "height": 295
-          }
-        },
-        {
-          "label": "Bosque__ob_papelera__g1758-1",
-          "frame": "Bosque__ob_papelera__g1758-1",
-          "bounds": {
-            "x": 4693,
-            "y": 380,
-            "width": 119,
-            "height": 122
-          }
-        },
-        {
-          "label": "Bosque__path431__path431",
-          "frame": "Bosque__path431__path431",
-          "bounds": {
-            "x": 6637,
-            "y": 1790,
-            "width": 21,
-            "height": 13
-          }
-        },
-        {
-          "label": "Bosque__dots__path2614",
-          "frame": "Bosque__dots__path2614",
-          "bounds": {
-            "x": 4420,
-            "y": 370,
-            "width": 1233,
-            "height": 793
-          }
-        },
-        {
-          "label": "Bosque__ob_banco_jardinera__g381-2",
-          "frame": "Bosque__ob_banco_jardinera__g381-2",
-          "bounds": {
-            "x": 5458,
-            "y": 582,
-            "width": 227,
-            "height": 217
-          }
-        },
-        {
-          "label": "Bosque__ob_banco_jardinera__g381-2-9",
-          "frame": "Bosque__ob_banco_jardinera__g381-2-9",
-          "bounds": {
-            "x": 5338,
-            "y": 653,
-            "width": 227,
-            "height": 217
-          }
-        },
-        {
-          "label": "Bosque__ob_banco_ola__g380",
-          "frame": "Bosque__ob_banco_ola__g380",
-          "bounds": {
-            "x": 4868,
-            "y": 419,
-            "width": 282,
-            "height": 251
-          }
-        },
-        {
-          "label": "Bosque__mono_abuelo__g259",
-          "frame": "Bosque__mono_abuelo__g259",
-          "bounds": {
-            "x": 4996,
-            "y": 456,
-            "width": 134,
-            "height": 181
-          }
-        },
-        {
-          "label": "Bosque__mono_abuela__g282",
-          "frame": "Bosque__mono_abuela__g282",
-          "bounds": {
-            "x": 4930,
-            "y": 411,
-            "width": 93,
-            "height": 194
-          }
-        },
-        {
-          "label": "Bosque__arbol__g1693",
-          "frame": "Bosque__arbol__g1693",
-          "bounds": {
-            "x": 5418,
-            "y": 273,
-            "width": 638,
-            "height": 784
-          }
-        },
-        {
-          "label": "Bosque__castillo__g1923",
-          "frame": "Bosque__castillo__g1923",
-          "bounds": {
-            "x": 5811,
-            "y": 0,
-            "width": 992,
-            "height": 1658
-          }
-        },
-        {
-          "label": "Bosque__seto__g29",
-          "frame": "Bosque__seto__g29",
-          "bounds": {
-            "x": 4419,
-            "y": 0,
-            "width": 913,
-            "height": 413
-          }
-        },
-        {
-          "label": "Bosque__varanda__g31",
-          "frame": "Bosque__varanda__g31",
-          "bounds": {
-            "x": 4196,
-            "y": 225,
-            "width": 1288,
-            "height": 966
-          }
-        },
-        {
-          "label": "Bosque__gaviota_pie__g279-3-9",
-          "frame": "Bosque__gaviota_pie__g279-3-9",
-          "bounds": {
-            "x": 6610,
-            "y": 617,
-            "width": 117,
-            "height": 90
-          }
-        },
-        {
-          "label": "Bosque__mono_grande__g128",
-          "frame": "Bosque__mono_grande__g128",
-          "bounds": {
-            "x": 5653,
-            "y": 1000,
-            "width": 165,
-            "height": 240
-          }
-        },
-        {
-          "label": "Bosque__path1443__path1443",
-          "frame": "Bosque__path1443__path1443",
-          "bounds": {
-            "x": 5467,
-            "y": 1150,
-            "width": 9,
-            "height": 14
-          }
-        },
-        {
-          "label": "Bosque__path2618__path2618",
-          "frame": "Bosque__path2618__path2618",
-          "bounds": {
-            "x": 4960,
-            "y": 917,
-            "width": 265,
-            "height": 246
-          }
-        },
-        {
-          "label": "Bosque__path2763__path2763",
-          "frame": "Bosque__path2763__path2763",
-          "bounds": {
-            "x": 4957,
-            "y": 956,
-            "width": 245,
-            "height": 182
-          }
-        },
-        {
-          "label": "Bosque__path2767__path2767",
-          "frame": "Bosque__path2767__path2767",
-          "bounds": {
-            "x": 4466,
-            "y": 7,
-            "width": 846,
-            "height": 385
-          }
-        }
-      ]
-    },
-    {
-      "label": "costa",
-      "children": [
-        {
-          "label": "costa__fondo_roca__path185",
-          "frame": "costa__fondo_roca__path185",
-          "bounds": {
-            "x": 5330,
-            "y": 2052,
-            "width": 1473,
-            "height": 1690
-          }
-        },
-        {
-          "label": "costa__path700__path700",
-          "frame": "costa__path700__path700",
-          "bounds": {
-            "x": 5330,
-            "y": 2515,
-            "width": 586,
-            "height": 1020
-          }
-        },
-        {
-          "label": "costa__path700-1__path700-1",
-          "frame": "costa__path700-1__path700-1",
-          "bounds": {
-            "x": 5456,
-            "y": 2869,
-            "width": 691,
-            "height": 858
-          }
-        },
-        {
-          "label": "costa__path700-1-4__path700-1-4",
-          "frame": "costa__path700-1-4__path700-1-4",
-          "bounds": {
-            "x": 5456,
-            "y": 3029,
-            "width": 1216,
-            "height": 713
-          }
-        },
-        {
-          "label": "costa__path685__path685",
-          "frame": "costa__path685__path685",
-          "bounds": {
-            "x": 5649,
-            "y": 2803,
-            "width": 267,
-            "height": 662
-          }
-        },
-        {
-          "label": "costa__path202__path202",
-          "frame": "costa__path202__path202",
-          "bounds": {
-            "x": 5582,
-            "y": 1685,
-            "width": 1221,
-            "height": 1980
-          }
-        },
-        {
-          "label": "costa__calva__path1085",
-          "frame": "costa__calva__path1085",
-          "bounds": {
-            "x": 6529,
-            "y": 2916,
-            "width": 274,
-            "height": 240
-          }
-        },
-        {
-          "label": "costa__path1725-7__path1725-7",
-          "frame": "costa__path1725-7__path1725-7",
-          "bounds": {
-            "x": 5725,
-            "y": 2281,
-            "width": 902,
-            "height": 466
-          }
-        },
-        {
-          "label": "costa__path1725-7-0__path1725-7-0",
-          "frame": "costa__path1725-7-0__path1725-7-0",
-          "bounds": {
-            "x": 6578,
-            "y": 3047,
-            "width": 225,
-            "height": 393
-          }
-        },
-        {
-          "label": "costa__calva__path1085-2",
-          "frame": "costa__calva__path1085-2",
-          "bounds": {
-            "x": 5951,
-            "y": 2071,
-            "width": 451,
-            "height": 298
-          }
-        },
-        {
-          "label": "costa__path691__path691",
-          "frame": "costa__path691__path691",
-          "bounds": {
-            "x": 5769,
-            "y": 3076,
-            "width": 722,
-            "height": 630
-          }
-        },
-        {
-          "label": "costa__castro__g1608",
-          "frame": "costa__castro__g1608",
-          "bounds": {
-            "x": 5848,
-            "y": 2281,
-            "width": 492,
-            "height": 360
-          }
-        },
-        {
-          "label": "costa__seto__path215",
-          "frame": "costa__seto__path215",
-          "bounds": {
-            "x": 6111,
-            "y": 3129,
-            "width": 179,
-            "height": 242
-          }
-        },
-        {
-          "label": "costa__path1725-7-1__path1725-7-1",
-          "frame": "costa__path1725-7-1__path1725-7-1",
-          "bounds": {
-            "x": 5841,
-            "y": 3218,
-            "width": 471,
-            "height": 377
-          }
-        },
-        {
-          "label": "costa__seto__path215-5",
-          "frame": "costa__seto__path215-5",
-          "bounds": {
-            "x": 5661,
-            "y": 2573,
-            "width": 244,
-            "height": 224
-          }
-        },
-        {
-          "label": "costa__path1619__path1619",
-          "frame": "costa__path1619__path1619",
-          "bounds": {
-            "x": 6179,
-            "y": 2651,
-            "width": 547,
-            "height": 516
-          }
-        },
-        {
-          "label": "costa__seto__path215-5-7",
-          "frame": "costa__seto__path215-5-7",
-          "bounds": {
-            "x": 6343,
-            "y": 1646,
-            "width": 460,
-            "height": 260
-          }
-        },
-        {
-          "label": "costa__mov_arbol_costa_2__g1693-2-7",
-          "frame": "costa__mov_arbol_costa_2__g1693-2-7",
-          "bounds": {
-            "x": 6360,
-            "y": 1976,
-            "width": 443,
-            "height": 754
-          }
-        },
-        {
-          "label": "costa__mov_arbol_costa_1__g1693-2",
-          "frame": "costa__mov_arbol_costa_1__g1693-2",
-          "bounds": {
-            "x": 6232,
-            "y": 2293,
-            "width": 571,
-            "height": 783
-          }
-        },
-        {
-          "label": "costa__cormoran__g75",
-          "frame": "costa__cormoran__g75",
-          "bounds": {
-            "x": 4965,
-            "y": 2791,
-            "width": 301,
-            "height": 240
-          }
-        },
-        {
-          "label": "costa__path701__path701",
-          "frame": "costa__path701__path701",
-          "bounds": {
-            "x": 5610,
-            "y": 2830,
-            "width": 209,
-            "height": 250
-          }
-        },
-        {
-          "label": "costa__mono_sabela__g216-8",
-          "frame": "costa__mono_sabela__g216-8",
-          "bounds": {
-            "x": 5859,
-            "y": 3215,
-            "width": 205,
-            "height": 255
-          }
-        },
-        {
-          "label": "costa__mono_durmiente__g190",
-          "frame": "costa__mono_durmiente__g190",
-          "bounds": {
-            "x": 6320,
-            "y": 2786,
-            "width": 237,
-            "height": 159
-          }
-        },
-        {
-          "label": "costa__roca__g1154",
-          "frame": "costa__roca__g1154",
-          "bounds": {
-            "x": 5773,
-            "y": 2064,
-            "width": 189,
-            "height": 156
-          }
-        },
-        {
-          "label": "costa__roca__g1154-7",
-          "frame": "costa__roca__g1154-7",
-          "bounds": {
-            "x": 6108,
-            "y": 3450,
-            "width": 189,
-            "height": 157
-          }
-        },
-        {
-          "label": "costa__arbol_roble__g46-9",
-          "frame": "costa__arbol_roble__g46-9",
-          "bounds": {
-            "x": 5826,
-            "y": 1473,
-            "width": 705,
-            "height": 792
-          }
-        },
-        {
-          "label": "costa__mono_fumado__g20",
-          "frame": "costa__mono_fumado__g20",
-          "bounds": {
-            "x": 6230,
-            "y": 2130,
-            "width": 176,
-            "height": 245
-          }
-        },
-        {
-          "label": "costa__path630__path630",
-          "frame": "costa__path630__path630",
-          "bounds": {
-            "x": 6401,
-            "y": 3280,
-            "width": 271,
-            "height": 313
-          }
-        }
-      ]
-    },
-    {
-      "label": "Layer 1",
-      "children": [
-        {
-          "label": "Layer_1__mono_feliz__g207-7",
-          "frame": "Layer_1__mono_feliz__g207-7",
-          "bounds": {
-            "x": 4550,
-            "y": 466,
-            "width": 172,
-            "height": 161
-          }
-        },
-        {
-          "label": "Layer_1__g243__g243",
-          "frame": "Layer_1__g243__g243",
-          "bounds": {
-            "x": 4739,
-            "y": 2400,
-            "width": 127,
-            "height": 239
-          }
-        }
-      ]
-    },
-    {
-      "label": "ob_saco_malla",
-      "children": [
-        {
-          "label": "ob_saco_malla__sombra__path626",
-          "frame": "ob_saco_malla__sombra__path626",
-          "bounds": {
-            "x": 4452,
-            "y": 1493,
-            "width": 90,
-            "height": 80
-          }
-        },
-        {
-          "label": "ob_saco_malla__path24-5__path24-5",
-          "frame": "ob_saco_malla__path24-5__path24-5",
-          "bounds": {
-            "x": 4490,
-            "y": 1466,
-            "width": 95,
-            "height": 126
-          }
-        },
-        {
-          "label": "ob_saco_malla__path25-90__path25-90",
-          "frame": "ob_saco_malla__path25-90__path25-90",
-          "bounds": {
-            "x": 4512,
-            "y": 1435,
-            "width": 50,
-            "height": 149
-          }
-        },
-        {
-          "label": "ob_saco_malla__path26-9__path26-9",
-          "frame": "ob_saco_malla__path26-9__path26-9",
-          "bounds": {
-            "x": 4490,
-            "y": 1468,
-            "width": 95,
-            "height": 124
-          }
-        },
-        {
-          "label": "ob_saco_malla__path27-3__path27-3",
-          "frame": "ob_saco_malla__path27-3__path27-3",
-          "bounds": {
-            "x": 4496,
-            "y": 1531,
-            "width": 89,
-            "height": 30
-          }
-        },
-        {
-          "label": "ob_saco_malla__path28-4__path28-4",
-          "frame": "ob_saco_malla__path28-4__path28-4",
-          "bounds": {
-            "x": 4493,
-            "y": 1482,
-            "width": 91,
-            "height": 95
-          }
-        },
-        {
-          "label": "ob_saco_malla__path29-0__path29-0",
-          "frame": "ob_saco_malla__path29-0__path29-0",
-          "bounds": {
-            "x": 4497,
-            "y": 1475,
-            "width": 81,
-            "height": 46
-          }
-        },
-        {
-          "label": "ob_saco_malla__path30-7__path30-7",
-          "frame": "ob_saco_malla__path30-7__path30-7",
-          "bounds": {
-            "x": 4507,
-            "y": 1486,
-            "width": 45,
-            "height": 106
-          }
-        },
-        {
-          "label": "ob_saco_malla__path31-5__path31-5",
-          "frame": "ob_saco_malla__path31-5__path31-5",
-          "bounds": {
-            "x": 4495,
-            "y": 1484,
-            "width": 73,
-            "height": 101
-          }
-        },
-        {
-          "label": "ob_saco_malla__path32-7__path32-7",
-          "frame": "ob_saco_malla__path32-7__path32-7",
-          "bounds": {
-            "x": 4519,
-            "y": 1447,
-            "width": 56,
-            "height": 131
-          }
-        }
-      ]
-    },
-    {
-      "label": "ob_papelera",
-      "children": [
-        {
-          "label": "ob_papelera__path1397__path1397",
-          "frame": "ob_papelera__path1397__path1397",
-          "bounds": {
-            "x": 3208,
-            "y": 927,
-            "width": 127,
-            "height": 83
-          }
-        },
-        {
-          "label": "ob_papelera__path347-2__path347-2",
-          "frame": "ob_papelera__path347-2__path347-2",
-          "bounds": {
-            "x": 3260,
-            "y": 885,
-            "width": 78,
-            "height": 133
-          }
-        },
-        {
-          "label": "ob_papelera__path348-3__path348-3",
-          "frame": "ob_papelera__path348-3__path348-3",
-          "bounds": {
-            "x": 3260,
-            "y": 874,
-            "width": 78,
-            "height": 54
-          }
-        },
-        {
-          "label": "ob_papelera__path349-9__path349-9",
-          "frame": "ob_papelera__path349-9__path349-9",
-          "bounds": {
-            "x": 3284,
-            "y": 907,
-            "width": 51,
-            "height": 37
-          }
-        },
-        {
-          "label": "ob_papelera__path350-9__path350-9",
-          "frame": "ob_papelera__path350-9__path350-9",
-          "bounds": {
-            "x": 3272,
-            "y": 880,
-            "width": 55,
-            "height": 37
-          }
-        },
-        {
-          "label": "ob_papelera__path351-7__path351-7",
-          "frame": "ob_papelera__path351-7__path351-7",
-          "bounds": {
-            "x": 3278,
-            "y": 883,
-            "width": 44,
-            "height": 30
-          }
-        },
-        {
-          "label": "ob_papelera__path352-0__path352-0",
-          "frame": "ob_papelera__path352-0__path352-0",
-          "bounds": {
-            "x": 3280,
-            "y": 932,
-            "width": 55,
-            "height": 78
-          }
-        },
-        {
-          "label": "ob_papelera__path353-3__path353-3",
-          "frame": "ob_papelera__path353-3__path353-3",
-          "bounds": {
-            "x": 3270,
-            "y": 926,
-            "width": 3,
-            "height": 91
-          }
-        }
-      ]
-    },
-    {
-      "label": "path2619__path2619",
-      "frame": "path2619__path2619",
+      "label": "Puerto__path628__path628",
+      "frame": "Puerto__path628__path628",
       "bounds": {
-        "x": 5470,
-        "y": 1225,
-        "width": 387,
-        "height": 615
+        "x": 4285,
+        "y": 1034,
+        "width": 1095,
+        "height": 993
       }
     },
     {
-      "label": "path2624__path2624",
-      "frame": "path2624__path2624",
+      "label": "Puerto__ob_carro__g1323",
+      "frame": "Puerto__ob_carro__g1323",
       "bounds": {
-        "x": 3307,
-        "y": 2105,
-        "width": 4,
-        "height": 127
+        "x": 5204,
+        "y": 1754,
+        "width": 197,
+        "height": 195
       }
     },
     {
-      "label": "gaviota",
-      "children": [
-        {
-          "label": "gaviota__g408__g408",
-          "frame": "gaviota__g408__g408",
-          "bounds": {
-            "x": 1063,
-            "y": 1072,
-            "width": 303,
-            "height": 189
-          }
-        },
-        {
-          "label": "gaviota__path408__path408",
-          "frame": "gaviota__path408__path408",
-          "bounds": {
-            "x": 1220,
-            "y": 1215,
-            "width": 9,
-            "height": 8
-          }
-        },
-        {
-          "label": "gaviota__path409__path409",
-          "frame": "gaviota__path409__path409",
-          "bounds": {
-            "x": 1206,
-            "y": 1180,
-            "width": 15,
-            "height": 13
-          }
-        },
-        {
-          "label": "gaviota__g411__g411",
-          "frame": "gaviota__g411__g411",
-          "bounds": {
-            "x": 974,
-            "y": 1167,
-            "width": 216,
-            "height": 139
-          }
-        },
-        {
-          "label": "gaviota__path411__path411",
-          "frame": "gaviota__path411__path411",
-          "bounds": {
-            "x": 1016,
-            "y": 1078,
-            "width": 330,
-            "height": 219
-          }
-        },
-        {
-          "label": "gaviota__path412__path412",
-          "frame": "gaviota__path412__path412",
-          "bounds": {
-            "x": 1221,
-            "y": 1231,
-            "width": 27,
-            "height": 22
-          }
-        }
-      ]
+      "label": "Puerto__mono_fede__g1442",
+      "frame": "Puerto__mono_fede__g1442",
+      "bounds": {
+        "x": 5056,
+        "y": 1688,
+        "width": 201,
+        "height": 315
+      }
+    },
+    {
+      "label": "Puerto__ob_pale_plastico__g1348",
+      "frame": "Puerto__ob_pale_plastico__g1348",
+      "bounds": {
+        "x": 4728,
+        "y": 1812,
+        "width": 309,
+        "height": 218
+      }
+    },
+    {
+      "label": "Puerto__ob_pale_porex__g1374",
+      "frame": "Puerto__ob_pale_porex__g1374",
+      "bounds": {
+        "x": 4822,
+        "y": 1500,
+        "width": 298,
+        "height": 202
+      }
+    },
+    {
+      "label": "Puerto__ob_cono__g1391",
+      "frame": "Puerto__ob_cono__g1391",
+      "bounds": {
+        "x": 3631,
+        "y": 1231,
+        "width": 103,
+        "height": 98
+      }
+    },
+    {
+      "label": "Puerto__ob_cono__g1391-0",
+      "frame": "Puerto__ob_cono__g1391-0",
+      "bounds": {
+        "x": 3754,
+        "y": 1191,
+        "width": 103,
+        "height": 99
+      }
+    },
+    {
+      "label": "Puerto__suelo_tierra__path618",
+      "frame": "Puerto__suelo_tierra__path618",
+      "bounds": {
+        "x": 4201,
+        "y": 0,
+        "width": 2602,
+        "height": 2023
+      }
+    },
+    {
+      "label": "Puerto__pared_interior__path1433-8",
+      "frame": "Puerto__pared_interior__path1433-8",
+      "bounds": {
+        "x": 4674,
+        "y": 1168,
+        "width": 488,
+        "height": 454
+      }
+    },
+    {
+      "label": "Puerto__arena_obra__path66",
+      "frame": "Puerto__arena_obra__path66",
+      "bounds": {
+        "x": 4924,
+        "y": 1385,
+        "width": 237,
+        "height": 147
+      }
+    },
+    {
+      "label": "Puerto__path81__path81",
+      "frame": "Puerto__path81__path81",
+      "bounds": {
+        "x": 4955,
+        "y": 1466,
+        "width": 50,
+        "height": 30
+      }
+    },
+    {
+      "label": "Puerto__ob_cupula__g309-9",
+      "frame": "Puerto__ob_cupula__g309-9",
+      "bounds": {
+        "x": 5048,
+        "y": 1392,
+        "width": 122,
+        "height": 83
+      }
+    },
+    {
+      "label": "Puerto__path67__path67",
+      "frame": "Puerto__path67__path67",
+      "bounds": {
+        "x": 4675,
+        "y": 1169,
+        "width": 206,
+        "height": 453
+      }
+    },
+    {
+      "label": "Puerto__ob_cupula__g309-9-2",
+      "frame": "Puerto__ob_cupula__g309-9-2",
+      "bounds": {
+        "x": 4990,
+        "y": 1426,
+        "width": 122,
+        "height": 82
+      }
+    },
+    {
+      "label": "Puerto__ob_panel_porex__g301",
+      "frame": "Puerto__ob_panel_porex__g301",
+      "bounds": {
+        "x": 4815,
+        "y": 1361,
+        "width": 157,
+        "height": 176
+      }
+    },
+    {
+      "label": "Puerto__ob_panel_porex__g301-3",
+      "frame": "Puerto__ob_panel_porex__g301-3",
+      "bounds": {
+        "x": 4764,
+        "y": 1307,
+        "width": 158,
+        "height": 177
+      }
+    },
+    {
+      "label": "Puerto__ob_panel_porex__g301-3-5",
+      "frame": "Puerto__ob_panel_porex__g301-3-5",
+      "bounds": {
+        "x": 4719,
+        "y": 1249,
+        "width": 158,
+        "height": 177
+      }
+    },
+    {
+      "label": "Puerto__ob_cubo__g1327",
+      "frame": "Puerto__ob_cubo__g1327",
+      "bounds": {
+        "x": 4792,
+        "y": 1741,
+        "width": 231,
+        "height": 197
+      }
+    },
+    {
+      "label": "Puerto__ob_cubo__g1327-4",
+      "frame": "Puerto__ob_cubo__g1327-4",
+      "bounds": {
+        "x": 4692,
+        "y": 1797,
+        "width": 231,
+        "height": 197
+      }
+    },
+    {
+      "label": "Puerto__ob_cubo__g1327-4-3",
+      "frame": "Puerto__ob_cubo__g1327-4-3",
+      "bounds": {
+        "x": 3194,
+        "y": 2970,
+        "width": 230,
+        "height": 198
+      }
+    },
+    {
+      "label": "Puerto__ob_bigbag__g23-5",
+      "frame": "Puerto__ob_bigbag__g23-5",
+      "bounds": {
+        "x": 3336,
+        "y": 3067,
+        "width": 137,
+        "height": 156
+      }
+    },
+    {
+      "label": "Puerto__mono_esther__g74",
+      "frame": "Puerto__mono_esther__g74",
+      "bounds": {
+        "x": 4412,
+        "y": 1178,
+        "width": 151,
+        "height": 226
+      }
+    },
+    {
+      "label": "Puerto__mono_luisa__g94",
+      "frame": "Puerto__mono_luisa__g94",
+      "bounds": {
+        "x": 4137,
+        "y": 1027,
+        "width": 128,
+        "height": 227
+      }
+    },
+    {
+      "label": "Puerto__ob_macetero__g382",
+      "frame": "Puerto__ob_macetero__g382",
+      "bounds": {
+        "x": 3826,
+        "y": 910,
+        "width": 304,
+        "height": 303
+      }
+    },
+    {
+      "label": "Puerto__mono_rachel__g103-6",
+      "frame": "Puerto__mono_rachel__g103-6",
+      "bounds": {
+        "x": 4062,
+        "y": 1053,
+        "width": 131,
+        "height": 215
+      }
+    },
+    {
+      "label": "Puerto__mono_sandra__g110",
+      "frame": "Puerto__mono_sandra__g110",
+      "bounds": {
+        "x": 4120,
+        "y": 1405,
+        "width": 125,
+        "height": 197
+      }
+    },
+    {
+      "label": "Puerto__mono_bea__g116",
+      "frame": "Puerto__mono_bea__g116",
+      "bounds": {
+        "x": 3038,
+        "y": 928,
+        "width": 150,
+        "height": 216
+      }
+    },
+    {
+      "label": "Puerto__mono_paleta__g222",
+      "frame": "Puerto__mono_paleta__g222",
+      "bounds": {
+        "x": 4701,
+        "y": 1304,
+        "width": 144,
+        "height": 343
+      }
+    },
+    {
+      "label": "Puerto__mostrador__g1410",
+      "frame": "Puerto__mostrador__g1410",
+      "bounds": {
+        "x": 4197,
+        "y": 1034,
+        "width": 403,
+        "height": 543
+      }
+    },
+    {
+      "label": "Puerto__ob_caja_plastico__g89-3",
+      "frame": "Puerto__ob_caja_plastico__g89-3",
+      "bounds": {
+        "x": 4346,
+        "y": 1049,
+        "width": 137,
+        "height": 99
+      }
+    },
+    {
+      "label": "Puerto__ob_caja_plastico__g89-3-8",
+      "frame": "Puerto__ob_caja_plastico__g89-3-8",
+      "bounds": {
+        "x": 4293,
+        "y": 1081,
+        "width": 136,
+        "height": 99
+      }
+    },
+    {
+      "label": "Puerto__ob_malla_naranjas__g375",
+      "frame": "Puerto__ob_malla_naranjas__g375",
+      "bounds": {
+        "x": 4458,
+        "y": 1345,
+        "width": 84,
+        "height": 68
+      }
+    },
+    {
+      "label": "Puerto__ob_malla_limones__g376",
+      "frame": "Puerto__ob_malla_limones__g376",
+      "bounds": {
+        "x": 4505,
+        "y": 1372,
+        "width": 87,
+        "height": 72
+      }
+    },
+    {
+      "label": "Puerto__ob_caja_madera__g377",
+      "frame": "Puerto__ob_caja_madera__g377",
+      "bounds": {
+        "x": 4268,
+        "y": 1229,
+        "width": 146,
+        "height": 106
+      }
+    },
+    {
+      "label": "Puerto__ob_caja_porex_cerrada__g262",
+      "frame": "Puerto__ob_caja_porex_cerrada__g262",
+      "bounds": {
+        "x": 4416,
+        "y": 988,
+        "width": 153,
+        "height": 120
+      }
+    },
+    {
+      "label": "Puerto__ob_caja_porex_pulpo__g378-3",
+      "frame": "Puerto__ob_caja_porex_pulpo__g378-3",
+      "bounds": {
+        "x": 4342,
+        "y": 1274,
+        "width": 146,
+        "height": 103
+      }
+    },
+    {
+      "label": "Puerto__path1166__path1166",
+      "frame": "Puerto__path1166__path1166",
+      "bounds": {
+        "x": 4207,
+        "y": 296,
+        "width": 237,
+        "height": 246
+      }
+    },
+    {
+      "label": "Puerto__muro__path1432",
+      "frame": "Puerto__muro__path1432",
+      "bounds": {
+        "x": 4189,
+        "y": 278,
+        "width": 2614,
+        "height": 2608
+      }
+    },
+    {
+      "label": "Puerto__path1159__path1159",
+      "frame": "Puerto__path1159__path1159",
+      "bounds": {
+        "x": 4192,
+        "y": 438,
+        "width": 1292,
+        "height": 792
+      }
+    },
+    {
+      "label": "Puerto__ob_cuerda__g1630-5-9",
+      "frame": "Puerto__ob_cuerda__g1630-5-9",
+      "bounds": {
+        "x": 4377,
+        "y": 1806,
+        "width": 185,
+        "height": 164
+      }
+    },
+    {
+      "label": "Puerto__noray__g950",
+      "frame": "Puerto__noray__g950",
+      "bounds": {
+        "x": 4338,
+        "y": 1927,
+        "width": 213,
+        "height": 155
+      }
+    },
+    {
+      "label": "Puerto__mono_stop__g43-0",
+      "frame": "Puerto__mono_stop__g43-0",
+      "bounds": {
+        "x": 4172,
+        "y": 1770,
+        "width": 234,
+        "height": 232
+      }
+    },
+    {
+      "label": "Puerto__mono_marido__g122",
+      "frame": "Puerto__mono_marido__g122",
+      "bounds": {
+        "x": 4197,
+        "y": 1409,
+        "width": 128,
+        "height": 232
+      }
+    },
+    {
+      "label": "Puerto__ob_bolardo__g372",
+      "frame": "Puerto__ob_bolardo__g372",
+      "bounds": {
+        "x": 3571,
+        "y": 958,
+        "width": 80,
+        "height": 116
+      }
+    },
+    {
+      "label": "Puerto__ob_bolardo__g372-8",
+      "frame": "Puerto__ob_bolardo__g372-8",
+      "bounds": {
+        "x": 3645,
+        "y": 1010,
+        "width": 79,
+        "height": 117
+      }
+    },
+    {
+      "label": "Puerto__ob_bolardo__g372-8-7",
+      "frame": "Puerto__ob_bolardo__g372-8-7",
+      "bounds": {
+        "x": 3719,
+        "y": 1053,
+        "width": 80,
+        "height": 117
+      }
+    },
+    {
+      "label": "Puerto__escalera__g1415",
+      "frame": "Puerto__escalera__g1415",
+      "bounds": {
+        "x": 4606,
+        "y": 2271,
+        "width": 318,
+        "height": 339
+      }
+    },
+    {
+      "label": "Puerto__ob_newjersey__g1386",
+      "frame": "Puerto__ob_newjersey__g1386",
+      "bounds": {
+        "x": 4589,
+        "y": 1579,
+        "width": 169,
+        "height": 148
+      }
+    },
+    {
+      "label": "Puerto__ob_newjersey__g1386-7",
+      "frame": "Puerto__ob_newjersey__g1386-7",
+      "bounds": {
+        "x": 4688,
+        "y": 1643,
+        "width": 169,
+        "height": 149
+      }
     }
   ]
 }

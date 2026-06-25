@@ -1,11 +1,11 @@
 {
   "frames": {
-    "Puerto__muro__path1432": {
+    "Puerto__suelo_tierra__path618": {
       "frame": {
         "x": 0,
         "y": 0,
         "w": 2048,
-        "h": 2043
+        "h": 1592
       },
       "rotated": false,
       "trimmed": false,
@@ -13,11 +13,11 @@
         "x": 0,
         "y": 0,
         "w": 2048,
-        "h": 2043
+        "h": 1592
       },
       "sourceSize": {
         "w": 2048,
-        "h": 2043
+        "h": 1592
       }
     }
   },
@@ -34,19 +34,14 @@
   },
   "sprites": [
     {
-      "label": "Puerto",
-      "children": [
-        {
-          "label": "Puerto__muro__path1432",
-          "frame": "Puerto__muro__path1432",
-          "bounds": {
-            "x": 4189,
-            "y": 278,
-            "width": 2614,
-            "height": 2608
-          }
-        }
-      ]
+      "label": "Puerto__suelo_tierra__path618",
+      "frame": "Puerto__suelo_tierra__path618",
+      "bounds": {
+        "x": 4201,
+        "y": 0,
+        "width": 2602,
+        "height": 2023
+      }
     }
   ]
 }

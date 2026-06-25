@@ -5,9 +5,36 @@ import sharp from 'sharp';
 
 const inputFile = process.argv[2];
 const outputDir = process.argv[3] ?? './output';
-const isTestMode = process.argv.includes('--test')
-  || process.env.npm_config_test === 'true'
-  || process.env.npm_config_test === '1';
+const extraArgs = process.argv.slice(4);
+const cliTestFlag = extraArgs.includes('--test');
+const cliTestArgIndex = extraArgs.indexOf('--test');
+const cliTestTarget = cliTestArgIndex >= 0
+  && extraArgs[cliTestArgIndex + 1]
+  && !extraArgs[cliTestArgIndex + 1].startsWith('--')
+  ? extraArgs[cliTestArgIndex + 1]
+  : null;
+const positionalTestTarget = extraArgs.find((arg) => !arg.startsWith('--')) ?? null;
+const envTestValue = process.env.npm_config_test;
+const envIsBooleanTest = envTestValue === 'true' || envTestValue === '1';
+const envTestTarget = envTestValue && !['true', '1', 'false', '0'].includes(envTestValue)
+  ? envTestValue
+  : null;
+const isTestMode = cliTestFlag || envIsBooleanTest || !!cliTestTarget || !!positionalTestTarget || !!envTestTarget;
+const parseTargetIds = (value) => (typeof value === 'string'
+  ? value.split(',').map((part) => part.trim()).filter(Boolean)
+  : []);
+const unique = (values) => [...new Set(values)];
+const cliTestTargets = parseTargetIds(cliTestTarget);
+const positionalTestTargets = parseTargetIds(positionalTestTarget);
+const envTestTargets = parseTargetIds(envTestTarget);
+const testRootIds = unique(
+  (cliTestTargets.length ? cliTestTargets : [])
+    .concat(positionalTestTargets.length ? positionalTestTargets : [])
+    .concat(envTestTargets.length ? envTestTargets : []),
+);
+if (testRootIds.length === 0) {
+  testRootIds.push('Juegos');
+}
 
 const groupsToProcess = ['arboles'];
 
@@ -240,7 +267,7 @@ const nextPowerOfTwo = (value) => {
   return 2 ** Math.ceil(Math.log2(value));
 };
 
-const packSprites = (inputSprites, atlasWidth, padding) => {
+const packSprites = (inputSprites, atlasWidth, padding, extrude = 0) => {
   const packNode = (node, requiredWidth, requiredHeight) => {
     if (!node) {
       return null;
@@ -285,8 +312,8 @@ const packSprites = (inputSprites, atlasWidth, padding) => {
     let usedHeight = 0;
 
     for (const sprite of inputSprites) {
-      const requiredWidth = sprite.width + padding;
-      const requiredHeight = sprite.height + padding;
+      const requiredWidth = sprite.width + (padding * 2) + (extrude * 2);
+      const requiredHeight = sprite.height + (padding * 2) + (extrude * 2);
       const node = packNode(root, requiredWidth, requiredHeight);
 
       if (!node) {
@@ -295,8 +322,8 @@ const packSprites = (inputSprites, atlasWidth, padding) => {
 
       placements.push({
         ...sprite,
-        x: node.x,
-        y: node.y,
+        x: node.x + padding + extrude,  // la posición del sprite real, sin el extrude
+        y: node.y + padding + extrude
       });
 
       usedWidth = Math.max(usedWidth, node.x + sprite.width);
@@ -311,7 +338,7 @@ const packSprites = (inputSprites, atlasWidth, padding) => {
   };
 };
 
-const findBestLayout = (inputSprites, padding = atlasPadding) => {
+const findBestLayout = (inputSprites, padding = atlasPadding, extrude = atlasPadding) => {
   if (!inputSprites.length) {
     return null;
   }
@@ -325,7 +352,8 @@ const findBestLayout = (inputSprites, padding = atlasPadding) => {
 
   for (let width = widthStart; width <= maxAtlasSize; width *= 2) {
     const effectivePadding = inputSprites.length <= 1 ? 0 : padding;
-    const packAtHeight = packSprites(inputSprites, width, effectivePadding);
+    const effectiveExtrude = inputSprites.length <= 1 ? 0 : extrude;
+    const packAtHeight = packSprites(inputSprites, width, effectivePadding, effectiveExtrude);
 
     for (let height = heightStart; height <= maxAtlasSize; height *= 2) {
       const packed = packAtHeight(height);
@@ -348,6 +376,82 @@ const findBestLayout = (inputSprites, padding = atlasPadding) => {
   }
 
   return bestLayout;
+};
+
+const createExtrudedSpriteBuffer = async (sprite, extrude) => {
+  if (extrude <= 0) {
+    return sprite.buffer;
+  }
+
+  const topEdge = await sharp(sprite.buffer)
+    .extract({ left: 0, top: 0, width: sprite.width, height: 1 })
+    .resize({ width: sprite.width, height: extrude, fit: 'fill' })
+    .png()
+    .toBuffer();
+
+  const bottomEdge = await sharp(sprite.buffer)
+    .extract({ left: 0, top: sprite.height - 1, width: sprite.width, height: 1 })
+    .resize({ width: sprite.width, height: extrude, fit: 'fill' })
+    .png()
+    .toBuffer();
+
+  const leftEdge = await sharp(sprite.buffer)
+    .extract({ left: 0, top: 0, width: 1, height: sprite.height })
+    .resize({ width: extrude, height: sprite.height, fit: 'fill' })
+    .png()
+    .toBuffer();
+
+  const rightEdge = await sharp(sprite.buffer)
+    .extract({ left: sprite.width - 1, top: 0, width: 1, height: sprite.height })
+    .resize({ width: extrude, height: sprite.height, fit: 'fill' })
+    .png()
+    .toBuffer();
+
+  const topLeftCorner = await sharp(sprite.buffer)
+    .extract({ left: 0, top: 0, width: 1, height: 1 })
+    .resize({ width: extrude, height: extrude, fit: 'fill' })
+    .png()
+    .toBuffer();
+
+  const topRightCorner = await sharp(sprite.buffer)
+    .extract({ left: sprite.width - 1, top: 0, width: 1, height: 1 })
+    .resize({ width: extrude, height: extrude, fit: 'fill' })
+    .png()
+    .toBuffer();
+
+  const bottomLeftCorner = await sharp(sprite.buffer)
+    .extract({ left: 0, top: sprite.height - 1, width: 1, height: 1 })
+    .resize({ width: extrude, height: extrude, fit: 'fill' })
+    .png()
+    .toBuffer();
+
+  const bottomRightCorner = await sharp(sprite.buffer)
+    .extract({ left: sprite.width - 1, top: sprite.height - 1, width: 1, height: 1 })
+    .resize({ width: extrude, height: extrude, fit: 'fill' })
+    .png()
+    .toBuffer();
+
+  return sharp({
+    create: {
+      width: sprite.width + (extrude * 2),
+      height: sprite.height + (extrude * 2),
+      channels: 4,
+      background: { r: 0, g: 0, b: 0, alpha: 0 },
+    },
+  })
+    .composite([
+      { input: topLeftCorner, left: 0, top: 0 },
+      { input: topEdge, left: extrude, top: 0 },
+      { input: topRightCorner, left: extrude + sprite.width, top: 0 },
+      { input: leftEdge, left: 0, top: extrude },
+      { input: sprite.buffer, left: extrude, top: extrude },
+      { input: rightEdge, left: extrude + sprite.width, top: extrude },
+      { input: bottomLeftCorner, left: 0, top: extrude + sprite.height },
+      { input: bottomEdge, left: extrude, top: extrude + sprite.height },
+      { input: bottomRightCorner, left: extrude + sprite.width, top: extrude + sprite.height },
+    ])
+    .png()
+    .toBuffer();
 };
 
 const filterSpriteTreeByFrames = (nodes, frameSet) => {
@@ -461,6 +565,19 @@ const buildAtlases = async () => {
     const atlasPngPath = path.join(outputDir, `${pageName}.png`);
     const atlasJsonPath = path.join(outputDir, `${pageName}.json`);
 
+    const extrude = page.layout.placements.length <= 1 ? 0 : atlasPadding;
+    const composites = await Promise.all(
+      page.layout.placements.map(async (sprite) => {
+        const input = await createExtrudedSpriteBuffer(sprite, extrude);
+
+        return {
+          input,
+          left: sprite.x - extrude,
+          top: sprite.y - extrude,
+        };
+      }),
+    );
+
     await sharp({
       create: {
         width: page.layout.width,
@@ -469,13 +586,7 @@ const buildAtlases = async () => {
         background: { r: 0, g: 0, b: 0, alpha: 0 },
       },
     })
-      .composite(
-        page.layout.placements.map((sprite) => ({
-          input: sprite.buffer,
-          left: sprite.x,
-          top: sprite.y,
-        })),
-      )
+      .composite(composites)
       .png()
       .toFile(atlasPngPath);
 
@@ -599,20 +710,28 @@ const processNode = async (el, depth = 0) => {
   return null;
 };
 
-const processRoot = isTestMode ? $('#Juegos').first() : rootSvg;
-
-if (isTestMode && processRoot.length === 0) {
-  throw new Error('Modo test activo, pero no se encontro <g id="Juegos"> en el SVG.');
-}
+const processRoots = isTestMode
+  ? testRootIds.map((id) => ({
+      id,
+      node: $('*[id]').filter((_, el) => $(el).attr('id') === id).first(),
+    }))
+  : [{ id: 'svg-root', node: rootSvg }];
 
 if (isTestMode) {
-  console.log('Modo test activo: procesando solo los hijos de <g id="Juegos">.');
+  const missingIds = processRoots.filter((entry) => entry.node.length === 0).map((entry) => entry.id);
+  if (missingIds.length > 0) {
+    throw new Error(`Modo test activo, pero no se encontraron ids en el SVG: ${missingIds.join(', ')}`);
+  }
+
+  console.log(`Modo test activo: procesando solo hijos de ids [${testRootIds.join(', ')}].`);
 }
 
-for (const child of processRoot.children().toArray()) {
-  const nodeData = await processNode(child, 0);
-  if (nodeData) {
-    sprites.push(nodeData);
+for (const processRoot of processRoots) {
+  for (const child of processRoot.node.children().toArray()) {
+    const nodeData = await processNode(child, isTestMode ? 1 : 0);
+    if (nodeData) {
+      sprites.push(nodeData);
+    }
   }
 }
 

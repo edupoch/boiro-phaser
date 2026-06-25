@@ -1,23 +1,323 @@
 {
   "frames": {
-    "Puerto__suelo_tierra__path618": {
+    "Puerto__path628__path628": {
       "frame": {
-        "x": 0,
-        "y": 0,
-        "w": 2048,
-        "h": 1592
+        "x": 4,
+        "y": 4,
+        "w": 1095,
+        "h": 993
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 2048,
-        "h": 1592
+        "w": 1095,
+        "h": 993
       },
       "sourceSize": {
-        "w": 2048,
-        "h": 1592
+        "w": 1095,
+        "h": 993
+      }
+    },
+    "Puerto__path1166__path1166": {
+      "frame": {
+        "x": 1107,
+        "y": 4,
+        "w": 237,
+        "h": 246
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 237,
+        "h": 246
+      },
+      "sourceSize": {
+        "w": 237,
+        "h": 246
+      }
+    },
+    "Puerto__ob_cubo__g1327-4-3": {
+      "frame": {
+        "x": 1352,
+        "y": 4,
+        "w": 230,
+        "h": 198
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 230,
+        "h": 198
+      },
+      "sourceSize": {
+        "w": 230,
+        "h": 198
+      }
+    },
+    "Puerto__mono_luisa__g94": {
+      "frame": {
+        "x": 1107,
+        "y": 258,
+        "w": 128,
+        "h": 227
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 227
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 227
+      }
+    },
+    "Puerto__mono_esther__g74": {
+      "frame": {
+        "x": 1243,
+        "y": 258,
+        "w": 151,
+        "h": 226
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 151,
+        "h": 226
+      },
+      "sourceSize": {
+        "w": 151,
+        "h": 226
+      }
+    },
+    "Puerto__mono_rachel__g103-6": {
+      "frame": {
+        "x": 1402,
+        "y": 258,
+        "w": 131,
+        "h": 215
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 131,
+        "h": 215
+      },
+      "sourceSize": {
+        "w": 131,
+        "h": 215
+      }
+    },
+    "Puerto__mono_sandra__g110": {
+      "frame": {
+        "x": 1590,
+        "y": 4,
+        "w": 125,
+        "h": 197
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 125,
+        "h": 197
+      },
+      "sourceSize": {
+        "w": 125,
+        "h": 197
+      }
+    },
+    "Puerto__ob_carro__g1323": {
+      "frame": {
+        "x": 1723,
+        "y": 4,
+        "w": 197,
+        "h": 195
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 197,
+        "h": 195
+      },
+      "sourceSize": {
+        "w": 197,
+        "h": 195
+      }
+    },
+    "Puerto__ob_cuerda__g1630-5-9": {
+      "frame": {
+        "x": 1541,
+        "y": 258,
+        "w": 185,
+        "h": 164
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 185,
+        "h": 164
+      },
+      "sourceSize": {
+        "w": 185,
+        "h": 164
+      }
+    },
+    "Puerto__ob_panel_porex__g301-3": {
+      "frame": {
+        "x": 1107,
+        "y": 493,
+        "w": 158,
+        "h": 177
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 158,
+        "h": 177
+      },
+      "sourceSize": {
+        "w": 158,
+        "h": 177
+      }
+    },
+    "Puerto__ob_panel_porex__g301-3-5": {
+      "frame": {
+        "x": 1273,
+        "y": 493,
+        "w": 158,
+        "h": 177
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 158,
+        "h": 177
+      },
+      "sourceSize": {
+        "w": 158,
+        "h": 177
+      }
+    },
+    "Puerto__ob_panel_porex__g301": {
+      "frame": {
+        "x": 1439,
+        "y": 493,
+        "w": 157,
+        "h": 176
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 157,
+        "h": 176
+      },
+      "sourceSize": {
+        "w": 157,
+        "h": 176
+      }
+    },
+    "Puerto__ob_bigbag__g23-5": {
+      "frame": {
+        "x": 1734,
+        "y": 258,
+        "w": 137,
+        "h": 156
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 137,
+        "h": 156
+      },
+      "sourceSize": {
+        "w": 137,
+        "h": 156
+      }
+    },
+    "Puerto__ob_bolardo__g372-8": {
+      "frame": {
+        "x": 1928,
+        "y": 4,
+        "w": 79,
+        "h": 117
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 79,
+        "h": 117
+      },
+      "sourceSize": {
+        "w": 79,
+        "h": 117
+      }
+    },
+    "Puerto__ob_bolardo__g372-8-7": {
+      "frame": {
+        "x": 1879,
+        "y": 258,
+        "w": 80,
+        "h": 117
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 80,
+        "h": 117
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 117
+      }
+    },
+    "Puerto__ob_bolardo__g372": {
+      "frame": {
+        "x": 1604,
+        "y": 493,
+        "w": 80,
+        "h": 116
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 80,
+        "h": 116
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 116
       }
     }
   },
@@ -28,25 +328,170 @@
     "format": "RGBA8888",
     "size": {
       "w": 2048,
-      "h": 2048
+      "h": 1024
     },
     "scale": "1"
   },
   "sprites": [
     {
-      "label": "Puerto",
-      "children": [
-        {
-          "label": "Puerto__suelo_tierra__path618",
-          "frame": "Puerto__suelo_tierra__path618",
-          "bounds": {
-            "x": 4201,
-            "y": 0,
-            "width": 2602,
-            "height": 2023
-          }
-        }
-      ]
+      "label": "Puerto__path628__path628",
+      "frame": "Puerto__path628__path628",
+      "bounds": {
+        "x": 4285,
+        "y": 1034,
+        "width": 1095,
+        "height": 993
+      }
+    },
+    {
+      "label": "Puerto__ob_carro__g1323",
+      "frame": "Puerto__ob_carro__g1323",
+      "bounds": {
+        "x": 5204,
+        "y": 1754,
+        "width": 197,
+        "height": 195
+      }
+    },
+    {
+      "label": "Puerto__ob_panel_porex__g301",
+      "frame": "Puerto__ob_panel_porex__g301",
+      "bounds": {
+        "x": 4815,
+        "y": 1361,
+        "width": 157,
+        "height": 176
+      }
+    },
+    {
+      "label": "Puerto__ob_panel_porex__g301-3",
+      "frame": "Puerto__ob_panel_porex__g301-3",
+      "bounds": {
+        "x": 4764,
+        "y": 1307,
+        "width": 158,
+        "height": 177
+      }
+    },
+    {
+      "label": "Puerto__ob_panel_porex__g301-3-5",
+      "frame": "Puerto__ob_panel_porex__g301-3-5",
+      "bounds": {
+        "x": 4719,
+        "y": 1249,
+        "width": 158,
+        "height": 177
+      }
+    },
+    {
+      "label": "Puerto__ob_cubo__g1327-4-3",
+      "frame": "Puerto__ob_cubo__g1327-4-3",
+      "bounds": {
+        "x": 3194,
+        "y": 2970,
+        "width": 230,
+        "height": 198
+      }
+    },
+    {
+      "label": "Puerto__ob_bigbag__g23-5",
+      "frame": "Puerto__ob_bigbag__g23-5",
+      "bounds": {
+        "x": 3336,
+        "y": 3067,
+        "width": 137,
+        "height": 156
+      }
+    },
+    {
+      "label": "Puerto__mono_esther__g74",
+      "frame": "Puerto__mono_esther__g74",
+      "bounds": {
+        "x": 4412,
+        "y": 1178,
+        "width": 151,
+        "height": 226
+      }
+    },
+    {
+      "label": "Puerto__mono_luisa__g94",
+      "frame": "Puerto__mono_luisa__g94",
+      "bounds": {
+        "x": 4137,
+        "y": 1027,
+        "width": 128,
+        "height": 227
+      }
+    },
+    {
+      "label": "Puerto__mono_rachel__g103-6",
+      "frame": "Puerto__mono_rachel__g103-6",
+      "bounds": {
+        "x": 4062,
+        "y": 1053,
+        "width": 131,
+        "height": 215
+      }
+    },
+    {
+      "label": "Puerto__mono_sandra__g110",
+      "frame": "Puerto__mono_sandra__g110",
+      "bounds": {
+        "x": 4120,
+        "y": 1405,
+        "width": 125,
+        "height": 197
+      }
+    },
+    {
+      "label": "Puerto__path1166__path1166",
+      "frame": "Puerto__path1166__path1166",
+      "bounds": {
+        "x": 4207,
+        "y": 296,
+        "width": 237,
+        "height": 246
+      }
+    },
+    {
+      "label": "Puerto__ob_cuerda__g1630-5-9",
+      "frame": "Puerto__ob_cuerda__g1630-5-9",
+      "bounds": {
+        "x": 4377,
+        "y": 1806,
+        "width": 185,
+        "height": 164
+      }
+    },
+    {
+      "label": "Puerto__ob_bolardo__g372",
+      "frame": "Puerto__ob_bolardo__g372",
+      "bounds": {
+        "x": 3571,
+        "y": 958,
+        "width": 80,
+        "height": 116
+      }
+    },
+    {
+      "label": "Puerto__ob_bolardo__g372-8",
+      "frame": "Puerto__ob_bolardo__g372-8",
+      "bounds": {
+        "x": 3645,
+        "y": 1010,
+        "width": 79,
+        "height": 117
+      }
+    },
+    {
+      "label": "Puerto__ob_bolardo__g372-8-7",
+      "frame": "Puerto__ob_bolardo__g372-8-7",
+      "bounds": {
+        "x": 3719,
+        "y": 1053,
+        "width": 80,
+        "height": 117
+      }
     }
   ]
 }
