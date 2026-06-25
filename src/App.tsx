@@ -3,7 +3,11 @@ import { IRefPhaserGame, PhaserGame } from './PhaserGame';
 import ObjectFoundModal from './components/ObjectFoundModal';
 import GameModal from './components/GameModal';
 import { EventBus } from './game/EventBus';
-import { FoundTargetResult } from './game/GameState';
+import {
+    createInitialGameSnapshot,
+    markFoundInSnapshot,
+    type GameStateSnapshot,
+} from './game/GameState';
 
 function App()
 {
@@ -12,6 +16,7 @@ function App()
     const [isGameScene, setIsGameScene] = useState(false);
     const [foundObjectName, setFoundObjectName] = useState('');
     const [isObjectFoundModalOpen, setIsObjectFoundModalOpen] = useState(false);
+    const [gameSnapshot, setGameSnapshot] = useState<GameStateSnapshot>(() => createInitialGameSnapshot());
 
     // Event emitted from the PhaserGame component
     const currentScene = (scene: Phaser.Scene) => {
@@ -19,15 +24,30 @@ function App()
     }
 
     useEffect(() => {
-        const handleObjectFound = (payload: FoundTargetResult) => {
-            setFoundObjectName(payload.name);
-            setIsObjectFoundModalOpen(true);
+        const handleGameReset = () => {
+            setGameSnapshot(createInitialGameSnapshot());
         };
 
-        EventBus.on('object-found', handleObjectFound);
+        const handleObjectClicked = (targetKey: string) => {
+            setGameSnapshot((previousSnapshot) => {
+                const { snapshot, foundTarget } = markFoundInSnapshot(previousSnapshot, targetKey);
+
+                if (foundTarget) {
+                    setFoundObjectName(foundTarget.name);
+                    setIsObjectFoundModalOpen(true);
+                    EventBus.emit('object-found', foundTarget);
+                }
+
+                return snapshot;
+            });
+        };
+
+        EventBus.on('game-reset', handleGameReset);
+        EventBus.on('object-clicked', handleObjectClicked);
 
         return () => {
-            EventBus.removeListener('object-found', handleObjectFound);
+            EventBus.removeListener('game-reset', handleGameReset);
+            EventBus.removeListener('object-clicked', handleObjectClicked);
         };
     }, []);
 
@@ -39,7 +59,7 @@ function App()
                 objectName={foundObjectName}
                 onClose={() => setIsObjectFoundModalOpen(false)}
             />
-            {isGameScene && <GameModal />}
+            {isGameScene && <GameModal gameSnapshot={gameSnapshot} />}
         </div>
     )
 }

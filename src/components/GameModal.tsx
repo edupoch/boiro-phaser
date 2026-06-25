@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { gameState, type GameStateSnapshot } from '../game/GameState';
+import { useState } from 'react';
+import type { GameStateSnapshot } from '../game/GameState';
 
 type TabId = 'tab-inicio' | 'tab-xogo1' | 'tab-xogo2' | 'tab-xogo3';
 
@@ -16,17 +16,12 @@ const tabsList: Tab[] = [
   { id: 'tab-xogo3', label: 'Xogo 3', color: 'bg-sky-500' }
 ];
 
-function GameModal() {
+interface GameModalProps {
+  gameSnapshot: GameStateSnapshot;
+}
+
+function GameModal({ gameSnapshot }: GameModalProps) {
   const [activeTab, setActiveTab] = useState<TabId>('tab-inicio');
-  const [gameSnapshot, setGameSnapshot] = useState<GameStateSnapshot>(() => gameState.getSnapshot());
-
-  useEffect(() => {
-    setGameSnapshot(gameState.getSnapshot());
-
-    return gameState.subscribe(() => {
-      setGameSnapshot(gameState.getSnapshot());
-    });
-  }, []);
 
   const playClickSound = () => {
     const audio = new Audio('/assets/audio/click.mp3');

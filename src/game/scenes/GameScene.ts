@@ -1,7 +1,6 @@
 import * as Phaser from 'phaser';
 
 import { EventBus } from '../EventBus';
-import { gameState } from '../GameState';
 
 type SpriteBounds = {
     x: number;
@@ -41,7 +40,7 @@ export class GameScene extends Phaser.Scene
         //this.logo = this.add.image(512, 300, 'logo').setDepth(100);
 
         this.input.setDefaultCursor('grab');
-        gameState.reset();
+        EventBus.emit('game-reset');
 
         this.sound.add('praia', { loop: true, volume: 0.5 }).play();
 
@@ -161,15 +160,7 @@ export class GameScene extends Phaser.Scene
                 if (sprite.label.includes('_ob_')) {
                     spriteImage.setInteractive({ useHandCursor: true });
                     spriteImage.on('pointerdown', () => {
-                        const foundTarget = gameState.markFound(sprite.label);
-
-                        if (foundTarget) {
-                            this.sound.play('success', { volume: 1 });
-                            EventBus.emit('object-found', foundTarget);
-                            return;
-                        }
-
-                        this.sound.play('error', { volume: 1 });
+                        EventBus.emit('object-clicked', sprite.label);
                     });
                     spriteImage.on('pointerover', () => {
 

@@ -29,8 +29,6 @@ export interface FoundTargetResult {
     total: number;
 }
 
-type Listener = () => void;
-
 const normalizeTargetId = (label: string): string => {
     const parts = label.split('__');
     const targetPart = parts.find((part) => part.startsWith('ob_'));
@@ -111,84 +109,63 @@ const pickRandomTargets = (targets: GameTargetState[], count: number): GameTarge
     return shuffledTargets.slice(0, Math.min(count, shuffledTargets.length));
 };
 
-class GameStateStore {
-    private listeners = new Set<Listener>();
-    private allTargets: GameTargetState[];
-    private targets: GameTargetState[];
-
-    constructor(targets: GameTargetState[]) {
-        this.allTargets = targets;
-        this.targets = pickRandomTargets(this.allTargets, 5);
-    }
-
-    getSnapshot(): GameStateSnapshot {
-        const targets = this.targets.map((target) => ({
-            ...target,
-            labels: [...target.labels],
-        }));
-        const totalToFind = targets.reduce((sum, target) => sum + target.total, 0);
-        const totalFound = targets.reduce((sum, target) => sum + target.found, 0);
-
-        return {
-            targets,
-            totalToFind,
-            totalFound,
-            remaining: totalToFind - totalFound,
-        };
-    }
-
-    subscribe(listener: Listener): () => void {
-        this.listeners.add(listener);
-
-        return () => {
-            this.listeners.delete(listener);
-        };
-    }
-
-    reset(): void {
-        this.targets = pickRandomTargets(this.allTargets, 5);
-        this.emit();
-    }
-
-    markFound(targetKey: string, amount = 1): FoundTargetResult | null {
-        let updated = false;
-        let foundTarget: FoundTargetResult | null = null;
-
-        this.targets = this.targets.map((target) => {
-            const matchesTarget = target.id === targetKey || target.labels.includes(targetKey);
-
-            if (!matchesTarget || target.found >= target.total) {
-                return target;
-            }
-
-            updated = true;
-
-            const nextFound = Math.min(target.total, target.found + amount);
-            foundTarget = {
-                id: target.id,
-                name: target.name,
-                found: nextFound,
-                total: target.total,
-            };
-
-            return {
-                ...target,
-                found: nextFound,
-            };
-        });
-
-        if (updated) {
-            this.emit();
-        }
-
-        return foundTarget;
-    }
-
-    private emit(): void {
-        this.listeners.forEach((listener) => listener());
-    }
-}
-
 const initialTargets = collectTargets(spriteCatalog as SpriteNode[]);
 
-export const gameState = new GameStateStore(initialTargets);
+const buildSnapshot = (targets: GameTargetState[]): GameStateSnapshot => {
+    const totalToFind = targets.reduce((sum, target) => sum + target.total, 0);
+    const totalFound = targets.reduce((sum, target) => sum + target.found, 0);
+
+    return {
+        targets,
+        totalToFind,
+        totalFound,
+        remaining: totalToFind - totalFound,
+    };
+};
+
+export const createInitialGameSnapshot = (targetCount = 5): GameStateSnapshot => {
+    const targets = pickRandomTargets(initialTargets, targetCount).map((target) => ({
+        ...target,
+        labels: [...target.labels],
+    }));
+
+    return buildSnapshot(targets);
+};
+
+export const markFoundInSnapshot = (
+    snapshot: GameStateSnapshot,
+    targetKey: string,
+    amount = 1,
+): { snapshot: GameStateSnapshot; foundTarget: FoundTargetResult | null } => {
+    let foundTarget: FoundTargetResult | null = null;
+
+    const nextTargets = snapshot.targets.map((target) => {
+        const matchesTarget = target.id === targetKey || target.labels.includes(targetKey);
+
+        if (!matchesTarget || target.found >= target.total) {
+            return target;
+        }
+
+        const nextFound = Math.min(target.total, target.found + amount);
+        foundTarget = {
+            id: target.id,
+            name: target.name,
+            found: nextFound,
+            total: target.total,
+        };
+
+        return {
+            ...target,
+            found: nextFound,
+        };
+    });
+
+    if (!foundTarget) {
+        return { snapshot, foundTarget: null };
+    }
+
+    return {
+        snapshot: buildSnapshot(nextTargets),
+        foundTarget,
+    };
+};
