@@ -1,0 +1,257 @@
+{
+  "frames": {
+    "Puerto__path628__path628": {
+      "frame": {
+        "x": 4,
+        "y": 4,
+        "w": 1095,
+        "h": 993
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1095,
+        "h": 993
+      },
+      "sourceSize": {
+        "w": 1095,
+        "h": 993
+      }
+    },
+    "Casas__casa_2__g232": {
+      "frame": {
+        "x": 4,
+        "y": 1005,
+        "w": 1066,
+        "h": 1025
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1066,
+        "h": 1025
+      },
+      "sourceSize": {
+        "w": 1066,
+        "h": 1025
+      }
+    },
+    "Casas__arboles__mov_arbol_casas_2__g269": {
+      "frame": {
+        "x": 1107,
+        "y": 4,
+        "w": 818,
+        "h": 821
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 818,
+        "h": 821
+      },
+      "sourceSize": {
+        "w": 818,
+        "h": 821
+      }
+    },
+    "puerto_viejo__empedrado__g1476": {
+      "frame": {
+        "x": 1078,
+        "y": 1005,
+        "w": 712,
+        "h": 475
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 712,
+        "h": 475
+      },
+      "sourceSize": {
+        "w": 712,
+        "h": 475
+      }
+    },
+    "Bosque__boiro__g1688": {
+      "frame": {
+        "x": 1078,
+        "y": 1488,
+        "w": 582,
+        "h": 429
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 582,
+        "h": 429
+      },
+      "sourceSize": {
+        "w": 582,
+        "h": 429
+      }
+    },
+    "Juegos__hexagonos__g537": {
+      "frame": {
+        "x": 1668,
+        "y": 1488,
+        "w": 349,
+        "h": 399
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 349,
+        "h": 399
+      },
+      "sourceSize": {
+        "w": 349,
+        "h": 399
+      }
+    },
+    "Puerto__mono_fede__g1442": {
+      "frame": {
+        "x": 1798,
+        "y": 1005,
+        "w": 201,
+        "h": 315
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 201,
+        "h": 315
+      },
+      "sourceSize": {
+        "w": 201,
+        "h": 315
+      }
+    }
+  },
+  "meta": {
+    "app": "boiro split atlas generator",
+    "version": "1.0",
+    "image": "atlas-31.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2048,
+      "h": 2048
+    },
+    "scale": "1"
+  },
+  "sprites": [
+    {
+      "label": "Casas",
+      "children": [
+        {
+          "label": "Casas__casa_2__g232",
+          "frame": "Casas__casa_2__g232",
+          "bounds": {
+            "x": 50,
+            "y": 0,
+            "width": 1066,
+            "height": 1025
+          }
+        },
+        {
+          "label": "arboles",
+          "children": [
+            {
+              "label": "Casas__arboles__mov_arbol_casas_2__g269",
+              "frame": "Casas__arboles__mov_arbol_casas_2__g269",
+              "bounds": {
+                "x": 786,
+                "y": 50,
+                "width": 818,
+                "height": 821
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Juegos",
+      "children": [
+        {
+          "label": "Juegos__hexagonos__g537",
+          "frame": "Juegos__hexagonos__g537",
+          "bounds": {
+            "x": 2465,
+            "y": 122,
+            "width": 349,
+            "height": 399
+          }
+        }
+      ]
+    },
+    {
+      "label": "Puerto",
+      "children": [
+        {
+          "label": "Puerto__path628__path628",
+          "frame": "Puerto__path628__path628",
+          "bounds": {
+            "x": 4285,
+            "y": 1034,
+            "width": 1095,
+            "height": 993
+          }
+        },
+        {
+          "label": "Puerto__mono_fede__g1442",
+          "frame": "Puerto__mono_fede__g1442",
+          "bounds": {
+            "x": 5056,
+            "y": 1688,
+            "width": 201,
+            "height": 315
+          }
+        }
+      ]
+    },
+    {
+      "label": "puerto_viejo",
+      "children": [
+        {
+          "label": "puerto_viejo__empedrado__g1476",
+          "frame": "puerto_viejo__empedrado__g1476",
+          "bounds": {
+            "x": 4919,
+            "y": 2356,
+            "width": 712,
+            "height": 475
+          }
+        }
+      ]
+    },
+    {
+      "label": "Bosque",
+      "children": [
+        {
+          "label": "Bosque__boiro__g1688",
+          "frame": "Bosque__boiro__g1688",
+          "bounds": {
+            "x": 4355,
+            "y": 743,
+            "width": 582,
+            "height": 429
+          }
+        }
+      ]
+    }
+  ]
+}

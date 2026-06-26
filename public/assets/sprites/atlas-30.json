@@ -1,0 +1,352 @@
+{
+  "frames": {
+    "Casas__casa_3__g186": {
+      "frame": {
+        "x": 4,
+        "y": 4,
+        "w": 1151,
+        "h": 727
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1151,
+        "h": 727
+      },
+      "sourceSize": {
+        "w": 1151,
+        "h": 727
+      }
+    },
+    "plaza__fondo__path592": {
+      "frame": {
+        "x": 4,
+        "y": 739,
+        "w": 1147,
+        "h": 660
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1147,
+        "h": 660
+      },
+      "sourceSize": {
+        "w": 1147,
+        "h": 660
+      }
+    },
+    "Bosque__ob_canodromo__g1575": {
+      "frame": {
+        "x": 4,
+        "y": 1407,
+        "w": 1073,
+        "h": 529
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1073,
+        "h": 529
+      },
+      "sourceSize": {
+        "w": 1073,
+        "h": 529
+      }
+    },
+    "Juegos__path967-0__path967-0": {
+      "frame": {
+        "x": 1163,
+        "y": 4,
+        "w": 846,
+        "h": 488
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 846,
+        "h": 488
+      },
+      "sourceSize": {
+        "w": 846,
+        "h": 488
+      }
+    },
+    "Fondo__path1850__path1850": {
+      "frame": {
+        "x": 1159,
+        "y": 739,
+        "w": 819,
+        "h": 504
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 819,
+        "h": 504
+      },
+      "sourceSize": {
+        "w": 819,
+        "h": 504
+      }
+    },
+    "Fondo__path1850-0__path1850-0": {
+      "frame": {
+        "x": 1085,
+        "y": 1407,
+        "w": 819,
+        "h": 504
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 819,
+        "h": 504
+      },
+      "sourceSize": {
+        "w": 819,
+        "h": 504
+      }
+    },
+    "Juegos__puente__g482": {
+      "frame": {
+        "x": 1163,
+        "y": 500,
+        "w": 360,
+        "h": 218
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 218
+      },
+      "sourceSize": {
+        "w": 360,
+        "h": 218
+      }
+    },
+    "Juegos__columpio__g509": {
+      "frame": {
+        "x": 1531,
+        "y": 500,
+        "w": 345,
+        "h": 213
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 345,
+        "h": 213
+      },
+      "sourceSize": {
+        "w": 345,
+        "h": 213
+      }
+    },
+    "Puerto__mono_rachel__g103-6": {
+      "frame": {
+        "x": 1912,
+        "y": 1407,
+        "w": 131,
+        "h": 215
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 131,
+        "h": 215
+      },
+      "sourceSize": {
+        "w": 131,
+        "h": 215
+      }
+    },
+    "puerto_viejo__silla__g1402-5": {
+      "frame": {
+        "x": 1884,
+        "y": 500,
+        "w": 147,
+        "h": 192
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 147,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 147,
+        "h": 192
+      }
+    }
+  },
+  "meta": {
+    "app": "boiro split atlas generator",
+    "version": "1.0",
+    "image": "atlas-30.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2048,
+      "h": 2048
+    },
+    "scale": "1"
+  },
+  "sprites": [
+    {
+      "label": "Fondo",
+      "children": [
+        {
+          "label": "Fondo__path1850__path1850",
+          "frame": "Fondo__path1850__path1850",
+          "bounds": {
+            "x": 1128,
+            "y": 721,
+            "width": 819,
+            "height": 504
+          }
+        },
+        {
+          "label": "Fondo__path1850-0__path1850-0",
+          "frame": "Fondo__path1850-0__path1850-0",
+          "bounds": {
+            "x": 797,
+            "y": 1158,
+            "width": 819,
+            "height": 504
+          }
+        }
+      ]
+    },
+    {
+      "label": "Casas",
+      "children": [
+        {
+          "label": "Casas__casa_3__g186",
+          "frame": "Casas__casa_3__g186",
+          "bounds": {
+            "x": 643,
+            "y": 0,
+            "width": 1151,
+            "height": 727
+          }
+        }
+      ]
+    },
+    {
+      "label": "Juegos",
+      "children": [
+        {
+          "label": "Juegos__path967-0__path967-0",
+          "frame": "Juegos__path967-0__path967-0",
+          "bounds": {
+            "x": 2337,
+            "y": 0,
+            "width": 846,
+            "height": 488
+          }
+        },
+        {
+          "label": "Juegos__puente__g482",
+          "frame": "Juegos__puente__g482",
+          "bounds": {
+            "x": 2486,
+            "y": 0,
+            "width": 360,
+            "height": 218
+          }
+        },
+        {
+          "label": "Juegos__columpio__g509",
+          "frame": "Juegos__columpio__g509",
+          "bounds": {
+            "x": 2081,
+            "y": 59,
+            "width": 345,
+            "height": 213
+          }
+        }
+      ]
+    },
+    {
+      "label": "plaza",
+      "children": [
+        {
+          "label": "plaza__fondo__path592",
+          "frame": "plaza__fondo__path592",
+          "bounds": {
+            "x": 2737,
+            "y": 380,
+            "width": 1147,
+            "height": 660
+          }
+        }
+      ]
+    },
+    {
+      "label": "Puerto",
+      "children": [
+        {
+          "label": "Puerto__mono_rachel__g103-6",
+          "frame": "Puerto__mono_rachel__g103-6",
+          "bounds": {
+            "x": 4062,
+            "y": 1053,
+            "width": 131,
+            "height": 215
+          }
+        }
+      ]
+    },
+    {
+      "label": "puerto_viejo",
+      "children": [
+        {
+          "label": "puerto_viejo__silla__g1402-5",
+          "frame": "puerto_viejo__silla__g1402-5",
+          "bounds": {
+            "x": 5267,
+            "y": 2219,
+            "width": 147,
+            "height": 192
+          }
+        }
+      ]
+    },
+    {
+      "label": "Bosque",
+      "children": [
+        {
+          "label": "Bosque__ob_canodromo__g1575",
+          "frame": "Bosque__ob_canodromo__g1575",
+          "bounds": {
+            "x": 4945,
+            "y": 0,
+            "width": 1073,
+            "height": 529
+          }
+        }
+      ]
+    }
+  ]
+}

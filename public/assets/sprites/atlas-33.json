@@ -1,0 +1,872 @@
+{
+  "frames": {
+    "Juegos__casita__g590": {
+      "frame": {
+        "x": 4,
+        "y": 4,
+        "w": 264,
+        "h": 321
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 264,
+        "h": 321
+      },
+      "sourceSize": {
+        "w": 264,
+        "h": 321
+      }
+    },
+    "Playa__roca__g436": {
+      "frame": {
+        "x": 276,
+        "y": 4,
+        "w": 279,
+        "h": 315
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 279,
+        "h": 315
+      },
+      "sourceSize": {
+        "w": 279,
+        "h": 315
+      }
+    },
+    "plaza__g1716__g1716": {
+      "frame": {
+        "x": 563,
+        "y": 4,
+        "w": 315,
+        "h": 302
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 315,
+        "h": 302
+      },
+      "sourceSize": {
+        "w": 315,
+        "h": 302
+      }
+    },
+    "costa__path630__path630": {
+      "frame": {
+        "x": 4,
+        "y": 333,
+        "w": 271,
+        "h": 313
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 271,
+        "h": 313
+      },
+      "sourceSize": {
+        "w": 271,
+        "h": 313
+      }
+    },
+    "Puerto__ob_macetero__g382": {
+      "frame": {
+        "x": 283,
+        "y": 333,
+        "w": 304,
+        "h": 303
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 304,
+        "h": 303
+      },
+      "sourceSize": {
+        "w": 304,
+        "h": 303
+      }
+    },
+    "costa__cormoran__g75": {
+      "frame": {
+        "x": 595,
+        "y": 333,
+        "w": 301,
+        "h": 240
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 301,
+        "h": 240
+      },
+      "sourceSize": {
+        "w": 301,
+        "h": 240
+      }
+    },
+    "Bosque__ob_banco_ola__g380": {
+      "frame": {
+        "x": 4,
+        "y": 654,
+        "w": 282,
+        "h": 251
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 282,
+        "h": 251
+      },
+      "sourceSize": {
+        "w": 282,
+        "h": 251
+      }
+    },
+    "Playa__mono_luisa__g339": {
+      "frame": {
+        "x": 4,
+        "y": 913,
+        "w": 206,
+        "h": 277
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 206,
+        "h": 277
+      },
+      "sourceSize": {
+        "w": 206,
+        "h": 277
+      }
+    },
+    "costa__calva__path1085": {
+      "frame": {
+        "x": 294,
+        "y": 654,
+        "w": 274,
+        "h": 240
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 274,
+        "h": 240
+      },
+      "sourceSize": {
+        "w": 274,
+        "h": 240
+      }
+    },
+    "plaza__mono_detective__g66-0": {
+      "frame": {
+        "x": 218,
+        "y": 913,
+        "w": 233,
+        "h": 273
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 233,
+        "h": 273
+      },
+      "sourceSize": {
+        "w": 233,
+        "h": 273
+      }
+    },
+    "Casas__mono_quique__g294": {
+      "frame": {
+        "x": 459,
+        "y": 913,
+        "w": 185,
+        "h": 268
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 185,
+        "h": 268
+      },
+      "sourceSize": {
+        "w": 185,
+        "h": 268
+      }
+    },
+    "puerto_viejo__ob_ancla__g896": {
+      "frame": {
+        "x": 652,
+        "y": 913,
+        "w": 213,
+        "h": 267
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 213,
+        "h": 267
+      },
+      "sourceSize": {
+        "w": 213,
+        "h": 267
+      }
+    },
+    "Bosque__path2618__path2618": {
+      "frame": {
+        "x": 4,
+        "y": 1198,
+        "w": 265,
+        "h": 246
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 265,
+        "h": 246
+      },
+      "sourceSize": {
+        "w": 265,
+        "h": 246
+      }
+    },
+    "puerto_viejo__mono_camarero__g8": {
+      "frame": {
+        "x": 4,
+        "y": 1452,
+        "w": 190,
+        "h": 259
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 190,
+        "h": 259
+      },
+      "sourceSize": {
+        "w": 190,
+        "h": 259
+      }
+    },
+    "costa__mono_sabela__g216-8": {
+      "frame": {
+        "x": 202,
+        "y": 1452,
+        "w": 205,
+        "h": 255
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 205,
+        "h": 255
+      },
+      "sourceSize": {
+        "w": 205,
+        "h": 255
+      }
+    },
+    "puerto_viejo__mono_sentada__g1715-5": {
+      "frame": {
+        "x": 415,
+        "y": 1452,
+        "w": 193,
+        "h": 254
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 193,
+        "h": 254
+      },
+      "sourceSize": {
+        "w": 193,
+        "h": 254
+      }
+    },
+    "costa__path701__path701": {
+      "frame": {
+        "x": 616,
+        "y": 1452,
+        "w": 209,
+        "h": 250
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 209,
+        "h": 250
+      },
+      "sourceSize": {
+        "w": 209,
+        "h": 250
+      }
+    },
+    "puerto_viejo__mono_moncho__g27-8": {
+      "frame": {
+        "x": 4,
+        "y": 1719,
+        "w": 192,
+        "h": 247
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 192,
+        "h": 247
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 247
+      }
+    },
+    "Puerto__path1166__path1166": {
+      "frame": {
+        "x": 277,
+        "y": 1198,
+        "w": 237,
+        "h": 246
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 237,
+        "h": 246
+      },
+      "sourceSize": {
+        "w": 237,
+        "h": 246
+      }
+    },
+    "Playa__mono_carmen__g323": {
+      "frame": {
+        "x": 522,
+        "y": 1198,
+        "w": 174,
+        "h": 245
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 174,
+        "h": 245
+      },
+      "sourceSize": {
+        "w": 174,
+        "h": 245
+      }
+    },
+    "costa__mono_fumado__g20": {
+      "frame": {
+        "x": 704,
+        "y": 1198,
+        "w": 176,
+        "h": 245
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 176,
+        "h": 245
+      },
+      "sourceSize": {
+        "w": 176,
+        "h": 245
+      }
+    },
+    "Mar__mono_fermin__g1153": {
+      "frame": {
+        "x": 833,
+        "y": 1452,
+        "w": 164,
+        "h": 242
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 164,
+        "h": 242
+      },
+      "sourceSize": {
+        "w": 164,
+        "h": 242
+      }
+    },
+    "costa__seto__path215": {
+      "frame": {
+        "x": 204,
+        "y": 1719,
+        "w": 179,
+        "h": 242
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 179,
+        "h": 242
+      },
+      "sourceSize": {
+        "w": 179,
+        "h": 242
+      }
+    },
+    "Bosque__mono_grande__g128": {
+      "frame": {
+        "x": 576,
+        "y": 654,
+        "w": 165,
+        "h": 240
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 165,
+        "h": 240
+      },
+      "sourceSize": {
+        "w": 165,
+        "h": 240
+      }
+    },
+    "Puerto__mono_stop__g43-0": {
+      "frame": {
+        "x": 749,
+        "y": 654,
+        "w": 234,
+        "h": 232
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 234,
+        "h": 232
+      },
+      "sourceSize": {
+        "w": 234,
+        "h": 232
+      }
+    },
+    "puerto_viejo__mesa__g1157": {
+      "frame": {
+        "x": 391,
+        "y": 1719,
+        "w": 218,
+        "h": 228
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 218,
+        "h": 228
+      },
+      "sourceSize": {
+        "w": 218,
+        "h": 228
+      }
+    },
+    "Puerto__mono_esther__g74": {
+      "frame": {
+        "x": 617,
+        "y": 1719,
+        "w": 151,
+        "h": 226
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 151,
+        "h": 226
+      },
+      "sourceSize": {
+        "w": 151,
+        "h": 226
+      }
+    }
+  },
+  "meta": {
+    "app": "boiro split atlas generator",
+    "version": "1.0",
+    "image": "atlas-33.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1024,
+      "h": 2048
+    },
+    "scale": "1"
+  },
+  "sprites": [
+    {
+      "label": "Casas",
+      "children": [
+        {
+          "label": "Casas__mono_quique__g294",
+          "frame": "Casas__mono_quique__g294",
+          "bounds": {
+            "x": 841,
+            "y": 692,
+            "width": 185,
+            "height": 268
+          }
+        }
+      ]
+    },
+    {
+      "label": "Playa",
+      "children": [
+        {
+          "label": "Playa__mono_carmen__g323",
+          "frame": "Playa__mono_carmen__g323",
+          "bounds": {
+            "x": 1522,
+            "y": 967,
+            "width": 174,
+            "height": 245
+          }
+        },
+        {
+          "label": "Playa__mono_luisa__g339",
+          "frame": "Playa__mono_luisa__g339",
+          "bounds": {
+            "x": 1670,
+            "y": 941,
+            "width": 206,
+            "height": 277
+          }
+        },
+        {
+          "label": "Playa__roca__g436",
+          "frame": "Playa__roca__g436",
+          "bounds": {
+            "x": 2028,
+            "y": 633,
+            "width": 279,
+            "height": 315
+          }
+        }
+      ]
+    },
+    {
+      "label": "Mar",
+      "children": [
+        {
+          "label": "Mar__mono_fermin__g1153",
+          "frame": "Mar__mono_fermin__g1153",
+          "bounds": {
+            "x": 3100,
+            "y": 1731,
+            "width": 164,
+            "height": 242
+          }
+        }
+      ]
+    },
+    {
+      "label": "Juegos",
+      "children": [
+        {
+          "label": "Juegos__casita__g590",
+          "frame": "Juegos__casita__g590",
+          "bounds": {
+            "x": 2855,
+            "y": 0,
+            "width": 264,
+            "height": 321
+          }
+        }
+      ]
+    },
+    {
+      "label": "plaza",
+      "children": [
+        {
+          "label": "plaza__g1716__g1716",
+          "frame": "plaza__g1716__g1716",
+          "bounds": {
+            "x": 3329,
+            "y": 373,
+            "width": 315,
+            "height": 302
+          }
+        },
+        {
+          "label": "plaza__mono_detective__g66-0",
+          "frame": "plaza__mono_detective__g66-0",
+          "bounds": {
+            "x": 3898,
+            "y": 399,
+            "width": 233,
+            "height": 273
+          }
+        }
+      ]
+    },
+    {
+      "label": "Puerto",
+      "children": [
+        {
+          "label": "Puerto__mono_esther__g74",
+          "frame": "Puerto__mono_esther__g74",
+          "bounds": {
+            "x": 4412,
+            "y": 1178,
+            "width": 151,
+            "height": 226
+          }
+        },
+        {
+          "label": "Puerto__ob_macetero__g382",
+          "frame": "Puerto__ob_macetero__g382",
+          "bounds": {
+            "x": 3826,
+            "y": 910,
+            "width": 304,
+            "height": 303
+          }
+        },
+        {
+          "label": "Puerto__path1166__path1166",
+          "frame": "Puerto__path1166__path1166",
+          "bounds": {
+            "x": 4207,
+            "y": 296,
+            "width": 237,
+            "height": 246
+          }
+        },
+        {
+          "label": "Puerto__mono_stop__g43-0",
+          "frame": "Puerto__mono_stop__g43-0",
+          "bounds": {
+            "x": 4172,
+            "y": 1770,
+            "width": 234,
+            "height": 232
+          }
+        }
+      ]
+    },
+    {
+      "label": "puerto_viejo",
+      "children": [
+        {
+          "label": "puerto_viejo__mono_camarero__g8",
+          "frame": "puerto_viejo__mono_camarero__g8",
+          "bounds": {
+            "x": 5419,
+            "y": 2145,
+            "width": 190,
+            "height": 259
+          }
+        },
+        {
+          "label": "puerto_viejo__ob_ancla__g896",
+          "frame": "puerto_viejo__ob_ancla__g896",
+          "bounds": {
+            "x": 5038,
+            "y": 2057,
+            "width": 213,
+            "height": 267
+          }
+        },
+        {
+          "label": "puerto_viejo__mono_moncho__g27-8",
+          "frame": "puerto_viejo__mono_moncho__g27-8",
+          "bounds": {
+            "x": 4619,
+            "y": 3137,
+            "width": 192,
+            "height": 247
+          }
+        },
+        {
+          "label": "puerto_viejo__mono_sentada__g1715-5",
+          "frame": "puerto_viejo__mono_sentada__g1715-5",
+          "bounds": {
+            "x": 5239,
+            "y": 2175,
+            "width": 193,
+            "height": 254
+          }
+        },
+        {
+          "label": "puerto_viejo__mesa__g1157",
+          "frame": "puerto_viejo__mesa__g1157",
+          "bounds": {
+            "x": 5369,
+            "y": 2285,
+            "width": 218,
+            "height": 228
+          }
+        }
+      ]
+    },
+    {
+      "label": "Bosque",
+      "children": [
+        {
+          "label": "Bosque__ob_banco_ola__g380",
+          "frame": "Bosque__ob_banco_ola__g380",
+          "bounds": {
+            "x": 4868,
+            "y": 419,
+            "width": 282,
+            "height": 251
+          }
+        },
+        {
+          "label": "Bosque__mono_grande__g128",
+          "frame": "Bosque__mono_grande__g128",
+          "bounds": {
+            "x": 5653,
+            "y": 1000,
+            "width": 165,
+            "height": 240
+          }
+        },
+        {
+          "label": "Bosque__path2618__path2618",
+          "frame": "Bosque__path2618__path2618",
+          "bounds": {
+            "x": 4960,
+            "y": 917,
+            "width": 265,
+            "height": 246
+          }
+        }
+      ]
+    },
+    {
+      "label": "costa",
+      "children": [
+        {
+          "label": "costa__calva__path1085",
+          "frame": "costa__calva__path1085",
+          "bounds": {
+            "x": 6529,
+            "y": 2916,
+            "width": 274,
+            "height": 240
+          }
+        },
+        {
+          "label": "costa__seto__path215",
+          "frame": "costa__seto__path215",
+          "bounds": {
+            "x": 6111,
+            "y": 3129,
+            "width": 179,
+            "height": 242
+          }
+        },
+        {
+          "label": "costa__cormoran__g75",
+          "frame": "costa__cormoran__g75",
+          "bounds": {
+            "x": 4965,
+            "y": 2791,
+            "width": 301,
+            "height": 240
+          }
+        },
+        {
+          "label": "costa__path701__path701",
+          "frame": "costa__path701__path701",
+          "bounds": {
+            "x": 5610,
+            "y": 2830,
+            "width": 209,
+            "height": 250
+          }
+        },
+        {
+          "label": "costa__mono_sabela__g216-8",
+          "frame": "costa__mono_sabela__g216-8",
+          "bounds": {
+            "x": 5859,
+            "y": 3215,
+            "width": 205,
+            "height": 255
+          }
+        },
+        {
+          "label": "costa__mono_fumado__g20",
+          "frame": "costa__mono_fumado__g20",
+          "bounds": {
+            "x": 6230,
+            "y": 2130,
+            "width": 176,
+            "height": 245
+          }
+        },
+        {
+          "label": "costa__path630__path630",
+          "frame": "costa__path630__path630",
+          "bounds": {
+            "x": 6401,
+            "y": 3280,
+            "width": 271,
+            "height": 313
+          }
+        }
+      ]
+    }
+  ]
+}

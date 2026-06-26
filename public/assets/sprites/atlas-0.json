@@ -1,23 +1,23 @@
 {
   "frames": {
-    "Puerto__muro__path1432": {
+    "puerto_viejo__muro__path616": {
       "frame": {
         "x": 0,
         "y": 0,
-        "w": 2048,
-        "h": 2043
+        "w": 1519,
+        "h": 2048
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 2048,
-        "h": 2043
+        "w": 1519,
+        "h": 2048
       },
       "sourceSize": {
-        "w": 2048,
-        "h": 2043
+        "w": 1519,
+        "h": 2048
       }
     }
   },
@@ -34,14 +34,19 @@
   },
   "sprites": [
     {
-      "label": "Puerto__muro__path1432",
-      "frame": "Puerto__muro__path1432",
-      "bounds": {
-        "x": 4189,
-        "y": 278,
-        "width": 2614,
-        "height": 2608
-      }
+      "label": "puerto_viejo",
+      "children": [
+        {
+          "label": "puerto_viejo__muro__path616",
+          "frame": "puerto_viejo__muro__path616",
+          "bounds": {
+            "x": 4921,
+            "y": 1139,
+            "width": 1882,
+            "height": 2536
+          }
+        }
+      ]
     }
   ]
 }

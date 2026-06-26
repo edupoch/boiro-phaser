@@ -1,0 +1,352 @@
+{
+  "frames": {
+    "P_del__g815__g815": {
+      "frame": {
+        "x": 4,
+        "y": 4,
+        "w": 1625,
+        "h": 649
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1625,
+        "h": 649
+      },
+      "sourceSize": {
+        "w": 1625,
+        "h": 649
+      }
+    },
+    "Casas__hierba__g309": {
+      "frame": {
+        "x": 4,
+        "y": 661,
+        "w": 1530,
+        "h": 908
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1530,
+        "h": 908
+      },
+      "sourceSize": {
+        "w": 1530,
+        "h": 908
+      }
+    },
+    "Mar__kayaks__g892": {
+      "frame": {
+        "x": 4,
+        "y": 1577,
+        "w": 1180,
+        "h": 402
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1180,
+        "h": 402
+      },
+      "sourceSize": {
+        "w": 1180,
+        "h": 402
+      }
+    },
+    "Bosque__path2767__path2767": {
+      "frame": {
+        "x": 1192,
+        "y": 1577,
+        "w": 846,
+        "h": 385
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 846,
+        "h": 385
+      },
+      "sourceSize": {
+        "w": 846,
+        "h": 385
+      }
+    },
+    "Puerto__mostrador__g1410": {
+      "frame": {
+        "x": 1637,
+        "y": 4,
+        "w": 403,
+        "h": 543
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 403,
+        "h": 543
+      },
+      "sourceSize": {
+        "w": 403,
+        "h": 543
+      }
+    },
+    "Puerto__pared_interior__path1433-8": {
+      "frame": {
+        "x": 1542,
+        "y": 661,
+        "w": 488,
+        "h": 454
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 488,
+        "h": 454
+      },
+      "sourceSize": {
+        "w": 488,
+        "h": 454
+      }
+    },
+    "costa__path1725-7-1__path1725-7-1": {
+      "frame": {
+        "x": 1542,
+        "y": 1123,
+        "w": 471,
+        "h": 377
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 471,
+        "h": 377
+      },
+      "sourceSize": {
+        "w": 471,
+        "h": 377
+      }
+    },
+    "Mar__ob_pala__g62-3": {
+      "frame": {
+        "x": 1637,
+        "y": 555,
+        "w": 137,
+        "h": 93
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 137,
+        "h": 93
+      },
+      "sourceSize": {
+        "w": 137,
+        "h": 93
+      }
+    },
+    "plaza__agujero__g1406": {
+      "frame": {
+        "x": 1782,
+        "y": 555,
+        "w": 137,
+        "h": 91
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 137,
+        "h": 91
+      },
+      "sourceSize": {
+        "w": 137,
+        "h": 91
+      }
+    },
+    "Casas__gaviota_pie__g279": {
+      "frame": {
+        "x": 1927,
+        "y": 555,
+        "w": 117,
+        "h": 90
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 117,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 117,
+        "h": 90
+      }
+    }
+  },
+  "meta": {
+    "app": "boiro split atlas generator",
+    "version": "1.0",
+    "image": "atlas-24.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2048,
+      "h": 2048
+    },
+    "scale": "1"
+  },
+  "sprites": [
+    {
+      "label": "Casas",
+      "children": [
+        {
+          "label": "Casas__gaviota_pie__g279",
+          "frame": "Casas__gaviota_pie__g279",
+          "bounds": {
+            "x": 179,
+            "y": 273,
+            "width": 117,
+            "height": 90
+          }
+        },
+        {
+          "label": "Casas__hierba__g309",
+          "frame": "Casas__hierba__g309",
+          "bounds": {
+            "x": 94,
+            "y": 633,
+            "width": 1530,
+            "height": 908
+          }
+        }
+      ]
+    },
+    {
+      "label": "Mar",
+      "children": [
+        {
+          "label": "Mar__kayaks__g892",
+          "frame": "Mar__kayaks__g892",
+          "bounds": {
+            "x": 280,
+            "y": 3164,
+            "width": 1180,
+            "height": 402
+          }
+        },
+        {
+          "label": "Mar__ob_pala__g62-3",
+          "frame": "Mar__ob_pala__g62-3",
+          "bounds": {
+            "x": 3599,
+            "y": 2475,
+            "width": 137,
+            "height": 93
+          }
+        }
+      ]
+    },
+    {
+      "label": "Pádel",
+      "children": [
+        {
+          "label": "P_del__g815__g815",
+          "frame": "P_del__g815__g815",
+          "bounds": {
+            "x": 3411,
+            "y": 0,
+            "width": 1625,
+            "height": 649
+          }
+        }
+      ]
+    },
+    {
+      "label": "plaza",
+      "children": [
+        {
+          "label": "plaza__agujero__g1406",
+          "frame": "plaza__agujero__g1406",
+          "bounds": {
+            "x": 3518,
+            "y": 1123,
+            "width": 137,
+            "height": 91
+          }
+        }
+      ]
+    },
+    {
+      "label": "Puerto",
+      "children": [
+        {
+          "label": "Puerto__pared_interior__path1433-8",
+          "frame": "Puerto__pared_interior__path1433-8",
+          "bounds": {
+            "x": 4674,
+            "y": 1168,
+            "width": 488,
+            "height": 454
+          }
+        },
+        {
+          "label": "Puerto__mostrador__g1410",
+          "frame": "Puerto__mostrador__g1410",
+          "bounds": {
+            "x": 4197,
+            "y": 1034,
+            "width": 403,
+            "height": 543
+          }
+        }
+      ]
+    },
+    {
+      "label": "Bosque",
+      "children": [
+        {
+          "label": "Bosque__path2767__path2767",
+          "frame": "Bosque__path2767__path2767",
+          "bounds": {
+            "x": 4466,
+            "y": 7,
+            "width": 846,
+            "height": 385
+          }
+        }
+      ]
+    },
+    {
+      "label": "costa",
+      "children": [
+        {
+          "label": "costa__path1725-7-1__path1725-7-1",
+          "frame": "costa__path1725-7-1__path1725-7-1",
+          "bounds": {
+            "x": 5841,
+            "y": 3218,
+            "width": 471,
+            "height": 377
+          }
+        }
+      ]
+    }
+  ]
+}

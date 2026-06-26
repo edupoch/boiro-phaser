@@ -1,0 +1,392 @@
+{
+  "frames": {
+    "Mar__batea__g948": {
+      "frame": {
+        "x": 4,
+        "y": 4,
+        "w": 1280,
+        "h": 746
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 746
+      },
+      "sourceSize": {
+        "w": 1280,
+        "h": 746
+      }
+    },
+    "Bosque__dots__path2614": {
+      "frame": {
+        "x": 4,
+        "y": 758,
+        "w": 1233,
+        "h": 793
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1233,
+        "h": 793
+      },
+      "sourceSize": {
+        "w": 1233,
+        "h": 793
+      }
+    },
+    "Bosque__seto__g29": {
+      "frame": {
+        "x": 4,
+        "y": 1559,
+        "w": 913,
+        "h": 413
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 913,
+        "h": 413
+      },
+      "sourceSize": {
+        "w": 913,
+        "h": 413
+      }
+    },
+    "Casas__arboles__mov_arbol_casas_1__g271": {
+      "frame": {
+        "x": 1245,
+        "y": 758,
+        "w": 663,
+        "h": 783
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 663,
+        "h": 783
+      },
+      "sourceSize": {
+        "w": 663,
+        "h": 783
+      }
+    },
+    "Fondo__path1850-0-6__path1850-0-6": {
+      "frame": {
+        "x": 1292,
+        "y": 4,
+        "w": 751,
+        "h": 504
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 751,
+        "h": 504
+      },
+      "sourceSize": {
+        "w": 751,
+        "h": 504
+      }
+    },
+    "Mar__barca_2__g992": {
+      "frame": {
+        "x": 925,
+        "y": 1559,
+        "w": 440,
+        "h": 319
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 440,
+        "h": 319
+      },
+      "sourceSize": {
+        "w": 440,
+        "h": 319
+      }
+    },
+    "Juegos__path967-0-03-5-2__path967-0-03-5-2": {
+      "frame": {
+        "x": 1292,
+        "y": 516,
+        "w": 406,
+        "h": 233
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 406,
+        "h": 233
+      },
+      "sourceSize": {
+        "w": 406,
+        "h": 233
+      }
+    },
+    "Playa__mono_juan__g366": {
+      "frame": {
+        "x": 1373,
+        "y": 1559,
+        "w": 361,
+        "h": 233
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 361,
+        "h": 233
+      },
+      "sourceSize": {
+        "w": 361,
+        "h": 233
+      }
+    },
+    "gaviota__path411__path411": {
+      "frame": {
+        "x": 1706,
+        "y": 516,
+        "w": 330,
+        "h": 219
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 330,
+        "h": 219
+      },
+      "sourceSize": {
+        "w": 330,
+        "h": 219
+      }
+    },
+    "Puerto__ob_pale_porex__g1374": {
+      "frame": {
+        "x": 1742,
+        "y": 1559,
+        "w": 298,
+        "h": 202
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 298,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 298,
+        "h": 202
+      }
+    },
+    "Puerto__mono_luisa__g94": {
+      "frame": {
+        "x": 1916,
+        "y": 758,
+        "w": 128,
+        "h": 227
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 227
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 227
+      }
+    }
+  },
+  "meta": {
+    "app": "boiro split atlas generator",
+    "version": "1.0",
+    "image": "atlas-28.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2048,
+      "h": 2048
+    },
+    "scale": "1"
+  },
+  "sprites": [
+    {
+      "label": "Fondo",
+      "children": [
+        {
+          "label": "Fondo__path1850-0-6__path1850-0-6",
+          "frame": "Fondo__path1850-0-6__path1850-0-6",
+          "bounds": {
+            "x": 0,
+            "y": 1574,
+            "width": 751,
+            "height": 504
+          }
+        }
+      ]
+    },
+    {
+      "label": "Casas",
+      "children": [
+        {
+          "label": "arboles",
+          "children": [
+            {
+              "label": "Casas__arboles__mov_arbol_casas_1__g271",
+              "frame": "Casas__arboles__mov_arbol_casas_1__g271",
+              "bounds": {
+                "x": 123,
+                "y": 518,
+                "width": 663,
+                "height": 783
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Playa",
+      "children": [
+        {
+          "label": "Playa__mono_juan__g366",
+          "frame": "Playa__mono_juan__g366",
+          "bounds": {
+            "x": 790,
+            "y": 1430,
+            "width": 361,
+            "height": 233
+          }
+        }
+      ]
+    },
+    {
+      "label": "Mar",
+      "children": [
+        {
+          "label": "Mar__batea__g948",
+          "frame": "Mar__batea__g948",
+          "bounds": {
+            "x": 4332,
+            "y": 2875,
+            "width": 1280,
+            "height": 746
+          }
+        },
+        {
+          "label": "Mar__barca_2__g992",
+          "frame": "Mar__barca_2__g992",
+          "bounds": {
+            "x": 2712,
+            "y": 2317,
+            "width": 440,
+            "height": 319
+          }
+        }
+      ]
+    },
+    {
+      "label": "Juegos",
+      "children": [
+        {
+          "label": "Juegos__path967-0-03-5-2__path967-0-03-5-2",
+          "frame": "Juegos__path967-0-03-5-2__path967-0-03-5-2",
+          "bounds": {
+            "x": 2959,
+            "y": 0,
+            "width": 406,
+            "height": 233
+          }
+        }
+      ]
+    },
+    {
+      "label": "Puerto",
+      "children": [
+        {
+          "label": "Puerto__ob_pale_porex__g1374",
+          "frame": "Puerto__ob_pale_porex__g1374",
+          "bounds": {
+            "x": 4822,
+            "y": 1500,
+            "width": 298,
+            "height": 202
+          }
+        },
+        {
+          "label": "Puerto__mono_luisa__g94",
+          "frame": "Puerto__mono_luisa__g94",
+          "bounds": {
+            "x": 4137,
+            "y": 1027,
+            "width": 128,
+            "height": 227
+          }
+        }
+      ]
+    },
+    {
+      "label": "Bosque",
+      "children": [
+        {
+          "label": "Bosque__dots__path2614",
+          "frame": "Bosque__dots__path2614",
+          "bounds": {
+            "x": 4420,
+            "y": 370,
+            "width": 1233,
+            "height": 793
+          }
+        },
+        {
+          "label": "Bosque__seto__g29",
+          "frame": "Bosque__seto__g29",
+          "bounds": {
+            "x": 4419,
+            "y": 0,
+            "width": 913,
+            "height": 413
+          }
+        }
+      ]
+    },
+    {
+      "label": "gaviota",
+      "children": [
+        {
+          "label": "gaviota__path411__path411",
+          "frame": "gaviota__path411__path411",
+          "bounds": {
+            "x": 1016,
+            "y": 1078,
+            "width": 330,
+            "height": 219
+          }
+        }
+      ]
+    }
+  ]
+}

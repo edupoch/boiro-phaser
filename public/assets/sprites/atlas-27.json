@@ -1,0 +1,252 @@
+{
+  "frames": {
+    "Fondo__path2378-9-3-6__path2378-9-3-6": {
+      "frame": {
+        "x": 4,
+        "y": 4,
+        "w": 1329,
+        "h": 1028
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1329,
+        "h": 1028
+      },
+      "sourceSize": {
+        "w": 1329,
+        "h": 1028
+      }
+    },
+    "Bosque__varanda__g31": {
+      "frame": {
+        "x": 4,
+        "y": 1040,
+        "w": 1288,
+        "h": 966
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1288,
+        "h": 966
+      },
+      "sourceSize": {
+        "w": 1288,
+        "h": 966
+      }
+    },
+    "costa__path700-1__path700-1": {
+      "frame": {
+        "x": 1341,
+        "y": 4,
+        "w": 691,
+        "h": 858
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 691,
+        "h": 858
+      },
+      "sourceSize": {
+        "w": 691,
+        "h": 858
+      }
+    },
+    "Bosque__arbol__g1693": {
+      "frame": {
+        "x": 1300,
+        "y": 1040,
+        "w": 638,
+        "h": 784
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 638,
+        "h": 784
+      },
+      "sourceSize": {
+        "w": 638,
+        "h": 784
+      }
+    },
+    "Puerto__ob_cuerda__g1630-5-9": {
+      "frame": {
+        "x": 1300,
+        "y": 1832,
+        "w": 185,
+        "h": 164
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 185,
+        "h": 164
+      },
+      "sourceSize": {
+        "w": 185,
+        "h": 164
+      }
+    },
+    "Layer_1__mono_feliz__g207-7": {
+      "frame": {
+        "x": 1341,
+        "y": 870,
+        "w": 172,
+        "h": 161
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 172,
+        "h": 161
+      },
+      "sourceSize": {
+        "w": 172,
+        "h": 161
+      }
+    },
+    "Bosque__ob_papelera__g1758-1": {
+      "frame": {
+        "x": 1521,
+        "y": 870,
+        "w": 119,
+        "h": 122
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 119,
+        "h": 122
+      },
+      "sourceSize": {
+        "w": 119,
+        "h": 122
+      }
+    }
+  },
+  "meta": {
+    "app": "boiro split atlas generator",
+    "version": "1.0",
+    "image": "atlas-27.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2048,
+      "h": 2048
+    },
+    "scale": "1"
+  },
+  "sprites": [
+    {
+      "label": "Fondo",
+      "children": [
+        {
+          "label": "Fondo__path2378-9-3-6__path2378-9-3-6",
+          "frame": "Fondo__path2378-9-3-6__path2378-9-3-6",
+          "bounds": {
+            "x": 1591,
+            "y": 2490,
+            "width": 1329,
+            "height": 1028
+          }
+        }
+      ]
+    },
+    {
+      "label": "Puerto",
+      "children": [
+        {
+          "label": "Puerto__ob_cuerda__g1630-5-9",
+          "frame": "Puerto__ob_cuerda__g1630-5-9",
+          "bounds": {
+            "x": 4377,
+            "y": 1806,
+            "width": 185,
+            "height": 164
+          }
+        }
+      ]
+    },
+    {
+      "label": "Bosque",
+      "children": [
+        {
+          "label": "Bosque__ob_papelera__g1758-1",
+          "frame": "Bosque__ob_papelera__g1758-1",
+          "bounds": {
+            "x": 4693,
+            "y": 380,
+            "width": 119,
+            "height": 122
+          }
+        },
+        {
+          "label": "Bosque__arbol__g1693",
+          "frame": "Bosque__arbol__g1693",
+          "bounds": {
+            "x": 5418,
+            "y": 273,
+            "width": 638,
+            "height": 784
+          }
+        },
+        {
+          "label": "Bosque__varanda__g31",
+          "frame": "Bosque__varanda__g31",
+          "bounds": {
+            "x": 4196,
+            "y": 225,
+            "width": 1288,
+            "height": 966
+          }
+        }
+      ]
+    },
+    {
+      "label": "costa",
+      "children": [
+        {
+          "label": "costa__path700-1__path700-1",
+          "frame": "costa__path700-1__path700-1",
+          "bounds": {
+            "x": 5456,
+            "y": 2869,
+            "width": 691,
+            "height": 858
+          }
+        }
+      ]
+    },
+    {
+      "label": "Layer 1",
+      "children": [
+        {
+          "label": "Layer_1__mono_feliz__g207-7",
+          "frame": "Layer_1__mono_feliz__g207-7",
+          "bounds": {
+            "x": 4550,
+            "y": 466,
+            "width": 172,
+            "height": 161
+          }
+        }
+      ]
+    }
+  ]
+}

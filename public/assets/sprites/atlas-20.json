@@ -1,0 +1,492 @@
+{
+  "frames": {
+    "costa__path202__path202": {
+      "frame": {
+        "x": 4,
+        "y": 4,
+        "w": 1221,
+        "h": 1980
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1221,
+        "h": 1980
+      },
+      "sourceSize": {
+        "w": 1221,
+        "h": 1980
+      }
+    },
+    "Casas__casa_1__g267": {
+      "frame": {
+        "x": 1233,
+        "y": 4,
+        "w": 690,
+        "h": 1211
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 690,
+        "h": 1211
+      },
+      "sourceSize": {
+        "w": 690,
+        "h": 1211
+      }
+    },
+    "Casas__palmera__g53": {
+      "frame": {
+        "x": 1233,
+        "y": 1223,
+        "w": 344,
+        "h": 754
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 344,
+        "h": 754
+      },
+      "sourceSize": {
+        "w": 344,
+        "h": 754
+      }
+    },
+    "costa__mov_arbol_costa_2__g1693-2-7": {
+      "frame": {
+        "x": 1585,
+        "y": 1223,
+        "w": 443,
+        "h": 754
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 443,
+        "h": 754
+      },
+      "sourceSize": {
+        "w": 443,
+        "h": 754
+      }
+    },
+    "Bosque__path423__path423": {
+      "frame": {
+        "x": 1931,
+        "y": 4,
+        "w": 83,
+        "h": 295
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 83,
+        "h": 295
+      },
+      "sourceSize": {
+        "w": 83,
+        "h": 295
+      }
+    },
+    "Bosque__mono_abuela__g282": {
+      "frame": {
+        "x": 1931,
+        "y": 307,
+        "w": 93,
+        "h": 194
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 93,
+        "h": 194
+      },
+      "sourceSize": {
+        "w": 93,
+        "h": 194
+      }
+    },
+    "ob_saco_malla__path25-90__path25-90": {
+      "frame": {
+        "x": 1931,
+        "y": 509,
+        "w": 50,
+        "h": 149
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 50,
+        "h": 149
+      },
+      "sourceSize": {
+        "w": 50,
+        "h": 149
+      }
+    },
+    "ob_papelera__path347-2__path347-2": {
+      "frame": {
+        "x": 1931,
+        "y": 666,
+        "w": 78,
+        "h": 133
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 78,
+        "h": 133
+      },
+      "sourceSize": {
+        "w": 78,
+        "h": 133
+      }
+    },
+    "ob_saco_malla__path32-7__path32-7": {
+      "frame": {
+        "x": 1931,
+        "y": 807,
+        "w": 56,
+        "h": 131
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 56,
+        "h": 131
+      },
+      "sourceSize": {
+        "w": 56,
+        "h": 131
+      }
+    },
+    "ob_saco_malla__path24-5__path24-5": {
+      "frame": {
+        "x": 1931,
+        "y": 946,
+        "w": 95,
+        "h": 126
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 95,
+        "h": 126
+      },
+      "sourceSize": {
+        "w": 95,
+        "h": 126
+      }
+    },
+    "ob_saco_malla__path26-9__path26-9": {
+      "frame": {
+        "x": 1931,
+        "y": 1080,
+        "w": 95,
+        "h": 124
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 95,
+        "h": 124
+      },
+      "sourceSize": {
+        "w": 95,
+        "h": 124
+      }
+    },
+    "ob_saco_malla__path30-7__path30-7": {
+      "frame": {
+        "x": 1989,
+        "y": 509,
+        "w": 45,
+        "h": 106
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 45,
+        "h": 106
+      },
+      "sourceSize": {
+        "w": 45,
+        "h": 106
+      }
+    },
+    "ob_saco_malla__path29-0__path29-0": {
+      "frame": {
+        "x": 4,
+        "y": 1992,
+        "w": 81,
+        "h": 46
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 81,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 81,
+        "h": 46
+      }
+    },
+    "ob_papelera__path350-9__path350-9": {
+      "frame": {
+        "x": 93,
+        "y": 1992,
+        "w": 55,
+        "h": 37
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 55,
+        "h": 37
+      },
+      "sourceSize": {
+        "w": 55,
+        "h": 37
+      }
+    },
+    "ob_papelera__path349-9__path349-9": {
+      "frame": {
+        "x": 156,
+        "y": 1992,
+        "w": 51,
+        "h": 37
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 51,
+        "h": 37
+      },
+      "sourceSize": {
+        "w": 51,
+        "h": 37
+      }
+    }
+  },
+  "meta": {
+    "app": "boiro split atlas generator",
+    "version": "1.0",
+    "image": "atlas-20.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2048,
+      "h": 2048
+    },
+    "scale": "1"
+  },
+  "sprites": [
+    {
+      "label": "Casas",
+      "children": [
+        {
+          "label": "Casas__casa_1__g267",
+          "frame": "Casas__casa_1__g267",
+          "bounds": {
+            "x": 0,
+            "y": 106,
+            "width": 690,
+            "height": 1211
+          }
+        },
+        {
+          "label": "Casas__palmera__g53",
+          "frame": "Casas__palmera__g53",
+          "bounds": {
+            "x": 0,
+            "y": 688,
+            "width": 344,
+            "height": 754
+          }
+        }
+      ]
+    },
+    {
+      "label": "Bosque",
+      "children": [
+        {
+          "label": "Bosque__path423__path423",
+          "frame": "Bosque__path423__path423",
+          "bounds": {
+            "x": 6720,
+            "y": 1342,
+            "width": 83,
+            "height": 295
+          }
+        },
+        {
+          "label": "Bosque__mono_abuela__g282",
+          "frame": "Bosque__mono_abuela__g282",
+          "bounds": {
+            "x": 4930,
+            "y": 411,
+            "width": 93,
+            "height": 194
+          }
+        }
+      ]
+    },
+    {
+      "label": "costa",
+      "children": [
+        {
+          "label": "costa__path202__path202",
+          "frame": "costa__path202__path202",
+          "bounds": {
+            "x": 5582,
+            "y": 1685,
+            "width": 1221,
+            "height": 1980
+          }
+        },
+        {
+          "label": "costa__mov_arbol_costa_2__g1693-2-7",
+          "frame": "costa__mov_arbol_costa_2__g1693-2-7",
+          "bounds": {
+            "x": 6360,
+            "y": 1976,
+            "width": 443,
+            "height": 754
+          }
+        }
+      ]
+    },
+    {
+      "label": "ob_saco_malla",
+      "children": [
+        {
+          "label": "ob_saco_malla__path24-5__path24-5",
+          "frame": "ob_saco_malla__path24-5__path24-5",
+          "bounds": {
+            "x": 4490,
+            "y": 1466,
+            "width": 95,
+            "height": 126
+          }
+        },
+        {
+          "label": "ob_saco_malla__path25-90__path25-90",
+          "frame": "ob_saco_malla__path25-90__path25-90",
+          "bounds": {
+            "x": 4512,
+            "y": 1435,
+            "width": 50,
+            "height": 149
+          }
+        },
+        {
+          "label": "ob_saco_malla__path26-9__path26-9",
+          "frame": "ob_saco_malla__path26-9__path26-9",
+          "bounds": {
+            "x": 4490,
+            "y": 1468,
+            "width": 95,
+            "height": 124
+          }
+        },
+        {
+          "label": "ob_saco_malla__path29-0__path29-0",
+          "frame": "ob_saco_malla__path29-0__path29-0",
+          "bounds": {
+            "x": 4497,
+            "y": 1475,
+            "width": 81,
+            "height": 46
+          }
+        },
+        {
+          "label": "ob_saco_malla__path30-7__path30-7",
+          "frame": "ob_saco_malla__path30-7__path30-7",
+          "bounds": {
+            "x": 4507,
+            "y": 1486,
+            "width": 45,
+            "height": 106
+          }
+        },
+        {
+          "label": "ob_saco_malla__path32-7__path32-7",
+          "frame": "ob_saco_malla__path32-7__path32-7",
+          "bounds": {
+            "x": 4519,
+            "y": 1447,
+            "width": 56,
+            "height": 131
+          }
+        }
+      ]
+    },
+    {
+      "label": "ob_papelera",
+      "children": [
+        {
+          "label": "ob_papelera__path347-2__path347-2",
+          "frame": "ob_papelera__path347-2__path347-2",
+          "bounds": {
+            "x": 3260,
+            "y": 885,
+            "width": 78,
+            "height": 133
+          }
+        },
+        {
+          "label": "ob_papelera__path349-9__path349-9",
+          "frame": "ob_papelera__path349-9__path349-9",
+          "bounds": {
+            "x": 3284,
+            "y": 907,
+            "width": 51,
+            "height": 37
+          }
+        },
+        {
+          "label": "ob_papelera__path350-9__path350-9",
+          "frame": "ob_papelera__path350-9__path350-9",
+          "bounds": {
+            "x": 3272,
+            "y": 880,
+            "width": 55,
+            "height": 37
+          }
+        }
+      ]
+    }
+  ]
+}
