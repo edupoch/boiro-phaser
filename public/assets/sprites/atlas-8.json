@@ -2,8 +2,8 @@
   "frames": {
     "Fondo__playa__path404": {
       "frame": {
-        "x": 4,
-        "y": 4,
+        "x": 18,
+        "y": 18,
         "w": 2580,
         "h": 2310
       },
@@ -22,8 +22,8 @@
     },
     "Casas__suelo__g135": {
       "frame": {
-        "x": 4,
-        "y": 2322,
+        "x": 18,
+        "y": 2364,
         "w": 2130,
         "h": 1592
       },
@@ -40,30 +40,50 @@
         "h": 1592
       }
     },
-    "costa__fondo_roca__path185": {
+    "Fondo__hoyo_mar__g1924": {
       "frame": {
-        "x": 2592,
-        "y": 4,
-        "w": 1473,
-        "h": 1690
+        "x": 2184,
+        "y": 2364,
+        "w": 1527,
+        "h": 1030
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 1473,
-        "h": 1690
+        "w": 1527,
+        "h": 1030
       },
       "sourceSize": {
-        "w": 1473,
-        "h": 1690
+        "w": 1527,
+        "h": 1030
+      }
+    },
+    "Mar__pasarela__g1089": {
+      "frame": {
+        "x": 2634,
+        "y": 18,
+        "w": 1435,
+        "h": 876
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1435,
+        "h": 876
+      },
+      "sourceSize": {
+        "w": 1435,
+        "h": 876
       }
     },
     "Fondo__path2378-9-3__path2378-9-3": {
       "frame": {
-        "x": 2142,
-        "y": 2322,
+        "x": 2634,
+        "y": 930,
         "w": 1334,
         "h": 1031
       },
@@ -80,44 +100,44 @@
         "h": 1031
       }
     },
-    "Bosque__ob_canodromo__g1575": {
+    "Juegos__puntos__path2635": {
       "frame": {
-        "x": 2592,
-        "y": 1702,
-        "w": 1073,
-        "h": 529
+        "x": 2184,
+        "y": 3430,
+        "w": 1000,
+        "h": 411
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 1073,
-        "h": 529
+        "w": 1000,
+        "h": 411
       },
       "sourceSize": {
-        "w": 1073,
-        "h": 529
+        "w": 1000,
+        "h": 411
       }
     },
-    "costa__path1725-7__path1725-7": {
+    "Juegos__path967-0-03-5__path967-0-03-5": {
       "frame": {
-        "x": 2142,
-        "y": 3361,
-        "w": 903,
-        "h": 466
+        "x": 3220,
+        "y": 3430,
+        "w": 647,
+        "h": 372
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 903,
-        "h": 466
+        "w": 647,
+        "h": 372
       },
       "sourceSize": {
-        "w": 903,
-        "h": 466
+        "w": 647,
+        "h": 372
       }
     }
   },
@@ -144,6 +164,16 @@
             "y": 399,
             "width": 2580,
             "height": 2310
+          }
+        },
+        {
+          "label": "Fondo__hoyo_mar__g1924",
+          "frame": "Fondo__hoyo_mar__g1924",
+          "bounds": {
+            "x": 732,
+            "y": 1256,
+            "width": 1527,
+            "height": 1030
           }
         },
         {
@@ -174,41 +204,41 @@
       ]
     },
     {
-      "label": "Bosque",
+      "label": "Mar",
       "children": [
         {
-          "label": "Bosque__ob_canodromo__g1575",
-          "frame": "Bosque__ob_canodromo__g1575",
+          "label": "Mar__pasarela__g1089",
+          "frame": "Mar__pasarela__g1089",
           "bounds": {
-            "x": 4946,
-            "y": 0,
-            "width": 1073,
-            "height": 529
+            "x": 2155,
+            "y": 1708,
+            "width": 1435,
+            "height": 876
           }
         }
       ]
     },
     {
-      "label": "costa",
+      "label": "Juegos",
       "children": [
         {
-          "label": "costa__fondo_roca__path185",
-          "frame": "costa__fondo_roca__path185",
+          "label": "Juegos__puntos__path2635",
+          "frame": "Juegos__puntos__path2635",
           "bounds": {
-            "x": 5331,
-            "y": 2052,
-            "width": 1473,
-            "height": 1690
+            "x": 2117,
+            "y": 0,
+            "width": 1000,
+            "height": 411
           }
         },
         {
-          "label": "costa__path1725-7__path1725-7",
-          "frame": "costa__path1725-7__path1725-7",
+          "label": "Juegos__path967-0-03-5__path967-0-03-5",
+          "frame": "Juegos__path967-0-03-5__path967-0-03-5",
           "bounds": {
-            "x": 5725,
-            "y": 2281,
-            "width": 903,
-            "height": 466
+            "x": 2492,
+            "y": 0,
+            "width": 647,
+            "height": 372
           }
         }
       ]

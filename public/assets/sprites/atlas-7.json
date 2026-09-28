@@ -2,8 +2,8 @@
   "frames": {
     "Puerto__muro__path1432": {
       "frame": {
-        "x": 4,
-        "y": 4,
+        "x": 18,
+        "y": 18,
         "w": 2614,
         "h": 2609
       },
@@ -22,8 +22,8 @@
     },
     "plaza__path2652__path2652": {
       "frame": {
-        "x": 4,
-        "y": 2621,
+        "x": 18,
+        "y": 2663,
         "w": 2027,
         "h": 1152
       },
@@ -42,8 +42,8 @@
     },
     "Bosque__castillo__g1923": {
       "frame": {
-        "x": 2626,
-        "y": 4,
+        "x": 2668,
+        "y": 18,
         "w": 992,
         "h": 1658
       },
@@ -60,44 +60,44 @@
         "h": 1658
       }
     },
-    "Fondo__hoyo_mar__g1924": {
+    "Casas__hierba__g309": {
       "frame": {
-        "x": 2039,
-        "y": 2621,
-        "w": 1527,
-        "h": 1030
+        "x": 2081,
+        "y": 2663,
+        "w": 1530,
+        "h": 908
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 1527,
-        "h": 1030
+        "w": 1530,
+        "h": 908
       },
       "sourceSize": {
-        "w": 1527,
-        "h": 1030
+        "w": 1530,
+        "h": 908
       }
     },
-    "Mar__pasarela__g1089": {
+    "Puerto__path1159__path1159": {
       "frame": {
-        "x": 2626,
-        "y": 1670,
-        "w": 1435,
-        "h": 876
+        "x": 2668,
+        "y": 1712,
+        "w": 1291,
+        "h": 792
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 1435,
-        "h": 876
+        "w": 1291,
+        "h": 792
       },
       "sourceSize": {
-        "w": 1435,
-        "h": 876
+        "w": 1291,
+        "h": 792
       }
     }
   },
@@ -114,31 +114,16 @@
   },
   "sprites": [
     {
-      "label": "Fondo",
+      "label": "Casas",
       "children": [
         {
-          "label": "Fondo__hoyo_mar__g1924",
-          "frame": "Fondo__hoyo_mar__g1924",
+          "label": "Casas__hierba__g309",
+          "frame": "Casas__hierba__g309",
           "bounds": {
-            "x": 732,
-            "y": 1256,
-            "width": 1527,
-            "height": 1030
-          }
-        }
-      ]
-    },
-    {
-      "label": "Mar",
-      "children": [
-        {
-          "label": "Mar__pasarela__g1089",
-          "frame": "Mar__pasarela__g1089",
-          "bounds": {
-            "x": 2155,
-            "y": 1708,
-            "width": 1435,
-            "height": 876
+            "x": 94,
+            "y": 633,
+            "width": 1530,
+            "height": 908
           }
         }
       ]
@@ -169,6 +154,16 @@
             "y": 277,
             "width": 2614,
             "height": 2609
+          }
+        },
+        {
+          "label": "Puerto__path1159__path1159",
+          "frame": "Puerto__path1159__path1159",
+          "bounds": {
+            "x": 4193,
+            "y": 438,
+            "width": 1291,
+            "height": 792
           }
         }
       ]

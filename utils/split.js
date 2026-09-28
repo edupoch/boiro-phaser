@@ -41,8 +41,12 @@ const groupsToProcess = ['arboles'];
 const svgContent = fs.readFileSync(inputFile, 'utf-8');
 const $ = cheerio.load(svgContent, { xmlMode: true });
 
-fs.rmSync(outputDir, { recursive: true, force: true });
+// Vaciamos el directorio sin borrarlo: si se elimina entero con `npm run dev` arrancado,
+// Vite deja de servir sus ficheros hasta reiniciarse y el juego carga en blanco.
 fs.mkdirSync(outputDir, { recursive: true });
+for (const entry of fs.readdirSync(outputDir)) {
+  fs.rmSync(path.join(outputDir, entry), { recursive: true, force: true });
+}
 
 // Extraer viewBox y dimensiones del SVG raíz
 const rootSvg = $('svg').first();
@@ -94,9 +98,13 @@ const sharedSvgContent = [styles, defs].filter(Boolean).join('\n');
 const sprites = [];
 const atlasSprites = [];
 const atlasPadding = 2;
+// Con zoom mínimo (~0.24) la GPU muestrea los niveles de mipmap 2 y 3, donde cada texel promedia
+// bloques de 4-8 px y el filtrado bilineal alcanza el bloque vecino: con menos extrude el borde
+// de los tiles se mezcla con la transparencia y aparece una costura clara.
+const atlasExtrude = 16;
 const maxAtlasSize = 4096;
 // Tamaño máximo de un tile para sprites que no caben en un atlas: deja sitio al padding y al extrude.
-const maxTileSize = maxAtlasSize - (atlasPadding * 4);
+const maxTileSize = maxAtlasSize - ((atlasPadding + atlasExtrude) * 2);
 
 const sanitizeSegment = (value) => value
   .replace(/[\\/]/g, '_')
@@ -378,7 +386,7 @@ const packSprites = (inputSprites, atlasWidth, padding, extrude = 0) => {
   };
 };
 
-const findBestLayout = (inputSprites, padding = atlasPadding, extrude = atlasPadding) => {
+const findBestLayout = (inputSprites, padding = atlasPadding, extrude = atlasExtrude) => {
   if (!inputSprites.length) {
     return null;
   }
@@ -601,7 +609,7 @@ const buildAtlases = async () => {
     const atlasPngPath = path.join(outputDir, `${pageName}.png`);
     const atlasJsonPath = path.join(outputDir, `${pageName}.json`);
 
-    const extrude = atlasPadding;
+    const extrude = atlasExtrude;
     const composites = await Promise.all(
       page.layout.placements.map(async (sprite) => {
         const input = await createExtrudedSpriteBuffer(sprite, extrude);

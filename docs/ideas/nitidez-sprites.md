@@ -31,9 +31,9 @@ Con esto desaparecen la línea blanca y el emborronado a zoom ≤ 1, con una mem
 
 ## Key Assumptions to Validate
 - [x] `CLAMP_TO_EDGE` y el padding eliminan la línea (validado: un detector de columnas claras encuentra la línea en la captura original y no en el render nuevo): regenerar, abrir la vista del pádel y comparar con `docs/bugs/linea_blanca.png`
-- [ ] Los tiles de sprites troceados no generan costuras: revisar las uniones del mar a zoom mínimo, 1 y 2.5
+- [x] Los tiles de sprites troceados no generan costuras: revisar las uniones del mar a zoom mínimo, 1 y 2.5 (validado en el juego con 16 px de extrude)
 - [ ] 4096 es seguro en los equipos objetivo: `renderer.getMaxTextureSize()` en la máquina más modesta
-- [ ] Los mipmaps con 2 px de padding y 2 px de extrude no sangran a zoom mínimo; si sangra, subir a 4–8 px
+- [x] Los mipmaps no sangran a zoom mínimo: con 2 px de extrude aparecía una costura clara en el tile del mar a zoom ~0.24 (niveles de mip 2-3); con 16 px desaparece
 
 ## MVP Scope
 **Dentro (fase A):** `utils/split.js` (escala fija, padding universal, tiling de sobredimensionados, filtro de nulos, atlas 4096) y `Preloader.ts`/`GameScene.ts` (clamp, sprites en varios tiles).

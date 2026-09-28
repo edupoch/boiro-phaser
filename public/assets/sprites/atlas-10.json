@@ -1,29 +1,29 @@
 {
   "frames": {
-    "Bosque__dots__path2614": {
+    "costa__path700-1-4__path700-1-4": {
       "frame": {
-        "x": 4,
-        "y": 4,
-        "w": 1234,
-        "h": 792
+        "x": 18,
+        "y": 18,
+        "w": 1216,
+        "h": 713
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 1234,
-        "h": 792
+        "w": 1216,
+        "h": 713
       },
       "sourceSize": {
-        "w": 1234,
-        "h": 792
+        "w": 1216,
+        "h": 713
       }
     },
     "Mar__velero__g1165": {
       "frame": {
-        "x": 4,
-        "y": 804,
+        "x": 18,
+        "y": 767,
         "w": 1065,
         "h": 1195
       },
@@ -42,8 +42,8 @@
     },
     "Casas__casa_3__g186": {
       "frame": {
-        "x": 1246,
-        "y": 4,
+        "x": 1119,
+        "y": 767,
         "w": 1151,
         "h": 727
       },
@@ -58,12 +58,32 @@
       "sourceSize": {
         "w": 1151,
         "h": 727
+      }
+    },
+    "plaza__fondo__path592": {
+      "frame": {
+        "x": 1270,
+        "y": 18,
+        "w": 1148,
+        "h": 660
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1148,
+        "h": 660
+      },
+      "sourceSize": {
+        "w": 1148,
+        "h": 660
       }
     },
     "Puerto__path628__path628": {
       "frame": {
-        "x": 1077,
-        "y": 804,
+        "x": 18,
+        "y": 1998,
         "w": 1094,
         "h": 994
       },
@@ -78,32 +98,12 @@
       "sourceSize": {
         "w": 1094,
         "h": 994
-      }
-    },
-    "puerto_viejo__piedras_esquina__g692-2": {
-      "frame": {
-        "x": 4,
-        "y": 2007,
-        "w": 905,
-        "h": 1079
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 905,
-        "h": 1079
-      },
-      "sourceSize": {
-        "w": 905,
-        "h": 1079
       }
     },
     "Casas__casa_2__g232": {
       "frame": {
-        "x": 917,
-        "y": 2007,
+        "x": 18,
+        "y": 3028,
         "w": 1066,
         "h": 1025
       },
@@ -122,8 +122,8 @@
     },
     "plaza__path1086__path1086": {
       "frame": {
-        "x": 2405,
-        "y": 4,
+        "x": 2454,
+        "y": 18,
         "w": 1062,
         "h": 619
       },
@@ -142,8 +142,8 @@
     },
     "puerto_viejo__lona__g90": {
       "frame": {
-        "x": 2179,
-        "y": 804,
+        "x": 1148,
+        "y": 1998,
         "w": 1014,
         "h": 823
       },
@@ -158,12 +158,72 @@
       "sourceSize": {
         "w": 1014,
         "h": 823
+      }
+    },
+    "costa__path1725-7__path1725-7": {
+      "frame": {
+        "x": 2306,
+        "y": 767,
+        "w": 903,
+        "h": 466
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 903,
+        "h": 466
+      },
+      "sourceSize": {
+        "w": 903,
+        "h": 466
+      }
+    },
+    "Juegos__path967-0-03__path967-0-03": {
+      "frame": {
+        "x": 2198,
+        "y": 1998,
+        "w": 888,
+        "h": 512
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 888,
+        "h": 512
+      },
+      "sourceSize": {
+        "w": 888,
+        "h": 512
+      }
+    },
+    "costa__path700-1__path700-1": {
+      "frame": {
+        "x": 1120,
+        "y": 3028,
+        "w": 691,
+        "h": 858
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 691,
+        "h": 858
+      },
+      "sourceSize": {
+        "w": 691,
+        "h": 858
       }
     },
     "Casas__arboles__mov_arbol_casas_2__g269": {
       "frame": {
-        "x": 3201,
-        "y": 804,
+        "x": 1847,
+        "y": 3028,
         "w": 817,
         "h": 821
       },
@@ -178,12 +238,32 @@
       "sourceSize": {
         "w": 817,
         "h": 821
+      }
+    },
+    "Fondo__path1850-0__path1850-0": {
+      "frame": {
+        "x": 3122,
+        "y": 1998,
+        "w": 818,
+        "h": 504
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 818,
+        "h": 504
+      },
+      "sourceSize": {
+        "w": 818,
+        "h": 504
       }
     },
     "costa__arbol_roble__g46-9": {
       "frame": {
-        "x": 1991,
-        "y": 2007,
+        "x": 2700,
+        "y": 3028,
         "w": 704,
         "h": 792
       },
@@ -200,24 +280,24 @@
         "h": 792
       }
     },
-    "costa__path691__path691": {
+    "Bosque__arbol__g1693": {
       "frame": {
-        "x": 2703,
-        "y": 2007,
-        "w": 723,
-        "h": 629
+        "x": 3440,
+        "y": 3028,
+        "w": 638,
+        "h": 783
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 723,
-        "h": 629
+        "w": 638,
+        "h": 783
       },
       "sourceSize": {
-        "w": 723,
-        "h": 629
+        "w": 638,
+        "h": 783
       }
     }
   },
@@ -233,6 +313,21 @@
     "scale": "1"
   },
   "sprites": [
+    {
+      "label": "Fondo",
+      "children": [
+        {
+          "label": "Fondo__path1850-0__path1850-0",
+          "frame": "Fondo__path1850-0__path1850-0",
+          "bounds": {
+            "x": 797,
+            "y": 1158,
+            "width": 818,
+            "height": 504
+          }
+        }
+      ]
+    },
     {
       "label": "Casas",
       "children": [
@@ -289,8 +384,33 @@
       ]
     },
     {
+      "label": "Juegos",
+      "children": [
+        {
+          "label": "Juegos__path967-0-03__path967-0-03",
+          "frame": "Juegos__path967-0-03__path967-0-03",
+          "bounds": {
+            "x": 2025,
+            "y": 0,
+            "width": 888,
+            "height": 512
+          }
+        }
+      ]
+    },
+    {
       "label": "plaza",
       "children": [
+        {
+          "label": "plaza__fondo__path592",
+          "frame": "plaza__fondo__path592",
+          "bounds": {
+            "x": 2737,
+            "y": 380,
+            "width": 1148,
+            "height": 660
+          }
+        },
         {
           "label": "plaza__path1086__path1086",
           "frame": "plaza__path1086__path1086",
@@ -322,16 +442,6 @@
       "label": "puerto_viejo",
       "children": [
         {
-          "label": "puerto_viejo__piedras_esquina__g692-2",
-          "frame": "puerto_viejo__piedras_esquina__g692-2",
-          "bounds": {
-            "x": 5475,
-            "y": 1186,
-            "width": 905,
-            "height": 1079
-          }
-        },
-        {
           "label": "puerto_viejo__lona__g90",
           "frame": "puerto_viejo__lona__g90",
           "bounds": {
@@ -347,13 +457,13 @@
       "label": "Bosque",
       "children": [
         {
-          "label": "Bosque__dots__path2614",
-          "frame": "Bosque__dots__path2614",
+          "label": "Bosque__arbol__g1693",
+          "frame": "Bosque__arbol__g1693",
           "bounds": {
-            "x": 4420,
-            "y": 370,
-            "width": 1234,
-            "height": 792
+            "x": 5419,
+            "y": 273,
+            "width": 638,
+            "height": 783
           }
         }
       ]
@@ -362,13 +472,33 @@
       "label": "costa",
       "children": [
         {
-          "label": "costa__path691__path691",
-          "frame": "costa__path691__path691",
+          "label": "costa__path700-1__path700-1",
+          "frame": "costa__path700-1__path700-1",
           "bounds": {
-            "x": 5769,
-            "y": 3077,
-            "width": 723,
-            "height": 629
+            "x": 5457,
+            "y": 2869,
+            "width": 691,
+            "height": 858
+          }
+        },
+        {
+          "label": "costa__path700-1-4__path700-1-4",
+          "frame": "costa__path700-1-4__path700-1-4",
+          "bounds": {
+            "x": 5457,
+            "y": 3029,
+            "width": 1216,
+            "height": 713
+          }
+        },
+        {
+          "label": "costa__path1725-7__path1725-7",
+          "frame": "costa__path1725-7__path1725-7",
+          "bounds": {
+            "x": 5725,
+            "y": 2281,
+            "width": 903,
+            "height": 466
           }
         },
         {

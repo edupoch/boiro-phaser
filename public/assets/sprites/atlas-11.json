@@ -1,0 +1,227 @@
+{
+  "frames": {
+    "puerto_viejo__piedras_esquina__g692-2": {
+      "frame": {
+        "x": 18,
+        "y": 18,
+        "w": 905,
+        "h": 1079
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 905,
+        "h": 1079
+      },
+      "sourceSize": {
+        "w": 905,
+        "h": 1079
+      }
+    },
+    "Casas__arboles__mov_arbol_casas_1__g271": {
+      "frame": {
+        "x": 959,
+        "y": 18,
+        "w": 662,
+        "h": 783
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 662,
+        "h": 783
+      },
+      "sourceSize": {
+        "w": 662,
+        "h": 783
+      }
+    },
+    "Fondo__path1850-0-6__path1850-0-6": {
+      "frame": {
+        "x": 18,
+        "y": 1133,
+        "w": 752,
+        "h": 504
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 752,
+        "h": 504
+      },
+      "sourceSize": {
+        "w": 752,
+        "h": 504
+      }
+    },
+    "costa__path691__path691": {
+      "frame": {
+        "x": 18,
+        "y": 1673,
+        "w": 723,
+        "h": 629
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 723,
+        "h": 629
+      },
+      "sourceSize": {
+        "w": 723,
+        "h": 629
+      }
+    },
+    "puerto_viejo__empedrado__g1476": {
+      "frame": {
+        "x": 806,
+        "y": 1133,
+        "w": 712,
+        "h": 475
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 712,
+        "h": 475
+      },
+      "sourceSize": {
+        "w": 712,
+        "h": 475
+      }
+    },
+    "plaza__roble__g46-9-0": {
+      "frame": {
+        "x": 18,
+        "y": 2338,
+        "w": 642,
+        "h": 681
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 642,
+        "h": 681
+      },
+      "sourceSize": {
+        "w": 642,
+        "h": 681
+      }
+    }
+  },
+  "meta": {
+    "app": "boiro split atlas generator",
+    "version": "1.0",
+    "image": "atlas-11.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2048,
+      "h": 4096
+    },
+    "scale": "1"
+  },
+  "sprites": [
+    {
+      "label": "Fondo",
+      "children": [
+        {
+          "label": "Fondo__path1850-0-6__path1850-0-6",
+          "frame": "Fondo__path1850-0-6__path1850-0-6",
+          "bounds": {
+            "x": 0,
+            "y": 1574,
+            "width": 752,
+            "height": 504
+          }
+        }
+      ]
+    },
+    {
+      "label": "Casas",
+      "children": [
+        {
+          "label": "arboles",
+          "children": [
+            {
+              "label": "Casas__arboles__mov_arbol_casas_1__g271",
+              "frame": "Casas__arboles__mov_arbol_casas_1__g271",
+              "bounds": {
+                "x": 124,
+                "y": 518,
+                "width": 662,
+                "height": 783
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "plaza",
+      "children": [
+        {
+          "label": "plaza__roble__g46-9-0",
+          "frame": "plaza__roble__g46-9-0",
+          "bounds": {
+            "x": 2808,
+            "y": 187,
+            "width": 642,
+            "height": 681
+          }
+        }
+      ]
+    },
+    {
+      "label": "puerto_viejo",
+      "children": [
+        {
+          "label": "puerto_viejo__piedras_esquina__g692-2",
+          "frame": "puerto_viejo__piedras_esquina__g692-2",
+          "bounds": {
+            "x": 5475,
+            "y": 1186,
+            "width": 905,
+            "height": 1079
+          }
+        },
+        {
+          "label": "puerto_viejo__empedrado__g1476",
+          "frame": "puerto_viejo__empedrado__g1476",
+          "bounds": {
+            "x": 4920,
+            "y": 2356,
+            "width": 712,
+            "height": 475
+          }
+        }
+      ]
+    },
+    {
+      "label": "costa",
+      "children": [
+        {
+          "label": "costa__path691__path691",
+          "frame": "costa__path691__path691",
+          "bounds": {
+            "x": 5769,
+            "y": 3077,
+            "width": 723,
+            "height": 629
+          }
+        }
+      ]
+    }
+  ]
+}

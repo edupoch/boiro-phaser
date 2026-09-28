@@ -2,8 +2,8 @@
   "frames": {
     "Fondo__borde__path76": {
       "frame": {
-        "x": 4,
-        "y": 4,
+        "x": 18,
+        "y": 18,
         "w": 3157,
         "h": 1828
       },
@@ -22,8 +22,8 @@
     },
     "Puerto__suelo_tierra__path618": {
       "frame": {
-        "x": 4,
-        "y": 1840,
+        "x": 18,
+        "y": 1882,
         "w": 2603,
         "h": 2023
       },
@@ -42,8 +42,8 @@
     },
     "costa__path202__path202": {
       "frame": {
-        "x": 2615,
-        "y": 1840,
+        "x": 2657,
+        "y": 1882,
         "w": 1222,
         "h": 1981
       },
@@ -62,8 +62,8 @@
     },
     "Casas__casa_1__g267": {
       "frame": {
-        "x": 3169,
-        "y": 4,
+        "x": 3211,
+        "y": 18,
         "w": 690,
         "h": 1211
       },
@@ -80,24 +80,24 @@
         "h": 1211
       }
     },
-    "Bosque__seto__g29": {
+    "Juegos__path967-0__path967-0": {
       "frame": {
-        "x": 3169,
-        "y": 1223,
-        "w": 913,
-        "h": 413
+        "x": 3211,
+        "y": 1265,
+        "w": 846,
+        "h": 488
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 913,
-        "h": 413
+        "w": 846,
+        "h": 488
       },
       "sourceSize": {
-        "w": 913,
-        "h": 413
+        "w": 846,
+        "h": 488
       }
     }
   },
@@ -144,6 +144,21 @@
       ]
     },
     {
+      "label": "Juegos",
+      "children": [
+        {
+          "label": "Juegos__path967-0__path967-0",
+          "frame": "Juegos__path967-0__path967-0",
+          "bounds": {
+            "x": 2337,
+            "y": 0,
+            "width": 846,
+            "height": 488
+          }
+        }
+      ]
+    },
+    {
       "label": "Puerto",
       "children": [
         {
@@ -154,21 +169,6 @@
             "y": 0,
             "width": 2603,
             "height": 2023
-          }
-        }
-      ]
-    },
-    {
-      "label": "Bosque",
-      "children": [
-        {
-          "label": "Bosque__seto__g29",
-          "frame": "Bosque__seto__g29",
-          "bounds": {
-            "x": 4420,
-            "y": 0,
-            "width": 913,
-            "height": 413
           }
         }
       ]
