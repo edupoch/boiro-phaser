@@ -1,23 +1,103 @@
 {
   "frames": {
-    "Fondo__hoyo_orilla__g1925": {
+    "Fondo__borde__path76": {
       "frame": {
-        "x": 0,
-        "y": 0,
-        "w": 2048,
-        "h": 1318
+        "x": 4,
+        "y": 4,
+        "w": 3157,
+        "h": 1828
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 2048,
-        "h": 1318
+        "w": 3157,
+        "h": 1828
       },
       "sourceSize": {
-        "w": 2048,
-        "h": 1318
+        "w": 3157,
+        "h": 1828
+      }
+    },
+    "Puerto__suelo_tierra__path618": {
+      "frame": {
+        "x": 4,
+        "y": 1840,
+        "w": 2603,
+        "h": 2023
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 2603,
+        "h": 2023
+      },
+      "sourceSize": {
+        "w": 2603,
+        "h": 2023
+      }
+    },
+    "costa__path202__path202": {
+      "frame": {
+        "x": 2615,
+        "y": 1840,
+        "w": 1222,
+        "h": 1981
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1222,
+        "h": 1981
+      },
+      "sourceSize": {
+        "w": 1222,
+        "h": 1981
+      }
+    },
+    "Casas__casa_1__g267": {
+      "frame": {
+        "x": 3169,
+        "y": 4,
+        "w": 690,
+        "h": 1211
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 690,
+        "h": 1211
+      },
+      "sourceSize": {
+        "w": 690,
+        "h": 1211
+      }
+    },
+    "Bosque__seto__g29": {
+      "frame": {
+        "x": 3169,
+        "y": 1223,
+        "w": 913,
+        "h": 413
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 913,
+        "h": 413
+      },
+      "sourceSize": {
+        "w": 913,
+        "h": 413
       }
     }
   },
@@ -27,8 +107,8 @@
     "image": "atlas-6.png",
     "format": "RGBA8888",
     "size": {
-      "w": 2048,
-      "h": 2048
+      "w": 4096,
+      "h": 4096
     },
     "scale": "1"
   },
@@ -37,13 +117,73 @@
       "label": "Fondo",
       "children": [
         {
-          "label": "Fondo__hoyo_orilla__g1925",
-          "frame": "Fondo__hoyo_orilla__g1925",
+          "label": "Fondo__borde__path76",
+          "frame": "Fondo__borde__path76",
           "bounds": {
-            "x": 16,
-            "y": 1340,
-            "width": 2056,
-            "height": 1324
+            "x": 3647,
+            "y": 1673,
+            "width": 3157,
+            "height": 1828
+          }
+        }
+      ]
+    },
+    {
+      "label": "Casas",
+      "children": [
+        {
+          "label": "Casas__casa_1__g267",
+          "frame": "Casas__casa_1__g267",
+          "bounds": {
+            "x": 0,
+            "y": 106,
+            "width": 690,
+            "height": 1211
+          }
+        }
+      ]
+    },
+    {
+      "label": "Puerto",
+      "children": [
+        {
+          "label": "Puerto__suelo_tierra__path618",
+          "frame": "Puerto__suelo_tierra__path618",
+          "bounds": {
+            "x": 4201,
+            "y": 0,
+            "width": 2603,
+            "height": 2023
+          }
+        }
+      ]
+    },
+    {
+      "label": "Bosque",
+      "children": [
+        {
+          "label": "Bosque__seto__g29",
+          "frame": "Bosque__seto__g29",
+          "bounds": {
+            "x": 4420,
+            "y": 0,
+            "width": 913,
+            "height": 413
+          }
+        }
+      ]
+    },
+    {
+      "label": "costa",
+      "children": [
+        {
+          "label": "costa__path202__path202",
+          "frame": "costa__path202__path202",
+          "bounds": {
+            "x": 5582,
+            "y": 1684,
+            "width": 1222,
+            "height": 1981
           }
         }
       ]

@@ -9,10 +9,16 @@ type SpriteBounds = {
     height: number;
 };
 
+// Trozo de un sprite demasiado grande para un atlas; x/y son relativos a los bounds del sprite.
+type SpriteTile = SpriteBounds & {
+    frame: string;
+};
+
 type PositionedSprite = {
     label: string;
     frame?: string;
     bounds: SpriteBounds | null;
+    tiles?: SpriteTile[];
     children?: PositionedSprite[];
     childen?: PositionedSprite[];
 };
@@ -157,6 +163,24 @@ export class GameScene extends Phaser.Scene
                 }
 
                 const bounds = sprite.bounds;
+
+                // Sprites troceados en tiles: son decorado estático, se pintan tile a tile
+                // y no participan en interacciones ni animaciones.
+                if (Array.isArray(sprite.tiles)) {
+                    sprite.tiles.forEach((tile) => {
+                        const tileAtlasKey = frameToAtlasKey[tile.frame];
+                        if (!tileAtlasKey || !this.textures.exists(tileAtlasKey)) {
+                            return;
+                        }
+
+                        this.add.image((bounds.x + tile.x) * scaleX, (bounds.y + tile.y) * scaleX, tileAtlasKey, tile.frame)
+                            .setOrigin(0, 0)
+                            .setDisplaySize(tile.width * scaleX, tile.height * scaleX)
+                            .setDepth(50);
+                    });
+                    return;
+                }
+
                 const centerX = (bounds.x + bounds.width / 2) * scaleX;
                 const centerY = (bounds.y + bounds.height / 2) * scaleX;
 

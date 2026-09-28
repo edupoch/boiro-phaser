@@ -1,23 +1,223 @@
 {
   "frames": {
-    "patron__path10-0": {
+    "Bosque__dots__path2614": {
       "frame": {
-        "x": 0,
-        "y": 0,
-        "w": 2048,
-        "h": 1126
+        "x": 4,
+        "y": 4,
+        "w": 1234,
+        "h": 792
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 2048,
-        "h": 1126
+        "w": 1234,
+        "h": 792
       },
       "sourceSize": {
-        "w": 2048,
-        "h": 1126
+        "w": 1234,
+        "h": 792
+      }
+    },
+    "Mar__velero__g1165": {
+      "frame": {
+        "x": 4,
+        "y": 804,
+        "w": 1065,
+        "h": 1195
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1065,
+        "h": 1195
+      },
+      "sourceSize": {
+        "w": 1065,
+        "h": 1195
+      }
+    },
+    "Casas__casa_3__g186": {
+      "frame": {
+        "x": 1246,
+        "y": 4,
+        "w": 1151,
+        "h": 727
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1151,
+        "h": 727
+      },
+      "sourceSize": {
+        "w": 1151,
+        "h": 727
+      }
+    },
+    "Puerto__path628__path628": {
+      "frame": {
+        "x": 1077,
+        "y": 804,
+        "w": 1094,
+        "h": 994
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1094,
+        "h": 994
+      },
+      "sourceSize": {
+        "w": 1094,
+        "h": 994
+      }
+    },
+    "puerto_viejo__piedras_esquina__g692-2": {
+      "frame": {
+        "x": 4,
+        "y": 2007,
+        "w": 905,
+        "h": 1079
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 905,
+        "h": 1079
+      },
+      "sourceSize": {
+        "w": 905,
+        "h": 1079
+      }
+    },
+    "Casas__casa_2__g232": {
+      "frame": {
+        "x": 917,
+        "y": 2007,
+        "w": 1066,
+        "h": 1025
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1066,
+        "h": 1025
+      },
+      "sourceSize": {
+        "w": 1066,
+        "h": 1025
+      }
+    },
+    "plaza__path1086__path1086": {
+      "frame": {
+        "x": 2405,
+        "y": 4,
+        "w": 1062,
+        "h": 619
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1062,
+        "h": 619
+      },
+      "sourceSize": {
+        "w": 1062,
+        "h": 619
+      }
+    },
+    "puerto_viejo__lona__g90": {
+      "frame": {
+        "x": 2179,
+        "y": 804,
+        "w": 1014,
+        "h": 823
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1014,
+        "h": 823
+      },
+      "sourceSize": {
+        "w": 1014,
+        "h": 823
+      }
+    },
+    "Casas__arboles__mov_arbol_casas_2__g269": {
+      "frame": {
+        "x": 3201,
+        "y": 804,
+        "w": 817,
+        "h": 821
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 817,
+        "h": 821
+      },
+      "sourceSize": {
+        "w": 817,
+        "h": 821
+      }
+    },
+    "costa__arbol_roble__g46-9": {
+      "frame": {
+        "x": 1991,
+        "y": 2007,
+        "w": 704,
+        "h": 792
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 704,
+        "h": 792
+      },
+      "sourceSize": {
+        "w": 704,
+        "h": 792
+      }
+    },
+    "costa__path691__path691": {
+      "frame": {
+        "x": 2703,
+        "y": 2007,
+        "w": 723,
+        "h": 629
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 723,
+        "h": 629
+      },
+      "sourceSize": {
+        "w": 723,
+        "h": 629
       }
     }
   },
@@ -27,16 +227,161 @@
     "image": "atlas-10.png",
     "format": "RGBA8888",
     "size": {
-      "w": 2048,
-      "h": 2048
+      "w": 4096,
+      "h": 4096
     },
     "scale": "1"
   },
   "sprites": [
     {
-      "label": "patron__path10-0",
-      "frame": "patron__path10-0",
-      "bounds": null
+      "label": "Casas",
+      "children": [
+        {
+          "label": "Casas__casa_3__g186",
+          "frame": "Casas__casa_3__g186",
+          "bounds": {
+            "x": 643,
+            "y": 0,
+            "width": 1151,
+            "height": 727
+          }
+        },
+        {
+          "label": "Casas__casa_2__g232",
+          "frame": "Casas__casa_2__g232",
+          "bounds": {
+            "x": 51,
+            "y": 0,
+            "width": 1066,
+            "height": 1025
+          }
+        },
+        {
+          "label": "arboles",
+          "children": [
+            {
+              "label": "Casas__arboles__mov_arbol_casas_2__g269",
+              "frame": "Casas__arboles__mov_arbol_casas_2__g269",
+              "bounds": {
+                "x": 787,
+                "y": 50,
+                "width": 817,
+                "height": 821
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Mar",
+      "children": [
+        {
+          "label": "Mar__velero__g1165",
+          "frame": "Mar__velero__g1165",
+          "bounds": {
+            "x": 2755,
+            "y": 1182,
+            "width": 1065,
+            "height": 1195
+          }
+        }
+      ]
+    },
+    {
+      "label": "plaza",
+      "children": [
+        {
+          "label": "plaza__path1086__path1086",
+          "frame": "plaza__path1086__path1086",
+          "bounds": {
+            "x": 2823,
+            "y": 388,
+            "width": 1062,
+            "height": 619
+          }
+        }
+      ]
+    },
+    {
+      "label": "Puerto",
+      "children": [
+        {
+          "label": "Puerto__path628__path628",
+          "frame": "Puerto__path628__path628",
+          "bounds": {
+            "x": 4286,
+            "y": 1033,
+            "width": 1094,
+            "height": 994
+          }
+        }
+      ]
+    },
+    {
+      "label": "puerto_viejo",
+      "children": [
+        {
+          "label": "puerto_viejo__piedras_esquina__g692-2",
+          "frame": "puerto_viejo__piedras_esquina__g692-2",
+          "bounds": {
+            "x": 5475,
+            "y": 1186,
+            "width": 905,
+            "height": 1079
+          }
+        },
+        {
+          "label": "puerto_viejo__lona__g90",
+          "frame": "puerto_viejo__lona__g90",
+          "bounds": {
+            "x": 5292,
+            "y": 1646,
+            "width": 1014,
+            "height": 823
+          }
+        }
+      ]
+    },
+    {
+      "label": "Bosque",
+      "children": [
+        {
+          "label": "Bosque__dots__path2614",
+          "frame": "Bosque__dots__path2614",
+          "bounds": {
+            "x": 4420,
+            "y": 370,
+            "width": 1234,
+            "height": 792
+          }
+        }
+      ]
+    },
+    {
+      "label": "costa",
+      "children": [
+        {
+          "label": "costa__path691__path691",
+          "frame": "costa__path691__path691",
+          "bounds": {
+            "x": 5769,
+            "y": 3077,
+            "width": 723,
+            "height": 629
+          }
+        },
+        {
+          "label": "costa__arbol_roble__g46-9",
+          "frame": "costa__arbol_roble__g46-9",
+          "bounds": {
+            "x": 5827,
+            "y": 1473,
+            "width": 704,
+            "height": 792
+          }
+        }
+      ]
     }
   ]
 }

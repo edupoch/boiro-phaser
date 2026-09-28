@@ -1,23 +1,123 @@
 {
   "frames": {
-    "Fondo__borde__path76": {
+    "Fondo__playa__path404": {
       "frame": {
-        "x": 0,
-        "y": 0,
-        "w": 2048,
-        "h": 1185
+        "x": 4,
+        "y": 4,
+        "w": 2580,
+        "h": 2310
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 2048,
-        "h": 1185
+        "w": 2580,
+        "h": 2310
       },
       "sourceSize": {
-        "w": 2048,
-        "h": 1185
+        "w": 2580,
+        "h": 2310
+      }
+    },
+    "Casas__suelo__g135": {
+      "frame": {
+        "x": 4,
+        "y": 2322,
+        "w": 2130,
+        "h": 1592
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 2130,
+        "h": 1592
+      },
+      "sourceSize": {
+        "w": 2130,
+        "h": 1592
+      }
+    },
+    "costa__fondo_roca__path185": {
+      "frame": {
+        "x": 2592,
+        "y": 4,
+        "w": 1473,
+        "h": 1690
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1473,
+        "h": 1690
+      },
+      "sourceSize": {
+        "w": 1473,
+        "h": 1690
+      }
+    },
+    "Fondo__path2378-9-3__path2378-9-3": {
+      "frame": {
+        "x": 2142,
+        "y": 2322,
+        "w": 1334,
+        "h": 1031
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1334,
+        "h": 1031
+      },
+      "sourceSize": {
+        "w": 1334,
+        "h": 1031
+      }
+    },
+    "Bosque__ob_canodromo__g1575": {
+      "frame": {
+        "x": 2592,
+        "y": 1702,
+        "w": 1073,
+        "h": 529
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1073,
+        "h": 529
+      },
+      "sourceSize": {
+        "w": 1073,
+        "h": 529
+      }
+    },
+    "costa__path1725-7__path1725-7": {
+      "frame": {
+        "x": 2142,
+        "y": 3361,
+        "w": 903,
+        "h": 466
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 903,
+        "h": 466
+      },
+      "sourceSize": {
+        "w": 903,
+        "h": 466
       }
     }
   },
@@ -27,8 +127,8 @@
     "image": "atlas-8.png",
     "format": "RGBA8888",
     "size": {
-      "w": 2048,
-      "h": 2048
+      "w": 4096,
+      "h": 4096
     },
     "scale": "1"
   },
@@ -37,13 +137,78 @@
       "label": "Fondo",
       "children": [
         {
-          "label": "Fondo__borde__path76",
-          "frame": "Fondo__borde__path76",
+          "label": "Fondo__playa__path404",
+          "frame": "Fondo__playa__path404",
           "bounds": {
-            "x": 3646,
-            "y": 1673,
-            "width": 3157,
-            "height": 1828
+            "x": 0,
+            "y": 399,
+            "width": 2580,
+            "height": 2310
+          }
+        },
+        {
+          "label": "Fondo__path2378-9-3__path2378-9-3",
+          "frame": "Fondo__path2378-9-3__path2378-9-3",
+          "bounds": {
+            "x": 4110,
+            "y": 2623,
+            "width": 1334,
+            "height": 1031
+          }
+        }
+      ]
+    },
+    {
+      "label": "Casas",
+      "children": [
+        {
+          "label": "Casas__suelo__g135",
+          "frame": "Casas__suelo__g135",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 2130,
+            "height": 1592
+          }
+        }
+      ]
+    },
+    {
+      "label": "Bosque",
+      "children": [
+        {
+          "label": "Bosque__ob_canodromo__g1575",
+          "frame": "Bosque__ob_canodromo__g1575",
+          "bounds": {
+            "x": 4946,
+            "y": 0,
+            "width": 1073,
+            "height": 529
+          }
+        }
+      ]
+    },
+    {
+      "label": "costa",
+      "children": [
+        {
+          "label": "costa__fondo_roca__path185",
+          "frame": "costa__fondo_roca__path185",
+          "bounds": {
+            "x": 5331,
+            "y": 2052,
+            "width": 1473,
+            "height": 1690
+          }
+        },
+        {
+          "label": "costa__path1725-7__path1725-7",
+          "frame": "costa__path1725-7__path1725-7",
+          "bounds": {
+            "x": 5725,
+            "y": 2281,
+            "width": 903,
+            "height": 466
           }
         }
       ]

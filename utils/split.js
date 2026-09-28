@@ -47,8 +47,15 @@ fs.mkdirSync(outputDir, { recursive: true });
 // Extraer viewBox y dimensiones del SVG raíz
 const rootSvg = $('svg').first();
 const viewBox = rootSvg.attr('viewBox') ?? '';
-const width = rootSvg.attr('width') ?? '512';
-const height = rootSvg.attr('height') ?? '512';
+const [viewBoxX = 0, viewBoxY = 0, viewBoxWidth, viewBoxHeight] = viewBox
+  .split(/[\s,]+/)
+  .filter(Boolean)
+  .map(Number);
+// Renderizamos siempre a 1 px por unidad del viewBox. Si usáramos los width/height del SVG
+// (en mm), sharp rasterizaría a 72 dpi con una escala ligeramente distinta (6803 px en vez de 6804)
+// y los bounds calculados no coincidirían con el recorte posterior.
+const width = String(viewBoxWidth ?? parseFloat(rootSvg.attr('width') ?? '512'));
+const height = String(viewBoxHeight ?? parseFloat(rootSvg.attr('height') ?? '512'));
 const rootAttrs = rootSvg.get(0)?.attribs ?? {};
 
 // Conserva todos los namespaces declarados en el SVG fuente (xmlns y xmlns:prefijo)
@@ -87,7 +94,9 @@ const sharedSvgContent = [styles, defs].filter(Boolean).join('\n');
 const sprites = [];
 const atlasSprites = [];
 const atlasPadding = 2;
-const maxAtlasSize = 2048;
+const maxAtlasSize = 4096;
+// Tamaño máximo de un tile para sprites que no caben en un atlas: deja sitio al padding y al extrude.
+const maxTileSize = maxAtlasSize - (atlasPadding * 4);
 
 const sanitizeSegment = (value) => value
   .replace(/[\\/]/g, '_')
@@ -196,17 +205,19 @@ const createPathSprite = async (el) => {
       : null;
   }
 
+  if (!bounds) {
+    console.log(`\t- skipped ${fileName} (sin píxeles visibles)`);
+    return null;
+  }
+
   console.log('\tCropping SVG');
-  // Create cropped SVG if bounds exist
-  const finalSvg = bounds
-    ? `<svg ${svgNamespaces} ${rootPresentationAttrs}
+  const finalSvg = `<svg ${svgNamespaces} ${rootPresentationAttrs}
     viewBox="0 0 ${bounds.width} ${bounds.height}" width="${bounds.width}" height="${bounds.height}">
     ${sharedSvgContent}
-    <g transform="translate(${-bounds.x}, ${-bounds.y})">
+    <g transform="translate(${-(viewBoxX + bounds.x)}, ${-(viewBoxY + bounds.y)})">
       ${contentWithParent}
     </g>
-  </svg>`
-    : isolated;
+  </svg>`;
 
   console.log('\tRendering sprite');
   const image = sharp(Buffer.from(finalSvg));
@@ -214,48 +225,77 @@ const createPathSprite = async (el) => {
     .png()
     .toBuffer({ resolveWithObject: true });
 
-  atlasSprites.push({
-    key: fileName,
-    buffer: pngBuffer,
-    width: info.width,
-    height: info.height,
-    bounds,
-    dedicatedAtlas: false,
-  });
-
-  if (info.width > maxAtlasSize || info.height > maxAtlasSize) {
-    const fitScale = Math.min(maxAtlasSize / info.width, maxAtlasSize / info.height);
-    const resizedWidth = Math.max(1, Math.floor(info.width * fitScale));
-    const resizedHeight = Math.max(1, Math.floor(info.height * fitScale));
-    const resizedBuffer = await sharp(pngBuffer)
-      .resize({
-        width: resizedWidth,
-        height: resizedHeight,
-        fit: 'fill',
-      })
-      .png()
-      .toBuffer();
-
-    atlasSprites[atlasSprites.length - 1] = {
+  if (info.width <= maxTileSize && info.height <= maxTileSize) {
+    atlasSprites.push({
       key: fileName,
-      buffer: resizedBuffer,
-      width: resizedWidth,
-      height: resizedHeight,
-      bounds,
-      dedicatedAtlas: true,
-    };
+      buffer: pngBuffer,
+      width: info.width,
+      height: info.height,
+    });
 
-    console.log(
-      `\t! oversized sprite adapted ${fileName}: ${info.width}x${info.height} -> ${resizedWidth}x${resizedHeight} (atlas dedicado)`,
-    );
+    console.log(`\t✓ queued ${fileName} (${info.width}x${info.height})`);
+
+    return {
+      label: fileName,
+      frame: fileName,
+      bounds,
+    };
   }
 
-  console.log(`\t✓ queued ${fileName} (${info.width}x${info.height})`);
+  // Sprite demasiado grande para un atlas: lo troceamos en tiles a resolución completa
+  // en lugar de reducirlo (reducirlo es lo que provocaba la pérdida de definición).
+  if (fileName.includes('_ob_')) {
+    console.warn(`\t! ${fileName} es un objeto interactivo pero se trocea en tiles: no recibirá eventos ni animaciones.`);
+  }
+
+  const columns = Math.ceil(info.width / maxTileSize);
+  const rows = Math.ceil(info.height / maxTileSize);
+  const tileWidth = Math.ceil(info.width / columns);
+  const tileHeight = Math.ceil(info.height / rows);
+  const tiles = [];
+
+  for (let row = 0; row < rows; row += 1) {
+    for (let column = 0; column < columns; column += 1) {
+      const left = column * tileWidth;
+      const top = row * tileHeight;
+      const width = Math.min(tileWidth, info.width - left);
+      const height = Math.min(tileHeight, info.height - top);
+      const tileBuffer = await sharp(pngBuffer)
+        .extract({ left, top, width, height })
+        .png()
+        .toBuffer();
+
+      const { isEmpty } = await sharp(tileBuffer).stats().then((stats) => ({
+        isEmpty: stats.channels[3].max === 0,
+      }));
+
+      if (isEmpty) {
+        continue;
+      }
+
+      const tileKey = `${fileName}__tile_${column}_${row}`;
+      atlasSprites.push({
+        key: tileKey,
+        buffer: tileBuffer,
+        width,
+        height,
+      });
+      tiles.push({
+        frame: tileKey,
+        x: left,
+        y: top,
+        width,
+        height,
+      });
+    }
+  }
+
+  console.log(`\t✓ queued ${fileName} (${info.width}x${info.height}) en ${tiles.length} tiles`);
 
   return {
     label: fileName,
-    frame: fileName,
     bounds,
+    tiles,
   };
 };
 
@@ -345,15 +385,17 @@ const findBestLayout = (inputSprites, padding = atlasPadding, extrude = atlasPad
 
   const widestSprite = inputSprites.reduce((max, sprite) => Math.max(max, sprite.width), 0);
   const tallestSprite = inputSprites.reduce((max, sprite) => Math.max(max, sprite.height), 0);
-  const widthStart = nextPowerOfTwo(widestSprite);
-  const heightStart = nextPowerOfTwo(tallestSprite);
+  // El padding y el extrude se aplican siempre, también con un único sprite: las texturas
+  // potencia de 2 usan wrap REPEAT en Phaser y un frame pegado al borde de la textura
+  // mezclaría sus píxeles con los del lado opuesto al filtrar.
+  const margin = (padding + extrude) * 2;
+  const widthStart = nextPowerOfTwo(widestSprite + margin);
+  const heightStart = nextPowerOfTwo(tallestSprite + margin);
 
   let bestLayout = null;
 
   for (let width = widthStart; width <= maxAtlasSize; width *= 2) {
-    const effectivePadding = inputSprites.length <= 1 ? 0 : padding;
-    const effectiveExtrude = inputSprites.length <= 1 ? 0 : extrude;
-    const packAtHeight = packSprites(inputSprites, width, effectivePadding, effectiveExtrude);
+    const packAtHeight = packSprites(inputSprites, width, padding, extrude);
 
     for (let height = heightStart; height <= maxAtlasSize; height *= 2) {
       const packed = packAtHeight(height);
@@ -477,6 +519,13 @@ const filterSpriteTreeByFrames = (nodes, frameSet) => {
     if (node.frame && frameSet.has(node.frame)) {
       filteredNodes.push(node);
     }
+
+    if (Array.isArray(node.tiles)) {
+      const pageTiles = node.tiles.filter((tile) => frameSet.has(tile.frame));
+      if (pageTiles.length > 0) {
+        filteredNodes.push({ ...node, tiles: pageTiles });
+      }
+    }
   }
 
   return filteredNodes;
@@ -499,32 +548,19 @@ const buildAtlases = async () => {
   const widestSprite = sortedSprites.reduce((max, sprite) => Math.max(max, sprite.width), 0);
   const tallestSprite = sortedSprites.reduce((max, sprite) => Math.max(max, sprite.height), 0);
 
-  if (widestSprite > maxAtlasSize || tallestSprite > maxAtlasSize) {
+  if (widestSprite > maxTileSize || tallestSprite > maxTileSize) {
     throw new Error(
-      `Hay sprites que exceden ${maxAtlasSize}px incluso tras adaptación (max ancho: ${widestSprite}, max alto: ${tallestSprite}).`,
+      `Hay sprites que exceden ${maxTileSize}px (max ancho: ${widestSprite}, max alto: ${tallestSprite}).`,
     );
   }
 
   const atlasPages = [];
-  const dedicatedSprites = sortedSprites.filter((sprite) => sprite.dedicatedAtlas);
-  let remainingSprites = sortedSprites.filter((sprite) => !sprite.dedicatedAtlas);
+  let remainingSprites = sortedSprites;
   const atlasManifest = {
     atlases: [],
     frameToAtlasKey: {},
     sprites,
   };
-
-  for (const sprite of dedicatedSprites) {
-    const dedicatedLayout = findBestLayout([sprite], 0);
-    if (!dedicatedLayout) {
-      throw new Error(`No se pudo calcular layout para sprite dedicado "${sprite.key}".`);
-    }
-
-    atlasPages.push({
-      sprites: [sprite],
-      layout: dedicatedLayout,
-    });
-  }
 
   while (remainingSprites.length > 0) {
     const pageSprites = [];
@@ -565,7 +601,7 @@ const buildAtlases = async () => {
     const atlasPngPath = path.join(outputDir, `${pageName}.png`);
     const atlasJsonPath = path.join(outputDir, `${pageName}.json`);
 
-    const extrude = page.layout.placements.length <= 1 ? 0 : atlasPadding;
+    const extrude = atlasPadding;
     const composites = await Promise.all(
       page.layout.placements.map(async (sprite) => {
         const input = await createExtrudedSpriteBuffer(sprite, extrude);

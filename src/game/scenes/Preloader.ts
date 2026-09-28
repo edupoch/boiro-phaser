@@ -1,3 +1,4 @@
+import * as Phaser from 'phaser';
 import { Scene } from 'phaser';
 
 export class Preloader extends Scene
@@ -72,6 +73,15 @@ export class Preloader extends Scene
         }
 
         this.load.once('complete', () => {
+            // Los atlas son potencia de 2 y Phaser les asigna wrap REPEAT: al filtrar, el borde
+            // de un frame se mezclaría con el lado opuesto de la textura (líneas fantasma).
+            atlases.forEach((atlas) => {
+                this.textures.get(atlas.key).setWrap(
+                    Phaser.Textures.WrapMode.CLAMP_TO_EDGE,
+                    Phaser.Textures.WrapMode.CLAMP_TO_EDGE,
+                );
+            });
+
             this.scene.start('StartScreen');
         });
 
