@@ -5,7 +5,7 @@
         "x": 18,
         "y": 18,
         "w": 1216,
-        "h": 713
+        "h": 714
       },
       "rotated": false,
       "trimmed": false,
@@ -13,51 +13,51 @@
         "x": 0,
         "y": 0,
         "w": 1216,
-        "h": 713
+        "h": 714
       },
       "sourceSize": {
         "w": 1216,
-        "h": 713
+        "h": 714
       }
     },
     "Mar__velero__g1165": {
       "frame": {
         "x": 18,
-        "y": 767,
-        "w": 1065,
-        "h": 1195
+        "y": 768,
+        "w": 1066,
+        "h": 1196
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 1065,
-        "h": 1195
+        "w": 1066,
+        "h": 1196
       },
       "sourceSize": {
-        "w": 1065,
-        "h": 1195
+        "w": 1066,
+        "h": 1196
       }
     },
     "Casas__casa_3__g186": {
       "frame": {
-        "x": 1119,
-        "y": 767,
-        "w": 1151,
-        "h": 727
+        "x": 1120,
+        "y": 768,
+        "w": 1152,
+        "h": 728
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 1151,
-        "h": 727
+        "w": 1152,
+        "h": 728
       },
       "sourceSize": {
-        "w": 1151,
-        "h": 727
+        "w": 1152,
+        "h": 728
       }
     },
     "plaza__fondo__path592": {
@@ -83,7 +83,7 @@
     "Puerto__path628__path628": {
       "frame": {
         "x": 18,
-        "y": 1998,
+        "y": 2000,
         "w": 1094,
         "h": 994
       },
@@ -103,9 +103,9 @@
     "Casas__casa_2__g232": {
       "frame": {
         "x": 18,
-        "y": 3028,
+        "y": 3030,
         "w": 1066,
-        "h": 1025
+        "h": 1026
       },
       "rotated": false,
       "trimmed": false,
@@ -113,11 +113,11 @@
         "x": 0,
         "y": 0,
         "w": 1066,
-        "h": 1025
+        "h": 1026
       },
       "sourceSize": {
         "w": 1066,
-        "h": 1025
+        "h": 1026
       }
     },
     "plaza__path1086__path1086": {
@@ -125,7 +125,7 @@
         "x": 2454,
         "y": 18,
         "w": 1062,
-        "h": 619
+        "h": 620
       },
       "rotated": false,
       "trimmed": false,
@@ -133,19 +133,19 @@
         "x": 0,
         "y": 0,
         "w": 1062,
-        "h": 619
+        "h": 620
       },
       "sourceSize": {
         "w": 1062,
-        "h": 619
+        "h": 620
       }
     },
     "puerto_viejo__lona__g90": {
       "frame": {
         "x": 1148,
-        "y": 1998,
+        "y": 2000,
         "w": 1014,
-        "h": 823
+        "h": 824
       },
       "rotated": false,
       "trimmed": false,
@@ -153,18 +153,18 @@
         "x": 0,
         "y": 0,
         "w": 1014,
-        "h": 823
+        "h": 824
       },
       "sourceSize": {
         "w": 1014,
-        "h": 823
+        "h": 824
       }
     },
     "costa__path1725-7__path1725-7": {
       "frame": {
-        "x": 2306,
-        "y": 767,
-        "w": 903,
+        "x": 2308,
+        "y": 768,
+        "w": 904,
         "h": 466
       },
       "rotated": false,
@@ -172,18 +172,18 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 903,
+        "w": 904,
         "h": 466
       },
       "sourceSize": {
-        "w": 903,
+        "w": 904,
         "h": 466
       }
     },
     "Juegos__path967-0-03__path967-0-03": {
       "frame": {
         "x": 2198,
-        "y": 1998,
+        "y": 2000,
         "w": 888,
         "h": 512
       },
@@ -203,8 +203,8 @@
     "costa__path700-1__path700-1": {
       "frame": {
         "x": 1120,
-        "y": 3028,
-        "w": 691,
+        "y": 3030,
+        "w": 692,
         "h": 858
       },
       "rotated": false,
@@ -212,38 +212,38 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 691,
+        "w": 692,
         "h": 858
       },
       "sourceSize": {
-        "w": 691,
+        "w": 692,
         "h": 858
       }
     },
     "Casas__arboles__mov_arbol_casas_2__g269": {
       "frame": {
-        "x": 1847,
-        "y": 3028,
-        "w": 817,
-        "h": 821
+        "x": 1848,
+        "y": 3030,
+        "w": 818,
+        "h": 822
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 817,
-        "h": 821
+        "w": 818,
+        "h": 822
       },
       "sourceSize": {
-        "w": 817,
-        "h": 821
+        "w": 818,
+        "h": 822
       }
     },
     "Fondo__path1850-0__path1850-0": {
       "frame": {
         "x": 3122,
-        "y": 1998,
+        "y": 2000,
         "w": 818,
         "h": 504
       },
@@ -262,8 +262,8 @@
     },
     "costa__arbol_roble__g46-9": {
       "frame": {
-        "x": 2700,
-        "y": 3028,
+        "x": 2702,
+        "y": 3030,
         "w": 704,
         "h": 792
       },
@@ -278,26 +278,6 @@
       "sourceSize": {
         "w": 704,
         "h": 792
-      }
-    },
-    "Bosque__arbol__g1693": {
-      "frame": {
-        "x": 3440,
-        "y": 3028,
-        "w": 638,
-        "h": 783
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 638,
-        "h": 783
-      },
-      "sourceSize": {
-        "w": 638,
-        "h": 783
       }
     }
   },
@@ -324,7 +304,79 @@
             "y": 1158,
             "width": 818,
             "height": 504
-          }
+          },
+          "hd": [
+            {
+              "key": "Fondo__path1850-0__path1850-0__hd_1_0",
+              "file": "hd/Fondo__path1850-0__path1850-0__hd_1_0.png",
+              "x": 272.8,
+              "y": 0,
+              "width": 272.8,
+              "height": 252,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 682,
+                "h": 630
+              }
+            },
+            {
+              "key": "Fondo__path1850-0__path1850-0__hd_2_0",
+              "file": "hd/Fondo__path1850-0__path1850-0__hd_2_0.png",
+              "x": 545.6,
+              "y": 0,
+              "width": 272.4,
+              "height": 252,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 681,
+                "h": 630
+              }
+            },
+            {
+              "key": "Fondo__path1850-0__path1850-0__hd_0_1",
+              "file": "hd/Fondo__path1850-0__path1850-0__hd_0_1.png",
+              "x": 0,
+              "y": 252,
+              "width": 272.8,
+              "height": 252,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 682,
+                "h": 630
+              }
+            },
+            {
+              "key": "Fondo__path1850-0__path1850-0__hd_1_1",
+              "file": "hd/Fondo__path1850-0__path1850-0__hd_1_1.png",
+              "x": 272.8,
+              "y": 252,
+              "width": 272.8,
+              "height": 252,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 682,
+                "h": 630
+              }
+            },
+            {
+              "key": "Fondo__path1850-0__path1850-0__hd_2_1",
+              "file": "hd/Fondo__path1850-0__path1850-0__hd_2_1.png",
+              "x": 545.6,
+              "y": 252,
+              "width": 272.4,
+              "height": 252,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 681,
+                "h": 630
+              }
+            }
+          ]
         }
       ]
     },
@@ -337,9 +389,95 @@
           "bounds": {
             "x": 643,
             "y": 0,
-            "width": 1151,
-            "height": 727
-          }
+            "width": 1152,
+            "height": 728
+          },
+          "hd": [
+            {
+              "key": "Casas__casa_3__g186__hd_0_0",
+              "file": "hd/Casas__casa_3__g186__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 384,
+              "height": 364,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 960,
+                "h": 910
+              }
+            },
+            {
+              "key": "Casas__casa_3__g186__hd_1_0",
+              "file": "hd/Casas__casa_3__g186__hd_1_0.png",
+              "x": 384,
+              "y": 0,
+              "width": 384,
+              "height": 364,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 960,
+                "h": 910
+              }
+            },
+            {
+              "key": "Casas__casa_3__g186__hd_2_0",
+              "file": "hd/Casas__casa_3__g186__hd_2_0.png",
+              "x": 768,
+              "y": 0,
+              "width": 384,
+              "height": 364,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 960,
+                "h": 910
+              }
+            },
+            {
+              "key": "Casas__casa_3__g186__hd_0_1",
+              "file": "hd/Casas__casa_3__g186__hd_0_1.png",
+              "x": 0,
+              "y": 364,
+              "width": 384,
+              "height": 364,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 960,
+                "h": 910
+              }
+            },
+            {
+              "key": "Casas__casa_3__g186__hd_1_1",
+              "file": "hd/Casas__casa_3__g186__hd_1_1.png",
+              "x": 384,
+              "y": 364,
+              "width": 384,
+              "height": 364,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 960,
+                "h": 910
+              }
+            },
+            {
+              "key": "Casas__casa_3__g186__hd_2_1",
+              "file": "hd/Casas__casa_3__g186__hd_2_1.png",
+              "x": 768,
+              "y": 364,
+              "width": 384,
+              "height": 364,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 960,
+                "h": 910
+              }
+            }
+          ]
         },
         {
           "label": "Casas__casa_2__g232",
@@ -348,8 +486,136 @@
             "x": 51,
             "y": 0,
             "width": 1066,
-            "height": 1025
-          }
+            "height": 1026
+          },
+          "hd": [
+            {
+              "key": "Casas__casa_2__g232__hd_0_0",
+              "file": "hd/Casas__casa_2__g232__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 355.6,
+              "height": 342,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 889,
+                "h": 855
+              }
+            },
+            {
+              "key": "Casas__casa_2__g232__hd_1_0",
+              "file": "hd/Casas__casa_2__g232__hd_1_0.png",
+              "x": 355.6,
+              "y": 0,
+              "width": 355.6,
+              "height": 342,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 889,
+                "h": 855
+              }
+            },
+            {
+              "key": "Casas__casa_2__g232__hd_2_0",
+              "file": "hd/Casas__casa_2__g232__hd_2_0.png",
+              "x": 711.2,
+              "y": 0,
+              "width": 354.8,
+              "height": 342,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 887,
+                "h": 855
+              }
+            },
+            {
+              "key": "Casas__casa_2__g232__hd_0_1",
+              "file": "hd/Casas__casa_2__g232__hd_0_1.png",
+              "x": 0,
+              "y": 342,
+              "width": 355.6,
+              "height": 342,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 889,
+                "h": 855
+              }
+            },
+            {
+              "key": "Casas__casa_2__g232__hd_1_1",
+              "file": "hd/Casas__casa_2__g232__hd_1_1.png",
+              "x": 355.6,
+              "y": 342,
+              "width": 355.6,
+              "height": 342,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 889,
+                "h": 855
+              }
+            },
+            {
+              "key": "Casas__casa_2__g232__hd_2_1",
+              "file": "hd/Casas__casa_2__g232__hd_2_1.png",
+              "x": 711.2,
+              "y": 342,
+              "width": 354.8,
+              "height": 342,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 887,
+                "h": 855
+              }
+            },
+            {
+              "key": "Casas__casa_2__g232__hd_0_2",
+              "file": "hd/Casas__casa_2__g232__hd_0_2.png",
+              "x": 0,
+              "y": 684,
+              "width": 355.6,
+              "height": 342,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 889,
+                "h": 855
+              }
+            },
+            {
+              "key": "Casas__casa_2__g232__hd_1_2",
+              "file": "hd/Casas__casa_2__g232__hd_1_2.png",
+              "x": 355.6,
+              "y": 684,
+              "width": 355.6,
+              "height": 342,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 889,
+                "h": 855
+              }
+            },
+            {
+              "key": "Casas__casa_2__g232__hd_2_2",
+              "file": "hd/Casas__casa_2__g232__hd_2_2.png",
+              "x": 711.2,
+              "y": 684,
+              "width": 354.8,
+              "height": 342,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 887,
+                "h": 855
+              }
+            }
+          ]
         },
         {
           "label": "arboles",
@@ -360,9 +626,123 @@
               "bounds": {
                 "x": 787,
                 "y": 50,
-                "width": 817,
-                "height": 821
-              }
+                "width": 818,
+                "height": 822
+              },
+              "hd": [
+                {
+                  "key": "Casas__arboles__mov_arbol_casas_2__g269__hd_0_0",
+                  "file": "hd/Casas__arboles__mov_arbol_casas_2__g269__hd_0_0.png",
+                  "x": 0,
+                  "y": 0,
+                  "width": 272.8,
+                  "height": 274,
+                  "frame": {
+                    "x": 4,
+                    "y": 4,
+                    "w": 682,
+                    "h": 685
+                  }
+                },
+                {
+                  "key": "Casas__arboles__mov_arbol_casas_2__g269__hd_1_0",
+                  "file": "hd/Casas__arboles__mov_arbol_casas_2__g269__hd_1_0.png",
+                  "x": 272.8,
+                  "y": 0,
+                  "width": 272.8,
+                  "height": 274,
+                  "frame": {
+                    "x": 4,
+                    "y": 4,
+                    "w": 682,
+                    "h": 685
+                  }
+                },
+                {
+                  "key": "Casas__arboles__mov_arbol_casas_2__g269__hd_2_0",
+                  "file": "hd/Casas__arboles__mov_arbol_casas_2__g269__hd_2_0.png",
+                  "x": 545.6,
+                  "y": 0,
+                  "width": 272.4,
+                  "height": 274,
+                  "frame": {
+                    "x": 4,
+                    "y": 4,
+                    "w": 681,
+                    "h": 685
+                  }
+                },
+                {
+                  "key": "Casas__arboles__mov_arbol_casas_2__g269__hd_0_1",
+                  "file": "hd/Casas__arboles__mov_arbol_casas_2__g269__hd_0_1.png",
+                  "x": 0,
+                  "y": 274,
+                  "width": 272.8,
+                  "height": 274,
+                  "frame": {
+                    "x": 4,
+                    "y": 4,
+                    "w": 682,
+                    "h": 685
+                  }
+                },
+                {
+                  "key": "Casas__arboles__mov_arbol_casas_2__g269__hd_1_1",
+                  "file": "hd/Casas__arboles__mov_arbol_casas_2__g269__hd_1_1.png",
+                  "x": 272.8,
+                  "y": 274,
+                  "width": 272.8,
+                  "height": 274,
+                  "frame": {
+                    "x": 4,
+                    "y": 4,
+                    "w": 682,
+                    "h": 685
+                  }
+                },
+                {
+                  "key": "Casas__arboles__mov_arbol_casas_2__g269__hd_2_1",
+                  "file": "hd/Casas__arboles__mov_arbol_casas_2__g269__hd_2_1.png",
+                  "x": 545.6,
+                  "y": 274,
+                  "width": 272.4,
+                  "height": 274,
+                  "frame": {
+                    "x": 4,
+                    "y": 4,
+                    "w": 681,
+                    "h": 685
+                  }
+                },
+                {
+                  "key": "Casas__arboles__mov_arbol_casas_2__g269__hd_0_2",
+                  "file": "hd/Casas__arboles__mov_arbol_casas_2__g269__hd_0_2.png",
+                  "x": 0,
+                  "y": 548,
+                  "width": 272.8,
+                  "height": 274,
+                  "frame": {
+                    "x": 4,
+                    "y": 4,
+                    "w": 682,
+                    "h": 685
+                  }
+                },
+                {
+                  "key": "Casas__arboles__mov_arbol_casas_2__g269__hd_1_2",
+                  "file": "hd/Casas__arboles__mov_arbol_casas_2__g269__hd_1_2.png",
+                  "x": 272.8,
+                  "y": 548,
+                  "width": 272.8,
+                  "height": 274,
+                  "frame": {
+                    "x": 4,
+                    "y": 4,
+                    "w": 682,
+                    "h": 685
+                  }
+                }
+              ]
             }
           ]
         }
@@ -377,9 +757,123 @@
           "bounds": {
             "x": 2755,
             "y": 1182,
-            "width": 1065,
-            "height": 1195
-          }
+            "width": 1066,
+            "height": 1196
+          },
+          "hd": [
+            {
+              "key": "Mar__velero__g1165__hd_1_0",
+              "file": "hd/Mar__velero__g1165__hd_1_0.png",
+              "x": 355.6,
+              "y": 0,
+              "width": 355.6,
+              "height": 398.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 889,
+                "h": 997
+              }
+            },
+            {
+              "key": "Mar__velero__g1165__hd_2_0",
+              "file": "hd/Mar__velero__g1165__hd_2_0.png",
+              "x": 711.2,
+              "y": 0,
+              "width": 354.8,
+              "height": 398.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 887,
+                "h": 997
+              }
+            },
+            {
+              "key": "Mar__velero__g1165__hd_0_1",
+              "file": "hd/Mar__velero__g1165__hd_0_1.png",
+              "x": 0,
+              "y": 398.8,
+              "width": 355.6,
+              "height": 398.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 889,
+                "h": 997
+              }
+            },
+            {
+              "key": "Mar__velero__g1165__hd_1_1",
+              "file": "hd/Mar__velero__g1165__hd_1_1.png",
+              "x": 355.6,
+              "y": 398.8,
+              "width": 355.6,
+              "height": 398.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 889,
+                "h": 997
+              }
+            },
+            {
+              "key": "Mar__velero__g1165__hd_2_1",
+              "file": "hd/Mar__velero__g1165__hd_2_1.png",
+              "x": 711.2,
+              "y": 398.8,
+              "width": 354.8,
+              "height": 398.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 887,
+                "h": 997
+              }
+            },
+            {
+              "key": "Mar__velero__g1165__hd_0_2",
+              "file": "hd/Mar__velero__g1165__hd_0_2.png",
+              "x": 0,
+              "y": 797.6,
+              "width": 355.6,
+              "height": 398.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 889,
+                "h": 996
+              }
+            },
+            {
+              "key": "Mar__velero__g1165__hd_1_2",
+              "file": "hd/Mar__velero__g1165__hd_1_2.png",
+              "x": 355.6,
+              "y": 797.6,
+              "width": 355.6,
+              "height": 398.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 889,
+                "h": 996
+              }
+            },
+            {
+              "key": "Mar__velero__g1165__hd_2_2",
+              "file": "hd/Mar__velero__g1165__hd_2_2.png",
+              "x": 711.2,
+              "y": 797.6,
+              "width": 354.8,
+              "height": 398.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 887,
+                "h": 996
+              }
+            }
+          ]
         }
       ]
     },
@@ -394,7 +888,65 @@
             "y": 0,
             "width": 888,
             "height": 512
-          }
+          },
+          "hd": [
+            {
+              "key": "Juegos__path967-0-03__path967-0-03__hd_0_0",
+              "file": "hd/Juegos__path967-0-03__path967-0-03__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 296,
+              "height": 256,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 740,
+                "h": 640
+              }
+            },
+            {
+              "key": "Juegos__path967-0-03__path967-0-03__hd_1_0",
+              "file": "hd/Juegos__path967-0-03__path967-0-03__hd_1_0.png",
+              "x": 296,
+              "y": 0,
+              "width": 296,
+              "height": 256,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 740,
+                "h": 640
+              }
+            },
+            {
+              "key": "Juegos__path967-0-03__path967-0-03__hd_1_1",
+              "file": "hd/Juegos__path967-0-03__path967-0-03__hd_1_1.png",
+              "x": 296,
+              "y": 256,
+              "width": 296,
+              "height": 256,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 740,
+                "h": 640
+              }
+            },
+            {
+              "key": "Juegos__path967-0-03__path967-0-03__hd_2_1",
+              "file": "hd/Juegos__path967-0-03__path967-0-03__hd_2_1.png",
+              "x": 592,
+              "y": 256,
+              "width": 296,
+              "height": 256,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 740,
+                "h": 640
+              }
+            }
+          ]
         }
       ]
     },
@@ -409,7 +961,93 @@
             "y": 380,
             "width": 1148,
             "height": 660
-          }
+          },
+          "hd": [
+            {
+              "key": "plaza__fondo__path592__hd_0_0",
+              "file": "hd/plaza__fondo__path592__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 382.8,
+              "height": 330,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 957,
+                "h": 825
+              }
+            },
+            {
+              "key": "plaza__fondo__path592__hd_1_0",
+              "file": "hd/plaza__fondo__path592__hd_1_0.png",
+              "x": 382.8,
+              "y": 0,
+              "width": 382.8,
+              "height": 330,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 957,
+                "h": 825
+              }
+            },
+            {
+              "key": "plaza__fondo__path592__hd_2_0",
+              "file": "hd/plaza__fondo__path592__hd_2_0.png",
+              "x": 765.6,
+              "y": 0,
+              "width": 382.4,
+              "height": 330,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 956,
+                "h": 825
+              }
+            },
+            {
+              "key": "plaza__fondo__path592__hd_0_1",
+              "file": "hd/plaza__fondo__path592__hd_0_1.png",
+              "x": 0,
+              "y": 330,
+              "width": 382.8,
+              "height": 330,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 957,
+                "h": 825
+              }
+            },
+            {
+              "key": "plaza__fondo__path592__hd_1_1",
+              "file": "hd/plaza__fondo__path592__hd_1_1.png",
+              "x": 382.8,
+              "y": 330,
+              "width": 382.8,
+              "height": 330,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 957,
+                "h": 825
+              }
+            },
+            {
+              "key": "plaza__fondo__path592__hd_2_1",
+              "file": "hd/plaza__fondo__path592__hd_2_1.png",
+              "x": 765.6,
+              "y": 330,
+              "width": 382.4,
+              "height": 330,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 956,
+                "h": 825
+              }
+            }
+          ]
         },
         {
           "label": "plaza__path1086__path1086",
@@ -418,8 +1056,94 @@
             "x": 2823,
             "y": 388,
             "width": 1062,
-            "height": 619
-          }
+            "height": 620
+          },
+          "hd": [
+            {
+              "key": "plaza__path1086__path1086__hd_0_0",
+              "file": "hd/plaza__path1086__path1086__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 354,
+              "height": 310,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 885,
+                "h": 775
+              }
+            },
+            {
+              "key": "plaza__path1086__path1086__hd_1_0",
+              "file": "hd/plaza__path1086__path1086__hd_1_0.png",
+              "x": 354,
+              "y": 0,
+              "width": 354,
+              "height": 310,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 885,
+                "h": 775
+              }
+            },
+            {
+              "key": "plaza__path1086__path1086__hd_2_0",
+              "file": "hd/plaza__path1086__path1086__hd_2_0.png",
+              "x": 708,
+              "y": 0,
+              "width": 354,
+              "height": 310,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 885,
+                "h": 775
+              }
+            },
+            {
+              "key": "plaza__path1086__path1086__hd_0_1",
+              "file": "hd/plaza__path1086__path1086__hd_0_1.png",
+              "x": 0,
+              "y": 310,
+              "width": 354,
+              "height": 310,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 885,
+                "h": 775
+              }
+            },
+            {
+              "key": "plaza__path1086__path1086__hd_1_1",
+              "file": "hd/plaza__path1086__path1086__hd_1_1.png",
+              "x": 354,
+              "y": 310,
+              "width": 354,
+              "height": 310,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 885,
+                "h": 775
+              }
+            },
+            {
+              "key": "plaza__path1086__path1086__hd_2_1",
+              "file": "hd/plaza__path1086__path1086__hd_2_1.png",
+              "x": 708,
+              "y": 310,
+              "width": 354,
+              "height": 310,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 885,
+                "h": 775
+              }
+            }
+          ]
         }
       ]
     },
@@ -434,7 +1158,121 @@
             "y": 1033,
             "width": 1094,
             "height": 994
-          }
+          },
+          "hd": [
+            {
+              "key": "Puerto__path628__path628__hd_0_0",
+              "file": "hd/Puerto__path628__path628__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 364.8,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 912,
+                "h": 829
+              }
+            },
+            {
+              "key": "Puerto__path628__path628__hd_1_0",
+              "file": "hd/Puerto__path628__path628__hd_1_0.png",
+              "x": 364.8,
+              "y": 0,
+              "width": 364.8,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 912,
+                "h": 829
+              }
+            },
+            {
+              "key": "Puerto__path628__path628__hd_2_0",
+              "file": "hd/Puerto__path628__path628__hd_2_0.png",
+              "x": 729.6,
+              "y": 0,
+              "width": 364.4,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 911,
+                "h": 829
+              }
+            },
+            {
+              "key": "Puerto__path628__path628__hd_0_1",
+              "file": "hd/Puerto__path628__path628__hd_0_1.png",
+              "x": 0,
+              "y": 331.6,
+              "width": 364.8,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 912,
+                "h": 829
+              }
+            },
+            {
+              "key": "Puerto__path628__path628__hd_1_1",
+              "file": "hd/Puerto__path628__path628__hd_1_1.png",
+              "x": 364.8,
+              "y": 331.6,
+              "width": 364.8,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 912,
+                "h": 829
+              }
+            },
+            {
+              "key": "Puerto__path628__path628__hd_2_1",
+              "file": "hd/Puerto__path628__path628__hd_2_1.png",
+              "x": 729.6,
+              "y": 331.6,
+              "width": 364.4,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 911,
+                "h": 829
+              }
+            },
+            {
+              "key": "Puerto__path628__path628__hd_1_2",
+              "file": "hd/Puerto__path628__path628__hd_1_2.png",
+              "x": 364.8,
+              "y": 663.2,
+              "width": 364.8,
+              "height": 330.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 912,
+                "h": 827
+              }
+            },
+            {
+              "key": "Puerto__path628__path628__hd_2_2",
+              "file": "hd/Puerto__path628__path628__hd_2_2.png",
+              "x": 729.6,
+              "y": 663.2,
+              "width": 364.4,
+              "height": 330.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 911,
+                "h": 827
+              }
+            }
+          ]
         }
       ]
     },
@@ -448,23 +1286,122 @@
             "x": 5292,
             "y": 1646,
             "width": 1014,
-            "height": 823
-          }
-        }
-      ]
-    },
-    {
-      "label": "Bosque",
-      "children": [
-        {
-          "label": "Bosque__arbol__g1693",
-          "frame": "Bosque__arbol__g1693",
-          "bounds": {
-            "x": 5419,
-            "y": 273,
-            "width": 638,
-            "height": 783
-          }
+            "height": 824
+          },
+          "hd": [
+            {
+              "key": "puerto_viejo__lona__g90__hd_0_0",
+              "file": "hd/puerto_viejo__lona__g90__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 338,
+              "height": 274.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 845,
+                "h": 687
+              }
+            },
+            {
+              "key": "puerto_viejo__lona__g90__hd_1_0",
+              "file": "hd/puerto_viejo__lona__g90__hd_1_0.png",
+              "x": 338,
+              "y": 0,
+              "width": 338,
+              "height": 274.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 845,
+                "h": 687
+              }
+            },
+            {
+              "key": "puerto_viejo__lona__g90__hd_2_0",
+              "file": "hd/puerto_viejo__lona__g90__hd_2_0.png",
+              "x": 676,
+              "y": 0,
+              "width": 338,
+              "height": 274.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 845,
+                "h": 687
+              }
+            },
+            {
+              "key": "puerto_viejo__lona__g90__hd_0_1",
+              "file": "hd/puerto_viejo__lona__g90__hd_0_1.png",
+              "x": 0,
+              "y": 274.8,
+              "width": 338,
+              "height": 274.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 845,
+                "h": 687
+              }
+            },
+            {
+              "key": "puerto_viejo__lona__g90__hd_1_1",
+              "file": "hd/puerto_viejo__lona__g90__hd_1_1.png",
+              "x": 338,
+              "y": 274.8,
+              "width": 338,
+              "height": 274.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 845,
+                "h": 687
+              }
+            },
+            {
+              "key": "puerto_viejo__lona__g90__hd_2_1",
+              "file": "hd/puerto_viejo__lona__g90__hd_2_1.png",
+              "x": 676,
+              "y": 274.8,
+              "width": 338,
+              "height": 274.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 845,
+                "h": 687
+              }
+            },
+            {
+              "key": "puerto_viejo__lona__g90__hd_0_2",
+              "file": "hd/puerto_viejo__lona__g90__hd_0_2.png",
+              "x": 0,
+              "y": 549.6,
+              "width": 338,
+              "height": 274.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 845,
+                "h": 686
+              }
+            },
+            {
+              "key": "puerto_viejo__lona__g90__hd_1_2",
+              "file": "hd/puerto_viejo__lona__g90__hd_1_2.png",
+              "x": 338,
+              "y": 549.6,
+              "width": 338,
+              "height": 274.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 845,
+                "h": 686
+              }
+            }
+          ]
         }
       ]
     },
@@ -477,19 +1414,163 @@
           "bounds": {
             "x": 5457,
             "y": 2869,
-            "width": 691,
+            "width": 692,
             "height": 858
-          }
+          },
+          "hd": [
+            {
+              "key": "costa__path700-1__path700-1__hd_0_0",
+              "file": "hd/costa__path700-1__path700-1__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 346,
+              "height": 286,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 865,
+                "h": 715
+              }
+            },
+            {
+              "key": "costa__path700-1__path700-1__hd_1_0",
+              "file": "hd/costa__path700-1__path700-1__hd_1_0.png",
+              "x": 346,
+              "y": 0,
+              "width": 346,
+              "height": 286,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 865,
+                "h": 715
+              }
+            },
+            {
+              "key": "costa__path700-1__path700-1__hd_0_1",
+              "file": "hd/costa__path700-1__path700-1__hd_0_1.png",
+              "x": 0,
+              "y": 286,
+              "width": 346,
+              "height": 286,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 865,
+                "h": 715
+              }
+            },
+            {
+              "key": "costa__path700-1__path700-1__hd_1_1",
+              "file": "hd/costa__path700-1__path700-1__hd_1_1.png",
+              "x": 346,
+              "y": 286,
+              "width": 346,
+              "height": 286,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 865,
+                "h": 715
+              }
+            },
+            {
+              "key": "costa__path700-1__path700-1__hd_0_2",
+              "file": "hd/costa__path700-1__path700-1__hd_0_2.png",
+              "x": 0,
+              "y": 572,
+              "width": 346,
+              "height": 286,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 865,
+                "h": 715
+              }
+            }
+          ]
         },
         {
           "label": "costa__path700-1-4__path700-1-4",
           "frame": "costa__path700-1-4__path700-1-4",
           "bounds": {
             "x": 5457,
-            "y": 3029,
+            "y": 3028,
             "width": 1216,
-            "height": 713
-          }
+            "height": 714
+          },
+          "hd": [
+            {
+              "key": "costa__path700-1-4__path700-1-4__hd_1_0",
+              "file": "hd/costa__path700-1-4__path700-1-4__hd_1_0.png",
+              "x": 405.6,
+              "y": 0,
+              "width": 405.6,
+              "height": 357.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 1014,
+                "h": 893
+              }
+            },
+            {
+              "key": "costa__path700-1-4__path700-1-4__hd_2_0",
+              "file": "hd/costa__path700-1-4__path700-1-4__hd_2_0.png",
+              "x": 811.2,
+              "y": 0,
+              "width": 404.8,
+              "height": 357.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 1012,
+                "h": 893
+              }
+            },
+            {
+              "key": "costa__path700-1-4__path700-1-4__hd_0_1",
+              "file": "hd/costa__path700-1-4__path700-1-4__hd_0_1.png",
+              "x": 0,
+              "y": 357.2,
+              "width": 405.6,
+              "height": 356.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 1014,
+                "h": 892
+              }
+            },
+            {
+              "key": "costa__path700-1-4__path700-1-4__hd_1_1",
+              "file": "hd/costa__path700-1-4__path700-1-4__hd_1_1.png",
+              "x": 405.6,
+              "y": 357.2,
+              "width": 405.6,
+              "height": 356.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 1014,
+                "h": 892
+              }
+            },
+            {
+              "key": "costa__path700-1-4__path700-1-4__hd_2_1",
+              "file": "hd/costa__path700-1-4__path700-1-4__hd_2_1.png",
+              "x": 811.2,
+              "y": 357.2,
+              "width": 404.8,
+              "height": 356.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 1012,
+                "h": 892
+              }
+            }
+          ]
         },
         {
           "label": "costa__path1725-7__path1725-7",
@@ -497,9 +1578,95 @@
           "bounds": {
             "x": 5725,
             "y": 2281,
-            "width": 903,
+            "width": 904,
             "height": 466
-          }
+          },
+          "hd": [
+            {
+              "key": "costa__path1725-7__path1725-7__hd_0_0",
+              "file": "hd/costa__path1725-7__path1725-7__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 301.6,
+              "height": 233.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 754,
+                "h": 583
+              }
+            },
+            {
+              "key": "costa__path1725-7__path1725-7__hd_1_0",
+              "file": "hd/costa__path1725-7__path1725-7__hd_1_0.png",
+              "x": 301.6,
+              "y": 0,
+              "width": 301.6,
+              "height": 233.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 754,
+                "h": 583
+              }
+            },
+            {
+              "key": "costa__path1725-7__path1725-7__hd_2_0",
+              "file": "hd/costa__path1725-7__path1725-7__hd_2_0.png",
+              "x": 603.2,
+              "y": 0,
+              "width": 300.8,
+              "height": 233.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 752,
+                "h": 583
+              }
+            },
+            {
+              "key": "costa__path1725-7__path1725-7__hd_0_1",
+              "file": "hd/costa__path1725-7__path1725-7__hd_0_1.png",
+              "x": 0,
+              "y": 233.2,
+              "width": 301.6,
+              "height": 232.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 754,
+                "h": 582
+              }
+            },
+            {
+              "key": "costa__path1725-7__path1725-7__hd_1_1",
+              "file": "hd/costa__path1725-7__path1725-7__hd_1_1.png",
+              "x": 301.6,
+              "y": 233.2,
+              "width": 301.6,
+              "height": 232.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 754,
+                "h": 582
+              }
+            },
+            {
+              "key": "costa__path1725-7__path1725-7__hd_2_1",
+              "file": "hd/costa__path1725-7__path1725-7__hd_2_1.png",
+              "x": 603.2,
+              "y": 233.2,
+              "width": 300.8,
+              "height": 232.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 752,
+                "h": 582
+              }
+            }
+          ]
         },
         {
           "label": "costa__arbol_roble__g46-9",
@@ -509,7 +1676,65 @@
             "y": 1473,
             "width": 704,
             "height": 792
-          }
+          },
+          "hd": [
+            {
+              "key": "costa__arbol_roble__g46-9__hd_0_0",
+              "file": "hd/costa__arbol_roble__g46-9__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 352,
+              "height": 396,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 880,
+                "h": 990
+              }
+            },
+            {
+              "key": "costa__arbol_roble__g46-9__hd_1_0",
+              "file": "hd/costa__arbol_roble__g46-9__hd_1_0.png",
+              "x": 352,
+              "y": 0,
+              "width": 352,
+              "height": 396,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 880,
+                "h": 990
+              }
+            },
+            {
+              "key": "costa__arbol_roble__g46-9__hd_0_1",
+              "file": "hd/costa__arbol_roble__g46-9__hd_0_1.png",
+              "x": 0,
+              "y": 396,
+              "width": 352,
+              "height": 396,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 880,
+                "h": 990
+              }
+            },
+            {
+              "key": "costa__arbol_roble__g46-9__hd_1_1",
+              "file": "hd/costa__arbol_roble__g46-9__hd_1_1.png",
+              "x": 352,
+              "y": 396,
+              "width": 352,
+              "height": 396,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 880,
+                "h": 990
+              }
+            }
+          ]
         }
       ]
     }

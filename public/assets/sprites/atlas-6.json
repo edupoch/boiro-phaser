@@ -4,7 +4,7 @@
       "frame": {
         "x": 18,
         "y": 18,
-        "w": 3157,
+        "w": 3158,
         "h": 1828
       },
       "rotated": false,
@@ -12,11 +12,11 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 3157,
+        "w": 3158,
         "h": 1828
       },
       "sourceSize": {
-        "w": 3157,
+        "w": 3158,
         "h": 1828
       }
     },
@@ -24,28 +24,28 @@
       "frame": {
         "x": 18,
         "y": 1882,
-        "w": 2603,
-        "h": 2023
+        "w": 2604,
+        "h": 2024
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 2603,
-        "h": 2023
+        "w": 2604,
+        "h": 2024
       },
       "sourceSize": {
-        "w": 2603,
-        "h": 2023
+        "w": 2604,
+        "h": 2024
       }
     },
     "costa__path202__path202": {
       "frame": {
-        "x": 2657,
+        "x": 2658,
         "y": 1882,
         "w": 1222,
-        "h": 1981
+        "h": 1982
       },
       "rotated": false,
       "trimmed": false,
@@ -53,19 +53,19 @@
         "x": 0,
         "y": 0,
         "w": 1222,
-        "h": 1981
+        "h": 1982
       },
       "sourceSize": {
         "w": 1222,
-        "h": 1981
+        "h": 1982
       }
     },
     "Casas__casa_1__g267": {
       "frame": {
-        "x": 3211,
+        "x": 3212,
         "y": 18,
         "w": 690,
-        "h": 1211
+        "h": 1212
       },
       "rotated": false,
       "trimmed": false,
@@ -73,17 +73,17 @@
         "x": 0,
         "y": 0,
         "w": 690,
-        "h": 1211
+        "h": 1212
       },
       "sourceSize": {
         "w": 690,
-        "h": 1211
+        "h": 1212
       }
     },
     "Juegos__path967-0__path967-0": {
       "frame": {
-        "x": 3211,
-        "y": 1265,
+        "x": 3212,
+        "y": 1266,
         "w": 846,
         "h": 488
       },
@@ -120,11 +120,181 @@
           "label": "Fondo__borde__path76",
           "frame": "Fondo__borde__path76",
           "bounds": {
-            "x": 3647,
+            "x": 3646,
             "y": 1673,
-            "width": 3157,
+            "width": 3158,
             "height": 1828
-          }
+          },
+          "hd": [
+            {
+              "key": "Fondo__borde__path76__hd_0_0",
+              "file": "hd/Fondo__borde__path76__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 394.8,
+              "height": 365.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 987,
+                "h": 914
+              }
+            },
+            {
+              "key": "Fondo__borde__path76__hd_1_0",
+              "file": "hd/Fondo__borde__path76__hd_1_0.png",
+              "x": 394.8,
+              "y": 0,
+              "width": 394.8,
+              "height": 365.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 987,
+                "h": 914
+              }
+            },
+            {
+              "key": "Fondo__borde__path76__hd_1_1",
+              "file": "hd/Fondo__borde__path76__hd_1_1.png",
+              "x": 394.8,
+              "y": 365.6,
+              "width": 394.8,
+              "height": 365.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 987,
+                "h": 914
+              }
+            },
+            {
+              "key": "Fondo__borde__path76__hd_2_1",
+              "file": "hd/Fondo__borde__path76__hd_2_1.png",
+              "x": 789.6,
+              "y": 365.6,
+              "width": 394.8,
+              "height": 365.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 987,
+                "h": 914
+              }
+            },
+            {
+              "key": "Fondo__borde__path76__hd_3_1",
+              "file": "hd/Fondo__borde__path76__hd_3_1.png",
+              "x": 1184.4,
+              "y": 365.6,
+              "width": 394.8,
+              "height": 365.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 987,
+                "h": 914
+              }
+            },
+            {
+              "key": "Fondo__borde__path76__hd_3_2",
+              "file": "hd/Fondo__borde__path76__hd_3_2.png",
+              "x": 1184.4,
+              "y": 731.2,
+              "width": 394.8,
+              "height": 365.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 987,
+                "h": 914
+              }
+            },
+            {
+              "key": "Fondo__borde__path76__hd_4_2",
+              "file": "hd/Fondo__borde__path76__hd_4_2.png",
+              "x": 1579.2,
+              "y": 731.2,
+              "width": 394.8,
+              "height": 365.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 987,
+                "h": 914
+              }
+            },
+            {
+              "key": "Fondo__borde__path76__hd_4_3",
+              "file": "hd/Fondo__borde__path76__hd_4_3.png",
+              "x": 1579.2,
+              "y": 1096.8,
+              "width": 394.8,
+              "height": 365.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 987,
+                "h": 914
+              }
+            },
+            {
+              "key": "Fondo__borde__path76__hd_5_3",
+              "file": "hd/Fondo__borde__path76__hd_5_3.png",
+              "x": 1974,
+              "y": 1096.8,
+              "width": 394.8,
+              "height": 365.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 987,
+                "h": 914
+              }
+            },
+            {
+              "key": "Fondo__borde__path76__hd_6_3",
+              "file": "hd/Fondo__borde__path76__hd_6_3.png",
+              "x": 2368.8,
+              "y": 1096.8,
+              "width": 394.8,
+              "height": 365.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 987,
+                "h": 914
+              }
+            },
+            {
+              "key": "Fondo__borde__path76__hd_6_4",
+              "file": "hd/Fondo__borde__path76__hd_6_4.png",
+              "x": 2368.8,
+              "y": 1462.4,
+              "width": 394.8,
+              "height": 365.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 987,
+                "h": 914
+              }
+            },
+            {
+              "key": "Fondo__borde__path76__hd_7_4",
+              "file": "hd/Fondo__borde__path76__hd_7_4.png",
+              "x": 2763.6,
+              "y": 1462.4,
+              "width": 394.4,
+              "height": 365.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 986,
+                "h": 914
+              }
+            }
+          ]
         }
       ]
     },
@@ -138,8 +308,94 @@
             "x": 0,
             "y": 106,
             "width": 690,
-            "height": 1211
-          }
+            "height": 1212
+          },
+          "hd": [
+            {
+              "key": "Casas__casa_1__g267__hd_0_0",
+              "file": "hd/Casas__casa_1__g267__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 345.2,
+              "height": 404,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 863,
+                "h": 1010
+              }
+            },
+            {
+              "key": "Casas__casa_1__g267__hd_1_0",
+              "file": "hd/Casas__casa_1__g267__hd_1_0.png",
+              "x": 345.2,
+              "y": 0,
+              "width": 344.8,
+              "height": 404,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 862,
+                "h": 1010
+              }
+            },
+            {
+              "key": "Casas__casa_1__g267__hd_0_1",
+              "file": "hd/Casas__casa_1__g267__hd_0_1.png",
+              "x": 0,
+              "y": 404,
+              "width": 345.2,
+              "height": 404,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 863,
+                "h": 1010
+              }
+            },
+            {
+              "key": "Casas__casa_1__g267__hd_1_1",
+              "file": "hd/Casas__casa_1__g267__hd_1_1.png",
+              "x": 345.2,
+              "y": 404,
+              "width": 344.8,
+              "height": 404,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 862,
+                "h": 1010
+              }
+            },
+            {
+              "key": "Casas__casa_1__g267__hd_0_2",
+              "file": "hd/Casas__casa_1__g267__hd_0_2.png",
+              "x": 0,
+              "y": 808,
+              "width": 345.2,
+              "height": 404,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 863,
+                "h": 1010
+              }
+            },
+            {
+              "key": "Casas__casa_1__g267__hd_1_2",
+              "file": "hd/Casas__casa_1__g267__hd_1_2.png",
+              "x": 345.2,
+              "y": 808,
+              "width": 344.8,
+              "height": 404,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 862,
+                "h": 1010
+              }
+            }
+          ]
         }
       ]
     },
@@ -154,7 +410,65 @@
             "y": 0,
             "width": 846,
             "height": 488
-          }
+          },
+          "hd": [
+            {
+              "key": "Juegos__path967-0__path967-0__hd_1_0",
+              "file": "hd/Juegos__path967-0__path967-0__hd_1_0.png",
+              "x": 282,
+              "y": 0,
+              "width": 282,
+              "height": 244,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 705,
+                "h": 610
+              }
+            },
+            {
+              "key": "Juegos__path967-0__path967-0__hd_2_0",
+              "file": "hd/Juegos__path967-0__path967-0__hd_2_0.png",
+              "x": 564,
+              "y": 0,
+              "width": 282,
+              "height": 244,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 705,
+                "h": 610
+              }
+            },
+            {
+              "key": "Juegos__path967-0__path967-0__hd_0_1",
+              "file": "hd/Juegos__path967-0__path967-0__hd_0_1.png",
+              "x": 0,
+              "y": 244,
+              "width": 282,
+              "height": 244,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 705,
+                "h": 610
+              }
+            },
+            {
+              "key": "Juegos__path967-0__path967-0__hd_1_1",
+              "file": "hd/Juegos__path967-0__path967-0__hd_1_1.png",
+              "x": 282,
+              "y": 244,
+              "width": 282,
+              "height": 244,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 705,
+                "h": 610
+              }
+            }
+          ]
         }
       ]
     },
@@ -165,11 +479,377 @@
           "label": "Puerto__suelo_tierra__path618",
           "frame": "Puerto__suelo_tierra__path618",
           "bounds": {
-            "x": 4201,
+            "x": 4200,
             "y": 0,
-            "width": 2603,
-            "height": 2023
-          }
+            "width": 2604,
+            "height": 2024
+          },
+          "hd": [
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_0_0",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_1_0",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_1_0.png",
+              "x": 372,
+              "y": 0,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_2_0",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_2_0.png",
+              "x": 744,
+              "y": 0,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_3_0",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_3_0.png",
+              "x": 1116,
+              "y": 0,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_4_0",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_4_0.png",
+              "x": 1488,
+              "y": 0,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_5_0",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_5_0.png",
+              "x": 1860,
+              "y": 0,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_6_0",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_6_0.png",
+              "x": 2232,
+              "y": 0,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_0_1",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_0_1.png",
+              "x": 0,
+              "y": 404.8,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_1_1",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_1_1.png",
+              "x": 372,
+              "y": 404.8,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_2_1",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_2_1.png",
+              "x": 744,
+              "y": 404.8,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_3_1",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_3_1.png",
+              "x": 1116,
+              "y": 404.8,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_4_1",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_4_1.png",
+              "x": 1488,
+              "y": 404.8,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_5_1",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_5_1.png",
+              "x": 1860,
+              "y": 404.8,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_6_1",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_6_1.png",
+              "x": 2232,
+              "y": 404.8,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_1_2",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_1_2.png",
+              "x": 372,
+              "y": 809.6,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_2_2",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_2_2.png",
+              "x": 744,
+              "y": 809.6,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_3_2",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_3_2.png",
+              "x": 1116,
+              "y": 809.6,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_4_2",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_4_2.png",
+              "x": 1488,
+              "y": 809.6,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_5_2",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_5_2.png",
+              "x": 1860,
+              "y": 809.6,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_6_2",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_6_2.png",
+              "x": 2232,
+              "y": 809.6,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_3_3",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_3_3.png",
+              "x": 1116,
+              "y": 1214.4,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_4_3",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_4_3.png",
+              "x": 1488,
+              "y": 1214.4,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_5_3",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_5_3.png",
+              "x": 1860,
+              "y": 1214.4,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_6_3",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_6_3.png",
+              "x": 2232,
+              "y": 1214.4,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_5_4",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_5_4.png",
+              "x": 1860,
+              "y": 1619.2,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            },
+            {
+              "key": "Puerto__suelo_tierra__path618__hd_6_4",
+              "file": "hd/Puerto__suelo_tierra__path618__hd_6_4.png",
+              "x": 2232,
+              "y": 1619.2,
+              "width": 372,
+              "height": 404.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 930,
+                "h": 1012
+              }
+            }
+          ]
         }
       ]
     },
@@ -183,8 +863,248 @@
             "x": 5582,
             "y": 1684,
             "width": 1222,
-            "height": 1981
-          }
+            "height": 1982
+          },
+          "hd": [
+            {
+              "key": "costa__path202__path202__hd_0_0",
+              "file": "hd/costa__path202__path202__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 305.6,
+              "height": 396.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 764,
+                "h": 991
+              }
+            },
+            {
+              "key": "costa__path202__path202__hd_1_0",
+              "file": "hd/costa__path202__path202__hd_1_0.png",
+              "x": 305.6,
+              "y": 0,
+              "width": 305.6,
+              "height": 396.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 764,
+                "h": 991
+              }
+            },
+            {
+              "key": "costa__path202__path202__hd_2_0",
+              "file": "hd/costa__path202__path202__hd_2_0.png",
+              "x": 611.2,
+              "y": 0,
+              "width": 305.6,
+              "height": 396.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 764,
+                "h": 991
+              }
+            },
+            {
+              "key": "costa__path202__path202__hd_3_0",
+              "file": "hd/costa__path202__path202__hd_3_0.png",
+              "x": 916.8,
+              "y": 0,
+              "width": 305.2,
+              "height": 396.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 763,
+                "h": 991
+              }
+            },
+            {
+              "key": "costa__path202__path202__hd_0_1",
+              "file": "hd/costa__path202__path202__hd_0_1.png",
+              "x": 0,
+              "y": 396.4,
+              "width": 305.6,
+              "height": 396.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 764,
+                "h": 991
+              }
+            },
+            {
+              "key": "costa__path202__path202__hd_1_1",
+              "file": "hd/costa__path202__path202__hd_1_1.png",
+              "x": 305.6,
+              "y": 396.4,
+              "width": 305.6,
+              "height": 396.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 764,
+                "h": 991
+              }
+            },
+            {
+              "key": "costa__path202__path202__hd_2_1",
+              "file": "hd/costa__path202__path202__hd_2_1.png",
+              "x": 611.2,
+              "y": 396.4,
+              "width": 305.6,
+              "height": 396.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 764,
+                "h": 991
+              }
+            },
+            {
+              "key": "costa__path202__path202__hd_3_1",
+              "file": "hd/costa__path202__path202__hd_3_1.png",
+              "x": 916.8,
+              "y": 396.4,
+              "width": 305.2,
+              "height": 396.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 763,
+                "h": 991
+              }
+            },
+            {
+              "key": "costa__path202__path202__hd_0_2",
+              "file": "hd/costa__path202__path202__hd_0_2.png",
+              "x": 0,
+              "y": 792.8,
+              "width": 305.6,
+              "height": 396.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 764,
+                "h": 991
+              }
+            },
+            {
+              "key": "costa__path202__path202__hd_1_2",
+              "file": "hd/costa__path202__path202__hd_1_2.png",
+              "x": 305.6,
+              "y": 792.8,
+              "width": 305.6,
+              "height": 396.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 764,
+                "h": 991
+              }
+            },
+            {
+              "key": "costa__path202__path202__hd_2_2",
+              "file": "hd/costa__path202__path202__hd_2_2.png",
+              "x": 611.2,
+              "y": 792.8,
+              "width": 305.6,
+              "height": 396.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 764,
+                "h": 991
+              }
+            },
+            {
+              "key": "costa__path202__path202__hd_3_2",
+              "file": "hd/costa__path202__path202__hd_3_2.png",
+              "x": 916.8,
+              "y": 792.8,
+              "width": 305.2,
+              "height": 396.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 763,
+                "h": 991
+              }
+            },
+            {
+              "key": "costa__path202__path202__hd_1_3",
+              "file": "hd/costa__path202__path202__hd_1_3.png",
+              "x": 305.6,
+              "y": 1189.2,
+              "width": 305.6,
+              "height": 396.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 764,
+                "h": 991
+              }
+            },
+            {
+              "key": "costa__path202__path202__hd_2_3",
+              "file": "hd/costa__path202__path202__hd_2_3.png",
+              "x": 611.2,
+              "y": 1189.2,
+              "width": 305.6,
+              "height": 396.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 764,
+                "h": 991
+              }
+            },
+            {
+              "key": "costa__path202__path202__hd_3_3",
+              "file": "hd/costa__path202__path202__hd_3_3.png",
+              "x": 916.8,
+              "y": 1189.2,
+              "width": 305.2,
+              "height": 396.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 763,
+                "h": 991
+              }
+            },
+            {
+              "key": "costa__path202__path202__hd_2_4",
+              "file": "hd/costa__path202__path202__hd_2_4.png",
+              "x": 611.2,
+              "y": 1585.6,
+              "width": 305.6,
+              "height": 396.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 764,
+                "h": 991
+              }
+            },
+            {
+              "key": "costa__path202__path202__hd_3_4",
+              "file": "hd/costa__path202__path202__hd_3_4.png",
+              "x": 916.8,
+              "y": 1585.6,
+              "width": 305.2,
+              "height": 396.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 763,
+                "h": 991
+              }
+            }
+          ]
         }
       ]
     }

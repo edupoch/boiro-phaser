@@ -44,7 +44,7 @@
       "frame": {
         "x": 2184,
         "y": 2364,
-        "w": 1527,
+        "w": 1528,
         "h": 1030
       },
       "rotated": false,
@@ -52,11 +52,11 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 1527,
+        "w": 1528,
         "h": 1030
       },
       "sourceSize": {
-        "w": 1527,
+        "w": 1528,
         "h": 1030
       }
     },
@@ -64,7 +64,7 @@
       "frame": {
         "x": 2634,
         "y": 18,
-        "w": 1435,
+        "w": 1436,
         "h": 876
       },
       "rotated": false,
@@ -72,11 +72,11 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 1435,
+        "w": 1436,
         "h": 876
       },
       "sourceSize": {
-        "w": 1435,
+        "w": 1436,
         "h": 876
       }
     },
@@ -85,7 +85,7 @@
         "x": 2634,
         "y": 930,
         "w": 1334,
-        "h": 1031
+        "h": 1032
       },
       "rotated": false,
       "trimmed": false,
@@ -93,11 +93,11 @@
         "x": 0,
         "y": 0,
         "w": 1334,
-        "h": 1031
+        "h": 1032
       },
       "sourceSize": {
         "w": 1334,
-        "h": 1031
+        "h": 1032
       }
     },
     "Juegos__puntos__path2635": {
@@ -105,7 +105,7 @@
         "x": 2184,
         "y": 3430,
         "w": 1000,
-        "h": 411
+        "h": 412
       },
       "rotated": false,
       "trimmed": false,
@@ -113,18 +113,18 @@
         "x": 0,
         "y": 0,
         "w": 1000,
-        "h": 411
+        "h": 412
       },
       "sourceSize": {
         "w": 1000,
-        "h": 411
+        "h": 412
       }
     },
     "Juegos__path967-0-03-5__path967-0-03-5": {
       "frame": {
         "x": 3220,
         "y": 3430,
-        "w": 647,
+        "w": 648,
         "h": 372
       },
       "rotated": false,
@@ -132,11 +132,11 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 647,
+        "w": 648,
         "h": 372
       },
       "sourceSize": {
-        "w": 647,
+        "w": 648,
         "h": 372
       }
     }
@@ -164,7 +164,415 @@
             "y": 399,
             "width": 2580,
             "height": 2310
-          }
+          },
+          "hd": [
+            {
+              "key": "Fondo__playa__path404__hd_3_0",
+              "file": "hd/Fondo__playa__path404__hd_3_0.png",
+              "x": 1106.4,
+              "y": 0,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_4_0",
+              "file": "hd/Fondo__playa__path404__hd_4_0.png",
+              "x": 1475.2,
+              "y": 0,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_5_0",
+              "file": "hd/Fondo__playa__path404__hd_5_0.png",
+              "x": 1844,
+              "y": 0,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_6_0",
+              "file": "hd/Fondo__playa__path404__hd_6_0.png",
+              "x": 2212.8,
+              "y": 0,
+              "width": 367.2,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 918,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_1_1",
+              "file": "hd/Fondo__playa__path404__hd_1_1.png",
+              "x": 368.8,
+              "y": 385.2,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_2_1",
+              "file": "hd/Fondo__playa__path404__hd_2_1.png",
+              "x": 737.6,
+              "y": 385.2,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_3_1",
+              "file": "hd/Fondo__playa__path404__hd_3_1.png",
+              "x": 1106.4,
+              "y": 385.2,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_4_1",
+              "file": "hd/Fondo__playa__path404__hd_4_1.png",
+              "x": 1475.2,
+              "y": 385.2,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_5_1",
+              "file": "hd/Fondo__playa__path404__hd_5_1.png",
+              "x": 1844,
+              "y": 385.2,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_6_1",
+              "file": "hd/Fondo__playa__path404__hd_6_1.png",
+              "x": 2212.8,
+              "y": 385.2,
+              "width": 367.2,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 918,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_0_2",
+              "file": "hd/Fondo__playa__path404__hd_0_2.png",
+              "x": 0,
+              "y": 770.4,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_1_2",
+              "file": "hd/Fondo__playa__path404__hd_1_2.png",
+              "x": 368.8,
+              "y": 770.4,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_2_2",
+              "file": "hd/Fondo__playa__path404__hd_2_2.png",
+              "x": 737.6,
+              "y": 770.4,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_3_2",
+              "file": "hd/Fondo__playa__path404__hd_3_2.png",
+              "x": 1106.4,
+              "y": 770.4,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_4_2",
+              "file": "hd/Fondo__playa__path404__hd_4_2.png",
+              "x": 1475.2,
+              "y": 770.4,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_5_2",
+              "file": "hd/Fondo__playa__path404__hd_5_2.png",
+              "x": 1844,
+              "y": 770.4,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_6_2",
+              "file": "hd/Fondo__playa__path404__hd_6_2.png",
+              "x": 2212.8,
+              "y": 770.4,
+              "width": 367.2,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 918,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_0_3",
+              "file": "hd/Fondo__playa__path404__hd_0_3.png",
+              "x": 0,
+              "y": 1155.6,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_1_3",
+              "file": "hd/Fondo__playa__path404__hd_1_3.png",
+              "x": 368.8,
+              "y": 1155.6,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_2_3",
+              "file": "hd/Fondo__playa__path404__hd_2_3.png",
+              "x": 737.6,
+              "y": 1155.6,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_3_3",
+              "file": "hd/Fondo__playa__path404__hd_3_3.png",
+              "x": 1106.4,
+              "y": 1155.6,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_4_3",
+              "file": "hd/Fondo__playa__path404__hd_4_3.png",
+              "x": 1475.2,
+              "y": 1155.6,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_5_3",
+              "file": "hd/Fondo__playa__path404__hd_5_3.png",
+              "x": 1844,
+              "y": 1155.6,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_0_4",
+              "file": "hd/Fondo__playa__path404__hd_0_4.png",
+              "x": 0,
+              "y": 1540.8,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_1_4",
+              "file": "hd/Fondo__playa__path404__hd_1_4.png",
+              "x": 368.8,
+              "y": 1540.8,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_2_4",
+              "file": "hd/Fondo__playa__path404__hd_2_4.png",
+              "x": 737.6,
+              "y": 1540.8,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_3_4",
+              "file": "hd/Fondo__playa__path404__hd_3_4.png",
+              "x": 1106.4,
+              "y": 1540.8,
+              "width": 368.8,
+              "height": 385.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 963
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_0_5",
+              "file": "hd/Fondo__playa__path404__hd_0_5.png",
+              "x": 0,
+              "y": 1926,
+              "width": 368.8,
+              "height": 384,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 960
+              }
+            },
+            {
+              "key": "Fondo__playa__path404__hd_1_5",
+              "file": "hd/Fondo__playa__path404__hd_1_5.png",
+              "x": 368.8,
+              "y": 1926,
+              "width": 368.8,
+              "height": 384,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 960
+              }
+            }
+          ]
         },
         {
           "label": "Fondo__hoyo_mar__g1924",
@@ -172,9 +580,67 @@
           "bounds": {
             "x": 732,
             "y": 1256,
-            "width": 1527,
+            "width": 1528,
             "height": 1030
-          }
+          },
+          "hd": [
+            {
+              "key": "Fondo__hoyo_mar__g1924__hd_3_0",
+              "file": "hd/Fondo__hoyo_mar__g1924__hd_3_0.png",
+              "x": 1146,
+              "y": 0,
+              "width": 382,
+              "height": 343.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 955,
+                "h": 859
+              }
+            },
+            {
+              "key": "Fondo__hoyo_mar__g1924__hd_2_1",
+              "file": "hd/Fondo__hoyo_mar__g1924__hd_2_1.png",
+              "x": 764,
+              "y": 343.6,
+              "width": 382,
+              "height": 343.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 955,
+                "h": 859
+              }
+            },
+            {
+              "key": "Fondo__hoyo_mar__g1924__hd_0_2",
+              "file": "hd/Fondo__hoyo_mar__g1924__hd_0_2.png",
+              "x": 0,
+              "y": 687.2,
+              "width": 382,
+              "height": 342.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 955,
+                "h": 857
+              }
+            },
+            {
+              "key": "Fondo__hoyo_mar__g1924__hd_1_2",
+              "file": "hd/Fondo__hoyo_mar__g1924__hd_1_2.png",
+              "x": 382,
+              "y": 687.2,
+              "width": 382,
+              "height": 342.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 955,
+                "h": 857
+              }
+            }
+          ]
         },
         {
           "label": "Fondo__path2378-9-3__path2378-9-3",
@@ -183,8 +649,136 @@
             "x": 4110,
             "y": 2623,
             "width": 1334,
-            "height": 1031
-          }
+            "height": 1032
+          },
+          "hd": [
+            {
+              "key": "Fondo__path2378-9-3__path2378-9-3__hd_2_0",
+              "file": "hd/Fondo__path2378-9-3__path2378-9-3__hd_2_0.png",
+              "x": 667.2,
+              "y": 0,
+              "width": 333.6,
+              "height": 344,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 834,
+                "h": 860
+              }
+            },
+            {
+              "key": "Fondo__path2378-9-3__path2378-9-3__hd_3_0",
+              "file": "hd/Fondo__path2378-9-3__path2378-9-3__hd_3_0.png",
+              "x": 1000.8,
+              "y": 0,
+              "width": 333.2,
+              "height": 344,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 833,
+                "h": 860
+              }
+            },
+            {
+              "key": "Fondo__path2378-9-3__path2378-9-3__hd_0_1",
+              "file": "hd/Fondo__path2378-9-3__path2378-9-3__hd_0_1.png",
+              "x": 0,
+              "y": 344,
+              "width": 333.6,
+              "height": 344,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 834,
+                "h": 860
+              }
+            },
+            {
+              "key": "Fondo__path2378-9-3__path2378-9-3__hd_1_1",
+              "file": "hd/Fondo__path2378-9-3__path2378-9-3__hd_1_1.png",
+              "x": 333.6,
+              "y": 344,
+              "width": 333.6,
+              "height": 344,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 834,
+                "h": 860
+              }
+            },
+            {
+              "key": "Fondo__path2378-9-3__path2378-9-3__hd_2_1",
+              "file": "hd/Fondo__path2378-9-3__path2378-9-3__hd_2_1.png",
+              "x": 667.2,
+              "y": 344,
+              "width": 333.6,
+              "height": 344,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 834,
+                "h": 860
+              }
+            },
+            {
+              "key": "Fondo__path2378-9-3__path2378-9-3__hd_3_1",
+              "file": "hd/Fondo__path2378-9-3__path2378-9-3__hd_3_1.png",
+              "x": 1000.8,
+              "y": 344,
+              "width": 333.2,
+              "height": 344,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 833,
+                "h": 860
+              }
+            },
+            {
+              "key": "Fondo__path2378-9-3__path2378-9-3__hd_0_2",
+              "file": "hd/Fondo__path2378-9-3__path2378-9-3__hd_0_2.png",
+              "x": 0,
+              "y": 688,
+              "width": 333.6,
+              "height": 344,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 834,
+                "h": 860
+              }
+            },
+            {
+              "key": "Fondo__path2378-9-3__path2378-9-3__hd_1_2",
+              "file": "hd/Fondo__path2378-9-3__path2378-9-3__hd_1_2.png",
+              "x": 333.6,
+              "y": 688,
+              "width": 333.6,
+              "height": 344,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 834,
+                "h": 860
+              }
+            },
+            {
+              "key": "Fondo__path2378-9-3__path2378-9-3__hd_2_2",
+              "file": "hd/Fondo__path2378-9-3__path2378-9-3__hd_2_2.png",
+              "x": 667.2,
+              "y": 688,
+              "width": 333.6,
+              "height": 344,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 834,
+                "h": 860
+              }
+            }
+          ]
         }
       ]
     },
@@ -199,7 +793,261 @@
             "y": 0,
             "width": 2130,
             "height": 1592
-          }
+          },
+          "hd": [
+            {
+              "key": "Casas__suelo__g135__hd_0_0",
+              "file": "hd/Casas__suelo__g135__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 355.2,
+              "height": 398,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 888,
+                "h": 995
+              }
+            },
+            {
+              "key": "Casas__suelo__g135__hd_1_0",
+              "file": "hd/Casas__suelo__g135__hd_1_0.png",
+              "x": 355.2,
+              "y": 0,
+              "width": 355.2,
+              "height": 398,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 888,
+                "h": 995
+              }
+            },
+            {
+              "key": "Casas__suelo__g135__hd_2_0",
+              "file": "hd/Casas__suelo__g135__hd_2_0.png",
+              "x": 710.4,
+              "y": 0,
+              "width": 355.2,
+              "height": 398,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 888,
+                "h": 995
+              }
+            },
+            {
+              "key": "Casas__suelo__g135__hd_3_0",
+              "file": "hd/Casas__suelo__g135__hd_3_0.png",
+              "x": 1065.6,
+              "y": 0,
+              "width": 355.2,
+              "height": 398,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 888,
+                "h": 995
+              }
+            },
+            {
+              "key": "Casas__suelo__g135__hd_4_0",
+              "file": "hd/Casas__suelo__g135__hd_4_0.png",
+              "x": 1420.8,
+              "y": 0,
+              "width": 355.2,
+              "height": 398,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 888,
+                "h": 995
+              }
+            },
+            {
+              "key": "Casas__suelo__g135__hd_5_0",
+              "file": "hd/Casas__suelo__g135__hd_5_0.png",
+              "x": 1776,
+              "y": 0,
+              "width": 354,
+              "height": 398,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 885,
+                "h": 995
+              }
+            },
+            {
+              "key": "Casas__suelo__g135__hd_0_1",
+              "file": "hd/Casas__suelo__g135__hd_0_1.png",
+              "x": 0,
+              "y": 398,
+              "width": 355.2,
+              "height": 398,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 888,
+                "h": 995
+              }
+            },
+            {
+              "key": "Casas__suelo__g135__hd_1_1",
+              "file": "hd/Casas__suelo__g135__hd_1_1.png",
+              "x": 355.2,
+              "y": 398,
+              "width": 355.2,
+              "height": 398,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 888,
+                "h": 995
+              }
+            },
+            {
+              "key": "Casas__suelo__g135__hd_2_1",
+              "file": "hd/Casas__suelo__g135__hd_2_1.png",
+              "x": 710.4,
+              "y": 398,
+              "width": 355.2,
+              "height": 398,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 888,
+                "h": 995
+              }
+            },
+            {
+              "key": "Casas__suelo__g135__hd_3_1",
+              "file": "hd/Casas__suelo__g135__hd_3_1.png",
+              "x": 1065.6,
+              "y": 398,
+              "width": 355.2,
+              "height": 398,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 888,
+                "h": 995
+              }
+            },
+            {
+              "key": "Casas__suelo__g135__hd_4_1",
+              "file": "hd/Casas__suelo__g135__hd_4_1.png",
+              "x": 1420.8,
+              "y": 398,
+              "width": 355.2,
+              "height": 398,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 888,
+                "h": 995
+              }
+            },
+            {
+              "key": "Casas__suelo__g135__hd_5_1",
+              "file": "hd/Casas__suelo__g135__hd_5_1.png",
+              "x": 1776,
+              "y": 398,
+              "width": 354,
+              "height": 398,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 885,
+                "h": 995
+              }
+            },
+            {
+              "key": "Casas__suelo__g135__hd_0_2",
+              "file": "hd/Casas__suelo__g135__hd_0_2.png",
+              "x": 0,
+              "y": 796,
+              "width": 355.2,
+              "height": 398,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 888,
+                "h": 995
+              }
+            },
+            {
+              "key": "Casas__suelo__g135__hd_1_2",
+              "file": "hd/Casas__suelo__g135__hd_1_2.png",
+              "x": 355.2,
+              "y": 796,
+              "width": 355.2,
+              "height": 398,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 888,
+                "h": 995
+              }
+            },
+            {
+              "key": "Casas__suelo__g135__hd_2_2",
+              "file": "hd/Casas__suelo__g135__hd_2_2.png",
+              "x": 710.4,
+              "y": 796,
+              "width": 355.2,
+              "height": 398,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 888,
+                "h": 995
+              }
+            },
+            {
+              "key": "Casas__suelo__g135__hd_3_2",
+              "file": "hd/Casas__suelo__g135__hd_3_2.png",
+              "x": 1065.6,
+              "y": 796,
+              "width": 355.2,
+              "height": 398,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 888,
+                "h": 995
+              }
+            },
+            {
+              "key": "Casas__suelo__g135__hd_0_3",
+              "file": "hd/Casas__suelo__g135__hd_0_3.png",
+              "x": 0,
+              "y": 1194,
+              "width": 355.2,
+              "height": 398,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 888,
+                "h": 995
+              }
+            },
+            {
+              "key": "Casas__suelo__g135__hd_1_3",
+              "file": "hd/Casas__suelo__g135__hd_1_3.png",
+              "x": 355.2,
+              "y": 1194,
+              "width": 355.2,
+              "height": 398,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 888,
+                "h": 995
+              }
+            }
+          ]
         }
       ]
     },
@@ -212,9 +1060,165 @@
           "bounds": {
             "x": 2155,
             "y": 1708,
-            "width": 1435,
+            "width": 1436,
             "height": 876
-          }
+          },
+          "hd": [
+            {
+              "key": "Mar__pasarela__g1089__hd_0_0",
+              "file": "hd/Mar__pasarela__g1089__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 359.2,
+              "height": 292,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 898,
+                "h": 730
+              }
+            },
+            {
+              "key": "Mar__pasarela__g1089__hd_1_0",
+              "file": "hd/Mar__pasarela__g1089__hd_1_0.png",
+              "x": 359.2,
+              "y": 0,
+              "width": 359.2,
+              "height": 292,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 898,
+                "h": 730
+              }
+            },
+            {
+              "key": "Mar__pasarela__g1089__hd_2_0",
+              "file": "hd/Mar__pasarela__g1089__hd_2_0.png",
+              "x": 718.4,
+              "y": 0,
+              "width": 359.2,
+              "height": 292,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 898,
+                "h": 730
+              }
+            },
+            {
+              "key": "Mar__pasarela__g1089__hd_3_0",
+              "file": "hd/Mar__pasarela__g1089__hd_3_0.png",
+              "x": 1077.6,
+              "y": 0,
+              "width": 358.4,
+              "height": 292,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 896,
+                "h": 730
+              }
+            },
+            {
+              "key": "Mar__pasarela__g1089__hd_0_1",
+              "file": "hd/Mar__pasarela__g1089__hd_0_1.png",
+              "x": 0,
+              "y": 292,
+              "width": 359.2,
+              "height": 292,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 898,
+                "h": 730
+              }
+            },
+            {
+              "key": "Mar__pasarela__g1089__hd_1_1",
+              "file": "hd/Mar__pasarela__g1089__hd_1_1.png",
+              "x": 359.2,
+              "y": 292,
+              "width": 359.2,
+              "height": 292,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 898,
+                "h": 730
+              }
+            },
+            {
+              "key": "Mar__pasarela__g1089__hd_2_1",
+              "file": "hd/Mar__pasarela__g1089__hd_2_1.png",
+              "x": 718.4,
+              "y": 292,
+              "width": 359.2,
+              "height": 292,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 898,
+                "h": 730
+              }
+            },
+            {
+              "key": "Mar__pasarela__g1089__hd_3_1",
+              "file": "hd/Mar__pasarela__g1089__hd_3_1.png",
+              "x": 1077.6,
+              "y": 292,
+              "width": 358.4,
+              "height": 292,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 896,
+                "h": 730
+              }
+            },
+            {
+              "key": "Mar__pasarela__g1089__hd_0_2",
+              "file": "hd/Mar__pasarela__g1089__hd_0_2.png",
+              "x": 0,
+              "y": 584,
+              "width": 359.2,
+              "height": 292,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 898,
+                "h": 730
+              }
+            },
+            {
+              "key": "Mar__pasarela__g1089__hd_1_2",
+              "file": "hd/Mar__pasarela__g1089__hd_1_2.png",
+              "x": 359.2,
+              "y": 584,
+              "width": 359.2,
+              "height": 292,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 898,
+                "h": 730
+              }
+            },
+            {
+              "key": "Mar__pasarela__g1089__hd_2_2",
+              "file": "hd/Mar__pasarela__g1089__hd_2_2.png",
+              "x": 718.4,
+              "y": 584,
+              "width": 359.2,
+              "height": 292,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 898,
+                "h": 730
+              }
+            }
+          ]
         }
       ]
     },
@@ -228,8 +1232,94 @@
             "x": 2117,
             "y": 0,
             "width": 1000,
-            "height": 411
-          }
+            "height": 412
+          },
+          "hd": [
+            {
+              "key": "Juegos__puntos__path2635__hd_0_0",
+              "file": "hd/Juegos__puntos__path2635__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 333.6,
+              "height": 206,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 834,
+                "h": 515
+              }
+            },
+            {
+              "key": "Juegos__puntos__path2635__hd_1_0",
+              "file": "hd/Juegos__puntos__path2635__hd_1_0.png",
+              "x": 333.6,
+              "y": 0,
+              "width": 333.6,
+              "height": 206,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 834,
+                "h": 515
+              }
+            },
+            {
+              "key": "Juegos__puntos__path2635__hd_2_0",
+              "file": "hd/Juegos__puntos__path2635__hd_2_0.png",
+              "x": 667.2,
+              "y": 0,
+              "width": 332.8,
+              "height": 206,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 832,
+                "h": 515
+              }
+            },
+            {
+              "key": "Juegos__puntos__path2635__hd_0_1",
+              "file": "hd/Juegos__puntos__path2635__hd_0_1.png",
+              "x": 0,
+              "y": 206,
+              "width": 333.6,
+              "height": 206,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 834,
+                "h": 515
+              }
+            },
+            {
+              "key": "Juegos__puntos__path2635__hd_1_1",
+              "file": "hd/Juegos__puntos__path2635__hd_1_1.png",
+              "x": 333.6,
+              "y": 206,
+              "width": 333.6,
+              "height": 206,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 834,
+                "h": 515
+              }
+            },
+            {
+              "key": "Juegos__puntos__path2635__hd_2_1",
+              "file": "hd/Juegos__puntos__path2635__hd_2_1.png",
+              "x": 667.2,
+              "y": 206,
+              "width": 332.8,
+              "height": 206,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 832,
+                "h": 515
+              }
+            }
+          ]
         },
         {
           "label": "Juegos__path967-0-03-5__path967-0-03-5",
@@ -237,9 +1327,39 @@
           "bounds": {
             "x": 2492,
             "y": 0,
-            "width": 647,
+            "width": 648,
             "height": 372
-          }
+          },
+          "hd": [
+            {
+              "key": "Juegos__path967-0-03-5__path967-0-03-5__hd_0_0",
+              "file": "hd/Juegos__path967-0-03-5__path967-0-03-5__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 324,
+              "height": 372,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 810,
+                "h": 930
+              }
+            },
+            {
+              "key": "Juegos__path967-0-03-5__path967-0-03-5__hd_1_0",
+              "file": "hd/Juegos__path967-0-03-5__path967-0-03-5__hd_1_0.png",
+              "x": 324,
+              "y": 0,
+              "width": 324,
+              "height": 372,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 810,
+                "h": 930
+              }
+            }
+          ]
         }
       ]
     }

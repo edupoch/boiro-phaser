@@ -106,6 +106,25 @@ const maxAtlasSize = 4096;
 // Tamaño máximo de un tile para sprites que no caben en un atlas: deja sitio al padding y al extrude.
 const maxTileSize = maxAtlasSize - ((atlasPadding + atlasExtrude) * 2);
 
+// Versión HD (LOD): cada sprite se rasteriza también a hdScale px por unidad y se trocea en chunks
+// que el juego carga bajo demanda solo para la zona visible cuando el zoom pasa de ~1.
+// La escala se puede cambiar con `npm run split --scale=2` o `npm run split -- --scale=2`.
+const cliScaleArg = extraArgs.find((arg) => arg.startsWith('--scale='));
+const hdScale = Number(cliScaleArg?.slice('--scale='.length) ?? process.env.npm_config_scale ?? 2.5);
+if (!(hdScale > 0)) {
+  throw new Error(`Escala HD no válida: ${hdScale}`);
+}
+const hdDirName = 'hd';
+const hdDir = path.join(outputDir, hdDirName);
+// Texturas potencia de 2 (para tener mipmaps) de como mucho 1024 px: con chunks más grandes se
+// cargaría mucha HD apenas visible por los bordes de la vista.
+const hdMaxTextureSize = 1024;
+// Píxeles reales de los chunks vecinos alrededor de cada chunk: con zoom >= 1 solo se muestrean
+// los primeros niveles de mipmap y 4 px bastan para que no aparezcan costuras entre chunks.
+const hdOverlap = 4;
+const hdMaxChunkSize = hdMaxTextureSize - (hdOverlap * 2);
+fs.mkdirSync(hdDir, { recursive: true });
+
 const sanitizeSegment = (value) => value
   .replace(/[\\/]/g, '_')
   .replace(/\s+/g, '_')
@@ -154,6 +173,113 @@ const getElementPathSegments = (el) => {
   return segments.reverse();
 };
 
+const nextPowerOfTwoSize = (value) => 2 ** Math.ceil(Math.log2(Math.max(1, value)));
+
+const isRegionEmpty = (data, info, left, top, regionWidth, regionHeight) => {
+  for (let y = top; y < top + regionHeight; y += 1) {
+    for (let x = left; x < left + regionWidth; x += 1) {
+      if (data[(y * info.width + x) * info.channels + (info.channels - 1)] > 0) {
+        return false;
+      }
+    }
+  }
+
+  return true;
+};
+
+// Rasteriza el sprite a hdScale sobre exactamente el mismo rectángulo que los bounds a 1x
+// y lo trocea en chunks con textura potencia de 2. Las coordenadas de cada chunk se guardan
+// en unidades del mundo, relativas a los bounds.
+const createHdChunks = async (fileName, contentWithParent, bounds) => {
+  const hdWidth = Math.round(bounds.width * hdScale);
+  const hdHeight = Math.round(bounds.height * hdScale);
+  const hdSvg = `<svg ${svgNamespaces} ${rootPresentationAttrs}
+    viewBox="0 0 ${bounds.width} ${bounds.height}" width="${hdWidth}" height="${hdHeight}">
+    ${sharedSvgContent}
+    <g transform="translate(${-(viewBoxX + bounds.x)}, ${-(viewBoxY + bounds.y)})">
+      ${contentWithParent}
+    </g>
+  </svg>`;
+
+  const { data, info } = await sharp(Buffer.from(hdSvg), { limitInputPixels: false })
+    .ensureAlpha()
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+
+  const columns = Math.ceil(info.width / hdMaxChunkSize);
+  const rows = Math.ceil(info.height / hdMaxChunkSize);
+  const chunkWidth = Math.ceil(info.width / columns);
+  const chunkHeight = Math.ceil(info.height / rows);
+  const chunks = [];
+
+  for (let row = 0; row < rows; row += 1) {
+    for (let column = 0; column < columns; column += 1) {
+      const left = column * chunkWidth;
+      const top = row * chunkHeight;
+      const contentWidth = Math.min(chunkWidth, info.width - left);
+      const contentHeight = Math.min(chunkHeight, info.height - top);
+
+      if (isRegionEmpty(data, info, left, top, contentWidth, contentHeight)) {
+        continue;
+      }
+
+      const sourceLeft = Math.max(0, left - hdOverlap);
+      const sourceTop = Math.max(0, top - hdOverlap);
+      const sourceRight = Math.min(info.width, left + contentWidth + hdOverlap);
+      const sourceBottom = Math.min(info.height, top + contentHeight + hdOverlap);
+      const region = await sharp(data, { raw: info, limitInputPixels: false })
+        .extract({
+          left: sourceLeft,
+          top: sourceTop,
+          width: sourceRight - sourceLeft,
+          height: sourceBottom - sourceTop,
+        })
+        .png()
+        .toBuffer();
+
+      const textureWidth = nextPowerOfTwoSize(contentWidth + (hdOverlap * 2));
+      const textureHeight = nextPowerOfTwoSize(contentHeight + (hdOverlap * 2));
+      const key = `${fileName}__hd_${column}_${row}`;
+      const file = `${hdDirName}/${key}.png`;
+
+      await sharp({
+        create: {
+          width: textureWidth,
+          height: textureHeight,
+          channels: 4,
+          background: { r: 0, g: 0, b: 0, alpha: 0 },
+        },
+      })
+        .composite([{
+          input: region,
+          left: hdOverlap - (left - sourceLeft),
+          top: hdOverlap - (top - sourceTop),
+        }])
+        .png()
+        .toFile(path.join(outputDir, file));
+
+      chunks.push({
+        key,
+        file,
+        x: left / hdScale,
+        y: top / hdScale,
+        width: contentWidth / hdScale,
+        height: contentHeight / hdScale,
+        frame: {
+          x: hdOverlap,
+          y: hdOverlap,
+          w: contentWidth,
+          h: contentHeight,
+        },
+      });
+    }
+  }
+
+  console.log(`\t✓ HD ${fileName} (${info.width}x${info.height}) en ${chunks.length} chunks`);
+
+  return chunks;
+};
+
 const getNodeLabel = (el) => {
   const node = $(el);
   return node.attr('inkscape:label') || node.attr('id') || null;
@@ -178,6 +304,8 @@ const createPathSprite = async (el) => {
 
   // First pass: calculate bounds
   let bounds = null;
+  let sceneWidthPx = 0;
+  let sceneHeightPx = 0;
   {
     const image = sharp(Buffer.from(isolated));
     const { data, info } = await image
@@ -185,6 +313,8 @@ const createPathSprite = async (el) => {
       .raw()
       .toBuffer({ resolveWithObject: true });
 
+    sceneWidthPx = info.width;
+    sceneHeightPx = info.height;
     let minX = info.width;
     let minY = info.height;
     let maxX = -1;
@@ -218,6 +348,20 @@ const createPathSprite = async (el) => {
     return null;
   }
 
+  // Ancho y alto pares para que, multiplicados por hdScale (2.5), den píxeles enteros y la versión HD
+  // cubra exactamente el mismo rectángulo que la de 1x. Crecemos hacia donde quede escena.
+  if (bounds.width % 2 === 1) {
+    if (bounds.x + bounds.width < sceneWidthPx) bounds.width += 1;
+    else { bounds.x -= 1; bounds.width += 1; }
+  }
+  if (bounds.height % 2 === 1) {
+    if (bounds.y + bounds.height < sceneHeightPx) bounds.height += 1;
+    else { bounds.y -= 1; bounds.height += 1; }
+  }
+
+  console.log('\tRendering HD');
+  const hd = await createHdChunks(fileName, contentWithParent, bounds);
+
   console.log('\tCropping SVG');
   const finalSvg = `<svg ${svgNamespaces} ${rootPresentationAttrs}
     viewBox="0 0 ${bounds.width} ${bounds.height}" width="${bounds.width}" height="${bounds.height}">
@@ -247,14 +391,12 @@ const createPathSprite = async (el) => {
       label: fileName,
       frame: fileName,
       bounds,
+      hd,
     };
   }
 
   // Sprite demasiado grande para un atlas: lo troceamos en tiles a resolución completa
   // en lugar de reducirlo (reducirlo es lo que provocaba la pérdida de definición).
-  if (fileName.includes('_ob_')) {
-    console.warn(`\t! ${fileName} es un objeto interactivo pero se trocea en tiles: no recibirá eventos ni animaciones.`);
-  }
 
   const columns = Math.ceil(info.width / maxTileSize);
   const rows = Math.ceil(info.height / maxTileSize);
@@ -304,6 +446,7 @@ const createPathSprite = async (el) => {
     label: fileName,
     bounds,
     tiles,
+    hd,
   };
 };
 
@@ -565,6 +708,7 @@ const buildAtlases = async () => {
   const atlasPages = [];
   let remainingSprites = sortedSprites;
   const atlasManifest = {
+    hdScale,
     atlases: [],
     frameToAtlasKey: {},
     sprites,

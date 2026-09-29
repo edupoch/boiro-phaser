@@ -1,6 +1,7 @@
 import * as Phaser from 'phaser';
 
 import { EventBus } from '../EventBus';
+import { HdChunk, SpriteLod } from '../SpriteLod';
 
 type SpriteBounds = {
     x: number;
@@ -9,7 +10,8 @@ type SpriteBounds = {
     height: number;
 };
 
-// Trozo de un sprite demasiado grande para un atlas; x/y son relativos a los bounds del sprite.
+// Trozo de un sprite demasiado grande para un atlas; x/y son relativos a los bounds del sprite
+// y, como los bounds, están en unidades del mundo.
 type SpriteTile = SpriteBounds & {
     frame: string;
 };
@@ -19,9 +21,13 @@ type PositionedSprite = {
     frame?: string;
     bounds: SpriteBounds | null;
     tiles?: SpriteTile[];
+    hd?: HdChunk[];
     children?: PositionedSprite[];
     childen?: PositionedSprite[];
 };
+
+// Los sprites troceados en tiles se agrupan en un Container para animarse como una sola pieza.
+type SpriteObject = Phaser.GameObjects.Image | Phaser.GameObjects.Container;
 
 type AtlasData = {
     frameToAtlasKey?: Record<string, string>;
@@ -37,7 +43,8 @@ export class GameScene extends Phaser.Scene
     camera: Phaser.Cameras.Scene2D.Camera;
 
     private spriteTree: PositionedSprite[] = [];
-    private spriteImageMap = new Map<string, Phaser.GameObjects.Image>();
+    private spriteImageMap = new Map<string, SpriteObject>();
+    private spriteLod: SpriteLod | null = null;
 
     constructor ()
     {
@@ -141,7 +148,15 @@ export class GameScene extends Phaser.Scene
             this.input.on('pointerdown', handlePointerDown);
             this.input.on('pointerup', handlePointerUp);
             this.input.on('wheel', handleWheel);
+            this.spriteLod = new SpriteLod(this, { basePath: 'assets/sprites/' });
+
+            if (import.meta.env.DEV) {
+                // Para depurar el LOD desde la consola: __spriteLod.getStats()
+                (window as unknown as { __spriteLod?: SpriteLod }).__spriteLod = this.spriteLod;
+            }
+
             this.events.once('shutdown', () => {
+                this.spriteLod = null;
                 this.input.off('pointermove', handlePointerMove);
                 this.input.off('pointerdown', handlePointerDown);
                 this.input.off('pointerup', handlePointerUp);
@@ -163,36 +178,49 @@ export class GameScene extends Phaser.Scene
                 }
 
                 const bounds = sprite.bounds;
+                const centerX = (bounds.x + bounds.width / 2) * scaleX;
+                const centerY = (bounds.y + bounds.height / 2) * scaleX;
+                const displayWidth = bounds.width * scaleX;
+                const displayHeight = bounds.height * scaleX;
 
-                // Sprites troceados en tiles: son decorado estático, se pintan tile a tile
-                // y no participan en interacciones ni animaciones.
+                let spriteImage: SpriteObject;
+
                 if (Array.isArray(sprite.tiles)) {
+                    const container = this.add.container(centerX, centerY)
+                        .setSize(displayWidth, displayHeight)
+                        .setDepth(50);
+
                     sprite.tiles.forEach((tile) => {
                         const tileAtlasKey = frameToAtlasKey[tile.frame];
                         if (!tileAtlasKey || !this.textures.exists(tileAtlasKey)) {
                             return;
                         }
 
-                        this.add.image((bounds.x + tile.x) * scaleX, (bounds.y + tile.y) * scaleX, tileAtlasKey, tile.frame)
+                        const tileImage = this.add.image(
+                            tile.x * scaleX - displayWidth / 2,
+                            tile.y * scaleX - displayHeight / 2,
+                            tileAtlasKey,
+                            tile.frame,
+                        )
                             .setOrigin(0, 0)
-                            .setDisplaySize(tile.width * scaleX, tile.height * scaleX)
-                            .setDepth(50);
+                            .setDisplaySize(tile.width * scaleX, tile.height * scaleX);
+                        container.add(tileImage);
                     });
-                    return;
+
+                    spriteImage = container;
+                } else {
+                    const frameKey = sprite.frame ?? sprite.label;
+                    const atlasTextureKey = frameToAtlasKey[frameKey];
+
+                    if (!atlasTextureKey || !this.textures.exists(atlasTextureKey)) {
+                        return;
+                    }
+
+                    spriteImage = this.add.image(centerX, centerY, atlasTextureKey, frameKey)
+                        .setDepth(50)
+                        .setDisplaySize(displayWidth, displayHeight);
                 }
 
-                const centerX = (bounds.x + bounds.width / 2) * scaleX;
-                const centerY = (bounds.y + bounds.height / 2) * scaleX;
-
-                const frameKey = sprite.frame ?? sprite.label;
-                const atlasTextureKey = frameToAtlasKey[frameKey];
-
-                if (!atlasTextureKey || !this.textures.exists(atlasTextureKey)) {
-                    return;
-                }
-
-                const spriteImage = this.add.image(centerX, centerY, atlasTextureKey, frameKey).setDepth(50);
-                spriteImage.setDisplaySize(bounds.width * scaleX, bounds.height * scaleX);
                 this.spriteImageMap.set(sprite.label, spriteImage);
 
                 if (sprite.label.includes('_ob_')) {
@@ -210,30 +238,34 @@ export class GameScene extends Phaser.Scene
 
                         spriteImage.setData('springAnimating', true);
 
+                        // La escala base depende de la textura activa (1x o HD), así que se lee al empezar.
+                        const baseScaleX = spriteImage.scaleX;
+                        const baseScaleY = spriteImage.scaleY;
+
                         this.tweens.chain({
                             targets: spriteImage,
                             tweens: [
                                 {
-                                    scaleX: 1.08,
-                                    scaleY: 0.92,
+                                    scaleX: baseScaleX * 1.08,
+                                    scaleY: baseScaleY * 0.92,
                                     duration: 90,
                                     ease: 'Quad.out',
                                 },
                                 {
-                                    scaleX: 0.96,
-                                    scaleY: 1.06,
+                                    scaleX: baseScaleX * 0.96,
+                                    scaleY: baseScaleY * 1.06,
                                     duration: 120,
                                     ease: 'Sine.inOut',
                                 },
                                 {
-                                    scaleX: 1.02,
-                                    scaleY: 0.98,
+                                    scaleX: baseScaleX * 1.02,
+                                    scaleY: baseScaleY * 0.98,
                                     duration: 110,
                                     ease: 'Sine.inOut',
                                 },
                                 {
-                                    scaleX: 1,
-                                    scaleY: 1,
+                                    scaleX: baseScaleX,
+                                    scaleY: baseScaleY,
                                     duration: 130,
                                     ease: 'Back.out',
                                 },
@@ -244,6 +276,8 @@ export class GameScene extends Phaser.Scene
                         });
                     });
                 }
+
+                this.spriteLod?.register(spriteImage, bounds, sprite.hd);
             };
 
             this.spriteTree = sprites;
@@ -291,7 +325,7 @@ export class GameScene extends Phaser.Scene
                 '*arbol*',
                 '*sombrilla*'
             ], (image) => {
-                image.setOrigin(0.5, 1);
+                this.setPivot(image, 0.5, 1);
                 image.y += image.displayHeight / 2;
 
                 this.tweens.add({
@@ -322,7 +356,31 @@ export class GameScene extends Phaser.Scene
         EventBus.emit('current-scene-ready', this);
     }
     
-    animateElements (label: string | string[], animFn: (image: Phaser.GameObjects.Image) => void): void
+    // Equivalente a setOrigin para imágenes y para los Container de sprites troceados
+    // (en estos se desplazan los tiles, porque un Container gira y escala alrededor de su posición).
+    setPivot (object: SpriteObject, originX: number, originY: number): void
+    {
+        if (object instanceof Phaser.GameObjects.Image) {
+            object.setOrigin(originX, originY);
+            return;
+        }
+
+        const offsetX = (originX - 0.5) * object.width;
+        const offsetY = (originY - 0.5) * object.height;
+        // SpriteLod lo necesita para colocar los chunks HD con el mismo pivote.
+        object.setData({ pivotX: originX, pivotY: originY });
+        object.each((child: Phaser.GameObjects.Image) => {
+            child.x -= offsetX;
+            child.y -= offsetY;
+        });
+    }
+
+    update (time: number): void
+    {
+        this.spriteLod?.update(time);
+    }
+
+    animateElements (label: string | string[], animFn: (image: SpriteObject) => void): void
     {
         const searchTerms = Array.isArray(label) ? label : [label];
         const regexPattern = /^\/(.+)\/([dgimsuvy]*)$/;

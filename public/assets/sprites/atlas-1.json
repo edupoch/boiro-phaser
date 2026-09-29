@@ -44,7 +44,7 @@
       "frame": {
         "x": 3456,
         "y": 808,
-        "w": 267,
+        "w": 268,
         "h": 662
       },
       "rotated": false,
@@ -52,11 +52,11 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 267,
+        "w": 268,
         "h": 662
       },
       "sourceSize": {
-        "w": 267,
+        "w": 268,
         "h": 662
       }
     },
@@ -64,28 +64,28 @@
       "frame": {
         "x": 3456,
         "y": 1506,
-        "w": 387,
-        "h": 615
+        "w": 388,
+        "h": 616
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 387,
-        "h": 615
+        "w": 388,
+        "h": 616
       },
       "sourceSize": {
-        "w": 387,
-        "h": 615
+        "w": 388,
+        "h": 616
       }
     },
     "Bosque__boiro__g1688": {
       "frame": {
         "x": 3456,
-        "y": 2157,
+        "y": 2158,
         "w": 582,
-        "h": 429
+        "h": 430
       },
       "rotated": false,
       "trimmed": false,
@@ -93,78 +93,78 @@
         "x": 0,
         "y": 0,
         "w": 582,
-        "h": 429
+        "h": 430
       },
       "sourceSize": {
         "w": 582,
-        "h": 429
+        "h": 430
       }
     },
     "Juegos__path967__path967": {
       "frame": {
         "x": 3456,
-        "y": 2622,
-        "w": 581,
-        "h": 335
+        "y": 2624,
+        "w": 582,
+        "h": 336
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 581,
-        "h": 335
+        "w": 582,
+        "h": 336
       },
       "sourceSize": {
-        "w": 581,
-        "h": 335
+        "w": 582,
+        "h": 336
       }
     },
     "costa__path1619__path1619": {
       "frame": {
         "x": 3456,
-        "y": 2993,
-        "w": 547,
-        "h": 515
+        "y": 2996,
+        "w": 548,
+        "h": 516
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 547,
-        "h": 515
+        "w": 548,
+        "h": 516
       },
       "sourceSize": {
-        "w": 547,
-        "h": 515
+        "w": 548,
+        "h": 516
       }
     },
     "Mar__ob_faro__g923": {
       "frame": {
-        "x": 3759,
+        "x": 3760,
         "y": 808,
-        "w": 311,
-        "h": 459
+        "w": 312,
+        "h": 460
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 311,
-        "h": 459
+        "w": 312,
+        "h": 460
       },
       "sourceSize": {
-        "w": 311,
-        "h": 459
+        "w": 312,
+        "h": 460
       }
     },
     "Juegos__path967-0-03-5-2__path967-0-03-5-2": {
       "frame": {
         "x": 18,
         "y": 3796,
-        "w": 405,
+        "w": 406,
         "h": 232
       },
       "rotated": false,
@@ -172,19 +172,19 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 405,
+        "w": 406,
         "h": 232
       },
       "sourceSize": {
-        "w": 405,
+        "w": 406,
         "h": 232
       }
     },
     "Playa__mono_juan__g366": {
       "frame": {
-        "x": 459,
+        "x": 460,
         "y": 3796,
-        "w": 361,
+        "w": 362,
         "h": 232
       },
       "rotated": false,
@@ -192,19 +192,19 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 361,
+        "w": 362,
         "h": 232
       },
       "sourceSize": {
-        "w": 361,
+        "w": 362,
         "h": 232
       }
     },
     "Playa__mono_tito__g378": {
       "frame": {
-        "x": 856,
+        "x": 858,
         "y": 3796,
-        "w": 361,
+        "w": 362,
         "h": 232
       },
       "rotated": false,
@@ -212,139 +212,139 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 361,
+        "w": 362,
         "h": 232
       },
       "sourceSize": {
-        "w": 361,
+        "w": 362,
         "h": 232
-      }
-    },
-    "Juegos__columpio__g509": {
-      "frame": {
-        "x": 3456,
-        "y": 3544,
-        "w": 345,
-        "h": 214
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 345,
-        "h": 214
-      },
-      "sourceSize": {
-        "w": 345,
-        "h": 214
       }
     },
     "Puerto__mono_paleta__g222": {
       "frame": {
-        "x": 3879,
+        "x": 3880,
         "y": 1506,
-        "w": 143,
-        "h": 343
+        "w": 144,
+        "h": 344
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 143,
-        "h": 343
+        "w": 144,
+        "h": 344
       },
       "sourceSize": {
-        "w": 143,
-        "h": 343
+        "w": 144,
+        "h": 344
       }
     },
     "gaviota__path411__path411": {
       "frame": {
-        "x": 1253,
+        "x": 1256,
         "y": 3796,
-        "w": 331,
-        "h": 219
+        "w": 332,
+        "h": 220
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 331,
-        "h": 219
+        "w": 332,
+        "h": 220
       },
       "sourceSize": {
-        "w": 331,
-        "h": 219
+        "w": 332,
+        "h": 220
       }
     },
     "Mar__linea__path632-4-6": {
       "frame": {
-        "x": 1620,
-        "y": 3796,
-        "w": 311,
-        "h": 191
+        "x": 3456,
+        "y": 3548,
+        "w": 312,
+        "h": 192
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 311,
-        "h": 191
+        "w": 312,
+        "h": 192
       },
       "sourceSize": {
-        "w": 311,
-        "h": 191
+        "w": 312,
+        "h": 192
+      }
+    },
+    "Puerto__ob_pale_plastico__g1348": {
+      "frame": {
+        "x": 1624,
+        "y": 3796,
+        "w": 310,
+        "h": 218
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 310,
+        "h": 218
+      },
+      "sourceSize": {
+        "w": 310,
+        "h": 218
       }
     },
     "gaviota__g408__g408": {
       "frame": {
-        "x": 1967,
+        "x": 1970,
         "y": 3796,
-        "w": 303,
-        "h": 189
+        "w": 304,
+        "h": 190
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 303,
-        "h": 189
+        "w": 304,
+        "h": 190
       },
       "sourceSize": {
-        "w": 303,
-        "h": 189
+        "w": 304,
+        "h": 190
       }
     },
     "Bosque__path423__path423": {
       "frame": {
         "x": 3936,
         "y": 18,
-        "w": 83,
-        "h": 295
+        "w": 84,
+        "h": 296
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 83,
-        "h": 295
+        "w": 84,
+        "h": 296
       },
       "sourceSize": {
-        "w": 83,
-        "h": 295
+        "w": 84,
+        "h": 296
       }
     },
     "Casas__mono_iago__g306": {
       "frame": {
         "x": 3936,
-        "y": 349,
-        "w": 115,
+        "y": 350,
+        "w": 116,
         "h": 268
       },
       "rotated": false,
@@ -352,19 +352,19 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 115,
+        "w": 116,
         "h": 268
       },
       "sourceSize": {
-        "w": 115,
+        "w": 116,
         "h": 268
       }
     },
     "Bosque__path2763__path2763": {
       "frame": {
-        "x": 2306,
-        "y": 3796,
-        "w": 245,
+        "x": 3804,
+        "y": 3548,
+        "w": 246,
         "h": 182
       },
       "rotated": false,
@@ -372,19 +372,59 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 245,
+        "w": 246,
         "h": 182
       },
       "sourceSize": {
-        "w": 245,
+        "w": 246,
         "h": 182
+      }
+    },
+    "Puerto__arena_obra__path66": {
+      "frame": {
+        "x": 3760,
+        "y": 1304,
+        "w": 238,
+        "h": 148
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 238,
+        "h": 148
+      },
+      "sourceSize": {
+        "w": 238,
+        "h": 148
+      }
+    },
+    "costa__mono_durmiente__g190": {
+      "frame": {
+        "x": 2310,
+        "y": 3796,
+        "w": 236,
+        "h": 160
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 236,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 236,
+        "h": 160
       }
     },
     "Puerto__mono_marido__g122": {
       "frame": {
-        "x": 3879,
-        "y": 1885,
-        "w": 127,
+        "x": 3880,
+        "y": 1886,
+        "w": 128,
         "h": 232
       },
       "rotated": false,
@@ -392,40 +432,20 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 127,
+        "w": 128,
         "h": 232
       },
       "sourceSize": {
-        "w": 127,
+        "w": 128,
         "h": 232
-      }
-    },
-    "plaza__ob_contenedor__g1654": {
-      "frame": {
-        "x": 3837,
-        "y": 3544,
-        "w": 231,
-        "h": 198
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 231,
-        "h": 198
-      },
-      "sourceSize": {
-        "w": 231,
-        "h": 198
       }
     },
     "Puerto__noray__g950": {
       "frame": {
-        "x": 3759,
-        "y": 1303,
+        "x": 2582,
+        "y": 3796,
         "w": 214,
-        "h": 155
+        "h": 156
       },
       "rotated": false,
       "trimmed": false,
@@ -433,16 +453,16 @@
         "x": 0,
         "y": 0,
         "w": 214,
-        "h": 155
+        "h": 156
       },
       "sourceSize": {
         "w": 214,
-        "h": 155
+        "h": 156
       }
     },
     "plaza__mono_alcantarilla__g233": {
       "frame": {
-        "x": 2587,
+        "x": 2832,
         "y": 3796,
         "w": 200,
         "h": 126
@@ -462,9 +482,9 @@
     },
     "plaza__path1408__path1408": {
       "frame": {
-        "x": 2823,
+        "x": 3068,
         "y": 3796,
-        "w": 177,
+        "w": 178,
         "h": 110
       },
       "rotated": false,
@@ -472,60 +492,80 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 177,
+        "w": 178,
         "h": 110
       },
       "sourceSize": {
-        "w": 177,
+        "w": 178,
         "h": 110
       }
     },
     "Juegos__piramide__g465": {
       "frame": {
-        "x": 3036,
+        "x": 3282,
         "y": 3796,
-        "w": 163,
-        "h": 109
+        "w": 164,
+        "h": 110
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 163,
-        "h": 109
+        "w": 164,
+        "h": 110
       },
       "sourceSize": {
-        "w": 163,
-        "h": 109
+        "w": 164,
+        "h": 110
+      }
+    },
+    "puerto_viejo__ob_caja_porex_vino__g278": {
+      "frame": {
+        "x": 3482,
+        "y": 3796,
+        "w": 152,
+        "h": 110
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 152,
+        "h": 110
+      },
+      "sourceSize": {
+        "w": 152,
+        "h": 110
       }
     },
     "plaza__ob_alcantarilla__g682-1": {
       "frame": {
-        "x": 3235,
+        "x": 3670,
         "y": 3796,
-        "w": 149,
-        "h": 109
+        "w": 150,
+        "h": 110
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 149,
-        "h": 109
+        "w": 150,
+        "h": 110
       },
       "sourceSize": {
-        "w": 149,
-        "h": 109
+        "w": 150,
+        "h": 110
       }
     },
-    "Playa__ob_alcantarilla__g682": {
+    "Puerto__ob_caja_madera__g377": {
       "frame": {
-        "x": 3420,
+        "x": 3856,
         "y": 3796,
         "w": 148,
-        "h": 99
+        "h": 106
       },
       "rotated": false,
       "trimmed": false,
@@ -533,19 +573,19 @@
         "x": 0,
         "y": 0,
         "w": 148,
-        "h": 99
+        "h": 106
       },
       "sourceSize": {
         "w": 148,
-        "h": 99
+        "h": 106
       }
     },
-    "plaza__agujero__g1406": {
+    "Playa__mono_flotador__g350": {
       "frame": {
         "x": 3936,
-        "y": 653,
+        "y": 654,
         "w": 138,
-        "h": 90
+        "h": 112
       },
       "rotated": false,
       "trimmed": false,
@@ -553,111 +593,11 @@
         "x": 0,
         "y": 0,
         "w": 138,
-        "h": 90
+        "h": 112
       },
       "sourceSize": {
         "w": 138,
-        "h": 90
-      }
-    },
-    "Puerto__ob_caja_plastico__g89-3-8": {
-      "frame": {
-        "x": 3604,
-        "y": 3796,
-        "w": 137,
-        "h": 99
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 137,
-        "h": 99
-      },
-      "sourceSize": {
-        "w": 137,
-        "h": 99
-      }
-    },
-    "Mar__ob_pala__g62-3": {
-      "frame": {
-        "x": 3777,
-        "y": 3796,
-        "w": 137,
-        "h": 93
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 137,
-        "h": 93
-      },
-      "sourceSize": {
-        "w": 137,
-        "h": 93
-      }
-    },
-    "ob_papelera__path1397__path1397": {
-      "frame": {
-        "x": 3950,
-        "y": 3796,
-        "w": 128,
-        "h": 83
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 128,
-        "h": 83
-      },
-      "sourceSize": {
-        "w": 128,
-        "h": 83
-      }
-    },
-    "ob_papelera__path352-0__path352-0": {
-      "frame": {
-        "x": 4009,
-        "y": 1303,
-        "w": 56,
-        "h": 78
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 56,
-        "h": 78
-      },
-      "sourceSize": {
-        "w": 56,
-        "h": 78
-      }
-    },
-    "ob_papelera__path350-9__path350-9": {
-      "frame": {
-        "x": 4009,
-        "y": 1417,
-        "w": 55,
-        "h": 37
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 55,
-        "h": 37
-      },
-      "sourceSize": {
-        "w": 55,
-        "h": 37
+        "h": 112
       }
     }
   },
@@ -689,6 +629,2388 @@
           "width": 3402,
           "height": 3742
         }
+      ],
+      "hd": [
+        {
+          "key": "fondo__path10__hd_0_0",
+          "file": "hd/fondo__path10__hd_0_0.png",
+          "x": 0,
+          "y": 0,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_1_0",
+          "file": "hd/fondo__path10__hd_1_0.png",
+          "x": 400.4,
+          "y": 0,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_2_0",
+          "file": "hd/fondo__path10__hd_2_0.png",
+          "x": 800.8,
+          "y": 0,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_3_0",
+          "file": "hd/fondo__path10__hd_3_0.png",
+          "x": 1201.2,
+          "y": 0,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_4_0",
+          "file": "hd/fondo__path10__hd_4_0.png",
+          "x": 1601.6,
+          "y": 0,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_5_0",
+          "file": "hd/fondo__path10__hd_5_0.png",
+          "x": 2002,
+          "y": 0,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_6_0",
+          "file": "hd/fondo__path10__hd_6_0.png",
+          "x": 2402.4,
+          "y": 0,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_7_0",
+          "file": "hd/fondo__path10__hd_7_0.png",
+          "x": 2802.8,
+          "y": 0,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_8_0",
+          "file": "hd/fondo__path10__hd_8_0.png",
+          "x": 3203.2,
+          "y": 0,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_9_0",
+          "file": "hd/fondo__path10__hd_9_0.png",
+          "x": 3603.6,
+          "y": 0,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_10_0",
+          "file": "hd/fondo__path10__hd_10_0.png",
+          "x": 4004,
+          "y": 0,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_11_0",
+          "file": "hd/fondo__path10__hd_11_0.png",
+          "x": 4404.4,
+          "y": 0,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_12_0",
+          "file": "hd/fondo__path10__hd_12_0.png",
+          "x": 4804.8,
+          "y": 0,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_13_0",
+          "file": "hd/fondo__path10__hd_13_0.png",
+          "x": 5205.2,
+          "y": 0,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_14_0",
+          "file": "hd/fondo__path10__hd_14_0.png",
+          "x": 5605.6,
+          "y": 0,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_15_0",
+          "file": "hd/fondo__path10__hd_15_0.png",
+          "x": 6006,
+          "y": 0,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_16_0",
+          "file": "hd/fondo__path10__hd_16_0.png",
+          "x": 6406.4,
+          "y": 0,
+          "width": 397.6,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 994,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_0_1",
+          "file": "hd/fondo__path10__hd_0_1.png",
+          "x": 0,
+          "y": 374.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_1_1",
+          "file": "hd/fondo__path10__hd_1_1.png",
+          "x": 400.4,
+          "y": 374.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_2_1",
+          "file": "hd/fondo__path10__hd_2_1.png",
+          "x": 800.8,
+          "y": 374.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_3_1",
+          "file": "hd/fondo__path10__hd_3_1.png",
+          "x": 1201.2,
+          "y": 374.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_4_1",
+          "file": "hd/fondo__path10__hd_4_1.png",
+          "x": 1601.6,
+          "y": 374.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_5_1",
+          "file": "hd/fondo__path10__hd_5_1.png",
+          "x": 2002,
+          "y": 374.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_6_1",
+          "file": "hd/fondo__path10__hd_6_1.png",
+          "x": 2402.4,
+          "y": 374.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_7_1",
+          "file": "hd/fondo__path10__hd_7_1.png",
+          "x": 2802.8,
+          "y": 374.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_8_1",
+          "file": "hd/fondo__path10__hd_8_1.png",
+          "x": 3203.2,
+          "y": 374.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_9_1",
+          "file": "hd/fondo__path10__hd_9_1.png",
+          "x": 3603.6,
+          "y": 374.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_10_1",
+          "file": "hd/fondo__path10__hd_10_1.png",
+          "x": 4004,
+          "y": 374.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_11_1",
+          "file": "hd/fondo__path10__hd_11_1.png",
+          "x": 4404.4,
+          "y": 374.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_12_1",
+          "file": "hd/fondo__path10__hd_12_1.png",
+          "x": 4804.8,
+          "y": 374.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_13_1",
+          "file": "hd/fondo__path10__hd_13_1.png",
+          "x": 5205.2,
+          "y": 374.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_14_1",
+          "file": "hd/fondo__path10__hd_14_1.png",
+          "x": 5605.6,
+          "y": 374.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_15_1",
+          "file": "hd/fondo__path10__hd_15_1.png",
+          "x": 6006,
+          "y": 374.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_16_1",
+          "file": "hd/fondo__path10__hd_16_1.png",
+          "x": 6406.4,
+          "y": 374.4,
+          "width": 397.6,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 994,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_0_2",
+          "file": "hd/fondo__path10__hd_0_2.png",
+          "x": 0,
+          "y": 748.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_1_2",
+          "file": "hd/fondo__path10__hd_1_2.png",
+          "x": 400.4,
+          "y": 748.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_2_2",
+          "file": "hd/fondo__path10__hd_2_2.png",
+          "x": 800.8,
+          "y": 748.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_3_2",
+          "file": "hd/fondo__path10__hd_3_2.png",
+          "x": 1201.2,
+          "y": 748.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_4_2",
+          "file": "hd/fondo__path10__hd_4_2.png",
+          "x": 1601.6,
+          "y": 748.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_5_2",
+          "file": "hd/fondo__path10__hd_5_2.png",
+          "x": 2002,
+          "y": 748.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_6_2",
+          "file": "hd/fondo__path10__hd_6_2.png",
+          "x": 2402.4,
+          "y": 748.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_7_2",
+          "file": "hd/fondo__path10__hd_7_2.png",
+          "x": 2802.8,
+          "y": 748.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_8_2",
+          "file": "hd/fondo__path10__hd_8_2.png",
+          "x": 3203.2,
+          "y": 748.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_9_2",
+          "file": "hd/fondo__path10__hd_9_2.png",
+          "x": 3603.6,
+          "y": 748.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_10_2",
+          "file": "hd/fondo__path10__hd_10_2.png",
+          "x": 4004,
+          "y": 748.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_11_2",
+          "file": "hd/fondo__path10__hd_11_2.png",
+          "x": 4404.4,
+          "y": 748.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_12_2",
+          "file": "hd/fondo__path10__hd_12_2.png",
+          "x": 4804.8,
+          "y": 748.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_13_2",
+          "file": "hd/fondo__path10__hd_13_2.png",
+          "x": 5205.2,
+          "y": 748.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_14_2",
+          "file": "hd/fondo__path10__hd_14_2.png",
+          "x": 5605.6,
+          "y": 748.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_15_2",
+          "file": "hd/fondo__path10__hd_15_2.png",
+          "x": 6006,
+          "y": 748.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_16_2",
+          "file": "hd/fondo__path10__hd_16_2.png",
+          "x": 6406.4,
+          "y": 748.8,
+          "width": 397.6,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 994,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_0_3",
+          "file": "hd/fondo__path10__hd_0_3.png",
+          "x": 0,
+          "y": 1123.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_1_3",
+          "file": "hd/fondo__path10__hd_1_3.png",
+          "x": 400.4,
+          "y": 1123.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_2_3",
+          "file": "hd/fondo__path10__hd_2_3.png",
+          "x": 800.8,
+          "y": 1123.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_3_3",
+          "file": "hd/fondo__path10__hd_3_3.png",
+          "x": 1201.2,
+          "y": 1123.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_4_3",
+          "file": "hd/fondo__path10__hd_4_3.png",
+          "x": 1601.6,
+          "y": 1123.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_5_3",
+          "file": "hd/fondo__path10__hd_5_3.png",
+          "x": 2002,
+          "y": 1123.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_6_3",
+          "file": "hd/fondo__path10__hd_6_3.png",
+          "x": 2402.4,
+          "y": 1123.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_7_3",
+          "file": "hd/fondo__path10__hd_7_3.png",
+          "x": 2802.8,
+          "y": 1123.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_8_3",
+          "file": "hd/fondo__path10__hd_8_3.png",
+          "x": 3203.2,
+          "y": 1123.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_9_3",
+          "file": "hd/fondo__path10__hd_9_3.png",
+          "x": 3603.6,
+          "y": 1123.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_10_3",
+          "file": "hd/fondo__path10__hd_10_3.png",
+          "x": 4004,
+          "y": 1123.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_11_3",
+          "file": "hd/fondo__path10__hd_11_3.png",
+          "x": 4404.4,
+          "y": 1123.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_12_3",
+          "file": "hd/fondo__path10__hd_12_3.png",
+          "x": 4804.8,
+          "y": 1123.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_13_3",
+          "file": "hd/fondo__path10__hd_13_3.png",
+          "x": 5205.2,
+          "y": 1123.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_14_3",
+          "file": "hd/fondo__path10__hd_14_3.png",
+          "x": 5605.6,
+          "y": 1123.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_15_3",
+          "file": "hd/fondo__path10__hd_15_3.png",
+          "x": 6006,
+          "y": 1123.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_16_3",
+          "file": "hd/fondo__path10__hd_16_3.png",
+          "x": 6406.4,
+          "y": 1123.2,
+          "width": 397.6,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 994,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_0_4",
+          "file": "hd/fondo__path10__hd_0_4.png",
+          "x": 0,
+          "y": 1497.6,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_1_4",
+          "file": "hd/fondo__path10__hd_1_4.png",
+          "x": 400.4,
+          "y": 1497.6,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_2_4",
+          "file": "hd/fondo__path10__hd_2_4.png",
+          "x": 800.8,
+          "y": 1497.6,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_3_4",
+          "file": "hd/fondo__path10__hd_3_4.png",
+          "x": 1201.2,
+          "y": 1497.6,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_4_4",
+          "file": "hd/fondo__path10__hd_4_4.png",
+          "x": 1601.6,
+          "y": 1497.6,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_5_4",
+          "file": "hd/fondo__path10__hd_5_4.png",
+          "x": 2002,
+          "y": 1497.6,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_6_4",
+          "file": "hd/fondo__path10__hd_6_4.png",
+          "x": 2402.4,
+          "y": 1497.6,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_7_4",
+          "file": "hd/fondo__path10__hd_7_4.png",
+          "x": 2802.8,
+          "y": 1497.6,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_8_4",
+          "file": "hd/fondo__path10__hd_8_4.png",
+          "x": 3203.2,
+          "y": 1497.6,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_9_4",
+          "file": "hd/fondo__path10__hd_9_4.png",
+          "x": 3603.6,
+          "y": 1497.6,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_10_4",
+          "file": "hd/fondo__path10__hd_10_4.png",
+          "x": 4004,
+          "y": 1497.6,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_11_4",
+          "file": "hd/fondo__path10__hd_11_4.png",
+          "x": 4404.4,
+          "y": 1497.6,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_12_4",
+          "file": "hd/fondo__path10__hd_12_4.png",
+          "x": 4804.8,
+          "y": 1497.6,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_13_4",
+          "file": "hd/fondo__path10__hd_13_4.png",
+          "x": 5205.2,
+          "y": 1497.6,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_14_4",
+          "file": "hd/fondo__path10__hd_14_4.png",
+          "x": 5605.6,
+          "y": 1497.6,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_15_4",
+          "file": "hd/fondo__path10__hd_15_4.png",
+          "x": 6006,
+          "y": 1497.6,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_16_4",
+          "file": "hd/fondo__path10__hd_16_4.png",
+          "x": 6406.4,
+          "y": 1497.6,
+          "width": 397.6,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 994,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_0_5",
+          "file": "hd/fondo__path10__hd_0_5.png",
+          "x": 0,
+          "y": 1872,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_1_5",
+          "file": "hd/fondo__path10__hd_1_5.png",
+          "x": 400.4,
+          "y": 1872,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_2_5",
+          "file": "hd/fondo__path10__hd_2_5.png",
+          "x": 800.8,
+          "y": 1872,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_3_5",
+          "file": "hd/fondo__path10__hd_3_5.png",
+          "x": 1201.2,
+          "y": 1872,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_4_5",
+          "file": "hd/fondo__path10__hd_4_5.png",
+          "x": 1601.6,
+          "y": 1872,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_5_5",
+          "file": "hd/fondo__path10__hd_5_5.png",
+          "x": 2002,
+          "y": 1872,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_6_5",
+          "file": "hd/fondo__path10__hd_6_5.png",
+          "x": 2402.4,
+          "y": 1872,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_7_5",
+          "file": "hd/fondo__path10__hd_7_5.png",
+          "x": 2802.8,
+          "y": 1872,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_8_5",
+          "file": "hd/fondo__path10__hd_8_5.png",
+          "x": 3203.2,
+          "y": 1872,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_9_5",
+          "file": "hd/fondo__path10__hd_9_5.png",
+          "x": 3603.6,
+          "y": 1872,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_10_5",
+          "file": "hd/fondo__path10__hd_10_5.png",
+          "x": 4004,
+          "y": 1872,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_11_5",
+          "file": "hd/fondo__path10__hd_11_5.png",
+          "x": 4404.4,
+          "y": 1872,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_12_5",
+          "file": "hd/fondo__path10__hd_12_5.png",
+          "x": 4804.8,
+          "y": 1872,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_13_5",
+          "file": "hd/fondo__path10__hd_13_5.png",
+          "x": 5205.2,
+          "y": 1872,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_14_5",
+          "file": "hd/fondo__path10__hd_14_5.png",
+          "x": 5605.6,
+          "y": 1872,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_15_5",
+          "file": "hd/fondo__path10__hd_15_5.png",
+          "x": 6006,
+          "y": 1872,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_16_5",
+          "file": "hd/fondo__path10__hd_16_5.png",
+          "x": 6406.4,
+          "y": 1872,
+          "width": 397.6,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 994,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_0_6",
+          "file": "hd/fondo__path10__hd_0_6.png",
+          "x": 0,
+          "y": 2246.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_1_6",
+          "file": "hd/fondo__path10__hd_1_6.png",
+          "x": 400.4,
+          "y": 2246.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_2_6",
+          "file": "hd/fondo__path10__hd_2_6.png",
+          "x": 800.8,
+          "y": 2246.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_3_6",
+          "file": "hd/fondo__path10__hd_3_6.png",
+          "x": 1201.2,
+          "y": 2246.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_4_6",
+          "file": "hd/fondo__path10__hd_4_6.png",
+          "x": 1601.6,
+          "y": 2246.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_5_6",
+          "file": "hd/fondo__path10__hd_5_6.png",
+          "x": 2002,
+          "y": 2246.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_6_6",
+          "file": "hd/fondo__path10__hd_6_6.png",
+          "x": 2402.4,
+          "y": 2246.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_7_6",
+          "file": "hd/fondo__path10__hd_7_6.png",
+          "x": 2802.8,
+          "y": 2246.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_8_6",
+          "file": "hd/fondo__path10__hd_8_6.png",
+          "x": 3203.2,
+          "y": 2246.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_9_6",
+          "file": "hd/fondo__path10__hd_9_6.png",
+          "x": 3603.6,
+          "y": 2246.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_10_6",
+          "file": "hd/fondo__path10__hd_10_6.png",
+          "x": 4004,
+          "y": 2246.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_11_6",
+          "file": "hd/fondo__path10__hd_11_6.png",
+          "x": 4404.4,
+          "y": 2246.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_12_6",
+          "file": "hd/fondo__path10__hd_12_6.png",
+          "x": 4804.8,
+          "y": 2246.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_13_6",
+          "file": "hd/fondo__path10__hd_13_6.png",
+          "x": 5205.2,
+          "y": 2246.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_14_6",
+          "file": "hd/fondo__path10__hd_14_6.png",
+          "x": 5605.6,
+          "y": 2246.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_15_6",
+          "file": "hd/fondo__path10__hd_15_6.png",
+          "x": 6006,
+          "y": 2246.4,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_16_6",
+          "file": "hd/fondo__path10__hd_16_6.png",
+          "x": 6406.4,
+          "y": 2246.4,
+          "width": 397.6,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 994,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_0_7",
+          "file": "hd/fondo__path10__hd_0_7.png",
+          "x": 0,
+          "y": 2620.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_1_7",
+          "file": "hd/fondo__path10__hd_1_7.png",
+          "x": 400.4,
+          "y": 2620.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_2_7",
+          "file": "hd/fondo__path10__hd_2_7.png",
+          "x": 800.8,
+          "y": 2620.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_3_7",
+          "file": "hd/fondo__path10__hd_3_7.png",
+          "x": 1201.2,
+          "y": 2620.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_4_7",
+          "file": "hd/fondo__path10__hd_4_7.png",
+          "x": 1601.6,
+          "y": 2620.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_5_7",
+          "file": "hd/fondo__path10__hd_5_7.png",
+          "x": 2002,
+          "y": 2620.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_6_7",
+          "file": "hd/fondo__path10__hd_6_7.png",
+          "x": 2402.4,
+          "y": 2620.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_7_7",
+          "file": "hd/fondo__path10__hd_7_7.png",
+          "x": 2802.8,
+          "y": 2620.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_8_7",
+          "file": "hd/fondo__path10__hd_8_7.png",
+          "x": 3203.2,
+          "y": 2620.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_9_7",
+          "file": "hd/fondo__path10__hd_9_7.png",
+          "x": 3603.6,
+          "y": 2620.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_10_7",
+          "file": "hd/fondo__path10__hd_10_7.png",
+          "x": 4004,
+          "y": 2620.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_11_7",
+          "file": "hd/fondo__path10__hd_11_7.png",
+          "x": 4404.4,
+          "y": 2620.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_12_7",
+          "file": "hd/fondo__path10__hd_12_7.png",
+          "x": 4804.8,
+          "y": 2620.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_13_7",
+          "file": "hd/fondo__path10__hd_13_7.png",
+          "x": 5205.2,
+          "y": 2620.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_14_7",
+          "file": "hd/fondo__path10__hd_14_7.png",
+          "x": 5605.6,
+          "y": 2620.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_15_7",
+          "file": "hd/fondo__path10__hd_15_7.png",
+          "x": 6006,
+          "y": 2620.8,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_16_7",
+          "file": "hd/fondo__path10__hd_16_7.png",
+          "x": 6406.4,
+          "y": 2620.8,
+          "width": 397.6,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 994,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_0_8",
+          "file": "hd/fondo__path10__hd_0_8.png",
+          "x": 0,
+          "y": 2995.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_1_8",
+          "file": "hd/fondo__path10__hd_1_8.png",
+          "x": 400.4,
+          "y": 2995.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_2_8",
+          "file": "hd/fondo__path10__hd_2_8.png",
+          "x": 800.8,
+          "y": 2995.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_3_8",
+          "file": "hd/fondo__path10__hd_3_8.png",
+          "x": 1201.2,
+          "y": 2995.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_4_8",
+          "file": "hd/fondo__path10__hd_4_8.png",
+          "x": 1601.6,
+          "y": 2995.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_5_8",
+          "file": "hd/fondo__path10__hd_5_8.png",
+          "x": 2002,
+          "y": 2995.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_6_8",
+          "file": "hd/fondo__path10__hd_6_8.png",
+          "x": 2402.4,
+          "y": 2995.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_7_8",
+          "file": "hd/fondo__path10__hd_7_8.png",
+          "x": 2802.8,
+          "y": 2995.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_8_8",
+          "file": "hd/fondo__path10__hd_8_8.png",
+          "x": 3203.2,
+          "y": 2995.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_9_8",
+          "file": "hd/fondo__path10__hd_9_8.png",
+          "x": 3603.6,
+          "y": 2995.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_10_8",
+          "file": "hd/fondo__path10__hd_10_8.png",
+          "x": 4004,
+          "y": 2995.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_11_8",
+          "file": "hd/fondo__path10__hd_11_8.png",
+          "x": 4404.4,
+          "y": 2995.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_12_8",
+          "file": "hd/fondo__path10__hd_12_8.png",
+          "x": 4804.8,
+          "y": 2995.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_13_8",
+          "file": "hd/fondo__path10__hd_13_8.png",
+          "x": 5205.2,
+          "y": 2995.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_14_8",
+          "file": "hd/fondo__path10__hd_14_8.png",
+          "x": 5605.6,
+          "y": 2995.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_15_8",
+          "file": "hd/fondo__path10__hd_15_8.png",
+          "x": 6006,
+          "y": 2995.2,
+          "width": 400.4,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_16_8",
+          "file": "hd/fondo__path10__hd_16_8.png",
+          "x": 6406.4,
+          "y": 2995.2,
+          "width": 397.6,
+          "height": 374.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 994,
+            "h": 936
+          }
+        },
+        {
+          "key": "fondo__path10__hd_0_9",
+          "file": "hd/fondo__path10__hd_0_9.png",
+          "x": 0,
+          "y": 3369.6,
+          "width": 400.4,
+          "height": 372.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 931
+          }
+        },
+        {
+          "key": "fondo__path10__hd_1_9",
+          "file": "hd/fondo__path10__hd_1_9.png",
+          "x": 400.4,
+          "y": 3369.6,
+          "width": 400.4,
+          "height": 372.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 931
+          }
+        },
+        {
+          "key": "fondo__path10__hd_2_9",
+          "file": "hd/fondo__path10__hd_2_9.png",
+          "x": 800.8,
+          "y": 3369.6,
+          "width": 400.4,
+          "height": 372.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 931
+          }
+        },
+        {
+          "key": "fondo__path10__hd_3_9",
+          "file": "hd/fondo__path10__hd_3_9.png",
+          "x": 1201.2,
+          "y": 3369.6,
+          "width": 400.4,
+          "height": 372.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 931
+          }
+        },
+        {
+          "key": "fondo__path10__hd_4_9",
+          "file": "hd/fondo__path10__hd_4_9.png",
+          "x": 1601.6,
+          "y": 3369.6,
+          "width": 400.4,
+          "height": 372.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 931
+          }
+        },
+        {
+          "key": "fondo__path10__hd_5_9",
+          "file": "hd/fondo__path10__hd_5_9.png",
+          "x": 2002,
+          "y": 3369.6,
+          "width": 400.4,
+          "height": 372.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 931
+          }
+        },
+        {
+          "key": "fondo__path10__hd_6_9",
+          "file": "hd/fondo__path10__hd_6_9.png",
+          "x": 2402.4,
+          "y": 3369.6,
+          "width": 400.4,
+          "height": 372.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 931
+          }
+        },
+        {
+          "key": "fondo__path10__hd_7_9",
+          "file": "hd/fondo__path10__hd_7_9.png",
+          "x": 2802.8,
+          "y": 3369.6,
+          "width": 400.4,
+          "height": 372.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 931
+          }
+        },
+        {
+          "key": "fondo__path10__hd_8_9",
+          "file": "hd/fondo__path10__hd_8_9.png",
+          "x": 3203.2,
+          "y": 3369.6,
+          "width": 400.4,
+          "height": 372.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 931
+          }
+        },
+        {
+          "key": "fondo__path10__hd_9_9",
+          "file": "hd/fondo__path10__hd_9_9.png",
+          "x": 3603.6,
+          "y": 3369.6,
+          "width": 400.4,
+          "height": 372.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 931
+          }
+        },
+        {
+          "key": "fondo__path10__hd_10_9",
+          "file": "hd/fondo__path10__hd_10_9.png",
+          "x": 4004,
+          "y": 3369.6,
+          "width": 400.4,
+          "height": 372.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 931
+          }
+        },
+        {
+          "key": "fondo__path10__hd_11_9",
+          "file": "hd/fondo__path10__hd_11_9.png",
+          "x": 4404.4,
+          "y": 3369.6,
+          "width": 400.4,
+          "height": 372.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 931
+          }
+        },
+        {
+          "key": "fondo__path10__hd_12_9",
+          "file": "hd/fondo__path10__hd_12_9.png",
+          "x": 4804.8,
+          "y": 3369.6,
+          "width": 400.4,
+          "height": 372.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 931
+          }
+        },
+        {
+          "key": "fondo__path10__hd_13_9",
+          "file": "hd/fondo__path10__hd_13_9.png",
+          "x": 5205.2,
+          "y": 3369.6,
+          "width": 400.4,
+          "height": 372.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 931
+          }
+        },
+        {
+          "key": "fondo__path10__hd_14_9",
+          "file": "hd/fondo__path10__hd_14_9.png",
+          "x": 5605.6,
+          "y": 3369.6,
+          "width": 400.4,
+          "height": 372.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 931
+          }
+        },
+        {
+          "key": "fondo__path10__hd_15_9",
+          "file": "hd/fondo__path10__hd_15_9.png",
+          "x": 6006,
+          "y": 3369.6,
+          "width": 400.4,
+          "height": 372.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 1001,
+            "h": 931
+          }
+        },
+        {
+          "key": "fondo__path10__hd_16_9",
+          "file": "hd/fondo__path10__hd_16_9.png",
+          "x": 6406.4,
+          "y": 3369.6,
+          "width": 397.6,
+          "height": 372.4,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 994,
+            "h": 931
+          }
+        }
       ]
     },
     {
@@ -700,9 +3022,25 @@
           "bounds": {
             "x": 1652,
             "y": 152,
-            "width": 115,
+            "width": 116,
             "height": 268
-          }
+          },
+          "hd": [
+            {
+              "key": "Casas__mono_iago__g306__hd_0_0",
+              "file": "hd/Casas__mono_iago__g306__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 116,
+              "height": 268,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 290,
+                "h": 670
+              }
+            }
+          ]
         }
       ]
     },
@@ -710,14 +3048,56 @@
       "label": "Playa",
       "children": [
         {
+          "label": "Playa__mono_flotador__g350",
+          "frame": "Playa__mono_flotador__g350",
+          "bounds": {
+            "x": 2008,
+            "y": 1495,
+            "width": 138,
+            "height": 112
+          },
+          "hd": [
+            {
+              "key": "Playa__mono_flotador__g350__hd_0_0",
+              "file": "hd/Playa__mono_flotador__g350__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 138,
+              "height": 112,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 345,
+                "h": 280
+              }
+            }
+          ]
+        },
+        {
           "label": "Playa__mono_juan__g366",
           "frame": "Playa__mono_juan__g366",
           "bounds": {
             "x": 790,
             "y": 1430,
-            "width": 361,
+            "width": 362,
             "height": 232
-          }
+          },
+          "hd": [
+            {
+              "key": "Playa__mono_juan__g366__hd_0_0",
+              "file": "hd/Playa__mono_juan__g366__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 362,
+              "height": 232,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 905,
+                "h": 580
+              }
+            }
+          ]
         },
         {
           "label": "Playa__mono_tito__g378",
@@ -725,19 +3105,25 @@
           "bounds": {
             "x": 636,
             "y": 1516,
-            "width": 361,
+            "width": 362,
             "height": 232
-          }
-        },
-        {
-          "label": "Playa__ob_alcantarilla__g682",
-          "frame": "Playa__ob_alcantarilla__g682",
-          "bounds": {
-            "x": 2077,
-            "y": 458,
-            "width": 148,
-            "height": 99
-          }
+          },
+          "hd": [
+            {
+              "key": "Playa__mono_tito__g378__hd_0_0",
+              "file": "hd/Playa__mono_tito__g378__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 362,
+              "height": 232,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 905,
+                "h": 580
+              }
+            }
+          ]
         }
       ]
     },
@@ -750,29 +3136,65 @@
           "bounds": {
             "x": 2222,
             "y": 3088,
-            "width": 311,
-            "height": 459
-          }
+            "width": 312,
+            "height": 460
+          },
+          "hd": [
+            {
+              "key": "Mar__ob_faro__g923__hd_0_0",
+              "file": "hd/Mar__ob_faro__g923__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 312,
+              "height": 230,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 780,
+                "h": 575
+              }
+            },
+            {
+              "key": "Mar__ob_faro__g923__hd_0_1",
+              "file": "hd/Mar__ob_faro__g923__hd_0_1.png",
+              "x": 0,
+              "y": 230,
+              "width": 312,
+              "height": 230,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 780,
+                "h": 575
+              }
+            }
+          ]
         },
         {
           "label": "Mar__linea__path632-4-6",
           "frame": "Mar__linea__path632-4-6",
           "bounds": {
             "x": 1058,
-            "y": 3551,
-            "width": 311,
-            "height": 191
-          }
-        },
-        {
-          "label": "Mar__ob_pala__g62-3",
-          "frame": "Mar__ob_pala__g62-3",
-          "bounds": {
-            "x": 3599,
-            "y": 2475,
-            "width": 137,
-            "height": 93
-          }
+            "y": 3550,
+            "width": 312,
+            "height": 192
+          },
+          "hd": [
+            {
+              "key": "Mar__linea__path632-4-6__hd_0_0",
+              "file": "hd/Mar__linea__path632-4-6__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 312,
+              "height": 192,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 780,
+                "h": 480
+              }
+            }
+          ]
         }
       ]
     },
@@ -785,9 +3207,39 @@
           "bounds": {
             "x": 2072,
             "y": 0,
-            "width": 581,
-            "height": 335
-          }
+            "width": 582,
+            "height": 336
+          },
+          "hd": [
+            {
+              "key": "Juegos__path967__path967__hd_0_0",
+              "file": "hd/Juegos__path967__path967__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 291.2,
+              "height": 336,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 728,
+                "h": 840
+              }
+            },
+            {
+              "key": "Juegos__path967__path967__hd_1_0",
+              "file": "hd/Juegos__path967__path967__hd_1_0.png",
+              "x": 291.2,
+              "y": 0,
+              "width": 290.8,
+              "height": 336,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 727,
+                "h": 840
+              }
+            }
+          ]
         },
         {
           "label": "Juegos__path967-0-03-5-2__path967-0-03-5-2",
@@ -795,9 +3247,25 @@
           "bounds": {
             "x": 2960,
             "y": 0,
-            "width": 405,
+            "width": 406,
             "height": 232
-          }
+          },
+          "hd": [
+            {
+              "key": "Juegos__path967-0-03-5-2__path967-0-03-5-2__hd_0_0",
+              "file": "hd/Juegos__path967-0-03-5-2__path967-0-03-5-2__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 406,
+              "height": 232,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 1015,
+                "h": 580
+              }
+            }
+          ]
         },
         {
           "label": "Juegos__piramide__g465",
@@ -805,19 +3273,25 @@
           "bounds": {
             "x": 1938,
             "y": 0,
-            "width": 163,
-            "height": 109
-          }
-        },
-        {
-          "label": "Juegos__columpio__g509",
-          "frame": "Juegos__columpio__g509",
-          "bounds": {
-            "x": 2082,
-            "y": 58,
-            "width": 345,
-            "height": 214
-          }
+            "width": 164,
+            "height": 110
+          },
+          "hd": [
+            {
+              "key": "Juegos__piramide__g465__hd_0_0",
+              "file": "hd/Juegos__piramide__g465__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 164,
+              "height": 110,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 410,
+                "h": 275
+              }
+            }
+          ]
         }
       ]
     },
@@ -825,34 +3299,30 @@
       "label": "plaza",
       "children": [
         {
-          "label": "plaza__ob_contenedor__g1654",
-          "frame": "plaza__ob_contenedor__g1654",
-          "bounds": {
-            "x": 3623,
-            "y": 564,
-            "width": 231,
-            "height": 198
-          }
-        },
-        {
-          "label": "plaza__agujero__g1406",
-          "frame": "plaza__agujero__g1406",
-          "bounds": {
-            "x": 3518,
-            "y": 1123,
-            "width": 138,
-            "height": 90
-          }
-        },
-        {
           "label": "plaza__ob_alcantarilla__g682-1",
           "frame": "plaza__ob_alcantarilla__g682-1",
           "bounds": {
             "x": 3429,
             "y": 1158,
-            "width": 149,
-            "height": 109
-          }
+            "width": 150,
+            "height": 110
+          },
+          "hd": [
+            {
+              "key": "plaza__ob_alcantarilla__g682-1__hd_0_0",
+              "file": "hd/plaza__ob_alcantarilla__g682-1__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 150,
+              "height": 110,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 375,
+                "h": 275
+              }
+            }
+          ]
         },
         {
           "label": "plaza__mono_alcantarilla__g233",
@@ -862,7 +3332,23 @@
             "y": 1029,
             "width": 200,
             "height": 126
-          }
+          },
+          "hd": [
+            {
+              "key": "plaza__mono_alcantarilla__g233__hd_0_0",
+              "file": "hd/plaza__mono_alcantarilla__g233__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 200,
+              "height": 126,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 500,
+                "h": 315
+              }
+            }
+          ]
         },
         {
           "label": "plaza__path1408__path1408",
@@ -870,9 +3356,25 @@
           "bounds": {
             "x": 3464,
             "y": 824,
-            "width": 177,
+            "width": 178,
             "height": 110
-          }
+          },
+          "hd": [
+            {
+              "key": "plaza__path1408__path1408__hd_0_0",
+              "file": "hd/plaza__path1408__path1408__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 178,
+              "height": 110,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 445,
+                "h": 275
+              }
+            }
+          ]
         }
       ]
     },
@@ -880,24 +3382,108 @@
       "label": "Puerto",
       "children": [
         {
+          "label": "Puerto__ob_pale_plastico__g1348",
+          "frame": "Puerto__ob_pale_plastico__g1348",
+          "bounds": {
+            "x": 4728,
+            "y": 1812,
+            "width": 310,
+            "height": 218
+          },
+          "hd": [
+            {
+              "key": "Puerto__ob_pale_plastico__g1348__hd_0_0",
+              "file": "hd/Puerto__ob_pale_plastico__g1348__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 310,
+              "height": 218,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 775,
+                "h": 545
+              }
+            }
+          ]
+        },
+        {
+          "label": "Puerto__arena_obra__path66",
+          "frame": "Puerto__arena_obra__path66",
+          "bounds": {
+            "x": 4925,
+            "y": 1385,
+            "width": 238,
+            "height": 148
+          },
+          "hd": [
+            {
+              "key": "Puerto__arena_obra__path66__hd_0_0",
+              "file": "hd/Puerto__arena_obra__path66__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 238,
+              "height": 148,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 595,
+                "h": 370
+              }
+            }
+          ]
+        },
+        {
           "label": "Puerto__mono_paleta__g222",
           "frame": "Puerto__mono_paleta__g222",
           "bounds": {
             "x": 4702,
             "y": 1304,
-            "width": 143,
-            "height": 343
-          }
+            "width": 144,
+            "height": 344
+          },
+          "hd": [
+            {
+              "key": "Puerto__mono_paleta__g222__hd_0_0",
+              "file": "hd/Puerto__mono_paleta__g222__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 144,
+              "height": 344,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 360,
+                "h": 860
+              }
+            }
+          ]
         },
         {
-          "label": "Puerto__ob_caja_plastico__g89-3-8",
-          "frame": "Puerto__ob_caja_plastico__g89-3-8",
+          "label": "Puerto__ob_caja_madera__g377",
+          "frame": "Puerto__ob_caja_madera__g377",
           "bounds": {
-            "x": 4293,
-            "y": 1081,
-            "width": 137,
-            "height": 99
-          }
+            "x": 4268,
+            "y": 1229,
+            "width": 148,
+            "height": 106
+          },
+          "hd": [
+            {
+              "key": "Puerto__ob_caja_madera__g377__hd_0_0",
+              "file": "hd/Puerto__ob_caja_madera__g377__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 148,
+              "height": 106,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 370,
+                "h": 265
+              }
+            }
+          ]
         },
         {
           "label": "Puerto__noray__g950",
@@ -906,8 +3492,24 @@
             "x": 4338,
             "y": 1927,
             "width": 214,
-            "height": 155
-          }
+            "height": 156
+          },
+          "hd": [
+            {
+              "key": "Puerto__noray__g950__hd_0_0",
+              "file": "hd/Puerto__noray__g950__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 214,
+              "height": 156,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 535,
+                "h": 390
+              }
+            }
+          ]
         },
         {
           "label": "Puerto__mono_marido__g122",
@@ -915,9 +3517,56 @@
           "bounds": {
             "x": 4198,
             "y": 1409,
-            "width": 127,
+            "width": 128,
             "height": 232
-          }
+          },
+          "hd": [
+            {
+              "key": "Puerto__mono_marido__g122__hd_0_0",
+              "file": "hd/Puerto__mono_marido__g122__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 128,
+              "height": 232,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 320,
+                "h": 580
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "puerto_viejo",
+      "children": [
+        {
+          "label": "puerto_viejo__ob_caja_porex_vino__g278",
+          "frame": "puerto_viejo__ob_caja_porex_vino__g278",
+          "bounds": {
+            "x": 2538,
+            "y": 2452,
+            "width": 152,
+            "height": 110
+          },
+          "hd": [
+            {
+              "key": "puerto_viejo__ob_caja_porex_vino__g278__hd_0_0",
+              "file": "hd/puerto_viejo__ob_caja_porex_vino__g278__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 152,
+              "height": 110,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 380,
+                "h": 275
+              }
+            }
+          ]
         }
       ]
     },
@@ -931,18 +3580,92 @@
             "x": 4356,
             "y": 743,
             "width": 582,
-            "height": 429
-          }
+            "height": 430
+          },
+          "hd": [
+            {
+              "key": "Bosque__boiro__g1688__hd_0_0",
+              "file": "hd/Bosque__boiro__g1688__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 291.2,
+              "height": 215.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 728,
+                "h": 538
+              }
+            },
+            {
+              "key": "Bosque__boiro__g1688__hd_1_0",
+              "file": "hd/Bosque__boiro__g1688__hd_1_0.png",
+              "x": 291.2,
+              "y": 0,
+              "width": 290.8,
+              "height": 215.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 727,
+                "h": 538
+              }
+            },
+            {
+              "key": "Bosque__boiro__g1688__hd_0_1",
+              "file": "hd/Bosque__boiro__g1688__hd_0_1.png",
+              "x": 0,
+              "y": 215.2,
+              "width": 291.2,
+              "height": 214.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 728,
+                "h": 537
+              }
+            },
+            {
+              "key": "Bosque__boiro__g1688__hd_1_1",
+              "file": "hd/Bosque__boiro__g1688__hd_1_1.png",
+              "x": 291.2,
+              "y": 215.2,
+              "width": 290.8,
+              "height": 214.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 727,
+                "h": 537
+              }
+            }
+          ]
         },
         {
           "label": "Bosque__path423__path423",
           "frame": "Bosque__path423__path423",
           "bounds": {
-            "x": 6721,
+            "x": 6720,
             "y": 1342,
-            "width": 83,
-            "height": 295
-          }
+            "width": 84,
+            "height": 296
+          },
+          "hd": [
+            {
+              "key": "Bosque__path423__path423__hd_0_0",
+              "file": "hd/Bosque__path423__path423__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 84,
+              "height": 296,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 210,
+                "h": 740
+              }
+            }
+          ]
         },
         {
           "label": "Bosque__path2763__path2763",
@@ -950,9 +3673,25 @@
           "bounds": {
             "x": 4958,
             "y": 956,
-            "width": 245,
+            "width": 246,
             "height": 182
-          }
+          },
+          "hd": [
+            {
+              "key": "Bosque__path2763__path2763__hd_0_0",
+              "file": "hd/Bosque__path2763__path2763__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 246,
+              "height": 182,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 615,
+                "h": 455
+              }
+            }
+          ]
         }
       ]
     },
@@ -965,9 +3704,39 @@
           "bounds": {
             "x": 5650,
             "y": 2803,
-            "width": 267,
+            "width": 268,
             "height": 662
-          }
+          },
+          "hd": [
+            {
+              "key": "costa__path685__path685__hd_0_0",
+              "file": "hd/costa__path685__path685__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 268,
+              "height": 331.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 670,
+                "h": 828
+              }
+            },
+            {
+              "key": "costa__path685__path685__hd_0_1",
+              "file": "hd/costa__path685__path685__hd_0_1.png",
+              "x": 0,
+              "y": 331.2,
+              "width": 268,
+              "height": 330.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 670,
+                "h": 827
+              }
+            }
+          ]
         },
         {
           "label": "costa__path1619__path1619",
@@ -975,9 +3744,67 @@
           "bounds": {
             "x": 6180,
             "y": 2652,
-            "width": 547,
-            "height": 515
-          }
+            "width": 548,
+            "height": 516
+          },
+          "hd": [
+            {
+              "key": "costa__path1619__path1619__hd_0_0",
+              "file": "hd/costa__path1619__path1619__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 274,
+              "height": 258,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 685,
+                "h": 645
+              }
+            },
+            {
+              "key": "costa__path1619__path1619__hd_1_0",
+              "file": "hd/costa__path1619__path1619__hd_1_0.png",
+              "x": 274,
+              "y": 0,
+              "width": 274,
+              "height": 258,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 685,
+                "h": 645
+              }
+            },
+            {
+              "key": "costa__path1619__path1619__hd_0_1",
+              "file": "hd/costa__path1619__path1619__hd_0_1.png",
+              "x": 0,
+              "y": 258,
+              "width": 274,
+              "height": 258,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 685,
+                "h": 645
+              }
+            },
+            {
+              "key": "costa__path1619__path1619__hd_1_1",
+              "file": "hd/costa__path1619__path1619__hd_1_1.png",
+              "x": 274,
+              "y": 258,
+              "width": 274,
+              "height": 258,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 685,
+                "h": 645
+              }
+            }
+          ]
         },
         {
           "label": "costa__mov_arbol_costa_2__g1693-2-7",
@@ -987,42 +3814,91 @@
             "y": 1976,
             "width": 444,
             "height": 754
-          }
-        }
-      ]
-    },
-    {
-      "label": "ob_papelera",
-      "children": [
-        {
-          "label": "ob_papelera__path1397__path1397",
-          "frame": "ob_papelera__path1397__path1397",
-          "bounds": {
-            "x": 3208,
-            "y": 927,
-            "width": 128,
-            "height": 83
-          }
+          },
+          "hd": [
+            {
+              "key": "costa__mov_arbol_costa_2__g1693-2-7__hd_0_0",
+              "file": "hd/costa__mov_arbol_costa_2__g1693-2-7__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 222,
+              "height": 377.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 555,
+                "h": 943
+              }
+            },
+            {
+              "key": "costa__mov_arbol_costa_2__g1693-2-7__hd_1_0",
+              "file": "hd/costa__mov_arbol_costa_2__g1693-2-7__hd_1_0.png",
+              "x": 222,
+              "y": 0,
+              "width": 222,
+              "height": 377.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 555,
+                "h": 943
+              }
+            },
+            {
+              "key": "costa__mov_arbol_costa_2__g1693-2-7__hd_0_1",
+              "file": "hd/costa__mov_arbol_costa_2__g1693-2-7__hd_0_1.png",
+              "x": 0,
+              "y": 377.2,
+              "width": 222,
+              "height": 376.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 555,
+                "h": 942
+              }
+            },
+            {
+              "key": "costa__mov_arbol_costa_2__g1693-2-7__hd_1_1",
+              "file": "hd/costa__mov_arbol_costa_2__g1693-2-7__hd_1_1.png",
+              "x": 222,
+              "y": 377.2,
+              "width": 222,
+              "height": 376.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 555,
+                "h": 942
+              }
+            }
+          ]
         },
         {
-          "label": "ob_papelera__path350-9__path350-9",
-          "frame": "ob_papelera__path350-9__path350-9",
+          "label": "costa__mono_durmiente__g190",
+          "frame": "costa__mono_durmiente__g190",
           "bounds": {
-            "x": 3273,
-            "y": 880,
-            "width": 55,
-            "height": 37
-          }
-        },
-        {
-          "label": "ob_papelera__path352-0__path352-0",
-          "frame": "ob_papelera__path352-0__path352-0",
-          "bounds": {
-            "x": 3280,
-            "y": 932,
-            "width": 56,
-            "height": 78
-          }
+            "x": 6321,
+            "y": 2786,
+            "width": 236,
+            "height": 160
+          },
+          "hd": [
+            {
+              "key": "costa__mono_durmiente__g190__hd_0_0",
+              "file": "hd/costa__mono_durmiente__g190__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 236,
+              "height": 160,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 590,
+                "h": 400
+              }
+            }
+          ]
         }
       ]
     },
@@ -1032,9 +3908,39 @@
       "bounds": {
         "x": 5471,
         "y": 1225,
-        "width": 387,
-        "height": 615
-      }
+        "width": 388,
+        "height": 616
+      },
+      "hd": [
+        {
+          "key": "path2619__path2619__hd_0_0",
+          "file": "hd/path2619__path2619__hd_0_0.png",
+          "x": 0,
+          "y": 0,
+          "width": 388,
+          "height": 308,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 970,
+            "h": 770
+          }
+        },
+        {
+          "key": "path2619__path2619__hd_0_1",
+          "file": "hd/path2619__path2619__hd_0_1.png",
+          "x": 0,
+          "y": 308,
+          "width": 388,
+          "height": 308,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 970,
+            "h": 770
+          }
+        }
+      ]
     },
     {
       "label": "gaviota",
@@ -1045,9 +3951,25 @@
           "bounds": {
             "x": 1063,
             "y": 1072,
-            "width": 303,
-            "height": 189
-          }
+            "width": 304,
+            "height": 190
+          },
+          "hd": [
+            {
+              "key": "gaviota__g408__g408__hd_0_0",
+              "file": "hd/gaviota__g408__g408__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 304,
+              "height": 190,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 760,
+                "h": 475
+              }
+            }
+          ]
         },
         {
           "label": "gaviota__path411__path411",
@@ -1055,9 +3977,25 @@
           "bounds": {
             "x": 1016,
             "y": 1078,
-            "width": 331,
-            "height": 219
-          }
+            "width": 332,
+            "height": 220
+          },
+          "hd": [
+            {
+              "key": "gaviota__path411__path411__hd_0_0",
+              "file": "hd/gaviota__path411__path411__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 332,
+              "height": 220,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 830,
+                "h": 550
+              }
+            }
+          ]
         }
       ]
     }

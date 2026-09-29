@@ -5,7 +5,7 @@
         "x": 18,
         "y": 18,
         "w": 2614,
-        "h": 2609
+        "h": 2610
       },
       "rotated": false,
       "trimmed": false,
@@ -13,18 +13,18 @@
         "x": 0,
         "y": 0,
         "w": 2614,
-        "h": 2609
+        "h": 2610
       },
       "sourceSize": {
         "w": 2614,
-        "h": 2609
+        "h": 2610
       }
     },
     "plaza__path2652__path2652": {
       "frame": {
         "x": 18,
-        "y": 2663,
-        "w": 2027,
+        "y": 2664,
+        "w": 2028,
         "h": 1152
       },
       "rotated": false,
@@ -32,11 +32,11 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 2027,
+        "w": 2028,
         "h": 1152
       },
       "sourceSize": {
-        "w": 2027,
+        "w": 2028,
         "h": 1152
       }
     },
@@ -62,8 +62,8 @@
     },
     "Casas__hierba__g309": {
       "frame": {
-        "x": 2081,
-        "y": 2663,
+        "x": 2082,
+        "y": 2664,
         "w": 1530,
         "h": 908
       },
@@ -84,7 +84,7 @@
       "frame": {
         "x": 2668,
         "y": 1712,
-        "w": 1291,
+        "w": 1292,
         "h": 792
       },
       "rotated": false,
@@ -92,11 +92,11 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 1291,
+        "w": 1292,
         "h": 792
       },
       "sourceSize": {
-        "w": 1291,
+        "w": 1292,
         "h": 792
       }
     }
@@ -124,7 +124,65 @@
             "y": 633,
             "width": 1530,
             "height": 908
-          }
+          },
+          "hd": [
+            {
+              "key": "Casas__hierba__g309__hd_3_0",
+              "file": "hd/Casas__hierba__g309__hd_3_0.png",
+              "x": 1148.4,
+              "y": 0,
+              "width": 381.6,
+              "height": 302.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 954,
+                "h": 757
+              }
+            },
+            {
+              "key": "Casas__hierba__g309__hd_1_1",
+              "file": "hd/Casas__hierba__g309__hd_1_1.png",
+              "x": 382.8,
+              "y": 302.8,
+              "width": 382.8,
+              "height": 302.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 957,
+                "h": 757
+              }
+            },
+            {
+              "key": "Casas__hierba__g309__hd_2_1",
+              "file": "hd/Casas__hierba__g309__hd_2_1.png",
+              "x": 765.6,
+              "y": 302.8,
+              "width": 382.8,
+              "height": 302.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 957,
+                "h": 757
+              }
+            },
+            {
+              "key": "Casas__hierba__g309__hd_0_2",
+              "file": "hd/Casas__hierba__g309__hd_0_2.png",
+              "x": 0,
+              "y": 605.6,
+              "width": 382.8,
+              "height": 302.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 957,
+                "h": 756
+              }
+            }
+          ]
         }
       ]
     },
@@ -137,9 +195,165 @@
           "bounds": {
             "x": 3168,
             "y": 1113,
-            "width": 2027,
+            "width": 2028,
             "height": 1152
-          }
+          },
+          "hd": [
+            {
+              "key": "plaza__path2652__path2652__hd_0_0",
+              "file": "hd/plaza__path2652__path2652__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 405.6,
+              "height": 384,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 1014,
+                "h": 960
+              }
+            },
+            {
+              "key": "plaza__path2652__path2652__hd_1_0",
+              "file": "hd/plaza__path2652__path2652__hd_1_0.png",
+              "x": 405.6,
+              "y": 0,
+              "width": 405.6,
+              "height": 384,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 1014,
+                "h": 960
+              }
+            },
+            {
+              "key": "plaza__path2652__path2652__hd_2_0",
+              "file": "hd/plaza__path2652__path2652__hd_2_0.png",
+              "x": 811.2,
+              "y": 0,
+              "width": 405.6,
+              "height": 384,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 1014,
+                "h": 960
+              }
+            },
+            {
+              "key": "plaza__path2652__path2652__hd_3_0",
+              "file": "hd/plaza__path2652__path2652__hd_3_0.png",
+              "x": 1216.8,
+              "y": 0,
+              "width": 405.6,
+              "height": 384,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 1014,
+                "h": 960
+              }
+            },
+            {
+              "key": "plaza__path2652__path2652__hd_1_1",
+              "file": "hd/plaza__path2652__path2652__hd_1_1.png",
+              "x": 405.6,
+              "y": 384,
+              "width": 405.6,
+              "height": 384,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 1014,
+                "h": 960
+              }
+            },
+            {
+              "key": "plaza__path2652__path2652__hd_2_1",
+              "file": "hd/plaza__path2652__path2652__hd_2_1.png",
+              "x": 811.2,
+              "y": 384,
+              "width": 405.6,
+              "height": 384,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 1014,
+                "h": 960
+              }
+            },
+            {
+              "key": "plaza__path2652__path2652__hd_3_1",
+              "file": "hd/plaza__path2652__path2652__hd_3_1.png",
+              "x": 1216.8,
+              "y": 384,
+              "width": 405.6,
+              "height": 384,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 1014,
+                "h": 960
+              }
+            },
+            {
+              "key": "plaza__path2652__path2652__hd_4_1",
+              "file": "hd/plaza__path2652__path2652__hd_4_1.png",
+              "x": 1622.4,
+              "y": 384,
+              "width": 405.6,
+              "height": 384,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 1014,
+                "h": 960
+              }
+            },
+            {
+              "key": "plaza__path2652__path2652__hd_2_2",
+              "file": "hd/plaza__path2652__path2652__hd_2_2.png",
+              "x": 811.2,
+              "y": 768,
+              "width": 405.6,
+              "height": 384,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 1014,
+                "h": 960
+              }
+            },
+            {
+              "key": "plaza__path2652__path2652__hd_3_2",
+              "file": "hd/plaza__path2652__path2652__hd_3_2.png",
+              "x": 1216.8,
+              "y": 768,
+              "width": 405.6,
+              "height": 384,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 1014,
+                "h": 960
+              }
+            },
+            {
+              "key": "plaza__path2652__path2652__hd_4_2",
+              "file": "hd/plaza__path2652__path2652__hd_4_2.png",
+              "x": 1622.4,
+              "y": 768,
+              "width": 405.6,
+              "height": 384,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 1014,
+                "h": 960
+              }
+            }
+          ]
         }
       ]
     },
@@ -153,8 +367,304 @@
             "x": 4190,
             "y": 277,
             "width": 2614,
-            "height": 2609
-          }
+            "height": 2610
+          },
+          "hd": [
+            {
+              "key": "Puerto__muro__path1432__hd_0_0",
+              "file": "hd/Puerto__muro__path1432__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 373.6,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_0_1",
+              "file": "hd/Puerto__muro__path1432__hd_0_1.png",
+              "x": 0,
+              "y": 373.2,
+              "width": 373.6,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_1_1",
+              "file": "hd/Puerto__muro__path1432__hd_1_1.png",
+              "x": 373.6,
+              "y": 373.2,
+              "width": 373.6,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_2_1",
+              "file": "hd/Puerto__muro__path1432__hd_2_1.png",
+              "x": 747.2,
+              "y": 373.2,
+              "width": 373.6,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_0_2",
+              "file": "hd/Puerto__muro__path1432__hd_0_2.png",
+              "x": 0,
+              "y": 746.4,
+              "width": 373.6,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_1_2",
+              "file": "hd/Puerto__muro__path1432__hd_1_2.png",
+              "x": 373.6,
+              "y": 746.4,
+              "width": 373.6,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_2_2",
+              "file": "hd/Puerto__muro__path1432__hd_2_2.png",
+              "x": 747.2,
+              "y": 746.4,
+              "width": 373.6,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_3_2",
+              "file": "hd/Puerto__muro__path1432__hd_3_2.png",
+              "x": 1120.8,
+              "y": 746.4,
+              "width": 373.6,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_1_3",
+              "file": "hd/Puerto__muro__path1432__hd_1_3.png",
+              "x": 373.6,
+              "y": 1119.6,
+              "width": 373.6,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_2_3",
+              "file": "hd/Puerto__muro__path1432__hd_2_3.png",
+              "x": 747.2,
+              "y": 1119.6,
+              "width": 373.6,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_3_3",
+              "file": "hd/Puerto__muro__path1432__hd_3_3.png",
+              "x": 1120.8,
+              "y": 1119.6,
+              "width": 373.6,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_4_3",
+              "file": "hd/Puerto__muro__path1432__hd_4_3.png",
+              "x": 1494.4,
+              "y": 1119.6,
+              "width": 373.6,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_3_4",
+              "file": "hd/Puerto__muro__path1432__hd_3_4.png",
+              "x": 1120.8,
+              "y": 1492.8,
+              "width": 373.6,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_4_4",
+              "file": "hd/Puerto__muro__path1432__hd_4_4.png",
+              "x": 1494.4,
+              "y": 1492.8,
+              "width": 373.6,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_5_4",
+              "file": "hd/Puerto__muro__path1432__hd_5_4.png",
+              "x": 1868,
+              "y": 1492.8,
+              "width": 373.6,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_3_5",
+              "file": "hd/Puerto__muro__path1432__hd_3_5.png",
+              "x": 1120.8,
+              "y": 1866,
+              "width": 373.6,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_4_5",
+              "file": "hd/Puerto__muro__path1432__hd_4_5.png",
+              "x": 1494.4,
+              "y": 1866,
+              "width": 373.6,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_5_5",
+              "file": "hd/Puerto__muro__path1432__hd_5_5.png",
+              "x": 1868,
+              "y": 1866,
+              "width": 373.6,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_6_5",
+              "file": "hd/Puerto__muro__path1432__hd_6_5.png",
+              "x": 2241.6,
+              "y": 1866,
+              "width": 372.4,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 931,
+                "h": 933
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_5_6",
+              "file": "hd/Puerto__muro__path1432__hd_5_6.png",
+              "x": 1868,
+              "y": 2239.2,
+              "width": 373.6,
+              "height": 370.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 934,
+                "h": 927
+              }
+            },
+            {
+              "key": "Puerto__muro__path1432__hd_6_6",
+              "file": "hd/Puerto__muro__path1432__hd_6_6.png",
+              "x": 2241.6,
+              "y": 2239.2,
+              "width": 372.4,
+              "height": 370.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 931,
+                "h": 927
+              }
+            }
+          ]
         },
         {
           "label": "Puerto__path1159__path1159",
@@ -162,9 +672,81 @@
           "bounds": {
             "x": 4193,
             "y": 438,
-            "width": 1291,
+            "width": 1292,
             "height": 792
-          }
+          },
+          "hd": [
+            {
+              "key": "Puerto__path1159__path1159__hd_0_0",
+              "file": "hd/Puerto__path1159__path1159__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 323.2,
+              "height": 396,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 808,
+                "h": 990
+              }
+            },
+            {
+              "key": "Puerto__path1159__path1159__hd_1_0",
+              "file": "hd/Puerto__path1159__path1159__hd_1_0.png",
+              "x": 323.2,
+              "y": 0,
+              "width": 323.2,
+              "height": 396,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 808,
+                "h": 990
+              }
+            },
+            {
+              "key": "Puerto__path1159__path1159__hd_1_1",
+              "file": "hd/Puerto__path1159__path1159__hd_1_1.png",
+              "x": 323.2,
+              "y": 396,
+              "width": 323.2,
+              "height": 396,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 808,
+                "h": 990
+              }
+            },
+            {
+              "key": "Puerto__path1159__path1159__hd_2_1",
+              "file": "hd/Puerto__path1159__path1159__hd_2_1.png",
+              "x": 646.4,
+              "y": 396,
+              "width": 323.2,
+              "height": 396,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 808,
+                "h": 990
+              }
+            },
+            {
+              "key": "Puerto__path1159__path1159__hd_3_1",
+              "file": "hd/Puerto__path1159__path1159__hd_3_1.png",
+              "x": 969.6,
+              "y": 396,
+              "width": 322.4,
+              "height": 396,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 806,
+                "h": 990
+              }
+            }
+          ]
         }
       ]
     },
@@ -179,7 +761,205 @@
             "y": 0,
             "width": 992,
             "height": 1658
-          }
+          },
+          "hd": [
+            {
+              "key": "Bosque__castillo__g1923__hd_0_0",
+              "file": "hd/Bosque__castillo__g1923__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 330.8,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 827,
+                "h": 829
+              }
+            },
+            {
+              "key": "Bosque__castillo__g1923__hd_1_0",
+              "file": "hd/Bosque__castillo__g1923__hd_1_0.png",
+              "x": 330.8,
+              "y": 0,
+              "width": 330.8,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 827,
+                "h": 829
+              }
+            },
+            {
+              "key": "Bosque__castillo__g1923__hd_2_0",
+              "file": "hd/Bosque__castillo__g1923__hd_2_0.png",
+              "x": 661.6,
+              "y": 0,
+              "width": 330.4,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 826,
+                "h": 829
+              }
+            },
+            {
+              "key": "Bosque__castillo__g1923__hd_0_1",
+              "file": "hd/Bosque__castillo__g1923__hd_0_1.png",
+              "x": 0,
+              "y": 331.6,
+              "width": 330.8,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 827,
+                "h": 829
+              }
+            },
+            {
+              "key": "Bosque__castillo__g1923__hd_1_1",
+              "file": "hd/Bosque__castillo__g1923__hd_1_1.png",
+              "x": 330.8,
+              "y": 331.6,
+              "width": 330.8,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 827,
+                "h": 829
+              }
+            },
+            {
+              "key": "Bosque__castillo__g1923__hd_2_1",
+              "file": "hd/Bosque__castillo__g1923__hd_2_1.png",
+              "x": 661.6,
+              "y": 331.6,
+              "width": 330.4,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 826,
+                "h": 829
+              }
+            },
+            {
+              "key": "Bosque__castillo__g1923__hd_0_2",
+              "file": "hd/Bosque__castillo__g1923__hd_0_2.png",
+              "x": 0,
+              "y": 663.2,
+              "width": 330.8,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 827,
+                "h": 829
+              }
+            },
+            {
+              "key": "Bosque__castillo__g1923__hd_1_2",
+              "file": "hd/Bosque__castillo__g1923__hd_1_2.png",
+              "x": 330.8,
+              "y": 663.2,
+              "width": 330.8,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 827,
+                "h": 829
+              }
+            },
+            {
+              "key": "Bosque__castillo__g1923__hd_2_2",
+              "file": "hd/Bosque__castillo__g1923__hd_2_2.png",
+              "x": 661.6,
+              "y": 663.2,
+              "width": 330.4,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 826,
+                "h": 829
+              }
+            },
+            {
+              "key": "Bosque__castillo__g1923__hd_0_3",
+              "file": "hd/Bosque__castillo__g1923__hd_0_3.png",
+              "x": 0,
+              "y": 994.8,
+              "width": 330.8,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 827,
+                "h": 829
+              }
+            },
+            {
+              "key": "Bosque__castillo__g1923__hd_1_3",
+              "file": "hd/Bosque__castillo__g1923__hd_1_3.png",
+              "x": 330.8,
+              "y": 994.8,
+              "width": 330.8,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 827,
+                "h": 829
+              }
+            },
+            {
+              "key": "Bosque__castillo__g1923__hd_2_3",
+              "file": "hd/Bosque__castillo__g1923__hd_2_3.png",
+              "x": 661.6,
+              "y": 994.8,
+              "width": 330.4,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 826,
+                "h": 829
+              }
+            },
+            {
+              "key": "Bosque__castillo__g1923__hd_1_4",
+              "file": "hd/Bosque__castillo__g1923__hd_1_4.png",
+              "x": 330.8,
+              "y": 1326.4,
+              "width": 330.8,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 827,
+                "h": 829
+              }
+            },
+            {
+              "key": "Bosque__castillo__g1923__hd_2_4",
+              "file": "hd/Bosque__castillo__g1923__hd_2_4.png",
+              "x": 661.6,
+              "y": 1326.4,
+              "width": 330.4,
+              "height": 331.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 826,
+                "h": 829
+              }
+            }
+          ]
         }
       ]
     }

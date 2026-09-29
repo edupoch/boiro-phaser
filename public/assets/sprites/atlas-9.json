@@ -4,7 +4,7 @@
       "frame": {
         "x": 18,
         "y": 18,
-        "w": 1883,
+        "w": 1884,
         "h": 2536
       },
       "rotated": false,
@@ -12,19 +12,19 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 1883,
+        "w": 1884,
         "h": 2536
       },
       "sourceSize": {
-        "w": 1883,
+        "w": 1884,
         "h": 2536
       }
     },
     "costa__fondo_roca__path185": {
       "frame": {
-        "x": 1937,
+        "x": 1938,
         "y": 18,
-        "w": 1473,
+        "w": 1474,
         "h": 1690
       },
       "rotated": false,
@@ -32,11 +32,11 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 1473,
+        "w": 1474,
         "h": 1690
       },
       "sourceSize": {
-        "w": 1473,
+        "w": 1474,
         "h": 1690
       }
     },
@@ -44,7 +44,7 @@
       "frame": {
         "x": 18,
         "y": 2590,
-        "w": 1329,
+        "w": 1330,
         "h": 1028
       },
       "rotated": false,
@@ -52,17 +52,17 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 1329,
+        "w": 1330,
         "h": 1028
       },
       "sourceSize": {
-        "w": 1329,
+        "w": 1330,
         "h": 1028
       }
     },
     "Bosque__varanda__g31": {
       "frame": {
-        "x": 1383,
+        "x": 1384,
         "y": 2590,
         "w": 1288,
         "h": 966
@@ -82,9 +82,9 @@
     },
     "Mar__batea__g948": {
       "frame": {
-        "x": 1937,
+        "x": 1938,
         "y": 1744,
-        "w": 1279,
+        "w": 1280,
         "h": 746
       },
       "rotated": false,
@@ -92,17 +92,17 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 1279,
+        "w": 1280,
         "h": 746
       },
       "sourceSize": {
-        "w": 1279,
+        "w": 1280,
         "h": 746
       }
     },
     "Bosque__dots__path2614": {
       "frame": {
-        "x": 2707,
+        "x": 2708,
         "y": 2590,
         "w": 1234,
         "h": 792
@@ -124,27 +124,27 @@
       "frame": {
         "x": 18,
         "y": 3654,
-        "w": 913,
-        "h": 413
+        "w": 914,
+        "h": 414
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 913,
-        "h": 413
+        "w": 914,
+        "h": 414
       },
       "sourceSize": {
-        "w": 913,
-        "h": 413
+        "w": 914,
+        "h": 414
       }
     },
     "Fondo__path1850__path1850": {
       "frame": {
-        "x": 3252,
+        "x": 3254,
         "y": 1744,
-        "w": 819,
+        "w": 820,
         "h": 504
       },
       "rotated": false,
@@ -152,11 +152,11 @@
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 819,
+        "w": 820,
         "h": 504
       },
       "sourceSize": {
-        "w": 819,
+        "w": 820,
         "h": 504
       }
     }
@@ -182,9 +182,81 @@
           "bounds": {
             "x": 1128,
             "y": 721,
-            "width": 819,
+            "width": 820,
             "height": 504
-          }
+          },
+          "hd": [
+            {
+              "key": "Fondo__path1850__path1850__hd_1_0",
+              "file": "hd/Fondo__path1850__path1850__hd_1_0.png",
+              "x": 273.6,
+              "y": 0,
+              "width": 273.6,
+              "height": 252,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 684,
+                "h": 630
+              }
+            },
+            {
+              "key": "Fondo__path1850__path1850__hd_2_0",
+              "file": "hd/Fondo__path1850__path1850__hd_2_0.png",
+              "x": 547.2,
+              "y": 0,
+              "width": 272.8,
+              "height": 252,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 682,
+                "h": 630
+              }
+            },
+            {
+              "key": "Fondo__path1850__path1850__hd_0_1",
+              "file": "hd/Fondo__path1850__path1850__hd_0_1.png",
+              "x": 0,
+              "y": 252,
+              "width": 273.6,
+              "height": 252,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 684,
+                "h": 630
+              }
+            },
+            {
+              "key": "Fondo__path1850__path1850__hd_1_1",
+              "file": "hd/Fondo__path1850__path1850__hd_1_1.png",
+              "x": 273.6,
+              "y": 252,
+              "width": 273.6,
+              "height": 252,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 684,
+                "h": 630
+              }
+            },
+            {
+              "key": "Fondo__path1850__path1850__hd_2_1",
+              "file": "hd/Fondo__path1850__path1850__hd_2_1.png",
+              "x": 547.2,
+              "y": 252,
+              "width": 272.8,
+              "height": 252,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 682,
+                "h": 630
+              }
+            }
+          ]
         },
         {
           "label": "Fondo__path2378-9-3-6__path2378-9-3-6",
@@ -192,9 +264,137 @@
           "bounds": {
             "x": 1592,
             "y": 2490,
-            "width": 1329,
+            "width": 1330,
             "height": 1028
-          }
+          },
+          "hd": [
+            {
+              "key": "Fondo__path2378-9-3-6__path2378-9-3-6__hd_2_0",
+              "file": "hd/Fondo__path2378-9-3-6__path2378-9-3-6__hd_2_0.png",
+              "x": 665.6,
+              "y": 0,
+              "width": 332.8,
+              "height": 342.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 832,
+                "h": 857
+              }
+            },
+            {
+              "key": "Fondo__path2378-9-3-6__path2378-9-3-6__hd_3_0",
+              "file": "hd/Fondo__path2378-9-3-6__path2378-9-3-6__hd_3_0.png",
+              "x": 998.4,
+              "y": 0,
+              "width": 331.6,
+              "height": 342.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 829,
+                "h": 857
+              }
+            },
+            {
+              "key": "Fondo__path2378-9-3-6__path2378-9-3-6__hd_0_1",
+              "file": "hd/Fondo__path2378-9-3-6__path2378-9-3-6__hd_0_1.png",
+              "x": 0,
+              "y": 342.8,
+              "width": 332.8,
+              "height": 342.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 832,
+                "h": 857
+              }
+            },
+            {
+              "key": "Fondo__path2378-9-3-6__path2378-9-3-6__hd_1_1",
+              "file": "hd/Fondo__path2378-9-3-6__path2378-9-3-6__hd_1_1.png",
+              "x": 332.8,
+              "y": 342.8,
+              "width": 332.8,
+              "height": 342.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 832,
+                "h": 857
+              }
+            },
+            {
+              "key": "Fondo__path2378-9-3-6__path2378-9-3-6__hd_2_1",
+              "file": "hd/Fondo__path2378-9-3-6__path2378-9-3-6__hd_2_1.png",
+              "x": 665.6,
+              "y": 342.8,
+              "width": 332.8,
+              "height": 342.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 832,
+                "h": 857
+              }
+            },
+            {
+              "key": "Fondo__path2378-9-3-6__path2378-9-3-6__hd_3_1",
+              "file": "hd/Fondo__path2378-9-3-6__path2378-9-3-6__hd_3_1.png",
+              "x": 998.4,
+              "y": 342.8,
+              "width": 331.6,
+              "height": 342.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 829,
+                "h": 857
+              }
+            },
+            {
+              "key": "Fondo__path2378-9-3-6__path2378-9-3-6__hd_0_2",
+              "file": "hd/Fondo__path2378-9-3-6__path2378-9-3-6__hd_0_2.png",
+              "x": 0,
+              "y": 685.6,
+              "width": 332.8,
+              "height": 342.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 832,
+                "h": 856
+              }
+            },
+            {
+              "key": "Fondo__path2378-9-3-6__path2378-9-3-6__hd_1_2",
+              "file": "hd/Fondo__path2378-9-3-6__path2378-9-3-6__hd_1_2.png",
+              "x": 332.8,
+              "y": 685.6,
+              "width": 332.8,
+              "height": 342.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 832,
+                "h": 856
+              }
+            },
+            {
+              "key": "Fondo__path2378-9-3-6__path2378-9-3-6__hd_2_2",
+              "file": "hd/Fondo__path2378-9-3-6__path2378-9-3-6__hd_2_2.png",
+              "x": 665.6,
+              "y": 685.6,
+              "width": 332.8,
+              "height": 342.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 832,
+                "h": 856
+              }
+            }
+          ]
         }
       ]
     },
@@ -207,9 +407,123 @@
           "bounds": {
             "x": 4333,
             "y": 2875,
-            "width": 1279,
+            "width": 1280,
             "height": 746
-          }
+          },
+          "hd": [
+            {
+              "key": "Mar__batea__g948__hd_0_0",
+              "file": "hd/Mar__batea__g948__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 320,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 800,
+                "h": 933
+              }
+            },
+            {
+              "key": "Mar__batea__g948__hd_1_0",
+              "file": "hd/Mar__batea__g948__hd_1_0.png",
+              "x": 320,
+              "y": 0,
+              "width": 320,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 800,
+                "h": 933
+              }
+            },
+            {
+              "key": "Mar__batea__g948__hd_2_0",
+              "file": "hd/Mar__batea__g948__hd_2_0.png",
+              "x": 640,
+              "y": 0,
+              "width": 320,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 800,
+                "h": 933
+              }
+            },
+            {
+              "key": "Mar__batea__g948__hd_3_0",
+              "file": "hd/Mar__batea__g948__hd_3_0.png",
+              "x": 960,
+              "y": 0,
+              "width": 320,
+              "height": 373.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 800,
+                "h": 933
+              }
+            },
+            {
+              "key": "Mar__batea__g948__hd_0_1",
+              "file": "hd/Mar__batea__g948__hd_0_1.png",
+              "x": 0,
+              "y": 373.2,
+              "width": 320,
+              "height": 372.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 800,
+                "h": 932
+              }
+            },
+            {
+              "key": "Mar__batea__g948__hd_1_1",
+              "file": "hd/Mar__batea__g948__hd_1_1.png",
+              "x": 320,
+              "y": 373.2,
+              "width": 320,
+              "height": 372.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 800,
+                "h": 932
+              }
+            },
+            {
+              "key": "Mar__batea__g948__hd_2_1",
+              "file": "hd/Mar__batea__g948__hd_2_1.png",
+              "x": 640,
+              "y": 373.2,
+              "width": 320,
+              "height": 372.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 800,
+                "h": 932
+              }
+            },
+            {
+              "key": "Mar__batea__g948__hd_3_1",
+              "file": "hd/Mar__batea__g948__hd_3_1.png",
+              "x": 960,
+              "y": 373.2,
+              "width": 320,
+              "height": 372.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 800,
+                "h": 932
+              }
+            }
+          ]
         }
       ]
     },
@@ -220,11 +534,405 @@
           "label": "puerto_viejo__muro__path616",
           "frame": "puerto_viejo__muro__path616",
           "bounds": {
-            "x": 4921,
+            "x": 4920,
             "y": 1139,
-            "width": 1883,
+            "width": 1884,
             "height": 2536
-          }
+          },
+          "hd": [
+            {
+              "key": "puerto_viejo__muro__path616__hd_1_0",
+              "file": "hd/puerto_viejo__muro__path616__hd_1_0.png",
+              "x": 376.8,
+              "y": 0,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_2_0",
+              "file": "hd/puerto_viejo__muro__path616__hd_2_0.png",
+              "x": 753.6,
+              "y": 0,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_3_0",
+              "file": "hd/puerto_viejo__muro__path616__hd_3_0.png",
+              "x": 1130.4,
+              "y": 0,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_1_1",
+              "file": "hd/puerto_viejo__muro__path616__hd_1_1.png",
+              "x": 376.8,
+              "y": 362.4,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_2_1",
+              "file": "hd/puerto_viejo__muro__path616__hd_2_1.png",
+              "x": 753.6,
+              "y": 362.4,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_3_1",
+              "file": "hd/puerto_viejo__muro__path616__hd_3_1.png",
+              "x": 1130.4,
+              "y": 362.4,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_4_1",
+              "file": "hd/puerto_viejo__muro__path616__hd_4_1.png",
+              "x": 1507.2,
+              "y": 362.4,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_0_2",
+              "file": "hd/puerto_viejo__muro__path616__hd_0_2.png",
+              "x": 0,
+              "y": 724.8,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_1_2",
+              "file": "hd/puerto_viejo__muro__path616__hd_1_2.png",
+              "x": 376.8,
+              "y": 724.8,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_2_2",
+              "file": "hd/puerto_viejo__muro__path616__hd_2_2.png",
+              "x": 753.6,
+              "y": 724.8,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_3_2",
+              "file": "hd/puerto_viejo__muro__path616__hd_3_2.png",
+              "x": 1130.4,
+              "y": 724.8,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_4_2",
+              "file": "hd/puerto_viejo__muro__path616__hd_4_2.png",
+              "x": 1507.2,
+              "y": 724.8,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_0_3",
+              "file": "hd/puerto_viejo__muro__path616__hd_0_3.png",
+              "x": 0,
+              "y": 1087.2,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_1_3",
+              "file": "hd/puerto_viejo__muro__path616__hd_1_3.png",
+              "x": 376.8,
+              "y": 1087.2,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_2_3",
+              "file": "hd/puerto_viejo__muro__path616__hd_2_3.png",
+              "x": 753.6,
+              "y": 1087.2,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_3_3",
+              "file": "hd/puerto_viejo__muro__path616__hd_3_3.png",
+              "x": 1130.4,
+              "y": 1087.2,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_4_3",
+              "file": "hd/puerto_viejo__muro__path616__hd_4_3.png",
+              "x": 1507.2,
+              "y": 1087.2,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_0_4",
+              "file": "hd/puerto_viejo__muro__path616__hd_0_4.png",
+              "x": 0,
+              "y": 1449.6,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_1_4",
+              "file": "hd/puerto_viejo__muro__path616__hd_1_4.png",
+              "x": 376.8,
+              "y": 1449.6,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_2_4",
+              "file": "hd/puerto_viejo__muro__path616__hd_2_4.png",
+              "x": 753.6,
+              "y": 1449.6,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_3_4",
+              "file": "hd/puerto_viejo__muro__path616__hd_3_4.png",
+              "x": 1130.4,
+              "y": 1449.6,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_4_4",
+              "file": "hd/puerto_viejo__muro__path616__hd_4_4.png",
+              "x": 1507.2,
+              "y": 1449.6,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_1_5",
+              "file": "hd/puerto_viejo__muro__path616__hd_1_5.png",
+              "x": 376.8,
+              "y": 1812,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_2_5",
+              "file": "hd/puerto_viejo__muro__path616__hd_2_5.png",
+              "x": 753.6,
+              "y": 1812,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_3_5",
+              "file": "hd/puerto_viejo__muro__path616__hd_3_5.png",
+              "x": 1130.4,
+              "y": 1812,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_4_5",
+              "file": "hd/puerto_viejo__muro__path616__hd_4_5.png",
+              "x": 1507.2,
+              "y": 1812,
+              "width": 376.8,
+              "height": 362.4,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 906
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_3_6",
+              "file": "hd/puerto_viejo__muro__path616__hd_3_6.png",
+              "x": 1130.4,
+              "y": 2174.4,
+              "width": 376.8,
+              "height": 361.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 904
+              }
+            },
+            {
+              "key": "puerto_viejo__muro__path616__hd_4_6",
+              "file": "hd/puerto_viejo__muro__path616__hd_4_6.png",
+              "x": 1507.2,
+              "y": 2174.4,
+              "width": 376.8,
+              "height": 361.6,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 942,
+                "h": 904
+              }
+            }
+          ]
         }
       ]
     },
@@ -239,7 +947,93 @@
             "y": 370,
             "width": 1234,
             "height": 792
-          }
+          },
+          "hd": [
+            {
+              "key": "Bosque__dots__path2614__hd_0_0",
+              "file": "hd/Bosque__dots__path2614__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 308.8,
+              "height": 396,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 772,
+                "h": 990
+              }
+            },
+            {
+              "key": "Bosque__dots__path2614__hd_1_0",
+              "file": "hd/Bosque__dots__path2614__hd_1_0.png",
+              "x": 308.8,
+              "y": 0,
+              "width": 308.8,
+              "height": 396,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 772,
+                "h": 990
+              }
+            },
+            {
+              "key": "Bosque__dots__path2614__hd_2_0",
+              "file": "hd/Bosque__dots__path2614__hd_2_0.png",
+              "x": 617.6,
+              "y": 0,
+              "width": 308.8,
+              "height": 396,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 772,
+                "h": 990
+              }
+            },
+            {
+              "key": "Bosque__dots__path2614__hd_1_1",
+              "file": "hd/Bosque__dots__path2614__hd_1_1.png",
+              "x": 308.8,
+              "y": 396,
+              "width": 308.8,
+              "height": 396,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 772,
+                "h": 990
+              }
+            },
+            {
+              "key": "Bosque__dots__path2614__hd_2_1",
+              "file": "hd/Bosque__dots__path2614__hd_2_1.png",
+              "x": 617.6,
+              "y": 396,
+              "width": 308.8,
+              "height": 396,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 772,
+                "h": 990
+              }
+            },
+            {
+              "key": "Bosque__dots__path2614__hd_3_1",
+              "file": "hd/Bosque__dots__path2614__hd_3_1.png",
+              "x": 926.4,
+              "y": 396,
+              "width": 307.6,
+              "height": 396,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 769,
+                "h": 990
+              }
+            }
+          ]
         },
         {
           "label": "Bosque__seto__g29",
@@ -247,9 +1041,81 @@
           "bounds": {
             "x": 4420,
             "y": 0,
-            "width": 913,
-            "height": 413
-          }
+            "width": 914,
+            "height": 414
+          },
+          "hd": [
+            {
+              "key": "Bosque__seto__g29__hd_0_0",
+              "file": "hd/Bosque__seto__g29__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 304.8,
+              "height": 207.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 762,
+                "h": 518
+              }
+            },
+            {
+              "key": "Bosque__seto__g29__hd_1_0",
+              "file": "hd/Bosque__seto__g29__hd_1_0.png",
+              "x": 304.8,
+              "y": 0,
+              "width": 304.8,
+              "height": 207.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 762,
+                "h": 518
+              }
+            },
+            {
+              "key": "Bosque__seto__g29__hd_2_0",
+              "file": "hd/Bosque__seto__g29__hd_2_0.png",
+              "x": 609.6,
+              "y": 0,
+              "width": 304.4,
+              "height": 207.2,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 761,
+                "h": 518
+              }
+            },
+            {
+              "key": "Bosque__seto__g29__hd_0_1",
+              "file": "hd/Bosque__seto__g29__hd_0_1.png",
+              "x": 0,
+              "y": 207.2,
+              "width": 304.8,
+              "height": 206.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 762,
+                "h": 517
+              }
+            },
+            {
+              "key": "Bosque__seto__g29__hd_1_1",
+              "file": "hd/Bosque__seto__g29__hd_1_1.png",
+              "x": 304.8,
+              "y": 207.2,
+              "width": 304.8,
+              "height": 206.8,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 762,
+                "h": 517
+              }
+            }
+          ]
         },
         {
           "label": "Bosque__varanda__g31",
@@ -259,7 +1125,93 @@
             "y": 225,
             "width": 1288,
             "height": 966
-          }
+          },
+          "hd": [
+            {
+              "key": "Bosque__varanda__g31__hd_0_0",
+              "file": "hd/Bosque__varanda__g31__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 322,
+              "height": 322,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 805,
+                "h": 805
+              }
+            },
+            {
+              "key": "Bosque__varanda__g31__hd_0_1",
+              "file": "hd/Bosque__varanda__g31__hd_0_1.png",
+              "x": 0,
+              "y": 322,
+              "width": 322,
+              "height": 322,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 805,
+                "h": 805
+              }
+            },
+            {
+              "key": "Bosque__varanda__g31__hd_1_1",
+              "file": "hd/Bosque__varanda__g31__hd_1_1.png",
+              "x": 322,
+              "y": 322,
+              "width": 322,
+              "height": 322,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 805,
+                "h": 805
+              }
+            },
+            {
+              "key": "Bosque__varanda__g31__hd_2_1",
+              "file": "hd/Bosque__varanda__g31__hd_2_1.png",
+              "x": 644,
+              "y": 322,
+              "width": 322,
+              "height": 322,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 805,
+                "h": 805
+              }
+            },
+            {
+              "key": "Bosque__varanda__g31__hd_2_2",
+              "file": "hd/Bosque__varanda__g31__hd_2_2.png",
+              "x": 644,
+              "y": 644,
+              "width": 322,
+              "height": 322,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 805,
+                "h": 805
+              }
+            },
+            {
+              "key": "Bosque__varanda__g31__hd_3_2",
+              "file": "hd/Bosque__varanda__g31__hd_3_2.png",
+              "x": 966,
+              "y": 644,
+              "width": 322,
+              "height": 322,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 805,
+                "h": 805
+              }
+            }
+          ]
         }
       ]
     },
@@ -270,11 +1222,293 @@
           "label": "costa__fondo_roca__path185",
           "frame": "costa__fondo_roca__path185",
           "bounds": {
-            "x": 5331,
+            "x": 5330,
             "y": 2052,
-            "width": 1473,
+            "width": 1474,
             "height": 1690
-          }
+          },
+          "hd": [
+            {
+              "key": "costa__fondo_roca__path185__hd_0_0",
+              "file": "hd/costa__fondo_roca__path185__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 368.8,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_1_0",
+              "file": "hd/costa__fondo_roca__path185__hd_1_0.png",
+              "x": 368.8,
+              "y": 0,
+              "width": 368.8,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_2_0",
+              "file": "hd/costa__fondo_roca__path185__hd_2_0.png",
+              "x": 737.6,
+              "y": 0,
+              "width": 368.8,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_3_0",
+              "file": "hd/costa__fondo_roca__path185__hd_3_0.png",
+              "x": 1106.4,
+              "y": 0,
+              "width": 367.6,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 919,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_0_1",
+              "file": "hd/costa__fondo_roca__path185__hd_0_1.png",
+              "x": 0,
+              "y": 338,
+              "width": 368.8,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_1_1",
+              "file": "hd/costa__fondo_roca__path185__hd_1_1.png",
+              "x": 368.8,
+              "y": 338,
+              "width": 368.8,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_2_1",
+              "file": "hd/costa__fondo_roca__path185__hd_2_1.png",
+              "x": 737.6,
+              "y": 338,
+              "width": 368.8,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_3_1",
+              "file": "hd/costa__fondo_roca__path185__hd_3_1.png",
+              "x": 1106.4,
+              "y": 338,
+              "width": 367.6,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 919,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_0_2",
+              "file": "hd/costa__fondo_roca__path185__hd_0_2.png",
+              "x": 0,
+              "y": 676,
+              "width": 368.8,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_1_2",
+              "file": "hd/costa__fondo_roca__path185__hd_1_2.png",
+              "x": 368.8,
+              "y": 676,
+              "width": 368.8,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_2_2",
+              "file": "hd/costa__fondo_roca__path185__hd_2_2.png",
+              "x": 737.6,
+              "y": 676,
+              "width": 368.8,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_3_2",
+              "file": "hd/costa__fondo_roca__path185__hd_3_2.png",
+              "x": 1106.4,
+              "y": 676,
+              "width": 367.6,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 919,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_0_3",
+              "file": "hd/costa__fondo_roca__path185__hd_0_3.png",
+              "x": 0,
+              "y": 1014,
+              "width": 368.8,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_1_3",
+              "file": "hd/costa__fondo_roca__path185__hd_1_3.png",
+              "x": 368.8,
+              "y": 1014,
+              "width": 368.8,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_2_3",
+              "file": "hd/costa__fondo_roca__path185__hd_2_3.png",
+              "x": 737.6,
+              "y": 1014,
+              "width": 368.8,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_3_3",
+              "file": "hd/costa__fondo_roca__path185__hd_3_3.png",
+              "x": 1106.4,
+              "y": 1014,
+              "width": 367.6,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 919,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_0_4",
+              "file": "hd/costa__fondo_roca__path185__hd_0_4.png",
+              "x": 0,
+              "y": 1352,
+              "width": 368.8,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_1_4",
+              "file": "hd/costa__fondo_roca__path185__hd_1_4.png",
+              "x": 368.8,
+              "y": 1352,
+              "width": 368.8,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_2_4",
+              "file": "hd/costa__fondo_roca__path185__hd_2_4.png",
+              "x": 737.6,
+              "y": 1352,
+              "width": 368.8,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 922,
+                "h": 845
+              }
+            },
+            {
+              "key": "costa__fondo_roca__path185__hd_3_4",
+              "file": "hd/costa__fondo_roca__path185__hd_3_4.png",
+              "x": 1106.4,
+              "y": 1352,
+              "width": 367.6,
+              "height": 338,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 919,
+                "h": 845
+              }
+            }
+          ]
         }
       ]
     }
