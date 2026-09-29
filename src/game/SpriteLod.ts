@@ -55,6 +55,23 @@ type TextureState = {
 
 const HD_FRAME = 'hd';
 
+// Una intención de zoom deja de valer tras este tiempo sin giros de rueda hacia dentro (ms).
+const INTENT_TTL_MS = 1500;
+
+type ZoomIntent = {
+    // Punto del mundo bajo el cursor, que el zoom anclado mantiene fijo.
+    x: number;
+    y: number;
+    // Vista que habrá al llegar al zoom objetivo.
+    view: Rect;
+    expires: number;
+};
+
+type QueuedChunk = {
+    chunk: HdChunk;
+    rect: Rect;
+};
+
 // Métricas de latencia de la HD y herramientas de depuración: siempre en desarrollo y, en producción,
 // solo con ?lodDebug en la URL (para medir en otros equipos desde GitHub Pages).
 export const LOD_DEBUG = import.meta.env.DEV || new URLSearchParams(window.location.search).has('lodDebug');
@@ -180,6 +197,8 @@ export type SpriteLodOptions = {
     uploadBudgetMs?: number;
     // false: decodifica y sube con el loader de Phaser, en el hilo principal (para comparar).
     useImageBitmap?: boolean;
+    // false: ignora las intenciones de zoom (para comparar).
+    useZoomIntent?: boolean;
     // Cada cuánto se recalcula qué chunks hacen falta (ms).
     updateInterval?: number;
 };
@@ -190,7 +209,7 @@ export class SpriteLod
     private readonly options: Required<SpriteLodOptions>;
     private readonly entries: LodEntry[] = [];
     private readonly textures = new Map<string, TextureState>();
-    private readonly queue: { chunk: HdChunk }[] = [];
+    private readonly queue: QueuedChunk[] = [];
     private readonly queuedKeys = new Set<string>();
     // Frame útil de cada chunk en carga, para crearlo en la textura al terminar.
     private readonly pendingFrames = new Map<string, HdChunk['frame']>();
@@ -203,6 +222,7 @@ export class SpriteLod
     // Object URL de cada chunk en carga, para revocarlo al terminar.
     private readonly objectUrls = new Map<string, string>();
     private destroyed = false;
+    private intent: ZoomIntent | null = null;
     private readonly bitmapSupport: Promise<boolean>;
     // Chunks ya decodificados esperando su turno para subir a la GPU.
     private readonly uploadQueue: { key: string; bitmap: ImageBitmap }[] = [];
@@ -231,6 +251,7 @@ export class SpriteLod
             maxUploadsPerFrame: 4,
             uploadBudgetMs: 4,
             useImageBitmap: true,
+            useZoomIntent: true,
             updateInterval: 100,
             ...options,
         };
@@ -290,7 +311,9 @@ export class SpriteLod
     {
         const camera = this.scene.cameras.main;
 
-        this.blobs.update(this.inflight > 0 || this.queue.length > 0, camera.midPoint.x, camera.midPoint.y);
+        const intent = this.activeIntent();
+        const focus = intent ?? camera.midPoint;
+        this.blobs.update(this.inflight > 0 || this.queue.length > 0, focus.x, focus.y);
 
         // La transformación de los Container HD se copia cada frame para seguir las animaciones.
         for (const entry of this.entries) {
@@ -325,13 +348,23 @@ export class SpriteLod
         }
 
         if (!this.hdEnabled) {
-            this.queue.length = 0;
-            this.queuedKeys.clear();
             for (const entry of this.entries) {
                 this.setHdActive(entry, false);
             }
+
+            // Con un acercamiento en curso se va cargando la vista de destino aunque la HD aún no se vea,
+            // de lo más cercano al cursor a lo más lejano y sin pasar del presupuesto de reposo.
+            const idleBudget = this.options.budgetBytes * this.options.idleBudgetRatio;
+            const intentKeys = new Set<string>();
+            if (intent) {
+                this.requestRect(intent.view, intentKeys);
+                this.touch(intentKeys, time);
+            }
+            this.pruneQueue(intentKeys);
+            this.pumpQueue(idleBudget);
+
             // Sin HD en pantalla solo guardamos una caché pequeña para volver a acercar rápido.
-            this.evict(new Set(), this.options.budgetBytes * this.options.idleBudgetRatio);
+            this.evict(intentKeys, idleBudget);
             if (METRICS && this.transition && performance.now() - this.transition.lastInput > TRANSITION_IDLE_MS) {
                 this.transition = null;
             }
@@ -362,7 +395,7 @@ export class SpriteLod
 
                 if (intersects(rect, neededRect)) {
                     neededKeys.add(chunk.key);
-                    this.request(chunk);
+                    this.request(chunk, rect);
                 }
 
                 if (intersects(rect, visibleRect)) {
@@ -384,38 +417,131 @@ export class SpriteLod
             this.checkTransition(allVisibleReady);
         }
 
-        for (const key of neededKeys) {
+        if (intent) {
+            this.requestRect(intent.view, neededKeys);
+        }
+
+        this.touch(neededKeys, time);
+        this.pruneQueue(neededKeys);
+        this.pumpQueue();
+        this.evict(neededKeys, this.options.budgetBytes);
+    }
+
+    // Registra un acercamiento con la rueda: el punto bajo (screenX, screenY) se mantiene fijo mientras
+    // la cámara va hacia targetZoom, así que ya se sabe qué se verá al llegar y se puede pedir antes.
+    setZoomIntent (screenX: number, screenY: number, targetZoom: number): void
+    {
+        if (!this.options.useZoomIntent) {
+            return;
+        }
+
+        // Con un objetivo por debajo del umbral se prepara la vista del umbral: con el zoom anclado las
+        // vistas están anidadas, así que contiene la de cualquier zoom mayor, y la cola carga primero
+        // lo más cercano al cursor (lo que se verá con más zoom), sin pasar del presupuesto de reposo.
+        const viewZoom = Math.max(targetZoom, this.options.enterZoom);
+        const camera = this.scene.cameras.main;
+        const point = camera.getWorldPoint(screenX, screenY);
+        const width = camera.width / viewZoom;
+        const height = camera.height / viewZoom;
+
+        this.intent = {
+            x: point.x,
+            y: point.y,
+            view: {
+                x: point.x - screenX / viewZoom,
+                y: point.y - screenY / viewZoom,
+                width,
+                height,
+            },
+            expires: performance.now() + INTENT_TTL_MS,
+        };
+        this.dirty = true;
+    }
+
+    private activeIntent (): ZoomIntent | null
+    {
+        if (this.intent && performance.now() > this.intent.expires) {
+            this.intent = null;
+        }
+
+        return this.intent;
+    }
+
+    // Pide los chunks que cortan rect y añade sus claves a keys.
+    private requestRect (rect: Rect, keys: Set<string>): void
+    {
+        for (const entry of this.entries) {
+            if (!intersects(entry.bounds, rect)) {
+                continue;
+            }
+
+            for (const chunk of entry.chunks) {
+                const chunkBounds = chunkRect(entry, chunk);
+                if (intersects(chunkBounds, rect)) {
+                    keys.add(chunk.key);
+                    this.request(chunk, chunkBounds);
+                }
+            }
+        }
+    }
+
+    private touch (keys: Set<string>, time: number): void
+    {
+        for (const key of keys) {
             const state = this.textures.get(key);
             if (state) {
                 state.lastUsed = time;
             }
         }
+    }
 
-        // Lo que ya no está en la zona necesaria no se sigue pidiendo.
+    // Lo que ya no hace falta no se sigue pidiendo.
+    private pruneQueue (keys: Set<string>): void
+    {
         for (let i = this.queue.length - 1; i >= 0; i -= 1) {
-            if (!neededKeys.has(this.queue[i].chunk.key)) {
+            if (!keys.has(this.queue[i].chunk.key)) {
                 this.queuedKeys.delete(this.queue[i].chunk.key);
                 this.queue.splice(i, 1);
             }
         }
-
-        this.pumpQueue();
-        this.evict(neededKeys, this.options.budgetBytes);
     }
 
-    private request (chunk: HdChunk): void
+    private request (chunk: HdChunk, rect: Rect): void
     {
         if (this.textures.has(chunk.key) || this.queuedKeys.has(chunk.key)) {
             return;
         }
 
         this.queuedKeys.add(chunk.key);
-        this.queue.push({ chunk });
+        this.queue.push({ chunk, rect });
     }
 
-    private pumpQueue (): void
+    // Primero lo que se verá al terminar el acercamiento; después, lo más cercano al punto de interés
+    // (el de la intención o, sin ella, el centro de la cámara).
+    private sortQueue (): void
     {
-        while (this.inflight < this.options.maxConcurrentLoads && this.queue.length > 0) {
+        if (this.queue.length < 2) {
+            return;
+        }
+
+        const intent = this.activeIntent();
+        const focus = intent ?? this.scene.cameras.main.midPoint;
+        const priority = ({ rect }: QueuedChunk) => {
+            const distance = Math.hypot(rect.x + rect.width / 2 - focus.x, rect.y + rect.height / 2 - focus.y);
+            return intent && intersects(rect, intent.view) ? distance : 1e7 + distance;
+        };
+
+        this.queue.sort((a, b) => priority(a) - priority(b));
+    }
+
+    // Con byteLimit no se empiezan cargas nuevas si la memoria HD ya lo alcanza.
+    private pumpQueue (byteLimit = Infinity): void
+    {
+        if (this.inflight < this.options.maxConcurrentLoads) {
+            this.sortQueue();
+        }
+
+        while (this.inflight < this.options.maxConcurrentLoads && this.queue.length > 0 && this.totalBytes < byteLimit) {
             const { chunk } = this.queue.shift()!;
             this.queuedKeys.delete(chunk.key);
             this.textures.set(chunk.key, { status: 'loading', bytes: 0, lastUsed: this.scene.time.now });
@@ -895,6 +1021,7 @@ export class SpriteLod
         this.samples.upload.length = 0;
         this.transition = null;
         this.lastTransition = null;
+        this.intent = null;
         this.blobs.reset(!keepBlobs, keepBlobs, bustCache ? `?bench=${Date.now()}` : '');
         this.dirty = true;
     }

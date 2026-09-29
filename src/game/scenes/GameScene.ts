@@ -164,6 +164,10 @@ export class GameScene extends Phaser.Scene
                     this.spriteLod?.beginTransition();
                 }
 
+                if (nextTarget > previousTarget) {
+                    this.spriteLod?.setZoomIntent(screenX, screenY, nextTarget);
+                }
+
                 zoomTarget = nextTarget;
                 zoomAnchorX = screenX;
                 zoomAnchorY = screenY;
@@ -201,7 +205,8 @@ export class GameScene extends Phaser.Scene
             this.input.on('pointerup', handlePointerUp);
             this.input.on('wheel', handleWheel);
             // Con LOD_DEBUG, para comparar sin recompilar: ?lodBudget=384 (presupuesto HD en MB),
-            // ?lodUploads=1 (máximo de subidas a la GPU por frame) y ?lodDecoder=loader (decodificar con el loader).
+            // ?lodUploads=1 (máximo de subidas a la GPU por frame), ?lodDecoder=loader (decodificar con el loader)
+            // y ?lodIntent=0 (sin prioridad por intención de zoom).
             const debugParams = new URLSearchParams(LOD_DEBUG ? window.location.search : '');
             const budgetParam = Number(debugParams.get('lodBudget'));
             const uploadsParam = Number(debugParams.get('lodUploads'));
@@ -210,6 +215,7 @@ export class GameScene extends Phaser.Scene
                 ...(budgetParam > 0 ? { budgetBytes: budgetParam * 1024 * 1024 } : {}),
                 ...(uploadsParam > 0 ? { maxUploadsPerFrame: uploadsParam } : {}),
                 ...(debugParams.get('lodDecoder') === 'loader' ? { useImageBitmap: false } : {}),
+                ...(debugParams.get('lodIntent') === '0' ? { useZoomIntent: false } : {}),
             });
 
             if (LOD_DEBUG) {

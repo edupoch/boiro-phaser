@@ -15,5 +15,5 @@ Plan: `tasks/plan.md` · Spec: `docs/ideas/precarga-hd.md`
 
 ## Fase 3: Empezar antes
 - [x] T5: Zoom suavizado con la rueda, ~250 ms (S); corrige además los límites de scroll con zoom (pendiente de probar la sensación en equipos reales)
-- [ ] T6: Prioridad por intención de zoom con `setZoomIntent` (M), depende de T5
+- [x] T6: Prioridad por intención de zoom con `setZoomIntent` (M); también por debajo de 1,05, con la vista del umbral
 - [ ] **Checkpoint C**: tabla final, prueba en el Mac de referencia y en el kiosko, actualizar la spec y revisar antes del commit

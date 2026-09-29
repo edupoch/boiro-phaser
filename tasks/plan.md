@@ -266,6 +266,11 @@ Sin `webglcontextlost` ni errores en ninguna condición.
 
 **Estimated scope:** M
 
+**Estado de T6 (2026-09-29): implementada y comprobada sin interfaz, con A/B mediante `?lodIntent=0`.**
+- `setZoomIntent(screenX, screenY, targetZoom)` se llama en cada giro de rueda hacia dentro y caduca a los 1,5 s. La cola se ordena primero por pertenencia a la vista de destino y después por distancia al punto de intención (o al centro de la cámara). La descarga de fondo también se ordena alrededor de ese punto.
+- **Cambio respecto al plan:** la primera versión solo creaba intención con un objetivo ≥ `enterZoom`. Con rueda de ratón (0,19 → 0,42 → 0,94 → 2,1), el zoom logarítmico cruza 1,05 unos ~15 ms después del tercer clic, así que no había tiempo para anticiparse (0 texturas listas al cruzar, igual que sin intención). Ahora un giro hacia dentro por debajo del umbral también crea intención, con la vista que habrá a `enterZoom` alrededor del cursor. Como las vistas ancladas están anidadas, contiene la de cualquier zoom mayor, y se carga de lo más cercano al cursor a lo más lejano sin pasar del presupuesto de reposo.
+- Sin interfaz (con precarga salvo que se indique): pádel 3,6–4,5 s frente a 4,4–5,3 s sin intención, faro 4,4 frente a 4,9 s, mar **5,7 frente a 9,4 s**, pádel sin precarga 3,9 frente a 5,4 s. Al cruzar 1,05 hay hasta 10 texturas listas frente a 0. Pico por debajo del umbral ≤ 48 MB (presupuesto de reposo: 192 MB). Mover el ratón sin rueda no carga nada.
+
 ### Checkpoint C: Completo
 - [ ] Tabla final frente a la línea base en los tres escenarios y las tres condiciones
 - [ ] Prueba en el Mac de referencia (Firefox) y en el kiosko
