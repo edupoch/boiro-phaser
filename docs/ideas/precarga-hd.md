@@ -14,7 +14,7 @@ Cambiamos el objetivo de "que la HD ya esté siempre" (imposible sin tenerlo tod
 
 1. **Red a cero.** Cuando el juego está en marcha, se descargan los 1064 chunks (30 MB) como blobs en memoria, sin decodificar ni ocupar VRAM. `SpriteLod` los carga desde object URLs.
 2. **Empezar antes.** Un zoom suavizado crea un margen de tiempo real, y durante un gesto de acercamiento los chunks se piden por prioridad según la distancia al puntero, aunque todavía no se haya pasado de 1.05.
-3. **Disimular lo que llegue tarde.** Fundido de ~200 ms de la HD sobre la 1×, en vez del `setTexture` seco.
+3. ~~**Disimular lo que llegue tarde.** Fundido de ~200 ms de la HD sobre la 1×, en vez del `setTexture` seco.~~ Descartado tras probarlo (ver "Decisiones tomadas").
 
 Primero se mide, porque qué pieza importa más depende de si domina la red o la CPU/GPU.
 
@@ -45,6 +45,8 @@ Primero se mide, porque qué pieza importa más depende de si domina la red o la
 ## Decisiones tomadas
 - **Zoom suavizado**: aceptado. La rueda deja de ser instantánea y pasa a una interpolación de ~250 ms.
 - **Kiosko**: tiene conexión, así que la persistencia entre sesiones no es necesaria y los blobs en memoria bastan.
+- **Fundido: descartado (2026-09-29).** Se implementó para los sprites de varios chunks y funcionaba, pero aporta poco. En zonas semitransparentes, como las sombras, se ve raro, porque mientras dura se ven a la vez la HD y el 1× y la zona se oscurece. Se revirtió y la variante para sprites de un chunk se canceló.
+- **Añadido tras el Checkpoint A: subida sin tirones.** Se decodifica con `createImageBitmap` y hay un presupuesto de subida por frame, porque en el Mac de referencia había frames de 350–650 ms (ver `tasks/plan.md`).
 
 ## Open Questions
 - Ninguna bloqueante. Tras el paso 0 hay que decidir si se añade la decodificación en un worker.

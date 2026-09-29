@@ -163,7 +163,7 @@ Sin `webglcontextlost` ni errores en ninguna condición.
 - Hallazgo: sin interfaz, la "red" del Checkpoint A en local era sobre todo espera del loader de Phaser. Con la precarga y sin T2b, la espera solo se pasaba al "proceso", y sin precarga empeoraba (4,8 s), porque había dos saltos: `fetch` y luego el loader.
 - Para medir en el Mac: `__lodBench('mar', { keepBlobs: true })` con precarga (esperar a que `__spriteLod.getStats().blobs` llegue a 1064/1064) y `__lodBench('mar')` sin precarga. Para comparar con el camino anterior, `?lodDecoder=loader`. Nuevas columnas: `subidasEnPeorFrame` y `msSubidaEnPeorFrame`.
 
-### Task 3: Fundido de entrada para sprites de varios chunks
+### ~~Task 3: Fundido de entrada para sprites de varios chunks~~ (descartada)
 
 **Description:** Cuando un sprite de varios chunks pasa a HD, el objeto base sigue visible mientras el `hdContainer` pasa de alfa 0 al alfa del objeto en ~200 ms. Al terminar, se oculta el base, como ahora. `syncContainer` multiplica el alfa por el progreso del fundido. Si el sprite vuelve a 1× a mitad de fundido, el fundido se cancela y se queda en 1×. Es el caso más fácil (la capa HD ya es otro objeto) y deja preparada la mecánica para T4.
 
@@ -183,9 +183,12 @@ Sin `webglcontextlost` ni errores en ninguna condición.
 
 **Estimated scope:** S
 
-**Estado de T3 (2026-09-29): implementada y comprobada sin interfaz con `?lodFade=2000`.** El alfa del faro sube de forma lineal de 0 a 1 y el 1× se oculta justo al terminar. Alejar a mitad de fundido (alfa 0,5) oculta la HD y deja el 1× visible. El clic durante el fundido llega una sola vez (Phaser lo entrega solo al objeto de arriba, que lo reenvía). `?lodFade=ms` permite probar otras duraciones a ojo (0 lo desactiva). Pendiente: revisión visual en el Mac.
+**Estado de T3 (2026-09-29): descartada y revertida.** Funcionaba (comprobado sin interfaz), pero al probarla a ojo el humano vio que aporta poco, y en zonas semitransparentes, como las sombras, se ve raro: durante el fundido se ven a la vez la HD y el 1×, y la zona se oscurece. El código se quitó; si hiciera falta, está en el commit `945426a`.
 
-### Task 4: Fundido de entrada para sprites de un chunk
+### ~~Task 4: Fundido de entrada para sprites de un chunk~~ (cancelada)
+
+**Cancelada** al descartar la T3 (mismo problema con las sombras semitransparentes).
+
 
 **Description:** Para sprites de un chunk (hoy es un `setTexture` directo), durante el fundido se crea una imagen HD temporal justo después del objeto en la lista de dibujado. Esa imagen copia su transformación cada frame, igual que `syncContainer`, y pasa de alfa 0 al alfa del objeto. Al terminar, se hace el `setTexture` actual y se destruye la imagen temporal. Hay que respetar `springAnimating`: si el muelle está en marcha, se espera para empezar el fundido, como ya se espera para el cambio de textura. La imagen temporal no es interactiva, porque el input sigue en el objeto base, que está visible.
 

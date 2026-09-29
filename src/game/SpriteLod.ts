@@ -45,8 +45,6 @@ type LodEntry = {
     baseTexture?: { key: string; frame: string };
     hdContainer?: Phaser.GameObjects.Container;
     hdActive: boolean;
-    // Inicio del fundido de entrada de la HD (reloj de la escena); undefined si no hay fundido en curso.
-    fadeStart?: number;
 };
 
 type TextureState = {
@@ -182,8 +180,6 @@ export type SpriteLodOptions = {
     uploadBudgetMs?: number;
     // false: decodifica y sube con el loader de Phaser, en el hilo principal (para comparar).
     useImageBitmap?: boolean;
-    // Duración del fundido de entrada de la HD sobre la 1× (ms); 0 lo desactiva.
-    fadeDuration?: number;
     // Cada cuánto se recalcula qué chunks hacen falta (ms).
     updateInterval?: number;
 };
@@ -235,7 +231,6 @@ export class SpriteLod
             maxUploadsPerFrame: 4,
             uploadBudgetMs: 4,
             useImageBitmap: true,
-            fadeDuration: 200,
             updateInterval: 100,
             ...options,
         };
@@ -644,43 +639,14 @@ export class SpriteLod
             return;
         }
 
+        if (active) {
+            this.ensureContainer(entry);
+            this.syncContainer(entry);
+        }
+
+        entry.hdContainer?.setVisible(active);
+        object.setVisible(!active);
         entry.hdActive = active;
-
-        if (!active) {
-            // A mitad de fundido el base sigue visible: basta con ocultar la HD.
-            entry.fadeStart = undefined;
-            entry.hdContainer?.setVisible(false);
-            object.setVisible(true);
-            return;
-        }
-
-        this.ensureContainer(entry);
-        entry.hdContainer!.setVisible(true);
-
-        if (this.options.fadeDuration > 0) {
-            // La HD aparece encima del base, que no se oculta hasta que termina el fundido.
-            entry.fadeStart = this.scene.time.now;
-        } else {
-            object.setVisible(false);
-        }
-
-        this.syncContainer(entry);
-    }
-
-    // Progreso del fundido de entrada (0-1); al llegar a 1 se oculta el base y el fundido termina.
-    private fadeProgress (entry: LodEntry): number
-    {
-        if (entry.fadeStart === undefined) {
-            return 1;
-        }
-
-        const progress = Math.min(1, (this.scene.time.now - entry.fadeStart) / this.options.fadeDuration);
-        if (progress >= 1) {
-            entry.fadeStart = undefined;
-            entry.object.setVisible(false);
-        }
-
-        return progress;
     }
 
     private ensureContainer (entry: LodEntry): void
@@ -782,7 +748,7 @@ export class SpriteLod
         container.setPosition(object.x, object.y);
         container.setRotation(object.rotation);
         container.setScale(object.scaleX / entry.baseScaleX, object.scaleY / entry.baseScaleY);
-        container.setAlpha(object.alpha * this.fadeProgress(entry));
+        container.setAlpha(object.alpha);
 
         if (container.depth !== object.depth) {
             container.setDepth(object.depth);
