@@ -237,6 +237,13 @@ Sin `webglcontextlost` ni errores en ninguna condición.
 
 **Estimated scope:** S
 
+**Estado de T5 (2026-09-29): implementada y comprobada sin interfaz con eventos de rueda reales (CDP).**
+- Un clic de rueda de ratón va de 1 a 2,226 (el mismo zoom final que antes) y llega al 95 % en ~170 ms medidos con frames de ~85 ms. Sin retrocesos ni salidas del mundo. El arrastre durante la interpolación funciona.
+- La interpolación usa `game.loop.rawDelta`: el `delta` de Phaser está suavizado y limitado, y con frames lentos alargaba el zoom a ~900 ms.
+- **Fallo previo corregido:** `clampCameraScroll` trataba `scrollX` como la esquina de la vista, pero Phaser hace el zoom respecto al centro (`worldView.x = scrollX + w/2 − w/(2·zoom)`). A zoom 0,3 no se llegaba a los bordes derecho e inferior (la vista se quedaba en x ≤ 5328 de 6804), y a zoom alto, tampoco al izquierdo y al superior. Además, el punto bajo el cursor se desplazaba cuando intervenía. Ahora se llega a las cuatro esquinas a zoom 2,5 y 0,3.
+- El benchmark mide desde el zoom objetivo y cancela el zoom en curso (`stopZoom`) antes de colocar la cámara.
+- Pendiente: probar la sensación con ratón y trackpad en equipos reales.
+
 ### Task 6: Prioridad por intención de zoom
 
 **Description:** Nuevo método `SpriteLod.setZoomIntent(worldPoint, targetZoom)`, al que `GameScene` llama en cada evento de rueda de acercamiento. `SpriteLod` calcula la vista de destino (el rectángulo de tamaño `pantalla / targetZoom`, anclado de forma que `worldPoint` quede en la misma posición de pantalla) y, durante unos 1,5 s, pide sus chunks aunque el zoom actual esté por debajo de `enterZoom`. La cola deja de ser FIFO: se ordena primero por pertenencia a la vista de destino y después por distancia al punto de intención. Las claves de la intención cuentan como necesarias en `evict`, y fuera de la HD respetan el presupuesto de reposo. Si existe `HdBlobStore`, la intención también adelanta esos chunks en la descarga de fondo.

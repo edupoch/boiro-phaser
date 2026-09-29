@@ -14,6 +14,6 @@ Plan: `tasks/plan.md` · Spec: `docs/ideas/precarga-hd.md`
 - [ ] **Checkpoint B**: benchmark frente a la línea base y revisión visual en el Mac de referencia
 
 ## Fase 3: Empezar antes
-- [ ] T5: Zoom suavizado con la rueda, ~250 ms (S), se puede hacer en paralelo con T2–T4
+- [x] T5: Zoom suavizado con la rueda, ~250 ms (S); corrige además los límites de scroll con zoom (pendiente de probar la sensación en equipos reales)
 - [ ] T6: Prioridad por intención de zoom con `setZoomIntent` (M), depende de T5
 - [ ] **Checkpoint C**: tabla final, prueba en el Mac de referencia y en el kiosko, actualizar la spec y revisar antes del commit

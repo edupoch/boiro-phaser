@@ -45,6 +45,8 @@ export class GameScene extends Phaser.Scene
     private spriteTree: PositionedSprite[] = [];
     private spriteImageMap = new Map<string, SpriteObject>();
     private spriteLod: SpriteLod | null = null;
+    // Avanza el zoom suavizado hacia su objetivo; lo define create() porque usa los límites de la cámara.
+    private stepZoom: ((delta: number) => void) | null = null;
 
     constructor ()
     {
@@ -90,14 +92,20 @@ export class GameScene extends Phaser.Scene
             this.camera.setBounds(0, 0, worldWidth, worldHeight);
             this.camera.setZoom(initialZoom);
 
-            const clampCameraScroll = () => {
-                const visibleWidth = sceneWidth / this.camera.zoom;
-                const visibleHeight = sceneHeight / this.camera.zoom;
-                const maxScrollX = Math.max(0, worldWidth - visibleWidth);
-                const maxScrollY = Math.max(0, worldHeight - visibleHeight);
+            // Phaser hace el zoom respecto al centro de la cámara: worldView.x = scrollX + w/2 - w/(2·zoom).
+            // Se limita el scroll para que la vista (no el scroll) quede dentro del mundo.
+            const clampAxis = (scroll: number, viewSize: number, worldSize: number) => {
+                const halfVisible = viewSize / (2 * this.camera.zoom);
+                const offset = viewSize / 2;
+                if (2 * halfVisible >= worldSize) {
+                    return worldSize / 2 - offset;
+                }
+                return Phaser.Math.Clamp(scroll, halfVisible - offset, worldSize - halfVisible - offset);
+            };
 
-                this.camera.scrollX = Phaser.Math.Clamp(this.camera.scrollX, 0, maxScrollX);
-                this.camera.scrollY = Phaser.Math.Clamp(this.camera.scrollY, 0, maxScrollY);
+            const clampCameraScroll = () => {
+                this.camera.scrollX = clampAxis(this.camera.scrollX, sceneWidth, worldWidth);
+                this.camera.scrollY = clampAxis(this.camera.scrollY, sceneHeight, worldHeight);
             };
 
             const handlePointerMove = (pointer: Phaser.Input.Pointer) => {
@@ -118,30 +126,65 @@ export class GameScene extends Phaser.Scene
                 this.input.setDefaultCursor('grab');
             };
 
-            // Zoom multiplicativo manteniendo fijo el punto del mundo que hay bajo (screenX, screenY).
-            const zoomAtScreen = (screenX: number, screenY: number, deltaY: number) => {
-                const zoomSensitivity = 0.008;
-                const zoomFactor = Math.exp(-deltaY * zoomSensitivity);
-                const previousZoom = this.camera.zoom;
-                const nextZoom = Phaser.Math.Clamp(this.camera.zoom * zoomFactor, minZoom, maxZoom);
-
-                if (nextZoom === previousZoom) {
-                    return;
-                }
-
-                if (nextZoom > previousZoom) {
-                    this.spriteLod?.beginTransition();
-                }
-
+            // Aplica un zoom manteniendo fijo el punto del mundo que hay bajo (screenX, screenY).
+            const setZoomAt = (zoom: number, screenX: number, screenY: number) => {
                 const worldPoint = this.camera.getWorldPoint(screenX, screenY);
 
-                this.camera.setZoom(nextZoom);
+                this.camera.setZoom(zoom);
                 this.camera.preRender();
 
                 const worldPointAfterZoom = this.camera.getWorldPoint(screenX, screenY);
                 this.camera.scrollX += worldPoint.x - worldPointAfterZoom.x;
                 this.camera.scrollY += worldPoint.y - worldPointAfterZoom.y;
                 clampCameraScroll();
+            };
+
+            // Zoom suavizado: la rueda fija un objetivo (acumulando sobre el que haya en curso) y la cámara
+            // se acerca a él en update(), en escala logarítmica, llegando al 95 % en zoomSmoothMs.
+            const zoomSensitivity = 0.008;
+            const zoomSmoothMs = 250;
+            let zoomTarget: number | null = null;
+            let zoomAnchorX = 0;
+            let zoomAnchorY = 0;
+
+            const getZoomTarget = () => zoomTarget ?? this.camera.zoom;
+            const stopZoom = () => {
+                zoomTarget = null;
+            };
+
+            const zoomAtScreen = (screenX: number, screenY: number, deltaY: number) => {
+                const previousTarget = getZoomTarget();
+                const nextTarget = Phaser.Math.Clamp(previousTarget * Math.exp(-deltaY * zoomSensitivity), minZoom, maxZoom);
+
+                if (nextTarget === previousTarget) {
+                    return;
+                }
+
+                if (nextTarget > this.camera.zoom) {
+                    this.spriteLod?.beginTransition();
+                }
+
+                zoomTarget = nextTarget;
+                zoomAnchorX = screenX;
+                zoomAnchorY = screenY;
+            };
+
+            this.stepZoom = (delta: number) => {
+                if (zoomTarget === null) {
+                    return;
+                }
+
+                const current = Math.log(this.camera.zoom);
+                const target = Math.log(zoomTarget);
+                // Exponencial dependiente del tiempo: e^(-3) ≈ 5 % restante tras zoomSmoothMs, a cualquier fps.
+                const t = 1 - Math.exp(-3 * delta / zoomSmoothMs);
+                const done = Math.abs(target - current) < 1e-3;
+
+                setZoomAt(done ? zoomTarget : Math.exp(current + (target - current) * t), zoomAnchorX, zoomAnchorY);
+
+                if (done) {
+                    zoomTarget = null;
+                }
             };
 
             const handleWheel = (
@@ -185,6 +228,8 @@ export class GameScene extends Phaser.Scene
                         keepBlobs: options.keepBlobs ?? false,
                         minZoom,
                         getObject: (label) => this.spriteImageMap.get(label),
+                        getZoomTarget,
+                        stopZoom,
                         zoomAtScreen,
                         clampCameraScroll,
                     });
@@ -193,6 +238,7 @@ export class GameScene extends Phaser.Scene
 
             this.events.once('shutdown', () => {
                 this.spriteLod = null;
+                this.stepZoom = null;
                 this.input.off('pointermove', handlePointerMove);
                 this.input.off('pointerdown', handlePointerDown);
                 this.input.off('pointerup', handlePointerUp);
@@ -414,6 +460,9 @@ export class GameScene extends Phaser.Scene
 
     update (time: number): void
     {
+        // Tiempo real del frame: el delta de Phaser está suavizado y limitado, y en equipos lentos
+        // haría que el zoom tardase más de lo previsto.
+        this.stepZoom?.(this.game.loop.rawDelta);
         this.spriteLod?.update(time);
     }
 

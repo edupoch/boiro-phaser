@@ -20,6 +20,10 @@ export type LodBenchmarkOptions = {
     keepBlobs: boolean;
     minZoom: number;
     getObject: (label: string) => { x: number; y: number } | undefined;
+    // Zoom al que va la cámara (con el zoom suavizado, el actual va por detrás).
+    getZoomTarget: () => number;
+    // Cancela el zoom suavizado en curso antes de colocar la cámara.
+    stopZoom: () => void;
     zoomAtScreen: (screenX: number, screenY: number, deltaY: number) => void;
     clampCameraScroll: () => void;
 };
@@ -52,6 +56,7 @@ export const runLodBenchmark = async (
 
     // Punto de partida: nada en carga, sin HD y con toda la escena a la vista.
     await waitUntil(() => lod.getStats().loading === 0, 30000);
+    options.stopZoom();
     camera.setZoom(options.minZoom);
     camera.centerOn(target.x, target.y);
     options.clampCameraScroll();
@@ -61,12 +66,12 @@ export const runLodBenchmark = async (
 
     const transitionsBefore = lod.getTransitionCount();
 
-    while (camera.zoom < scenario.zoom - 1e-3) {
+    while (options.getZoomTarget() < scenario.zoom - 1e-3) {
         camera.preRender();
         const screenX = (target.x - camera.worldView.x) * camera.zoom;
         const screenY = (target.y - camera.worldView.y) * camera.zoom;
         // El último clic se recorta para terminar justo en el zoom del escenario.
-        const deltaY = Math.max(-100, -Math.log(scenario.zoom / camera.zoom) / 0.008);
+        const deltaY = Math.max(-100, -Math.log(scenario.zoom / options.getZoomTarget()) / 0.008);
         options.zoomAtScreen(screenX, screenY, deltaY);
         await wait(100);
     }
