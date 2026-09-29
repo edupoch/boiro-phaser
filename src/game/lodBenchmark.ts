@@ -16,6 +16,8 @@ export type LodBenchmarkOptions = {
     name: string;
     // Añade un parámetro a las URL para que la red no se sirva desde la caché HTTP.
     bustCache: boolean;
+    // Conserva los blobs precargados (medir con precarga) en vez de vaciarlos (medir sin precarga).
+    keepBlobs: boolean;
     minZoom: number;
     getObject: (label: string) => { x: number; y: number } | undefined;
     zoomAtScreen: (screenX: number, screenY: number, deltaY: number) => void;
@@ -54,7 +56,7 @@ export const runLodBenchmark = async (
     camera.centerOn(target.x, target.y);
     options.clampCameraScroll();
     await wait(300);
-    lod.resetForBenchmark(options.bustCache);
+    lod.resetForBenchmark(options.bustCache, options.keepBlobs);
     await wait(500);
 
     const transitionsBefore = lod.getTransitionCount();
@@ -70,13 +72,17 @@ export const runLodBenchmark = async (
     }
 
     await waitUntil(() => lod.getTransitionCount() > transitionsBefore, 35000);
+    lod.endBenchmark();
 
     const stats = lod.getStats();
     const result = {
         escenario: options.name,
+        precarga: options.keepBlobs,
         zoom: scenario.zoom,
         hastaHdMs: stats.lastTransition?.ms,
         peorFrameMs: stats.lastTransition?.worstFrame,
+        subidasEnPeorFrame: stats.lastTransition?.worstFrameUploads,
+        msSubidaEnPeorFrame: stats.lastTransition?.worstFrameUploadMs,
         timeout: stats.lastTransition?.timedOut ?? true,
         chunks: stats.network?.count,
         redP50: stats.network?.p50,

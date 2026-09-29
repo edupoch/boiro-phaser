@@ -1,5 +1,7 @@
 import * as Phaser from 'phaser';
 
+import { HdBlobStore } from './HdBlobStore';
+
 // Nivel de detalle (LOD) de los sprites.
 //
 // Los atlas a 1x están siempre cargados. Con zoom alto, cada sprite visible cambia a su versión HD
@@ -10,6 +12,11 @@ import * as Phaser from 'phaser';
 //   mismo Image, así que input, animaciones y profundidad no se ven afectados.
 // - Sprites de varios chunks: un Container con los chunks copia la transformación del objeto base
 //   cada frame y se dibuja justo encima de él; el base se oculta mientras la HD está completa.
+//
+// Los PNG se descargan a través de HdBlobStore, que además los precarga todos en segundo plano
+// (solo los bytes, sin decodificar), así que al hacer zoom la red normalmente ya no interviene.
+// Se decodifican con createImageBitmap (fuera del hilo principal) y se suben a la GPU poco a poco
+// (uploadBudgetMs por frame), para que la llegada de la HD no congele el juego en equipos lentos.
 
 export type HdChunk = {
     key: string;
@@ -57,11 +64,24 @@ const MAX_SAMPLES = 2000;
 const TRANSITION_IDLE_MS = 1500;
 const TRANSITION_TIMEOUT_MS = 30000;
 
-type LoadTiming = { requested: number; loaded?: number; upload?: number };
+type LoadTiming = { requested: number; blobReady?: number; upload?: number };
 
-type Transition = { start: number; lastInput: number; worstFrame: number };
+type Transition = {
+    start: number;
+    lastInput: number;
+    worstFrame: number;
+    // Subidas a la GPU que cayeron en el peor frame y su coste síncrono total.
+    worstFrameUploads: number;
+    worstFrameUploadMs: number;
+};
 
-export type TransitionResult = { ms: number; worstFrame: number; timedOut: boolean };
+export type TransitionResult = {
+    ms: number;
+    worstFrame: number;
+    worstFrameUploads: number;
+    worstFrameUploadMs: number;
+    timedOut: boolean;
+};
 
 type Summary = { count: number; p50: number; p95: number; max: number };
 
@@ -96,6 +116,42 @@ const expand = (rect: Rect, marginX: number, marginY: number): Rect => ({
     height: rect.height + marginY * 2,
 });
 
+// Phaser 4 sube las texturas con UNPACK_FLIP_Y y UNPACK_PREMULTIPLY_ALPHA, pero WebGL ignora ambos
+// con ImageBitmap: hay que pedirlos al decodificar.
+const BITMAP_OPTIONS: ImageBitmapOptions = { imageOrientation: 'flipY', premultiplyAlpha: 'premultiply' };
+
+// Comprueba una vez que el navegador respeta imageOrientation (si no, la HD saldría volteada):
+// un bitmap de 1×2 con rojo arriba y azul abajo debe quedar con el azul arriba.
+const checkBitmapSupport = async (): Promise<boolean> => {
+    if (typeof createImageBitmap !== 'function') {
+        return false;
+    }
+
+    try {
+        const source = document.createElement('canvas');
+        source.width = 1;
+        source.height = 2;
+        const sourceContext = source.getContext('2d')!;
+        sourceContext.fillStyle = '#ff0000';
+        sourceContext.fillRect(0, 0, 1, 1);
+        sourceContext.fillStyle = '#0000ff';
+        sourceContext.fillRect(0, 1, 1, 1);
+
+        const bitmap = await createImageBitmap(source, BITMAP_OPTIONS);
+        const target = document.createElement('canvas');
+        target.width = 1;
+        target.height = 2;
+        const targetContext = target.getContext('2d')!;
+        targetContext.drawImage(bitmap, 0, 0);
+        bitmap.close();
+
+        const [red, , blue] = targetContext.getImageData(0, 0, 1, 1).data;
+        return blue > red;
+    } catch {
+        return false;
+    }
+};
+
 const chunkRect = (entry: LodEntry, chunk: HdChunk): Rect => ({
     x: entry.bounds.x + chunk.x,
     y: entry.bounds.y + chunk.y,
@@ -116,8 +172,14 @@ export type SpriteLodOptions = {
     budgetBytes?: number;
     // Fracción del presupuesto que se conserva en caché mientras la HD está desactivada.
     idleBudgetRatio?: number;
-    // Chunks que se piden a la vez al loader.
+    // Chunks que se piden (descarga + decodificación) a la vez.
     maxConcurrentLoads?: number;
+    // Subidas a la GPU por frame: al menos una y, mientras no se pase de uploadBudgetMs,
+    // hasta maxUploadsPerFrame. En equipos lentos sale una por frame; en rápidos, varias.
+    maxUploadsPerFrame?: number;
+    uploadBudgetMs?: number;
+    // false: decodifica y sube con el loader de Phaser, en el hilo principal (para comparar).
+    useImageBitmap?: boolean;
     // Cada cuánto se recalcula qué chunks hacen falta (ms).
     updateInterval?: number;
 };
@@ -137,8 +199,18 @@ export class SpriteLod
     private lastUpdate = -Infinity;
     private dirty = true;
     private inflight = 0;
-    // Sufijo de URL para forzar la descarga en el benchmark (sin caché HTTP).
-    private urlSuffix = '';
+    private readonly blobs = new HdBlobStore();
+    // Object URL de cada chunk en carga, para revocarlo al terminar.
+    private readonly objectUrls = new Map<string, string>();
+    private destroyed = false;
+    private readonly bitmapSupport: Promise<boolean>;
+    // Chunks ya decodificados esperando su turno para subir a la GPU.
+    private readonly uploadQueue: { key: string; bitmap: ImageBitmap }[] = [];
+    // Bitmap de cada textura HD subida (Phaser lo conserva como fuente); se cierra al liberarla.
+    private readonly bitmaps = new Map<string, ImageBitmap>();
+    // Subidas desde el último frame, para atribuir los frames largos.
+    private frameUploads = 0;
+    private frameUploadMs = 0;
     private readonly timings = new Map<string, LoadTiming>();
     private readonly samples = { network: [] as number[], process: [] as number[], upload: [] as number[] };
     private transition: Transition | null = null;
@@ -156,15 +228,24 @@ export class SpriteLod
             budgetBytes: 768 * 1024 * 1024,
             idleBudgetRatio: 0.25,
             maxConcurrentLoads: 6,
+            maxUploadsPerFrame: 4,
+            uploadBudgetMs: 4,
+            useImageBitmap: true,
             updateInterval: 100,
             ...options,
         };
 
+        this.bitmapSupport = this.options.useImageBitmap ? checkBitmapSupport() : Promise.resolve(false);
+        if (METRICS && this.options.useImageBitmap) {
+            this.bitmapSupport.then((supported) => {
+                if (!supported) {
+                    console.warn('[SpriteLod] createImageBitmap no disponible o sin imageOrientation: se usa el loader');
+                }
+            });
+        }
+
         scene.load.on(Phaser.Loader.Events.FILE_COMPLETE, this.handleFileComplete, this);
         scene.load.on(Phaser.Loader.Events.FILE_LOAD_ERROR, this.handleFileError, this);
-        if (METRICS) {
-            scene.load.on(Phaser.Loader.Events.FILE_LOAD, this.handleFileLoad, this);
-        }
         scene.events.once(Phaser.Scenes.Events.SHUTDOWN, this.destroy, this);
     }
 
@@ -188,11 +269,28 @@ export class SpriteLod
         }
 
         this.entries.push(entry);
+
+        for (const chunk of chunks) {
+            this.blobs.add(
+                chunk.key,
+                `${this.options.basePath}${chunk.file}`,
+                bounds.x + chunk.x + chunk.width / 2,
+                bounds.y + chunk.y + chunk.height / 2,
+            );
+        }
+    }
+
+    // Empieza a descargar en segundo plano todos los chunks registrados.
+    startBackgroundDownload (): void
+    {
+        this.blobs.start();
     }
 
     update (time: number): void
     {
         const camera = this.scene.cameras.main;
+
+        this.blobs.update(this.inflight > 0 || this.queue.length > 0, camera.midPoint.x, camera.midPoint.y);
 
         // La transformación de los Container HD se copia cada frame para seguir las animaciones.
         for (const entry of this.entries) {
@@ -202,8 +300,18 @@ export class SpriteLod
         }
 
         if (METRICS && this.transition) {
-            this.transition.worstFrame = Math.max(this.transition.worstFrame, this.scene.game.loop.rawDelta);
+            // rawDelta es la duración del frame anterior, que incluye las subidas contadas desde entonces.
+            const delta = this.scene.game.loop.rawDelta;
+            if (delta > this.transition.worstFrame) {
+                this.transition.worstFrame = delta;
+                this.transition.worstFrameUploads = this.frameUploads;
+                this.transition.worstFrameUploadMs = this.frameUploadMs;
+            }
         }
+        this.frameUploads = 0;
+        this.frameUploadMs = 0;
+
+        this.processUploads();
 
         if (!this.dirty && time - this.lastUpdate < this.options.updateInterval) {
             return;
@@ -307,38 +415,153 @@ export class SpriteLod
 
     private pumpQueue (): void
     {
-        let added = false;
-
         while (this.inflight < this.options.maxConcurrentLoads && this.queue.length > 0) {
             const { chunk } = this.queue.shift()!;
             this.queuedKeys.delete(chunk.key);
             this.textures.set(chunk.key, { status: 'loading', bytes: 0, lastUsed: this.scene.time.now });
             this.pendingFrames.set(chunk.key, chunk.frame);
-            const file = new Phaser.Loader.FileTypes.ImageFile(
-                this.scene.load,
-                chunk.key,
-                `${this.options.basePath}${chunk.file}${this.urlSuffix}`,
-            );
-            if (METRICS) {
-                this.instrument(file);
-            }
-            this.scene.load.addFile(file);
             this.inflight += 1;
-            added = true;
+            if (METRICS) {
+                this.timings.set(chunk.key, { requested: performance.now() });
+            }
+
+            this.blobs.load(chunk.key).then(
+                (blob) => this.loadTexture(chunk.key, blob),
+                () => this.failLoad(chunk.key, chunk.file),
+            );
+        }
+    }
+
+    // Con el blob ya en memoria: se decodifica fuera del hilo principal y se encola para subir.
+    private loadTexture (key: string, blob: Blob): void
+    {
+        if (this.destroyed) {
+            return;
         }
 
-        if (added && !this.scene.load.isLoading()) {
+        if (METRICS) {
+            const timing = this.timings.get(key);
+            if (timing) {
+                timing.blobReady = performance.now();
+            }
+        }
+
+        this.bitmapSupport
+            .then((supported) => {
+                if (!supported) {
+                    throw new Error('ImageBitmap no soportado');
+                }
+                return createImageBitmap(blob, BITMAP_OPTIONS);
+            })
+            .then(
+                (bitmap) => {
+                    if (this.destroyed || this.textures.get(key)?.status !== 'loading') {
+                        bitmap.close();
+                        return;
+                    }
+                    this.uploadQueue.push({ key, bitmap });
+                },
+                () => this.loadTextureWithLoader(key, blob),
+            );
+    }
+
+    // Sube a la GPU texturas decodificadas dentro del presupuesto de tiempo del frame.
+    private processUploads (): void
+    {
+        const frameStart = performance.now();
+
+        for (let i = 0; i < this.options.maxUploadsPerFrame && this.uploadQueue.length > 0; i += 1) {
+            if (i > 0 && performance.now() - frameStart >= this.options.uploadBudgetMs) {
+                break;
+            }
+
+            const { key, bitmap } = this.uploadQueue.shift()!;
+            const start = performance.now();
+            // Phaser acepta cualquier fuente con width/height que texImage2D admita.
+            this.scene.textures.addImage(key, bitmap as unknown as HTMLImageElement);
+            const upload = performance.now() - start;
+            this.bitmaps.set(key, bitmap);
+            this.recordUpload(key, upload);
+            this.finishTexture(key);
+        }
+    }
+
+    private recordUpload (key: string, upload: number): void
+    {
+        this.frameUploads += 1;
+        this.frameUploadMs += upload;
+        const timing = this.timings.get(key);
+        if (timing) {
+            timing.upload = upload;
+        }
+    }
+
+    // Alternativa sin createImageBitmap: el loader de Phaser decodifica y sube en el hilo principal.
+    private loadTextureWithLoader (key: string, blob: Blob): void
+    {
+        if (this.destroyed) {
+            return;
+        }
+
+        const url = URL.createObjectURL(blob);
+        this.objectUrls.set(key, url);
+        const file = new Phaser.Loader.FileTypes.ImageFile(this.scene.load, key, url);
+        if (METRICS) {
+            this.instrument(file);
+        }
+        this.scene.load.addFile(file);
+
+        if (!this.scene.load.isLoading()) {
             this.scene.load.start();
+        }
+    }
+
+    private failLoad (key: string, path: string): void
+    {
+        if (this.destroyed) {
+            return;
+        }
+
+        const state = this.textures.get(key);
+        console.warn(`[SpriteLod] No se pudo cargar ${path}`);
+        this.inflight -= 1;
+        if (state) {
+            state.status = 'error';
+        }
+        this.pendingFrames.delete(key);
+        this.timings.delete(key);
+        this.pumpQueue();
+    }
+
+    private closeBitmap (key: string): void
+    {
+        this.bitmaps.get(key)?.close();
+        this.bitmaps.delete(key);
+    }
+
+    private revokeObjectUrl (key: string): void
+    {
+        const url = this.objectUrls.get(key);
+        if (url) {
+            URL.revokeObjectURL(url);
+            this.objectUrls.delete(key);
         }
     }
 
     private handleFileComplete (key: string, type: string): void
     {
-        const state = this.textures.get(key);
-        if (type !== 'image' || !state) {
+        if (type !== 'image' || !this.textures.has(key)) {
             return;
         }
 
+        this.revokeObjectUrl(key);
+        this.finishTexture(key);
+    }
+
+    // La textura ya está en la GPU: se configura y se pone a disposición de los sprites.
+    private finishTexture (key: string): void
+    {
+        const state = this.textures.get(key)!;
         this.inflight -= 1;
         const texture = this.scene.textures.get(key);
         const frame = this.pendingFrames.get(key)!;
@@ -374,8 +597,9 @@ export class SpriteLod
             return;
         }
 
-        console.warn(`[SpriteLod] No se pudo cargar ${file.url}`);
+        console.warn(`[SpriteLod] No se pudo decodificar ${file.key}`);
         this.inflight -= 1;
+        this.revokeObjectUrl(file.key);
         state.status = 'error';
         this.timings.delete(file.key);
         this.pendingFrames.delete(file.key);
@@ -567,6 +791,7 @@ export class SpriteLod
             }
 
             this.scene.textures.remove(key);
+            this.closeBitmap(key);
             this.textures.delete(key);
             this.totalBytes -= state.bytes;
         }
@@ -585,7 +810,7 @@ export class SpriteLod
         if (this.transition) {
             this.transition.lastInput = now;
         } else {
-            this.transition = { start: now, lastInput: now, worstFrame: 0 };
+            this.transition = { start: now, lastInput: now, worstFrame: 0, worstFrameUploads: 0, worstFrameUploadMs: 0 };
         }
         this.dirty = true;
     }
@@ -601,7 +826,13 @@ export class SpriteLod
             return;
         }
 
-        this.lastTransition = { ms: Math.round(elapsed), worstFrame: Math.round(transition.worstFrame), timedOut };
+        this.lastTransition = {
+            ms: Math.round(elapsed),
+            worstFrame: Math.round(transition.worstFrame),
+            worstFrameUploads: transition.worstFrameUploads,
+            worstFrameUploadMs: Math.round(transition.worstFrameUploadMs),
+            timedOut,
+        };
         this.transitionCount += 1;
         this.transition = null;
     }
@@ -615,44 +846,35 @@ export class SpriteLod
     // texImage2D y generateMipmap (Phaser 4 sube la textura en el constructor de TextureSource).
     private instrument (file: Phaser.Loader.FileTypes.ImageFile): void
     {
-        this.timings.set(file.key, { requested: performance.now() });
-
         const addToCache = file.addToCache;
         file.addToCache = () => {
             const start = performance.now();
             addToCache.call(file);
-            const timing = this.timings.get(file.key);
-            if (timing) {
-                timing.upload = performance.now() - start;
-            }
+            this.recordUpload(file.key, performance.now() - start);
         };
-    }
-
-    private handleFileLoad (file: Phaser.Loader.File): void
-    {
-        const timing = this.timings.get(file.key);
-        if (timing) {
-            timing.loaded = performance.now();
-        }
     }
 
     private recordTiming (key: string): void
     {
         const timing = this.timings.get(key);
         this.timings.delete(key);
-        if (!timing || timing.loaded === undefined || timing.upload === undefined) {
+        if (!timing || timing.blobReady === undefined || timing.upload === undefined) {
             return;
         }
 
         const complete = performance.now();
-        pushSample(this.samples.network, timing.loaded - timing.requested);
-        // Del blob al Image listo para subir (la decodificación puede ocurrir aquí o dentro de texImage2D).
-        pushSample(this.samples.process, complete - timing.loaded - timing.upload);
+        // Red: hasta tener el blob (casi 0 si ya estaba precargado).
+        pushSample(this.samples.network, timing.blobReady - timing.requested);
+        // Proceso: espera al loader y del blob al Image listo para subir
+        // (la decodificación puede ocurrir aquí o dentro de texImage2D).
+        pushSample(this.samples.process, complete - timing.blobReady - timing.upload);
         pushSample(this.samples.upload, timing.upload);
     }
 
     // Vuelve al estado inicial para el benchmark: sin texturas HD ni métricas previas.
-    resetForBenchmark (bustCache: boolean): void
+    // Con keepBlobs se conserva lo precargado (medir con precarga); si no, se vacía y la descarga
+    // en segundo plano se pausa hasta endBenchmark() (medir sin precarga).
+    resetForBenchmark (bustCache: boolean, keepBlobs: boolean): void
     {
         if (!METRICS) {
             return;
@@ -673,8 +895,13 @@ export class SpriteLod
         this.samples.upload.length = 0;
         this.transition = null;
         this.lastTransition = null;
-        this.urlSuffix = bustCache ? `?bench=${Date.now()}` : '';
+        this.blobs.reset(!keepBlobs, keepBlobs, bustCache ? `?bench=${Date.now()}` : '');
         this.dirty = true;
+    }
+
+    endBenchmark (): void
+    {
+        this.blobs.setEnabled(true);
     }
 
     getTransitionCount (): number
@@ -692,6 +919,7 @@ export class SpriteLod
         process?: Summary;
         upload?: Summary;
         lastTransition?: TransitionResult | null;
+        blobs: ReturnType<HdBlobStore['getStats']>;
     }
     {
         const stats = {
@@ -700,6 +928,7 @@ export class SpriteLod
             megabytes: Math.round(this.totalBytes / (1024 * 1024)),
             loading: this.inflight,
             queued: this.queue.length,
+            blobs: this.blobs.getStats(),
         };
 
         if (!METRICS) {
@@ -719,12 +948,21 @@ export class SpriteLod
     {
         this.scene.load.off(Phaser.Loader.Events.FILE_COMPLETE, this.handleFileComplete, this);
         this.scene.load.off(Phaser.Loader.Events.FILE_LOAD_ERROR, this.handleFileError, this);
-        this.scene.load.off(Phaser.Loader.Events.FILE_LOAD, this.handleFileLoad, this);
+        this.destroyed = true;
+        this.blobs.destroy();
+        for (const { bitmap } of this.uploadQueue) {
+            bitmap.close();
+        }
+        this.uploadQueue.length = 0;
+        for (const key of [...this.objectUrls.keys()]) {
+            this.revokeObjectUrl(key);
+        }
 
         for (const key of this.textures.keys()) {
             if (this.scene.textures.exists(key)) {
                 this.scene.textures.remove(key);
             }
+            this.closeBitmap(key);
         }
 
         this.textures.clear();

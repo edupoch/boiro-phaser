@@ -27,6 +27,7 @@ T1 Medición (métricas + escenario reproducible)
  ├── Checkpoint A: línea base en 3 condiciones → decidir orden
  │
  ├── T2 HdBlobStore (descarga en segundo plano) ──────────┐
+ │    └── T2b Subida sin tirones (createImageBitmap)      │
  │                                                        │
  ├── T3 Fundido: sprites de varios chunks (Container)     │
  │    └── T4 Fundido: sprites de un chunk (overlay)       │
@@ -66,22 +67,40 @@ T2, T3/T4 y T5 son independientes entre sí. T5 toca solo `GameScene.ts` y se pu
 **Estimated scope:** S
 
 ### Checkpoint A: Línea base
-- [ ] Tabla de línea base rellenada (3 escenarios × 3 condiciones)
-- [ ] Presupuesto de memoria validado en el Mac: comparar `?lodBudget=768` con `?lodBudget=384` (peor frame, pérdida de contexto) y decidir el valor por defecto. Lo que se decida puede ir en una tarea aparte (presupuesto fijo más bajo o calculado según la pantalla); no se mezcla con T2.
-- [ ] Decisión con el humano: si la subida y la decodificación dominan claramente sobre la red, se adelantan T3/T4 y se valora añadir la idea 5 (decodificar con `createImageBitmap` en un worker) antes de T2
+- [x] Tabla de línea base rellenada (3 escenarios × 3 condiciones)
+- [x] Presupuesto de memoria validado en el Mac (sin pérdida de contexto; se mantienen 768 MB, ver las conclusiones): comparar `?lodBudget=768` con `?lodBudget=384` (peor frame, pérdida de contexto) y decidir el valor por defecto. Lo que se decida puede ir en una tarea aparte (presupuesto fijo más bajo o calculado según la pantalla); no se mezcla con T2.
+- [x] Decisión con el humano (se añade la T2b después de la T2): si la subida y la decodificación dominan claramente sobre la red, se adelantan T3/T4 y se valora añadir la idea 5 (decodificar con `createImageBitmap` en un worker) antes de T2
 
-| Escenario | Local | Regular 4G / LTE | Mac de referencia |
+**Línea base (2026-09-29, GitHub Pages con `?lodDebug`)**: `hastaHdMs` / `peorFrameMs` (chunks, MB)
+
+| Escenario | Equipo de desarrollo | Equipo de desarrollo, Regular 4G / LTE | Mac, `lodBudget=768` | Mac, `lodBudget=384` |
+|---|---|---|---|---|
+| Pádel | 1102 / 83 (60, 313) | 3282 / 66 (55, 287) | 2219 / 183 (30, 160) | 2451 / 250 (31, 165) |
+| Faro | 1254 / 100 (70, 363) | 2419 / 84 (70, 363) | 2706 / 349 (34, 176) | 1791 / 200 (28, 144) |
+| Mar | 2155 / 83 (148, 750) | 8287 / 66 (147, 747) | 4041 / 349 (51, 263) | 3843 / 648 (51, 263) |
+
+Por chunk (p50 / p95, ms):
+
+| | Red | Proceso | Subida |
 |---|---|---|---|
-| Pádel | | | |
-| Faro | | | |
-| Mar | | | |
+| Equipo de desarrollo | 46–56 / 80–96 | 24–27 / 63–69 | 5 / 9–10 |
+| Regular 4G / LTE | 77–114 / 639–991 | 8–11 / 39–45 | 5 / 8–10 |
+| Mac | 190–301 / 355–606 | 42–104 / 176–319 | 16–20 / 34–62 |
+
+Sin `webglcontextlost` ni errores en ninguna condición.
+
+**Conclusiones y decisiones (Checkpoint A):**
+- **Con mala conexión domina la red** (p95 de ~1 s por chunk y 8,3 s en el mar). La T2 sigue siendo la primera tarea.
+- **En el Mac, el problema principal son los tirones**: frames de 350–650 ms. La subida es 3–4 veces más cara que en el equipo de desarrollo y el proceso tiene un p95 de ~300 ms. Ni la precarga ni el fundido lo arreglan, así que se añade la **T2b** (decodificar fuera del hilo principal y limitar las subidas por frame) justo después de la T2.
+- **Presupuesto: se mantiene en 768 MB por defecto.** No hubo pérdida de contexto. El benchmark empieza con la caché vacía, así que no ejercita el presupuesto: `evict` nunca libera lo necesario para la vista, y el presupuesto solo limita la caché de lo que ya no se ve. Se valida en el Checkpoint B moviéndose por el mapa a zoom alto en el Mac.
+- **El número de chunks por vista depende de la pantalla**: en el equipo de desarrollo hacen falta 2–3 veces más que en el Mac. En el mar, la vista del equipo de desarrollo ya ocupa 750 MB.
 
 **Cómo medir.** En DEV (`npm run dev-nolog`) o en GitHub Pages con `?lodDebug` en la URL (por ejemplo, `?lodDebug&lodBudget=384`), después de "Comecemos", ejecutar en la consola `await __lodBench('padel')`, `await __lodBench('faro')` y `await __lodBench('mar')`. Anotar `hastaHdMs` y `peorFrameMs`, y como detalle red, proceso y subida (p50/p95) y `memoriaMb`. Por defecto se evita la caché HTTP. Con `__lodBench('padel', { bustCache: false })` se usa. Para el presupuesto: `?lodBudget=384` en la URL.
 
 **Referencia en Chromium sin interfaz (2026-09-29, 1280×800, renderizado por software; no sirve como línea base).** Pádel: 3,2–3,3 s (35 chunks, 184 MB). Faro: 5,1 s (57 chunks, 299 MB). Mar: 9,1 s (99 chunks, 505 MB). Peor frame de 230–270 ms. Por chunk: red ~370 ms, proceso ~115 ms, subida ~5,5 ms. Cuatro ejecuciones del pádel quedan a menos del 6 % entre sí.
 - **La "red" de ~370 ms sirviendo en local no es red.** Sale igual con la caché HTTP caliente (el servidor de Vite responde `Cache-Control: no-cache`, así que revalida en cada petición). Es sobre todo espera: el loader arranca las peticiones en su tick de `update`, y aquí el hilo principal está saturado con frames de 100–250 ms. En hardware real será distinto, así que hay que medirlo allí.
 - **El tiempo total lo marcan los lotes**: 35 chunks ÷ 6 simultáneos × ~0,5 s ≈ 3 s. Además de la precarga, `maxConcurrentLoads` y el coste por chunk en el hilo principal pueden pesar tanto como la red. Hay que revisarlo en el Checkpoint A con los datos reales.
-- **El mar a 1.2 necesita 505 MB de HD.** Con el presupuesto de 384 MB que propusimos para el Mac, esa vista no cabe entera: se quedaría a 1× o entraría en un ciclo de expulsiones. Es un punto a validar en el Checkpoint A.
+- ~~El mar a 1.2 no cabe con 384 MB~~: incorrecto, porque `evict` nunca libera lo necesario para la vista actual (ver las conclusiones del Checkpoint A).
 
 ---
 
@@ -110,6 +129,39 @@ T2, T3/T4 y T5 son independientes entre sí. T5 toca solo `GameScene.ts` y se pu
 - `src/game/scenes/GameScene.ts` (arranque tras registrar los sprites)
 
 **Estimated scope:** M
+
+### Task 2b: Subida sin tirones
+
+**Description:** En el Mac hay frames de 350–650 ms mientras llega la HD. Primero se confirma la causa: se amplían las métricas para registrar, en el peor frame, cuántas texturas se subieron y cuánto tardaron en total. Después, como la T2 ya deja los blobs en manos de `SpriteLod`, se deja de usar el loader de Phaser para la HD: blob → `createImageBitmap` (decodifica fuera del hilo principal) → cola de subida → como mucho N texturas por frame (empezando por 1) con `textures.addImage`, `CLAMP_TO_EDGE` y el frame `hd`, como ahora. Si `createImageBitmap` no está disponible o falla, se vuelve al camino del loader.
+
+**Acceptance criteria:**
+- [ ] En el Mac, el peor frame del benchmark baja claramente respecto a la línea base (objetivo: ≤ 100 ms) en los tres escenarios.
+- [ ] `hastaHdMs` no empeora más de un 20 % en el equipo de desarrollo a cambio de repartir las subidas.
+- [ ] Las texturas HD se siguen viendo sin costuras ni sangrado (bordes de los chunks, mipmaps a zoom mínimo): mismas comprobaciones visuales que en `nitidez-sprites.md`.
+
+**Verification:**
+- [ ] `npx tsc --noEmit` y `npm run build-nolog` sin errores
+- [ ] Manual: repetir el benchmark en el Mac y en el equipo de desarrollo
+
+**Dependencies:** T2
+
+**Files likely touched:**
+- `src/game/SpriteLod.ts`
+
+**Estimated scope:** M
+
+**Estado de T2 y T2b (2026-09-29): implementadas, pendientes de validar en el Mac.**
+- T2: 1064/1064 blobs (26,7 MB) sin peticiones duplicadas. La descarga de fondo se reanuda después del benchmark y con Save-Data no se descarga nada (comprobado en Chromium sin interfaz).
+- T2b: el tope de subidas por frame pasa a ser un presupuesto de tiempo (`uploadBudgetMs` = 4 ms, `maxUploadsPerFrame` = 4, al menos una por frame). Phaser 4 sube con `flipY` y alfa premultiplicado, y WebGL ignora ambos con `ImageBitmap`, así que se piden en `createImageBitmap` y una comprobación de 1×2 píxeles cae al loader si el navegador no respeta la orientación. La captura del pádel a 2.5 es idéntica píxel a píxel a la del loader.
+- Sin interfaz (solo relativo; frames de ~100 ms de base por el renderizado por software):
+
+| | Peor frame | Pádel, con precarga | Pádel, sin precarga | Mar, con precarga |
+|---|---|---|---|---|
+| Loader (`?lodDecoder=loader`) | 183–283 ms | 3,0–3,3 s | 4,5 s | 8,6 s |
+| Bitmap y presupuesto de 4 ms | 117–150 ms | 2,4–2,7 s | 3,5 s | 6,3 s |
+
+- Hallazgo: sin interfaz, la "red" del Checkpoint A en local era sobre todo espera del loader de Phaser. Con la precarga y sin T2b, la espera solo se pasaba al "proceso", y sin precarga empeoraba (4,8 s), porque había dos saltos: `fetch` y luego el loader.
+- Para medir en el Mac: `__lodBench('mar', { keepBlobs: true })` con precarga (esperar a que `__spriteLod.getStats().blobs` llegue a 1064/1064) y `__lodBench('mar')` sin precarga. Para comparar con el camino anterior, `?lodDecoder=loader`. Nuevas columnas: `subidasEnPeorFrame` y `msSubidaEnPeorFrame`.
 
 ### Task 3: Fundido de entrada para sprites de varios chunks
 
