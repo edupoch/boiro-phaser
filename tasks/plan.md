@@ -183,6 +183,8 @@ Sin `webglcontextlost` ni errores en ninguna condición.
 
 **Estimated scope:** S
 
+**Estado de T3 (2026-09-29): implementada y comprobada sin interfaz con `?lodFade=2000`.** El alfa del faro sube de forma lineal de 0 a 1 y el 1× se oculta justo al terminar. Alejar a mitad de fundido (alfa 0,5) oculta la HD y deja el 1× visible. El clic durante el fundido llega una sola vez (Phaser lo entrega solo al objeto de arriba, que lo reenvía). `?lodFade=ms` permite probar otras duraciones a ojo (0 lo desactiva). Pendiente: revisión visual en el Mac.
+
 ### Task 4: Fundido de entrada para sprites de un chunk
 
 **Description:** Para sprites de un chunk (hoy es un `setTexture` directo), durante el fundido se crea una imagen HD temporal justo después del objeto en la lista de dibujado. Esa imagen copia su transformación cada frame, igual que `syncContainer`, y pasa de alfa 0 al alfa del objeto. Al terminar, se hace el `setTexture` actual y se destruye la imagen temporal. Hay que respetar `springAnimating`: si el muelle está en marcha, se espera para empezar el fundido, como ya se espera para el cambio de textura. La imagen temporal no es interactiva, porque el input sigue en el objeto base, que está visible.

@@ -9,7 +9,7 @@ Plan: `tasks/plan.md` · Spec: `docs/ideas/precarga-hd.md`
 ## Fase 2: Quitar la red y disimular
 - [x] T2: `HdBlobStore`, descarga en segundo plano de los 30 MB como blobs (M)
 - [x] T2b: Subida sin tirones: `createImageBitmap` y como mucho N subidas por frame (M), depende de T2 (pendiente de validar en el Mac)
-- [ ] T3: Fundido de entrada para sprites de varios chunks (S)
+- [x] T3: Fundido de entrada para sprites de varios chunks (S)
 - [ ] T4: Fundido de entrada para sprites de un chunk (S), depende de T3
 - [ ] **Checkpoint B**: benchmark frente a la línea base y revisión visual en el Mac de referencia
 

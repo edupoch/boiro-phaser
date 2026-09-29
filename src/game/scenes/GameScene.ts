@@ -158,15 +158,18 @@ export class GameScene extends Phaser.Scene
             this.input.on('pointerup', handlePointerUp);
             this.input.on('wheel', handleWheel);
             // Con LOD_DEBUG, para comparar sin recompilar: ?lodBudget=384 (presupuesto HD en MB),
-            // ?lodUploads=1 (máximo de subidas a la GPU por frame) y ?lodDecoder=loader (decodificar con el loader).
+            // ?lodUploads=1 (máximo de subidas a la GPU por frame), ?lodDecoder=loader (decodificar con el loader)
+            // y ?lodFade=300 (duración del fundido de entrada de la HD en ms; 0 lo desactiva).
             const debugParams = new URLSearchParams(LOD_DEBUG ? window.location.search : '');
             const budgetParam = Number(debugParams.get('lodBudget'));
             const uploadsParam = Number(debugParams.get('lodUploads'));
+            const fadeParam = debugParams.get('lodFade');
             this.spriteLod = new SpriteLod(this, {
                 basePath: 'assets/sprites/',
                 ...(budgetParam > 0 ? { budgetBytes: budgetParam * 1024 * 1024 } : {}),
                 ...(uploadsParam > 0 ? { maxUploadsPerFrame: uploadsParam } : {}),
                 ...(debugParams.get('lodDecoder') === 'loader' ? { useImageBitmap: false } : {}),
+                ...(fadeParam !== null && Number(fadeParam) >= 0 ? { fadeDuration: Number(fadeParam) } : {}),
             });
 
             if (LOD_DEBUG) {
