@@ -26,6 +26,23 @@ export type LodBenchmarkOptions = {
     stopZoom: () => void;
     zoomAtScreen: (screenX: number, screenY: number, deltaY: number) => void;
     clampCameraScroll: () => void;
+    // Sin console.table (la batería muestra un resumen al final).
+    quiet?: boolean;
+};
+
+const waitHelpers = (scene: Phaser.Scene) => {
+    const wait = (ms: number) => new Promise((resolve) => scene.time.delayedCall(ms, resolve));
+    const waitUntil = async (condition: () => boolean, timeoutMs: number) => {
+        const start = performance.now();
+        while (!condition()) {
+            if (performance.now() - start > timeoutMs) {
+                return false;
+            }
+            await wait(16);
+        }
+        return true;
+    };
+    return { wait, waitUntil };
 };
 
 export const runLodBenchmark = async (
@@ -42,17 +59,7 @@ export const runLodBenchmark = async (
     }
 
     const camera = scene.cameras.main;
-    const wait = (ms: number) => new Promise((resolve) => scene.time.delayedCall(ms, resolve));
-    const waitUntil = async (condition: () => boolean, timeoutMs: number) => {
-        const start = performance.now();
-        while (!condition()) {
-            if (performance.now() - start > timeoutMs) {
-                return false;
-            }
-            await wait(16);
-        }
-        return true;
-    };
+    const { wait, waitUntil } = waitHelpers(scene);
 
     // Punto de partida: nada en carga, sin HD y con toda la escena a la vista.
     await waitUntil(() => lod.getStats().loading === 0, 30000);
@@ -98,6 +105,181 @@ export const runLodBenchmark = async (
         subidaP95: stats.upload?.p95,
         memoriaMb: stats.megabytes,
     };
-    console.table(result);
+    if (!options.quiet) {
+        console.table(result);
+    }
     return result;
+};
+
+export type LodSuiteOptions = Omit<LodBenchmarkOptions, 'name' | 'bustCache' | 'keepBlobs' | 'quiet'> & {
+    // Repeticiones de cada escenario en cada configuración.
+    repeats: number;
+};
+
+// Recorre el mapa a zoom 2 en tres pasadas horizontales, con la HD precargada, para ver cómo se
+// comporta la caché con un presupuesto dado: pico de memoria, peor frame y frames lentos.
+const runPanTest = async (scene: Phaser.Scene, lod: SpriteLod, options: LodSuiteOptions, budgetMb: number) =>
+{
+    const camera = scene.cameras.main;
+    const { wait, waitUntil } = waitHelpers(scene);
+    const worldWidth = 6804;
+    const worldHeight = 3742.2;
+    const speed = 900; // unidades del mundo por segundo
+
+    await waitUntil(() => lod.getStats().loading === 0, 30000);
+    lod.setDebugOptions({ budgetBytes: budgetMb * 1024 * 1024 });
+    lod.resetForBenchmark(false, true);
+    options.stopZoom();
+    camera.setZoom(2);
+
+    let peakMb = 0;
+    let worstFrame = 0;
+    let slowFrames = 0;
+    let frames = 0;
+    const onUpdate = () => {
+        const delta = scene.game.loop.rawDelta;
+        frames += 1;
+        worstFrame = Math.max(worstFrame, delta);
+        if (delta > 100) {
+            slowFrames += 1;
+        }
+        peakMb = Math.max(peakMb, lod.getStats().megabytes);
+    };
+
+    const rows = [0.2, 0.5, 0.8];
+    camera.centerOn(0, worldHeight * rows[0]);
+    options.clampCameraScroll();
+    await wait(1500);
+    scene.events.on(Phaser.Scenes.Events.UPDATE, onUpdate);
+
+    const start = performance.now();
+    for (let row = 0; row < rows.length; row += 1) {
+        const leftToRight = row % 2 === 0;
+        let x = leftToRight ? 0 : worldWidth;
+        let last = performance.now();
+        while (leftToRight ? x < worldWidth : x > 0) {
+            await wait(16);
+            const now = performance.now();
+            x += (leftToRight ? 1 : -1) * speed * (now - last) / 1000;
+            last = now;
+            camera.centerOn(x, worldHeight * rows[row]);
+            options.clampCameraScroll();
+        }
+    }
+
+    scene.events.off(Phaser.Scenes.Events.UPDATE, onUpdate);
+    const final = lod.getStats();
+
+    return {
+        presupuestoMb: budgetMb,
+        duracionS: Math.round((performance.now() - start) / 100) / 10,
+        picoMb: peakMb,
+        finalMb: final.megabytes,
+        peorFrameMs: Math.round(worstFrame),
+        framesLentos: slowFrames,
+        frames,
+    };
+};
+
+const environment = (scene: Phaser.Scene, lod: SpriteLod) =>
+{
+    const renderer = scene.game.renderer as Phaser.Renderer.WebGL.WebGLRenderer;
+    const gl = renderer.gl;
+    const debugInfo = gl?.getExtension('WEBGL_debug_renderer_info');
+    const options = lod.getDebugOptions();
+
+    return {
+        navegador: navigator.userAgent,
+        gpu: gl ? gl.getParameter(debugInfo ? debugInfo.UNMASKED_RENDERER_WEBGL : gl.RENDERER) : 'canvas',
+        maxTexture: gl?.getParameter(gl.MAX_TEXTURE_SIZE),
+        pantalla: `${screen.width}x${screen.height}`,
+        juego: `${scene.scale.width}x${scene.scale.height}`,
+        dpr: devicePixelRatio,
+        presupuestoMb: Math.round(options.budgetBytes / (1024 * 1024)),
+        subidasPorFrame: options.maxUploadsPerFrame,
+        msSubidaPorFrame: options.uploadBudgetMs,
+    };
+};
+
+// Batería completa para medir en otro equipo con un solo comando: espera a la precarga, pasa los
+// tres escenarios en cuatro configuraciones, prueba la caché con dos presupuestos y devuelve un JSON.
+export const runLodSuite = async (
+    scene: Phaser.Scene,
+    lod: SpriteLod,
+    options: LodSuiteOptions,
+): Promise<string> =>
+{
+    const { wait, waitUntil } = waitHelpers(scene);
+    const initial = lod.getDebugOptions();
+    const log = (message: string) => console.log(`%c[lodSuite] ${message}`, 'color:#0a7');
+
+    log('Esperando a que termine la precarga de la HD…');
+    let lastLogged = -1;
+    await waitUntil(() => {
+        const { blobs, total } = lod.getStats().blobs;
+        const tenth = Math.floor(10 * blobs / total);
+        if (tenth !== lastLogged) {
+            lastLogged = tenth;
+            log(`Precarga: ${blobs}/${total}`);
+        }
+        return blobs === total;
+    }, 600000);
+
+    const configs: { name: string; debug: Parameters<SpriteLod['setDebugOptions']>[0]; keepBlobs: boolean }[] = [
+        { name: 'todo', debug: { useZoomIntent: true, useImageBitmap: true }, keepBlobs: true },
+        { name: 'sinIntencion', debug: { useZoomIntent: false, useImageBitmap: true }, keepBlobs: true },
+        { name: 'loader', debug: { useZoomIntent: true, useImageBitmap: false }, keepBlobs: true },
+        // La última, porque vacía los blobs precargados.
+        { name: 'sinPrecarga', debug: { useZoomIntent: true, useImageBitmap: true }, keepBlobs: false },
+    ];
+
+    const runs: Record<string, unknown>[] = [];
+    const pans = [];
+    for (const config of configs) {
+        // La prueba de caché va antes de la configuración sin precarga, mientras la HD sigue precargada.
+        if (!config.keepBlobs) {
+            lod.setDebugOptions({ useZoomIntent: true, useImageBitmap: true });
+            for (const budgetMb of [768, 384]) {
+                log(`Recorrido del mapa a zoom 2 con presupuesto de ${budgetMb} MB…`);
+                pans.push(await runPanTest(scene, lod, options, budgetMb));
+            }
+        }
+
+        lod.setDebugOptions({ ...config.debug, budgetBytes: initial.budgetBytes });
+        for (const name of Object.keys(SCENARIOS)) {
+            for (let i = 0; i < options.repeats; i += 1) {
+                log(`${config.name} · ${name} (${i + 1}/${options.repeats})`);
+                const result = await runLodBenchmark(scene, lod, {
+                    ...options,
+                    name,
+                    bustCache: true,
+                    keepBlobs: config.keepBlobs,
+                    quiet: true,
+                });
+                runs.push({ config: config.name, ...result });
+                await wait(300);
+            }
+        }
+    }
+
+    lod.setDebugOptions({
+        useZoomIntent: initial.useZoomIntent,
+        useImageBitmap: initial.useImageBitmap,
+        budgetBytes: initial.budgetBytes,
+    });
+
+    const keys = ['hastaHdMs', 'peorFrameMs', 'subidasEnPeorFrame', 'msSubidaEnPeorFrame', 'chunks', 'redP50', 'procesoP50', 'subidaP50', 'subidaP95', 'memoriaMb', 'timeout'];
+    const compact = runs.map((run) => ({
+        config: run.config,
+        escenario: run.escenario,
+        ...Object.fromEntries(keys.map((key) => [key, run[key]])),
+    }));
+
+    console.table(compact);
+    console.table(pans);
+
+    const json = JSON.stringify({ equipo: environment(scene, lod), escenarios: compact, recorridos: pans });
+    log('Listo. Si lo lanzaste con copy(await __lodSuite()), el resultado ya está en el portapapeles; si no, copia la línea siguiente (clic derecho → Copiar mensaje) y pégala en el chat:');
+    console.log(json);
+    return json;
 };

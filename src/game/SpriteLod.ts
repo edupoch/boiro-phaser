@@ -256,7 +256,8 @@ export class SpriteLod
             ...options,
         };
 
-        this.bitmapSupport = this.options.useImageBitmap ? checkBitmapSupport() : Promise.resolve(false);
+        // Se comprueba siempre, para poder alternar el decodificador en caliente (setDebugOptions).
+        this.bitmapSupport = checkBitmapSupport();
         if (METRICS && this.options.useImageBitmap) {
             this.bitmapSupport.then((supported) => {
                 if (!supported) {
@@ -570,6 +571,11 @@ export class SpriteLod
             if (timing) {
                 timing.blobReady = performance.now();
             }
+        }
+
+        if (!this.options.useImageBitmap) {
+            this.loadTextureWithLoader(key, blob);
+            return;
         }
 
         this.bitmapSupport
@@ -1029,6 +1035,25 @@ export class SpriteLod
     endBenchmark (): void
     {
         this.blobs.setEnabled(true);
+    }
+
+    // Para la batería de medición: cambia en caliente opciones que normalmente se fijan por URL.
+    setDebugOptions (options: Partial<Pick<Required<SpriteLodOptions>, 'useZoomIntent' | 'useImageBitmap' | 'budgetBytes'>>): void
+    {
+        if (!METRICS) {
+            return;
+        }
+
+        Object.assign(this.options, options);
+        if (options.useZoomIntent === false) {
+            this.intent = null;
+        }
+        this.dirty = true;
+    }
+
+    getDebugOptions (): Readonly<Required<SpriteLodOptions>>
+    {
+        return { ...this.options };
     }
 
     getTransitionCount (): number

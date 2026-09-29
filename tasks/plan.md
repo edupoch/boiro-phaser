@@ -271,6 +271,14 @@ Sin `webglcontextlost` ni errores en ninguna condición.
 - **Cambio respecto al plan:** la primera versión solo creaba intención con un objetivo ≥ `enterZoom`. Con rueda de ratón (0,19 → 0,42 → 0,94 → 2,1), el zoom logarítmico cruza 1,05 unos ~15 ms después del tercer clic, así que no había tiempo para anticiparse (0 texturas listas al cruzar, igual que sin intención). Ahora un giro hacia dentro por debajo del umbral también crea intención, con la vista que habrá a `enterZoom` alrededor del cursor. Como las vistas ancladas están anidadas, contiene la de cualquier zoom mayor, y se carga de lo más cercano al cursor a lo más lejano sin pasar del presupuesto de reposo.
 - Sin interfaz (con precarga salvo que se indique): pádel 3,6–4,5 s frente a 4,4–5,3 s sin intención, faro 4,4 frente a 4,9 s, mar **5,7 frente a 9,4 s**, pádel sin precarga 3,9 frente a 5,4 s. Al cruzar 1,05 hay hasta 10 texturas listas frente a 0. Pico por debajo del umbral ≤ 48 MB (presupuesto de reposo: 192 MB). Mover el ratón sin rueda no carga nada.
 
+**Medición con un solo comando (Checkpoints B y C).** Abre `…/?lodDebug`, entra al juego y ejecuta en la consola `copy(await __lodSuite())`. Tarda unos 5 minutos:
+1. espera a la precarga, mostrando el progreso;
+2. pasa pádel, faro y mar 2 veces en cuatro configuraciones (todo, sin intención, loader, sin precarga);
+3. recorre el mapa a zoom 2 con 768 y 384 MB (pico de memoria, peor frame, frames > 100 ms);
+4. deja en el portapapeles un JSON con los datos del equipo y los resultados.
+
+Las configuraciones se cambian en caliente con `SpriteLod.setDebugOptions`, así que no hace falta recargar la página.
+
 ### Checkpoint C: Completo
 - [ ] Tabla final frente a la línea base en los tres escenarios y las tres condiciones
 - [ ] Prueba en el Mac de referencia (Firefox) y en el kiosko

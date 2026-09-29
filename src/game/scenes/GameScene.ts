@@ -219,8 +219,8 @@ export class GameScene extends Phaser.Scene
             });
 
             if (LOD_DEBUG) {
-                // Para depurar el LOD desde la consola: __spriteLod.getStats() y await __lodBench('padel')
-                const debugWindow = window as unknown as { __spriteLod?: SpriteLod; __lodBench?: unknown };
+                // Para depurar el LOD desde la consola: __spriteLod.getStats(), await __lodBench('padel') y await __lodSuite()
+                const debugWindow = window as unknown as { __spriteLod?: SpriteLod; __lodBench?: unknown; __lodSuite?: unknown };
                 debugWindow.__spriteLod = this.spriteLod;
                 const lod = this.spriteLod;
                 debugWindow.__lodBench = async (
@@ -232,6 +232,19 @@ export class GameScene extends Phaser.Scene
                         name,
                         bustCache: options.bustCache ?? true,
                         keepBlobs: options.keepBlobs ?? false,
+                        minZoom,
+                        getObject: (label) => this.spriteImageMap.get(label),
+                        getZoomTarget,
+                        stopZoom,
+                        zoomAtScreen,
+                        clampCameraScroll,
+                    });
+                };
+                // Batería completa para medir en otro equipo: await __lodSuite()
+                debugWindow.__lodSuite = async (options: { repeats?: number } = {}) => {
+                    const { runLodSuite } = await import('../lodBenchmark');
+                    return runLodSuite(this, lod, {
+                        repeats: options.repeats ?? 2,
                         minZoom,
                         getObject: (label) => this.spriteImageMap.get(label),
                         getZoomTarget,
