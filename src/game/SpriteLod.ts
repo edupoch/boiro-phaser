@@ -48,6 +48,42 @@ type TextureState = {
 
 const HD_FRAME = 'hd';
 
+// Métricas de latencia de la HD y herramientas de depuración: siempre en desarrollo y, en producción,
+// solo con ?lodDebug en la URL (para medir en otros equipos desde GitHub Pages).
+export const LOD_DEBUG = import.meta.env.DEV || new URLSearchParams(window.location.search).has('lodDebug');
+const METRICS = LOD_DEBUG;
+const MAX_SAMPLES = 2000;
+// Un acercamiento que no llega a activar la HD se descarta tras este tiempo sin rueda.
+const TRANSITION_IDLE_MS = 1500;
+const TRANSITION_TIMEOUT_MS = 30000;
+
+type LoadTiming = { requested: number; loaded?: number; upload?: number };
+
+type Transition = { start: number; lastInput: number; worstFrame: number };
+
+export type TransitionResult = { ms: number; worstFrame: number; timedOut: boolean };
+
+type Summary = { count: number; p50: number; p95: number; max: number };
+
+const summarize = (samples: number[]): Summary => {
+    if (samples.length === 0) {
+        return { count: 0, p50: 0, p95: 0, max: 0 };
+    }
+
+    const sorted = [...samples].sort((a, b) => a - b);
+    const at = (q: number) => sorted[Math.min(sorted.length - 1, Math.floor(q * sorted.length))];
+    const round = (value: number) => Math.round(value * 10) / 10;
+
+    return { count: sorted.length, p50: round(at(0.5)), p95: round(at(0.95)), max: round(sorted[sorted.length - 1]) };
+};
+
+const pushSample = (samples: number[], value: number): void => {
+    samples.push(value);
+    if (samples.length > MAX_SAMPLES) {
+        samples.shift();
+    }
+};
+
 const intersects = (a: Rect, b: Rect): boolean => a.x < b.x + b.width
     && a.x + a.width > b.x
     && a.y < b.y + b.height
@@ -101,6 +137,13 @@ export class SpriteLod
     private lastUpdate = -Infinity;
     private dirty = true;
     private inflight = 0;
+    // Sufijo de URL para forzar la descarga en el benchmark (sin caché HTTP).
+    private urlSuffix = '';
+    private readonly timings = new Map<string, LoadTiming>();
+    private readonly samples = { network: [] as number[], process: [] as number[], upload: [] as number[] };
+    private transition: Transition | null = null;
+    private lastTransition: TransitionResult | null = null;
+    private transitionCount = 0;
 
     constructor (scene: Phaser.Scene, options: SpriteLodOptions)
     {
@@ -119,6 +162,9 @@ export class SpriteLod
 
         scene.load.on(Phaser.Loader.Events.FILE_COMPLETE, this.handleFileComplete, this);
         scene.load.on(Phaser.Loader.Events.FILE_LOAD_ERROR, this.handleFileError, this);
+        if (METRICS) {
+            scene.load.on(Phaser.Loader.Events.FILE_LOAD, this.handleFileLoad, this);
+        }
         scene.events.once(Phaser.Scenes.Events.SHUTDOWN, this.destroy, this);
     }
 
@@ -155,6 +201,10 @@ export class SpriteLod
             }
         }
 
+        if (METRICS && this.transition) {
+            this.transition.worstFrame = Math.max(this.transition.worstFrame, this.scene.game.loop.rawDelta);
+        }
+
         if (!this.dirty && time - this.lastUpdate < this.options.updateInterval) {
             return;
         }
@@ -174,6 +224,9 @@ export class SpriteLod
             }
             // Sin HD en pantalla solo guardamos una caché pequeña para volver a acercar rápido.
             this.evict(new Set(), this.options.budgetBytes * this.options.idleBudgetRatio);
+            if (METRICS && this.transition && performance.now() - this.transition.lastInput > TRANSITION_IDLE_MS) {
+                this.transition = null;
+            }
             return;
         }
 
@@ -185,6 +238,7 @@ export class SpriteLod
             view.height * this.options.prefetchMargin,
         );
         const neededKeys = new Set<string>();
+        let allVisibleReady = true;
 
         for (const entry of this.entries) {
             if (!intersects(entry.bounds, neededRect)) {
@@ -212,6 +266,14 @@ export class SpriteLod
             }
 
             this.setHdActive(entry, anyVisible && complete);
+
+            if (METRICS && anyVisible && !entry.hdActive && !this.hasError(entry)) {
+                allVisibleReady = false;
+            }
+        }
+
+        if (METRICS && this.transition) {
+            this.checkTransition(allVisibleReady);
         }
 
         for (const key of neededKeys) {
@@ -252,7 +314,15 @@ export class SpriteLod
             this.queuedKeys.delete(chunk.key);
             this.textures.set(chunk.key, { status: 'loading', bytes: 0, lastUsed: this.scene.time.now });
             this.pendingFrames.set(chunk.key, chunk.frame);
-            this.scene.load.image(chunk.key, `${this.options.basePath}${chunk.file}`);
+            const file = new Phaser.Loader.FileTypes.ImageFile(
+                this.scene.load,
+                chunk.key,
+                `${this.options.basePath}${chunk.file}${this.urlSuffix}`,
+            );
+            if (METRICS) {
+                this.instrument(file);
+            }
+            this.scene.load.addFile(file);
             this.inflight += 1;
             added = true;
         }
@@ -277,6 +347,10 @@ export class SpriteLod
         // Texturas potencia de 2 => Phaser usaría REPEAT y el borde se mezclaría con el lado opuesto.
         texture.setWrap(Phaser.Textures.WrapMode.CLAMP_TO_EDGE, Phaser.Textures.WrapMode.CLAMP_TO_EDGE);
         texture.add(HD_FRAME, 0, frame.x, frame.y, frame.w, frame.h);
+
+        if (METRICS) {
+            this.recordTiming(key);
+        }
 
         const source = texture.source[0];
         state.status = 'ready';
@@ -303,6 +377,7 @@ export class SpriteLod
         console.warn(`[SpriteLod] No se pudo cargar ${file.url}`);
         this.inflight -= 1;
         state.status = 'error';
+        this.timings.delete(file.key);
         this.pendingFrames.delete(file.key);
         this.pumpQueue();
     }
@@ -497,14 +572,146 @@ export class SpriteLod
         }
     }
 
-    getStats (): { enabled: boolean; textures: number; megabytes: number; loading: number; queued: number }
+    // --- Métricas (solo en desarrollo) ---
+
+    // Marca el inicio de un gesto de acercamiento; el tiempo hasta HD completa se mide desde el primero.
+    beginTransition (): void
     {
-        return {
+        if (!METRICS) {
+            return;
+        }
+
+        const now = performance.now();
+        if (this.transition) {
+            this.transition.lastInput = now;
+        } else {
+            this.transition = { start: now, lastInput: now, worstFrame: 0 };
+        }
+        this.dirty = true;
+    }
+
+    private checkTransition (allVisibleReady: boolean): void
+    {
+        const transition = this.transition!;
+        const elapsed = performance.now() - transition.start;
+        const timedOut = elapsed > TRANSITION_TIMEOUT_MS;
+
+        // Con la cola vacía y nada en vuelo, lo visible no va a cambiar hasta que se mueva la cámara.
+        if (!(allVisibleReady && this.inflight === 0 && this.queue.length === 0) && !timedOut) {
+            return;
+        }
+
+        this.lastTransition = { ms: Math.round(elapsed), worstFrame: Math.round(transition.worstFrame), timedOut };
+        this.transitionCount += 1;
+        this.transition = null;
+    }
+
+    private hasError (entry: LodEntry): boolean
+    {
+        return entry.chunks.some((chunk) => this.textures.get(chunk.key)?.status === 'error');
+    }
+
+    // Mide la parte síncrona de añadir la textura: creación del Image decodificado en WebGL,
+    // texImage2D y generateMipmap (Phaser 4 sube la textura en el constructor de TextureSource).
+    private instrument (file: Phaser.Loader.FileTypes.ImageFile): void
+    {
+        this.timings.set(file.key, { requested: performance.now() });
+
+        const addToCache = file.addToCache;
+        file.addToCache = () => {
+            const start = performance.now();
+            addToCache.call(file);
+            const timing = this.timings.get(file.key);
+            if (timing) {
+                timing.upload = performance.now() - start;
+            }
+        };
+    }
+
+    private handleFileLoad (file: Phaser.Loader.File): void
+    {
+        const timing = this.timings.get(file.key);
+        if (timing) {
+            timing.loaded = performance.now();
+        }
+    }
+
+    private recordTiming (key: string): void
+    {
+        const timing = this.timings.get(key);
+        this.timings.delete(key);
+        if (!timing || timing.loaded === undefined || timing.upload === undefined) {
+            return;
+        }
+
+        const complete = performance.now();
+        pushSample(this.samples.network, timing.loaded - timing.requested);
+        // Del blob al Image listo para subir (la decodificación puede ocurrir aquí o dentro de texImage2D).
+        pushSample(this.samples.process, complete - timing.loaded - timing.upload);
+        pushSample(this.samples.upload, timing.upload);
+    }
+
+    // Vuelve al estado inicial para el benchmark: sin texturas HD ni métricas previas.
+    resetForBenchmark (bustCache: boolean): void
+    {
+        if (!METRICS) {
+            return;
+        }
+
+        this.queue.length = 0;
+        this.queuedKeys.clear();
+        this.evict(new Set(), 0);
+
+        for (const [key, state] of this.textures) {
+            if (state.status === 'error') {
+                this.textures.delete(key);
+            }
+        }
+
+        this.samples.network.length = 0;
+        this.samples.process.length = 0;
+        this.samples.upload.length = 0;
+        this.transition = null;
+        this.lastTransition = null;
+        this.urlSuffix = bustCache ? `?bench=${Date.now()}` : '';
+        this.dirty = true;
+    }
+
+    getTransitionCount (): number
+    {
+        return this.transitionCount;
+    }
+
+    getStats (): {
+        enabled: boolean;
+        textures: number;
+        megabytes: number;
+        loading: number;
+        queued: number;
+        network?: Summary;
+        process?: Summary;
+        upload?: Summary;
+        lastTransition?: TransitionResult | null;
+    }
+    {
+        const stats = {
             enabled: this.hdEnabled,
             textures: [...this.textures.values()].filter((state) => state.status === 'ready').length,
             megabytes: Math.round(this.totalBytes / (1024 * 1024)),
             loading: this.inflight,
             queued: this.queue.length,
+        };
+
+        if (!METRICS) {
+            return stats;
+        }
+
+        return {
+            ...stats,
+            network: summarize(this.samples.network),
+            process: summarize(this.samples.process),
+            upload: summarize(this.samples.upload),
+            lastTransition: this.lastTransition,
         };
     }
 
@@ -512,6 +719,7 @@ export class SpriteLod
     {
         this.scene.load.off(Phaser.Loader.Events.FILE_COMPLETE, this.handleFileComplete, this);
         this.scene.load.off(Phaser.Loader.Events.FILE_LOAD_ERROR, this.handleFileError, this);
+        this.scene.load.off(Phaser.Loader.Events.FILE_LOAD, this.handleFileLoad, this);
 
         for (const key of this.textures.keys()) {
             if (this.scene.textures.exists(key)) {

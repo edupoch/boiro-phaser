@@ -1,7 +1,7 @@
 import * as Phaser from 'phaser';
 
 import { EventBus } from '../EventBus';
-import { HdChunk, SpriteLod } from '../SpriteLod';
+import { HdChunk, LOD_DEBUG, SpriteLod } from '../SpriteLod';
 
 type SpriteBounds = {
     x: number;
@@ -118,12 +118,8 @@ export class GameScene extends Phaser.Scene
                 this.input.setDefaultCursor('grab');
             };
 
-            const handleWheel = (
-                pointer: Phaser.Input.Pointer,
-                _gameObjects: Phaser.GameObjects.GameObject[],
-                _deltaX: number,
-                deltaY: number,
-            ) => {
+            // Zoom multiplicativo manteniendo fijo el punto del mundo que hay bajo (screenX, screenY).
+            const zoomAtScreen = (screenX: number, screenY: number, deltaY: number) => {
                 const zoomSensitivity = 0.008;
                 const zoomFactor = Math.exp(-deltaY * zoomSensitivity);
                 const previousZoom = this.camera.zoom;
@@ -133,26 +129,59 @@ export class GameScene extends Phaser.Scene
                     return;
                 }
 
-                const worldPoint = pointer.positionToCamera(this.camera) as Phaser.Math.Vector2;
+                if (nextZoom > previousZoom) {
+                    this.spriteLod?.beginTransition();
+                }
+
+                const worldPoint = this.camera.getWorldPoint(screenX, screenY);
 
                 this.camera.setZoom(nextZoom);
                 this.camera.preRender();
 
-                const worldPointAfterZoom = pointer.positionToCamera(this.camera) as Phaser.Math.Vector2;
+                const worldPointAfterZoom = this.camera.getWorldPoint(screenX, screenY);
                 this.camera.scrollX += worldPoint.x - worldPointAfterZoom.x;
                 this.camera.scrollY += worldPoint.y - worldPointAfterZoom.y;
                 clampCameraScroll();
+            };
+
+            const handleWheel = (
+                pointer: Phaser.Input.Pointer,
+                _gameObjects: Phaser.GameObjects.GameObject[],
+                _deltaX: number,
+                deltaY: number,
+            ) => {
+                zoomAtScreen(pointer.x, pointer.y, deltaY);
             };
 
             this.input.on('pointermove', handlePointerMove);
             this.input.on('pointerdown', handlePointerDown);
             this.input.on('pointerup', handlePointerUp);
             this.input.on('wheel', handleWheel);
-            this.spriteLod = new SpriteLod(this, { basePath: 'assets/sprites/' });
+            // Con LOD_DEBUG, ?lodBudget=384 cambia el presupuesto HD (MB) para comparar sin recompilar.
+            const budgetParam = LOD_DEBUG
+                ? Number(new URLSearchParams(window.location.search).get('lodBudget'))
+                : NaN;
+            this.spriteLod = new SpriteLod(this, {
+                basePath: 'assets/sprites/',
+                ...(budgetParam > 0 ? { budgetBytes: budgetParam * 1024 * 1024 } : {}),
+            });
 
-            if (import.meta.env.DEV) {
-                // Para depurar el LOD desde la consola: __spriteLod.getStats()
-                (window as unknown as { __spriteLod?: SpriteLod }).__spriteLod = this.spriteLod;
+            if (LOD_DEBUG) {
+                // Para depurar el LOD desde la consola: __spriteLod.getStats() y await __lodBench('padel')
+                const debugWindow = window as unknown as { __spriteLod?: SpriteLod; __lodBench?: unknown };
+                debugWindow.__spriteLod = this.spriteLod;
+                const lod = this.spriteLod;
+                debugWindow.__lodBench = async (name: string = 'padel', options: { bustCache?: boolean } = {}) => {
+                    const { runLodBenchmark } = await import('../lodBenchmark');
+                    return runLodBenchmark(this, lod, {
+                        name,
+                        bustCache: options.bustCache ?? true,
+                        minZoom,
+                        getObject: (label) => this.spriteImageMap.get(label),
+                        zoomAtScreen,
+                        clampCameraScroll,
+                    });
+                };
             }
 
             this.events.once('shutdown', () => {
