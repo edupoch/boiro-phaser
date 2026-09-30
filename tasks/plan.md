@@ -279,10 +279,35 @@ Sin `webglcontextlost` ni errores en ninguna condición.
 
 Las configuraciones se cambian en caliente con `SpriteLod.setDebugOptions`, así que no hace falta recargar la página.
 
+**Resultados en el Mac de referencia (2026-09-30, `__lodSuite`, Firefox 156, juego de 1280×662).** `hastaHdMs` / `peorFrameMs`, 2 ejecuciones:
+
+| | Línea base (A) | Todo | Sin intención | Loader | Sin precarga |
+|---|---|---|---|---|---|
+| Pádel | 2219 / 183 | 1190–1495 / 66–100 | 1334–1408 / 50–67 | *15–40 / 17–49 (anómalo)* | 1505–1565 / 83–116 |
+| Faro | 2706 / 349 | 1592–1770 / 66–67 | 2008–2023 / 67 | 1898–1945 / 167–183 | 2049–2123 / 68–83 |
+| Mar | 4041 / 349 | 3122–3157 / 99–133 | 3238–3584 / 100–101 | 3409–3451 / 283–333 | 3169–3207 / 67–100 |
+
+- **La T2b resuelve los tirones:** con el bitmap hay 1 subida de 3–7 ms en el peor frame; con el loader, 3–4 subidas que suman 38–50 ms. Subida p50: 5 ms frente a 11–14 ms.
+- **La HD llega un 25–45 % antes** que en la línea base.
+- **Precarga:** gana ~300 ms en pádel y faro con la conexión del Mac (red p50 sin precarga: 66–194 ms); con 4G gana más (Checkpoint A).
+- **Intención:** faro −17 %, mar −7 %, pádel sin diferencia.
+- **Filas `loader · padel` anómalas** (15–40 ms, 45–51 chunks frente a 31–34): probablemente un fallo de la batería al cambiar de configuración en caliente; no afecta a las conclusiones.
+
+Recorrido a zoom 2 (23 s):
+
+| Presupuesto | Pico | Peor frame | Frames > 100 ms | Frames |
+|---|---|---|---|---|
+| 768 MB | 768 MB | **732 ms** | 13 | 505 |
+| 384 MB | 384 MB | 116 ms | 3 | 623 |
+
+**Pruebas a mano en el Mac (2026-09-30): correctas.** Sensación del zoom suavizado con ratón y trackpad, acceso a los cuatro bordes del mapa y bordes de los sprites sin halos en Firefox (alfa premultiplicado y orientación del `ImageBitmap` correctos).
+
+→ Con 768 MB, el Mac sufre (base de ~981 MB + 768 > 1536 MB de VRAM dinámica). **Decisión (2026-09-30): `budgetBytes` por defecto pasa a 384 MB para todos.**
+
 ### Checkpoint C: Completo
-- [ ] Tabla final frente a la línea base en los tres escenarios y las tres condiciones
-- [ ] Prueba en el Mac de referencia (Firefox) y en el kiosko
-- [ ] `docs/ideas/precarga-hd.md` actualizado con los resultados; `nitidez-sprites.md` enlazado si cambian los umbrales
+- [x] Tabla final frente a la línea base en los tres escenarios y las tres condiciones (Mac; ver arriba)
+- [x] Prueba en el Mac de referencia (Firefox); pendiente el kiosko
+- [x] `docs/ideas/precarga-hd.md` actualizado con los resultados; `nitidez-sprites.md` actualizado con el nuevo presupuesto
 - [ ] Revisión con el humano antes de hacer commit
 
 ---

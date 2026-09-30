@@ -19,12 +19,12 @@ Cambiamos el objetivo de "que la HD ya esté siempre" (imposible sin tenerlo tod
 Primero se mide, porque qué pieza importa más depende de si domina la red o la CPU/GPU.
 
 ## Key Assumptions to Validate
-- [ ] **Qué fase domina el retraso.** Instrumentar `SpriteLod` con los tiempos desde la petición hasta `FILE_COMPLETE` y el coste de la subida a la GPU, y ampliar `getStats()`. Medir en local, con DevTools en "Slow 4G" y con la CPU ralentizada 4× y 6×.
-- [ ] **La descarga en segundo plano no se nota al jugar.** Medir el frame time durante la descarga con la CPU ralentizada. La descarga se pausa mientras haya chunks pendientes bajo demanda.
-- [ ] **Con los blobs precargados, el tiempo hasta la HD baja claramente con mala conexión.** Comparar antes y después con "Slow 4G".
-- [ ] **El zoom suavizado deja margen suficiente.** Medir cuántos ms pasan entre el primer evento de rueda y el momento en que el zoom supera 1.6, frente a lo que tarda en estar lista la HD de la vista de destino.
-- [ ] **El fundido se percibe mejor que el corte.** Comparación visual en el pádel, el faro (Container interactivo) y los árboles (animados).
-- [ ] **30 MB de blobs en RAM son asumibles.** Comprobar la memoria de la pestaña en el equipo modesto.
+- [x] **Qué fase domina el retraso.** Depende del equipo. Con mala conexión domina la red (p95 de ~1 s por chunk con 4G). En el Mac, además de esperar, había tirones: frames de 350–650 ms por subidas en el hilo principal. Ver el Checkpoint A en `tasks/plan.md`.
+- [x] **La descarga en segundo plano no se nota al jugar.** Concurrencia 2, pausa con carga bajo demanda, 0 peticiones duplicadas y respeta Save-Data.
+- [x] **Con los blobs precargados, el tiempo hasta la HD baja.** La red por chunk pasa a ~2 ms. En el Mac gana ~300 ms en pádel y faro con su conexión, y más con conexiones peores.
+- [x] **El zoom suavizado deja margen suficiente**, pero solo si la intención nace desde el primer giro hacia dentro, también por debajo de 1,05. Con objetivo ≥ 1,05, el zoom logarítmico cruza el umbral ~15 ms después del clic. Ganancia en el Mac: faro −17 %, mar −7 %.
+- [x] ~~**El fundido se percibe mejor que el corte.**~~ Refutado: aporta poco y en las sombras semitransparentes se ve raro. Descartado.
+- [x] **30 MB de blobs en RAM son asumibles** (26,7 MB reales; el Mac tiene 8 GB).
 
 ## MVP Scope
 **Dentro:**
@@ -47,6 +47,21 @@ Primero se mide, porque qué pieza importa más depende de si domina la red o la
 - **Kiosko**: tiene conexión, así que la persistencia entre sesiones no es necesaria y los blobs en memoria bastan.
 - **Fundido: descartado (2026-09-29).** Se implementó para los sprites de varios chunks y funcionaba, pero aporta poco. En zonas semitransparentes, como las sombras, se ve raro, porque mientras dura se ven a la vez la HD y el 1× y la zona se oscurece. Se revirtió y la variante para sprites de un chunk se canceló.
 - **Añadido tras el Checkpoint A: subida sin tirones.** Se decodifica con `createImageBitmap` y hay un presupuesto de subida por frame, porque en el Mac de referencia había frames de 350–650 ms (ver `tasks/plan.md`).
+
+## Resultado (2026-09-30)
+En el Mac de referencia (MacBook Pro de 2012, Firefox 156), comparado con la línea base:
+
+| hasta HD / peor frame | Antes | Después |
+|---|---|---|
+| Pádel | 2219 ms / 183 ms | 1190–1495 / 66–100 |
+| Faro | 2706 / 349 | 1592–1770 / 66–67 |
+| Mar | 4041 / 349 | 3122–3157 / 99–133 |
+
+- **Lo que más aporta es la subida sin tirones** (`createImageBitmap` y 4 ms de subida por frame): los frames de 350 ms desaparecen.
+- La precarga y la intención de zoom adelantan la HD un poco más, sobre todo con mala conexión.
+- **El presupuesto HD por defecto baja de 768 a 384 MB:** con 768, recorrer el mapa a zoom 2 en el Mac daba un tirón de 732 ms; con 384, de 116 ms.
+- De paso se corrigió un fallo previo en los límites de la cámara con zoom: no se llegaba a todos los bordes del mapa.
+- Pruebas a mano correctas: sensación del zoom, bordes y sin halos en Firefox.
 
 ## Open Questions
 - Ninguna bloqueante. Tras el paso 0 hay que decidir si se añade la decodificación en un worker.

@@ -37,7 +37,7 @@ Cómo funciona:
   - Un sprite pasa a HD cuando todo lo visible está cargado; si falta algo, vuelve a 1×, así que nunca hay huecos.
   - Sprites de un chunk: se cambia la textura del mismo `Image`, sin tocar input, animaciones ni profundidad.
   - Sprites de varios chunks: un `Container` copia la transformación del base cada frame y va justo después de él en la lista de dibujado. Si el base es interactivo, reenvía los eventos de puntero.
-  - Memoria: presupuesto LRU de 768 MB, que baja a 192 MB al alejar.
+  - Memoria: presupuesto LRU de 384 MB (antes 768; ver `precarga-hd.md`), que baja a 96 MB al alejar.
 
 ## Key Assumptions to Validate
 - [x] `CLAMP_TO_EDGE` y el padding eliminan la línea (validado: un detector de columnas claras encuentra la línea en la captura original y no en el render nuevo): regenerar, abrir la vista del pádel y comparar con `docs/bugs/linea_blanca.png`
@@ -47,7 +47,7 @@ Cómo funciona:
 - [x] Sin costuras entre chunks HD: detector de líneas en pádel (2.5), mar (1.2) y árboles (1.6)
 - [x] Un objeto interactivo de varios chunks sigue recibiendo clics en HD (faro a zoom 2)
 - [x] Al alejar se libera la HD: 187 MB en caché (presupuesto de 192 MB)
-- [ ] Pico de memoria aceptable en el hardware real: en headless la vista más cargada (mar a 1.2) llega al presupuesto de 768 MB
+- [x] Pico de memoria aceptable en el hardware real: con 768 MB, el Mac de referencia daba tirones de hasta 732 ms al recorrer el mapa; con 384 MB, 116 ms (ver `precarga-hd.md`)
 - [ ] Sin tirones al subir texturas HD en el hardware real (en headless no se puede medir)
 - [x] Los mipmaps no sangran a zoom mínimo: con 2 px de extrude aparecía una costura clara en el tile del mar a zoom ~0.24 (niveles de mip 2-3); con 16 px desaparece
 

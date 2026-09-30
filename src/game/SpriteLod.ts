@@ -245,7 +245,10 @@ export class SpriteLod
             exitZoom: 0.95,
             prefetchMargin: 0.25,
             visibleMargin: 32,
-            budgetBytes: 768 * 1024 * 1024,
+            // 384 MB: con 768, el Mac de referencia (HD 4000, 1536 MB de VRAM dinámica y ~981 MB de base a 1×)
+            // daba tirones de hasta 732 ms al recorrer el mapa. La vista actual nunca se expulsa, y lo expulsado
+            // se recarga desde los blobs precargados, sin red.
+            budgetBytes: 384 * 1024 * 1024,
             idleBudgetRatio: 0.25,
             maxConcurrentLoads: 6,
             maxUploadsPerFrame: 4,
