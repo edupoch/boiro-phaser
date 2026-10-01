@@ -1,4 +1,5 @@
-import type { ReactNode } from 'react';
+import { useSyncExternalStore, type ReactNode } from 'react';
+import { getVolumes, setVolume, subscribeVolumes, type VolumeKey } from '../game/audioSettings';
 import { CLUES, getEntry, type CompanyId } from '../game/content/catalog';
 import { TEXTS } from '../game/content/texts';
 import { LEVEL_COUNT, objectiveFound, type GameState, type Objective } from '../game/play/gameReducer';
@@ -55,6 +56,38 @@ function ObjectiveRow({ objective }: { objective: Objective }) {
       <div className="min-w-0 flex-1">{content}</div>
       {done && <span className="text-lg font-extrabold text-lime-600" aria-label="Completado">✓</span>}
     </li>
+  );
+}
+
+const volumeSliders: { key: VolumeKey; label: string }[] = [
+  { key: 'ambient', label: TEXTS.settings.ambient },
+  { key: 'effects', label: TEXTS.settings.effects },
+  // Todavía no hay música: el valor se guarda, pero no suena nada.
+  { key: 'music', label: TEXTS.settings.music },
+];
+
+function SettingsPanel() {
+  const volumes = useSyncExternalStore(subscribeVolumes, getVolumes);
+
+  return (
+    <div className="space-y-5">
+      {volumeSliders.map(({ key, label }) => (
+        <label key={key} className="block">
+          <span className="flex justify-between text-sm font-bold text-sky-700">
+            {label}
+            <span className="font-semibold text-sky-500">{Math.round(volumes[key] * 100)}</span>
+          </span>
+          <input
+            type="range"
+            min={0}
+            max={100}
+            value={Math.round(volumes[key] * 100)}
+            onChange={(event) => setVolume(key, Number(event.target.value) / 100)}
+            className="mt-2 w-full accent-amber-400"
+          />
+        </label>
+      ))}
+    </div>
   );
 }
 
@@ -164,6 +197,8 @@ function Hud({ state, activeTab, onTabClick, onStart, onContinue, onRestart }: H
         {activeTab === 'exploracion' && (
           <p className="text-sm leading-relaxed font-medium text-sky-500">{TEXTS.explore.intro}</p>
         )}
+
+        {activeTab === 'axustes' && <SettingsPanel />}
       </div>
     </div>
   );

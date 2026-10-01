@@ -16,6 +16,6 @@ Plan: `tasks/plan.md` · Spec: `SPEC.md` · Idea: `docs/ideas/mecanicas-xogo.md`
 - [ ] **Checkpoint 2**: juego completo sin audio ni inactividad, y partida cronometrada
 
 ## Fase 3: Kiosko
-- [ ] T7: Audio: `audioSettings.ts`, sliders de Axustes y volúmenes en Phaser y en la HUD (M)
+- [x] T7: Audio: `audioSettings.ts`, sliders de Axustes y volúmenes en Phaser y en la HUD (M)
 - [ ] T8: Reinicio por inactividad con "Segues aí?" y vuelta a la cámara inicial (M)
 - [ ] **Checkpoint 3**: todos los criterios de éxito, prueba en el Mac de referencia y docs actualizados

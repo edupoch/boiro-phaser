@@ -1,5 +1,6 @@
 import * as Phaser from 'phaser';
 
+import { getVolumes, subscribeVolumes } from '../audioSettings';
 import { GAME_CONFIG } from '../config';
 import { getEntryForToken } from '../content/catalog';
 import { spriteToken } from '../content/sprites';
@@ -28,6 +29,9 @@ type PositionedSprite = {
     children?: PositionedSprite[];
     childen?: PositionedSprite[];
 };
+
+const AMBIENT_BASE_VOLUME = 0.5;
+const HOVER_BASE_VOLUME = 0.25;
 
 // Los sprites troceados en tiles se agrupan en un Container para animarse como una sola pieza.
 type SpriteObject = Phaser.GameObjects.Image | Phaser.GameObjects.Container;
@@ -69,10 +73,16 @@ export class GameScene extends Phaser.Scene
         this.input.setDefaultCursor('grab');
         EventBus.emit('game-reset');
 
-        this.sound.add('praia', { loop: true, volume: 0.5 }).play();
+        // Volumen final = volumen base × slider de Axustes.
+        const ambient = this.sound.add('praia', { loop: true, volume: AMBIENT_BASE_VOLUME * getVolumes().ambient });
+        ambient.play();
+        const unsubscribeVolumes = subscribeVolumes((volumes) => {
+            (ambient as Phaser.Sound.WebAudioSound | Phaser.Sound.HTML5AudioSound).setVolume(AMBIENT_BASE_VOLUME * volumes.ambient);
+        });
+        this.events.once('shutdown', unsubscribeVolumes);
 
         // Efectos que pide la interfaz de React (clic de la HUD, acierto, error).
-        const playSfx = (key: string) => this.sound.play(key);
+        const playSfx = (key: string) => this.sound.play(key, { volume: getVolumes().effects });
         EventBus.on('play-sfx', playSfx);
         this.events.once('shutdown', () => EventBus.off('play-sfx', playSfx));
 
@@ -360,7 +370,7 @@ export class GameScene extends Phaser.Scene
                     });
                     spriteImage.on('pointerover', () => {
 
-                        this.sound.play('hover_' + Phaser.Math.Between(1, 4), { volume: 0.25 });
+                        this.sound.play('hover_' + Phaser.Math.Between(1, 4), { volume: HOVER_BASE_VOLUME * getVolumes().effects });
 
                         if (spriteImage.getData('springAnimating')) {
                             return;
