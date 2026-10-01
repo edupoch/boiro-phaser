@@ -126,6 +126,7 @@ Dev:        npm run dev-nolog
 Build:      npm run build-nolog
 Typecheck:  ./node_modules/.bin/tsc --noEmit -p .
 Test:       npm test              # nuevo script: "test": "vitest run"
+E2E:        npm run test:e2e      # con el servidor de desarrollo arrancado; E2E_URL y CHROME_PATH opcionales
 Test watch: npx vitest
 ```
 ESLint no funciona (`.eslintrc.cjs` con ESLint 9) y queda fuera de este trabajo.
@@ -203,7 +204,7 @@ El reducer es puro: el azar llega como semilla en la acción (`{ type: 'start', 
   - `level2Clues ≤` el número de pistas.
   - Al menos una empresa cumple `level3MinObjects`.
 - **Manual en el navegador** (`npm run dev-nolog`): recorrido completo ganando, recorrido perdiendo, arrastre sobre un señuelo sin error, confirmaciones, inactividad con reinicio de cámara y sliders.
-- La HUD y Phaser no tienen tests automáticos.
+- **Pruebas de navegador (`e2e/`, puppeteer-core):** con clics reales sobre el canvas, cubren el modo xogo (arrastre, partida completa con 1 error, derrota), la tabla de modos, Axustes y la inactividad. Usan `__spriteLod` e importan módulos de `/src`, así que solo funcionan contra el servidor de desarrollo.
 
 ## Boundaries
 - **Always:**
@@ -237,6 +238,7 @@ El reducer es puro: el azar llega como semilla en la acción (`{ type: 'start', 
 ## Decisiones durante la implementación
 - **`split.js` exporta como un solo sprite los grupos `ob_*` que cuelgan de la raíz del SVG.** Antes los troceaba como capas, así que el saco y una papeleira no se podían pulsar y contaban de más (10 sacos y 9 papeleiras en vez de 1 y 2). Con la escena actual, ninguna ficha supera el tope de 3.
 - **Las confirmaciones y el aviso de inactividad son estado local de React**, no del reducer, porque no cambian las reglas.
+- **Un toque solo cuenta si empieza y acaba en el canvas.** Phaser escucha el `mouseup` en `window`, así que un clic sobre una confirmación abría la ficha del objeto de debajo (lo destapó `e2e/modes.mjs`).
 - **Hay objetos parcialmente tapados por señuelos** (por ejemplo, un cubo sobre el palet): las zonas pulsables son rectángulos y tocar el señuelo cuenta como error. Queda pendiente de ver en el stand si molesta.
 
 ## Open Questions

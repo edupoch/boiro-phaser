@@ -26,7 +26,8 @@
     "dev-nolog": "vite --config vite/config.dev.mjs",
     "build-nolog": "vite build --config vite/config.prod.mjs",
     "split": "node utils/split.js public/assets/escena.svg public/assets/sprites",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:e2e": "node e2e/run.mjs"
   },
   "dependencies": {
     "@fontsource/jetbrains-mono": "^5.2.8",
@@ -47,6 +48,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "puppeteer-core": "^23.11.1",
     "tailwindcss": "^4.3.1",
     "terser": "^5.28.1",
     "typescript": "~5.7.2",

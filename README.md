@@ -28,6 +28,8 @@ This template has been updated for:
 | `npm run build` | Create a production build in the `dist` folder |
 | `npm run dev-nolog` | Launch a development web server without sending anonymous data (see "About log.js" below) |
 | `npm run build-nolog` | Create a production build in the `dist` folder without sending anonymous data (see "About log.js" below) |
+| `npm test` | Pruebas unitarias (Vitest): catálogo, reglas del juego y volúmenes |
+| `npm run test:e2e` | Pruebas de navegador con clics reales (necesita `npm run dev-nolog` arrancado y Chrome/Chromium; ver `e2e/run.mjs`) |
 
 ## Writing Code
 

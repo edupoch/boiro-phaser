@@ -18,4 +18,5 @@ Plan: `tasks/plan.md` · Spec: `SPEC.md` · Idea: `docs/ideas/mecanicas-xogo.md`
 ## Fase 3: Kiosko
 - [x] T7: Audio: `audioSettings.ts`, sliders de Axustes y volúmenes en Phaser y en la HUD (M)
 - [x] T8: Reinicio por inactividad con "Segues aí?" y vuelta a la cámara inicial (M)
-- [ ] **Checkpoint 3**: todos los criterios de éxito, prueba en el Mac de referencia y docs actualizados
+- [x] Extra: pruebas de navegador en `e2e/` (`npm run test:e2e`); destaparon que un clic sobre una confirmación llegaba al objeto de debajo (corregido)
+- [~] **Checkpoint 3**: criterios de éxito y docs actualizados; **pendiente: prueba en el Mac de referencia (y en el kiosko)**
