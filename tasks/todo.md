@@ -11,7 +11,7 @@ Plan: `tasks/plan.md` · Spec: `SPEC.md` · Idea: `docs/ideas/mecanicas-xogo.md`
 ## Fase 2: Juego jugable
 - [x] Extra (descubierto en T4): `split.js` exporta los grupos `ob_*` de la raíz del SVG como un solo sprite (el saco y una papeleira no se podían pulsar); atlas regenerado
 - [x] T4: Recorrido de acierto de los 3 niveles: `useReducer`, `Hud.tsx`, `FichaModal.tsx` y se borran `GameState.ts` y `ObjectFoundModal.tsx` (M)
-- [ ] T5: Errores, derrota y final con resumen por empresa: `MessageModal.tsx` (M)
+- [x] T5: Errores, derrota y final con resumen por empresa: `MessageModal.tsx` (M)
 - [ ] T6: Modos, pestañas, confirmaciones A y B, y señuelos según el modo (M)
 - [ ] **Checkpoint 2**: juego completo sin audio ni inactividad, y partida cronometrada
 

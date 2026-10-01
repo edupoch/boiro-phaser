@@ -1,6 +1,7 @@
 import { useEffect, useReducer, useRef, useState } from 'react';
 import { IRefPhaserGame, PhaserGame } from './PhaserGame';
 import FichaModal from './components/FichaModal';
+import GameMessages from './components/GameMessages';
 import Hud, { type TabId } from './components/Hud';
 import { EventBus } from './game/EventBus';
 import { createInitialState, gameReducer, type Modal } from './game/play/gameReducer';
@@ -76,6 +77,15 @@ function App()
         setActiveTab('xogo');
     };
 
+    const handlePlayAgain = () => {
+        startGame();
+    };
+
+    const handleExplore = () => {
+        dispatch({ type: 'enterExplore' });
+        setActiveTab('exploracion');
+    };
+
     const modal = state.modal;
 
     return (
@@ -91,6 +101,15 @@ function App()
                     level={state.level}
                     onContinue={() => dispatch({ type: 'closeModal' })}
                     onNextLevel={handleNextLevel}
+                />
+            )}
+            {(modal?.kind === 'wrong' || modal?.kind === 'lost' || modal?.kind === 'won') && (
+                <GameMessages
+                    state={state}
+                    modal={modal}
+                    onContinue={() => dispatch({ type: 'closeModal' })}
+                    onPlayAgain={handlePlayAgain}
+                    onExplore={handleExplore}
                 />
             )}
         </div>
