@@ -4,6 +4,7 @@ import FichaModal from './components/FichaModal';
 import GameMessages from './components/GameMessages';
 import Hud, { type TabId } from './components/Hud';
 import MessageModal from './components/MessageModal';
+import { useIdleReset } from './components/useIdleReset';
 import { TEXTS } from './game/content/texts';
 import { EventBus } from './game/EventBus';
 import { createInitialState, gameReducer, type Modal } from './game/play/gameReducer';
@@ -21,6 +22,8 @@ function App()
     const previousModal = useRef<Modal | null>(null);
     // Confirmación pendiente ("Seguro?"): no cambia las reglas, así que vive en React y no en el reducer.
     const [confirm, setConfirm] = useState<{ message: string; onYes: () => void } | null>(null);
+    // Si la cámara se movió desde el último reinicio (lo avisa GameScene).
+    const cameraMoved = useRef(false);
 
     // Event emitted from the PhaserGame component
     const currentScene = (scene: Phaser.Scene) => {
@@ -31,12 +34,18 @@ function App()
         const handleObjectClicked = (label: string) => dispatch({ type: 'tap', label });
         const handleGameReset = () => dispatch({ type: 'idleReset' });
 
+        const handleCameraMoved = () => {
+            cameraMoved.current = true;
+        };
+
         EventBus.on('object-clicked', handleObjectClicked);
         EventBus.on('game-reset', handleGameReset);
+        EventBus.on('camera-moved', handleCameraMoved);
 
         return () => {
             EventBus.removeListener('object-clicked', handleObjectClicked);
             EventBus.removeListener('game-reset', handleGameReset);
+            EventBus.removeListener('camera-moved', handleCameraMoved);
         };
     }, []);
 
@@ -103,6 +112,18 @@ function App()
         askConfirm(TEXTS.confirm.loseProgress, startGame);
     };
 
+    const idleCountdown = useIdleReset({
+        hasSomethingToReset: () => isGameScene
+            && (state.mode !== 'idle' || state.modal !== null || confirm !== null || activeTab !== 'inicio' || cameraMoved.current),
+        onReset: () => {
+            dispatch({ type: 'idleReset' });
+            setConfirm(null);
+            setActiveTab('inicio');
+            cameraMoved.current = false;
+            EventBus.emit('reset-camera');
+        },
+    });
+
     const modal = state.modal;
 
     return (
@@ -145,6 +166,12 @@ function App()
                     ]}
                 >
                     <p>{confirm.message}</p>
+                </MessageModal>
+            )}
+            {idleCountdown !== null && (
+                // Cualquier toque ya cuenta como actividad y cierra el aviso; el botón es solo el sitio obvio.
+                <MessageModal title={TEXTS.idle.title} buttons={[{ label: TEXTS.idle.stay, onClick: () => undefined }]}>
+                    <p>{TEXTS.idle.countdown(idleCountdown)}</p>
                 </MessageModal>
             )}
         </div>

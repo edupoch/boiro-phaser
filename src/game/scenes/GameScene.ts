@@ -143,6 +143,7 @@ export class GameScene extends Phaser.Scene
                 this.camera.scrollX -= (pointer.x - pointer.prevPosition.x) / this.camera.zoom;
                 this.camera.scrollY -= (pointer.y - pointer.prevPosition.y) / this.camera.zoom;
                 clampCameraScroll();
+                EventBus.emit('camera-moved');
             };
 
             const handlePointerDown = () => {
@@ -198,7 +199,19 @@ export class GameScene extends Phaser.Scene
                 zoomTarget = nextTarget;
                 zoomAnchorX = screenX;
                 zoomAnchorY = screenY;
+                EventBus.emit('camera-moved');
             };
+
+            // Vuelta a la vista inicial cuando el kiosko se reinicia por inactividad.
+            const initialScrollX = this.camera.scrollX;
+            const initialScrollY = this.camera.scrollY;
+            const resetCamera = () => {
+                stopZoom();
+                this.camera.setZoom(initialZoom);
+                this.camera.scrollX = initialScrollX;
+                this.camera.scrollY = initialScrollY;
+            };
+            EventBus.on('reset-camera', resetCamera);
 
             this.stepZoom = (delta: number) => {
                 if (zoomTarget === null) {
@@ -289,6 +302,7 @@ export class GameScene extends Phaser.Scene
                 this.input.off('pointerdown', handlePointerDown);
                 this.input.off('pointerup', handlePointerUp);
                 this.input.off('wheel', handleWheel);
+                EventBus.off('reset-camera', resetCamera);
             });
 
             const renderSpriteNode = (sprite: PositionedSprite) => {
