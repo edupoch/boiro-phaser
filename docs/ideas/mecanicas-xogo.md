@@ -53,7 +53,7 @@ Como es un kiosko, al cabo de un rato sin actividad aparece el aviso "Segues aí
 ## Key Assumptions to Validate
 - [ ] **Una partida completa dura 3–5 minutos.** *Prueba:* cronometrar a 5 personas con los valores por defecto y ajustar X, Y y el tope.
 - [ ] **La gente recuerda al menos 2 empresas al terminar.** *Prueba:* preguntar a la salida "¿qué hace Egalsa?".
-- [ ] **Con una sola empresa, el nivel 3 está equilibrado** (Egalsa ≈ 3 objetos, Oziona ≈ 8). *Prueba:* comparar el tiempo y los errores según la empresa que toque. Si no está equilibrado, subir `nivel3MinObxectos` o pasar a varias empresas.
+- [ ] **Con una sola empresa, el nivel 3 está equilibrado** (con la escena actual: Egalsa 3 objetos, Rotogal 6, JJ Chicolino 7 y Oziona 7). *Prueba:* comparar el tiempo y los errores según la empresa que toque. Si no está equilibrado, subir `nivel3MinObxectos` o pasar a varias empresas.
 - [ ] **Las pistas se entienden sin ayuda.** *Prueba:* observar si la gente se queda bloqueada en el nivel 2.
 - [ ] **Los señuelos como error se sienten justos.** *Prueba:* observar reacciones al primer "Obxecto incorrecto!".
 

@@ -153,9 +153,11 @@ Se eliminan `ObjectFoundModal.tsx` y `GameState.ts`.
 |---|---|---|
 | `object-clicked` | Phaser → React | `label` (solo cuando es un toque) |
 | `mode-changed` | React → Phaser | `'idle' \| 'game' \| 'explore'` |
-| `modal-open-changed` | React → Phaser | `boolean` |
+| `play-sfx` | React → Phaser | `'click' \| 'success' \| 'error'` (todos los efectos suenan en Phaser con el volumen de Axustes) |
+| `camera-moved` | Phaser → React | (sin carga; para saber si hay que devolver la cámara al reiniciar) |
 | `reset-camera` | React → Phaser | (sin carga) |
-| `user-activity` | Phaser → React | (sin carga) |
+
+La actividad del kiosko se detecta con listeners en `window` (que también reciben los eventos del canvas), así que no hace falta un evento `user-activity`. Tampoco hace falta `modal-open-changed`: el fondo de los modales tapa el canvas y, además, el reducer ignora los toques con un modal abierto.
 
 ## Code Style
 Lógica en TypeScript con el estilo de `GameState.ts`: 4 espacios, funciones flecha en `const`, tipos explícitos, comillas simples y punto y coma. Los identificadores van en inglés, los textos para el jugador en gallego (solo en `texts.ts` y `catalog.ts`) y los comentarios en español. Cada fichero mantiene sus finales de línea.
@@ -231,6 +233,11 @@ El reducer es puro: el azar llega como semilla en la acción (`{ type: 'start', 
 - [ ] Las tres pestañas y Axustes se comportan según la tabla de modos, con sus confirmaciones.
 - [ ] Tras `idleSeconds + idleWarningSeconds` sin actividad, todo vuelve a Inicio y a la cámara inicial, y los volúmenes se mantienen tras recargar.
 - [ ] `npm test` y `tsc` pasan, y `npm run build-nolog` compila.
+
+## Decisiones durante la implementación
+- **`split.js` exporta como un solo sprite los grupos `ob_*` que cuelgan de la raíz del SVG.** Antes los troceaba como capas, así que el saco y una papeleira no se podían pulsar y contaban de más (10 sacos y 9 papeleiras en vez de 1 y 2). Con la escena actual, ninguna ficha supera el tope de 3.
+- **Las confirmaciones y el aviso de inactividad son estado local de React**, no del reducer, porque no cambian las reglas.
+- **Hay objetos parcialmente tapados por señuelos** (por ejemplo, un cubo sobre el palet): las zonas pulsables son rectángulos y tocar el señuelo cuenta como error. Queda pendiente de ver en el stand si molesta.
 
 ## Open Questions
 - **Pistas sin objetos suficientes** (*tarde na auga*, *cordas*, *manter no sitio*): quedan comentadas en el catálogo hasta que haya sprites o una reescritura tuya.
