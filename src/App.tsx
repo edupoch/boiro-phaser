@@ -3,6 +3,8 @@ import { IRefPhaserGame, PhaserGame } from './PhaserGame';
 import FichaModal from './components/FichaModal';
 import GameMessages from './components/GameMessages';
 import Hud, { type TabId } from './components/Hud';
+import MessageModal from './components/MessageModal';
+import { TEXTS } from './game/content/texts';
 import { EventBus } from './game/EventBus';
 import { createInitialState, gameReducer, type Modal } from './game/play/gameReducer';
 import { newSeed } from './game/play/rng';
@@ -17,6 +19,8 @@ function App()
     const [state, dispatch] = useReducer(gameReducer, undefined, () => createInitialState());
     const [activeTab, setActiveTab] = useState<TabId>('inicio');
     const previousModal = useRef<Modal | null>(null);
+    // Confirmación pendiente ("Seguro?"): no cambia las reglas, así que vive en React y no en el reducer.
+    const [confirm, setConfirm] = useState<{ message: string; onYes: () => void } | null>(null);
 
     // Event emitted from the PhaserGame component
     const currentScene = (scene: Phaser.Scene) => {
@@ -51,20 +55,37 @@ function App()
         previousModal.current = modal;
     }, [state.modal]);
 
+    // Phaser activa los señuelos solo en el modo xogo.
+    useEffect(() => {
+        EventBus.emit('mode-changed', state.mode);
+    }, [state.mode]);
+
     const startGame = () => {
         dispatch({ type: 'start', seed: newSeed() });
         setActiveTab('xogo');
     };
 
+    const enterExplore = () => {
+        dispatch({ type: 'enterExplore' });
+        setActiveTab('exploracion');
+    };
+
+    const askConfirm = (message: string, onYes: () => void) => setConfirm({ message, onYes });
+
     const handleTabClick = (tab: TabId) => {
         playSfx('click');
 
-        if (tab === 'xogo' && state.mode !== 'game') {
+        if (tab === 'xogo' && state.mode === 'idle') {
             startGame();
-            return;
+        } else if (tab === 'xogo' && state.mode === 'explore') {
+            askConfirm(TEXTS.confirm.newGame, startGame);
+        } else if (tab === 'exploracion' && state.mode === 'game') {
+            askConfirm(TEXTS.confirm.loseProgress, enterExplore);
+        } else if (tab === 'exploracion' && state.mode === 'idle') {
+            enterExplore();
+        } else {
+            setActiveTab(tab);
         }
-
-        setActiveTab(tab);
     };
 
     const handleStart = () => {
@@ -77,13 +98,9 @@ function App()
         setActiveTab('xogo');
     };
 
-    const handlePlayAgain = () => {
-        startGame();
-    };
-
-    const handleExplore = () => {
-        dispatch({ type: 'enterExplore' });
-        setActiveTab('exploracion');
+    const handleRestart = () => {
+        playSfx('click');
+        askConfirm(TEXTS.confirm.loseProgress, startGame);
     };
 
     const modal = state.modal;
@@ -92,7 +109,14 @@ function App()
         <div id="app">
             <PhaserGame ref={phaserRef} currentActiveScene={currentScene} />
             {isGameScene && (
-                <Hud state={state} activeTab={activeTab} onTabClick={handleTabClick} onStart={handleStart} />
+                <Hud
+                    state={state}
+                    activeTab={activeTab}
+                    onTabClick={handleTabClick}
+                    onStart={handleStart}
+                    onContinue={() => handleTabClick('xogo')}
+                    onRestart={handleRestart}
+                />
             )}
             {modal?.kind === 'ficha' && (
                 <FichaModal
@@ -108,9 +132,20 @@ function App()
                     state={state}
                     modal={modal}
                     onContinue={() => dispatch({ type: 'closeModal' })}
-                    onPlayAgain={handlePlayAgain}
-                    onExplore={handleExplore}
+                    onPlayAgain={startGame}
+                    onExplore={enterExplore}
                 />
+            )}
+            {confirm && (
+                <MessageModal
+                    title={TEXTS.confirm.title}
+                    buttons={[
+                        { label: TEXTS.confirm.yes, onClick: () => { setConfirm(null); confirm.onYes(); } },
+                        { label: TEXTS.confirm.no, onClick: () => setConfirm(null), secondary: true },
+                    ]}
+                >
+                    <p>{confirm.message}</p>
+                </MessageModal>
             )}
         </div>
     )

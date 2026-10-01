@@ -54,8 +54,9 @@ export const TEXTS = {
         explore: 'Explorar o mapa',
     },
     confirm: {
-        loseProgress: 'Seguro? Isto fará que perdas todos os teus avances',
-        newGame: 'Seguro? Isto fará que comeces unha nova partida',
+        title: 'Seguro?',
+        loseProgress: 'Isto fará que perdas todos os teus avances',
+        newGame: 'Isto fará que comeces unha nova partida',
         yes: 'Si',
         no: 'Non',
     },

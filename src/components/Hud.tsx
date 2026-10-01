@@ -12,6 +12,8 @@ interface HudProps {
   activeTab: TabId;
   onTabClick: (tab: TabId) => void;
   onStart: () => void;
+  onContinue: () => void;
+  onRestart: () => void;
 }
 
 const lowerFirst = (text: string): string => text.charAt(0).toLowerCase() + text.slice(1);
@@ -56,7 +58,7 @@ function ObjectiveRow({ objective }: { objective: Objective }) {
   );
 }
 
-function Hud({ state, activeTab, onTabClick, onStart }: HudProps) {
+function Hud({ state, activeTab, onTabClick, onStart, onContinue, onRestart }: HudProps) {
   const gameLabel = state.mode === 'game' ? TEXTS.tabs.gameLevel(state.level, LEVEL_COUNT) : TEXTS.tabs.game;
 
   const tabsList: { id: Exclude<TabId, 'axustes'>; label: string; color: string }[] = [
@@ -116,14 +118,31 @@ function Hud({ state, activeTab, onTabClick, onStart }: HudProps) {
             </div>
             <div className="mt-4 flex flex-col gap-4">
               <p className="text-sm leading-relaxed font-medium text-sky-500">{TEXTS.home.intro}</p>
-              <div className="flex justify-end">
-                <button
-                  id="btn-comezamos"
-                  onClick={onStart}
-                  className="mt-6 rounded-2xl bg-amber-400 px-8 py-3 text-lg font-extrabold text-white shadow-lg transition-transform hover:scale-105 hover:bg-amber-300"
-                >
-                  {TEXTS.home.start}
-                </button>
+              <div className="mt-6 flex flex-wrap justify-end gap-3">
+                {state.mode === 'game' ? (
+                  <>
+                    <button
+                      onClick={onRestart}
+                      className="rounded-2xl bg-sky-100 px-6 py-3 text-lg font-extrabold text-sky-700 transition-transform hover:scale-105 hover:bg-sky-200"
+                    >
+                      {TEXTS.home.restart}
+                    </button>
+                    <button
+                      onClick={onContinue}
+                      className="rounded-2xl bg-amber-400 px-6 py-3 text-lg font-extrabold text-white shadow-lg transition-transform hover:scale-105 hover:bg-amber-300"
+                    >
+                      {TEXTS.home.continue}
+                    </button>
+                  </>
+                ) : (
+                  <button
+                    id="btn-comezamos"
+                    onClick={onStart}
+                    className="rounded-2xl bg-amber-400 px-8 py-3 text-lg font-extrabold text-white shadow-lg transition-transform hover:scale-105 hover:bg-amber-300"
+                  >
+                    {TEXTS.home.start}
+                  </button>
+                )}
               </div>
             </div>
           </div>

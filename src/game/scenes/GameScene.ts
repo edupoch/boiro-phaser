@@ -1,6 +1,7 @@
 import * as Phaser from 'phaser';
 
 import { GAME_CONFIG } from '../config';
+import { getEntryForToken } from '../content/catalog';
 import { spriteToken } from '../content/sprites';
 import { EventBus } from '../EventBus';
 import { HdChunk, LOD_DEBUG, SpriteLod } from '../SpriteLod';
@@ -46,6 +47,8 @@ export class GameScene extends Phaser.Scene
 
     private spriteTree: PositionedSprite[] = [];
     private spriteImageMap = new Map<string, SpriteObject>();
+    // Objetos `ob_*` sin ficha: solo se pueden pulsar en el modo xogo, donde cuentan como error.
+    private decoys: SpriteObject[] = [];
     private spriteLod: SpriteLod | null = null;
     // Avanza el zoom suavizado hacia su objetivo; lo define create() porque usa los límites de la cámara.
     private stepZoom: ((delta: number) => void) | null = null;
@@ -61,6 +64,8 @@ export class GameScene extends Phaser.Scene
 
         //this.logo = this.add.image(512, 300, 'logo').setDepth(100);
 
+        // La escena se reutiliza al reiniciarse: los señuelos de la partida anterior ya no existen.
+        this.decoys = [];
         this.input.setDefaultCursor('grab');
         EventBus.emit('game-reset');
 
@@ -70,6 +75,11 @@ export class GameScene extends Phaser.Scene
         const playSfx = (key: string) => this.sound.play(key);
         EventBus.on('play-sfx', playSfx);
         this.events.once('shutdown', () => EventBus.off('play-sfx', playSfx));
+
+        // Al crear la escena el juego vuelve a `idle` (game-reset), así que los señuelos empiezan desactivados.
+        const handleModeChanged = (mode: string) => this.setDecoysEnabled(mode === 'game');
+        EventBus.on('mode-changed', handleModeChanged);
+        this.events.once('shutdown', () => EventBus.off('mode-changed', handleModeChanged));
 
         this.camera = this.cameras.main;
 
@@ -331,8 +341,16 @@ export class GameScene extends Phaser.Scene
 
                 this.spriteImageMap.set(sprite.label, spriteImage);
 
-                if (spriteToken(sprite.label)) {
+                const token = spriteToken(sprite.label);
+
+                if (token) {
                     spriteImage.setInteractive({ useHandCursor: true });
+
+                    if (!getEntryForToken(token)) {
+                        this.decoys.push(spriteImage);
+                        spriteImage.disableInteractive();
+                    }
+
                     // Solo cuenta como toque si el puntero apenas se movió: arrastrar el mapa
                     // empezando sobre un objeto no debe pulsarlo (en el juego sería un error).
                     spriteImage.on('pointerup', (pointer: Phaser.Input.Pointer) => {
@@ -469,6 +487,12 @@ export class GameScene extends Phaser.Scene
         EventBus.emit('current-scene-ready', this);
     }
     
+    // disableInteractive conserva el hit area y setInteractive() sin argumentos lo reactiva tal cual.
+    setDecoysEnabled (enabled: boolean): void
+    {
+        this.decoys.forEach((decoy) => (enabled ? decoy.setInteractive() : decoy.disableInteractive()));
+    }
+
     // Equivalente a setOrigin para imágenes y para los Container de sprites troceados
     // (en estos se desplazan los tiles, porque un Container gira y escala alrededor de su posición).
     setPivot (object: SpriteObject, originX: number, originY: number): void
