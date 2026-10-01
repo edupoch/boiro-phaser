@@ -855,8 +855,9 @@ const processNode = async (el, depth = 0) => {
     console.log('Processing group:', $(el).attr('id') || 'unnamed');
     const label = getNodeLabel(el);
 
-    // Los <g> de primer nivel (hijos directos de <svg>) siempre se desglosan.
-    if (depth === 0) {
+    // Los <g> de primer nivel (hijos directos de <svg>) son capas y se desglosan, salvo los objetos
+    // del juego (`ob_*`): esos se exportan como un solo sprite aunque cuelguen de la raíz.
+    if (depth === 0 && !(label && label.startsWith('ob_'))) {
       const children = [];
       for (const child of $(el).children().toArray()) {
         const childData = await processNode(child, depth + 1);

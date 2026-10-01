@@ -820,29 +820,9 @@
         "h": 90
       }
     },
-    "Puerto__ob_malla_limones__g376": {
-      "frame": {
-        "x": 3860,
-        "y": 1480,
-        "w": 88,
-        "h": 74
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 88,
-        "h": 74
-      },
-      "sourceSize": {
-        "w": 88,
-        "h": 74
-      }
-    },
     "Puerto__ob_malla_naranjas__g375": {
       "frame": {
-        "x": 3984,
+        "x": 3860,
         "y": 1480,
         "w": 84,
         "h": 70
@@ -3106,32 +3086,6 @@
                 "y": 4,
                 "w": 210,
                 "h": 175
-              }
-            }
-          ]
-        },
-        {
-          "label": "Puerto__ob_malla_limones__g376",
-          "frame": "Puerto__ob_malla_limones__g376",
-          "bounds": {
-            "x": 4505,
-            "y": 1371,
-            "width": 88,
-            "height": 74
-          },
-          "hd": [
-            {
-              "key": "Puerto__ob_malla_limones__g376__hd_0_0",
-              "file": "hd/Puerto__ob_malla_limones__g376__hd_0_0.png",
-              "x": 0,
-              "y": 0,
-              "width": 88,
-              "height": 74,
-              "frame": {
-                "x": 4,
-                "y": 4,
-                "w": 220,
-                "h": 185
               }
             }
           ]

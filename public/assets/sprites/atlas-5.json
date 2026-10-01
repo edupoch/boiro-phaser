@@ -160,64 +160,24 @@
         "h": 104
       }
     },
-    "Mar__ob_botas__g379": {
+    "Bosque__gaviota_pie__g279-3-9": {
       "frame": {
         "x": 3456,
         "y": 222,
-        "w": 108,
-        "h": 102
+        "w": 118,
+        "h": 90
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 108,
-        "h": 102
+        "w": 118,
+        "h": 90
       },
       "sourceSize": {
-        "w": 108,
-        "h": 102
-      }
-    },
-    "Puerto__ob_cono__g1391-0": {
-      "frame": {
-        "x": 3600,
-        "y": 222,
-        "w": 102,
-        "h": 100
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 102,
-        "h": 100
-      },
-      "sourceSize": {
-        "w": 102,
-        "h": 100
-      }
-    },
-    "Puerto__ob_cono__g1391": {
-      "frame": {
-        "x": 3738,
-        "y": 222,
-        "w": 102,
-        "h": 98
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 102,
-        "h": 98
-      },
-      "sourceSize": {
-        "w": 102,
-        "h": 98
+        "w": 118,
+        "h": 90
       }
     }
   },
@@ -1545,37 +1505,6 @@
       ]
     },
     {
-      "label": "Mar",
-      "children": [
-        {
-          "label": "Mar__ob_botas__g379",
-          "frame": "Mar__ob_botas__g379",
-          "bounds": {
-            "x": 4836,
-            "y": 3286,
-            "width": 108,
-            "height": 102
-          },
-          "hd": [
-            {
-              "key": "Mar__ob_botas__g379__hd_0_0",
-              "file": "hd/Mar__ob_botas__g379__hd_0_0.png",
-              "x": 0,
-              "y": 0,
-              "width": 108,
-              "height": 102,
-              "frame": {
-                "x": 4,
-                "y": 4,
-                "w": 270,
-                "h": 255
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
       "label": "Juegos",
       "children": [
         {
@@ -1721,58 +1650,6 @@
     {
       "label": "Puerto",
       "children": [
-        {
-          "label": "Puerto__ob_cono__g1391",
-          "frame": "Puerto__ob_cono__g1391",
-          "bounds": {
-            "x": 3632,
-            "y": 1231,
-            "width": 102,
-            "height": 98
-          },
-          "hd": [
-            {
-              "key": "Puerto__ob_cono__g1391__hd_0_0",
-              "file": "hd/Puerto__ob_cono__g1391__hd_0_0.png",
-              "x": 0,
-              "y": 0,
-              "width": 102,
-              "height": 98,
-              "frame": {
-                "x": 4,
-                "y": 4,
-                "w": 255,
-                "h": 245
-              }
-            }
-          ]
-        },
-        {
-          "label": "Puerto__ob_cono__g1391-0",
-          "frame": "Puerto__ob_cono__g1391-0",
-          "bounds": {
-            "x": 3755,
-            "y": 1191,
-            "width": 102,
-            "height": 100
-          },
-          "hd": [
-            {
-              "key": "Puerto__ob_cono__g1391-0__hd_0_0",
-              "file": "hd/Puerto__ob_cono__g1391-0__hd_0_0.png",
-              "x": 0,
-              "y": 0,
-              "width": 102,
-              "height": 100,
-              "frame": {
-                "x": 4,
-                "y": 4,
-                "w": 255,
-                "h": 250
-              }
-            }
-          ]
-        },
         {
           "label": "Puerto__ob_caja_porex_pulpo__g378-3",
           "frame": "Puerto__ob_caja_porex_pulpo__g378-3",
@@ -1953,6 +1830,32 @@
                 "y": 4,
                 "w": 895,
                 "h": 662
+              }
+            }
+          ]
+        },
+        {
+          "label": "Bosque__gaviota_pie__g279-3-9",
+          "frame": "Bosque__gaviota_pie__g279-3-9",
+          "bounds": {
+            "x": 6610,
+            "y": 617,
+            "width": 118,
+            "height": 90
+          },
+          "hd": [
+            {
+              "key": "Bosque__gaviota_pie__g279-3-9__hd_0_0",
+              "file": "hd/Bosque__gaviota_pie__g279-3-9__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 118,
+              "height": 90,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 295,
+                "h": 225
               }
             }
           ]

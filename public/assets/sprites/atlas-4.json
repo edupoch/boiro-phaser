@@ -600,10 +600,30 @@
         "h": 148
       }
     },
-    "Puerto__ob_bigbag__g23-5": {
+    "ob_saco_malla__g32": {
       "frame": {
         "x": 3934,
         "y": 2614,
+        "w": 134,
+        "h": 158
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 134,
+        "h": 158
+      },
+      "sourceSize": {
+        "w": 134,
+        "h": 158
+      }
+    },
+    "Puerto__ob_bigbag__g23-5": {
+      "frame": {
+        "x": 3934,
+        "y": 2808,
         "w": 138,
         "h": 156
       },
@@ -640,10 +660,30 @@
         "h": 124
       }
     },
+    "ob_papelera__g353": {
+      "frame": {
+        "x": 3934,
+        "y": 3000,
+        "w": 130,
+        "h": 144
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 130,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 130,
+        "h": 144
+      }
+    },
     "Puerto__ob_caja_plastico__g89-3": {
       "frame": {
         "x": 3934,
-        "y": 2806,
+        "y": 3180,
         "w": 136,
         "h": 100
       },
@@ -658,32 +698,12 @@
       "sourceSize": {
         "w": 136,
         "h": 100
-      }
-    },
-    "ob_papelera__path1397__path1397": {
-      "frame": {
-        "x": 3934,
-        "y": 2942,
-        "w": 128,
-        "h": 84
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 128,
-        "h": 84
-      },
-      "sourceSize": {
-        "w": 128,
-        "h": 84
       }
     },
     "Mar__ob_cuerda__g1630-5": {
       "frame": {
         "x": 3934,
-        "y": 3062,
+        "y": 3316,
         "w": 124,
         "h": 110
       },
@@ -703,7 +723,7 @@
     "Bosque__ob_papelera__g1758-1": {
       "frame": {
         "x": 3934,
-        "y": 3208,
+        "y": 3462,
         "w": 120,
         "h": 122
       },
@@ -723,7 +743,7 @@
     "Puerto__ob_cupula__g309-9": {
       "frame": {
         "x": 3934,
-        "y": 3366,
+        "y": 3620,
         "w": 122,
         "h": 84
       },
@@ -743,7 +763,7 @@
     "Puerto__ob_cupula__g309-9-2": {
       "frame": {
         "x": 3934,
-        "y": 3486,
+        "y": 3740,
         "w": 122,
         "h": 82
       },
@@ -763,7 +783,7 @@
     "Mar__gaviota_pie__g279-3": {
       "frame": {
         "x": 3934,
-        "y": 3604,
+        "y": 3858,
         "w": 118,
         "h": 90
       },
@@ -780,124 +800,24 @@
         "h": 90
       }
     },
-    "Bosque__gaviota_pie__g279-3-9": {
-      "frame": {
-        "x": 3934,
-        "y": 3730,
-        "w": 118,
-        "h": 90
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 118,
-        "h": 90
-      },
-      "sourceSize": {
-        "w": 118,
-        "h": 90
-      }
-    },
-    "Puerto__ob_bolardo__g372-8-7": {
+    "Puerto__ob_cono__g1391": {
       "frame": {
         "x": 3976,
         "y": 308,
-        "w": 80,
-        "h": 116
+        "w": 102,
+        "h": 98
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 80,
-        "h": 116
+        "w": 102,
+        "h": 98
       },
       "sourceSize": {
-        "w": 80,
-        "h": 116
-      }
-    },
-    "Casas__pajaro__g283": {
-      "frame": {
-        "x": 3934,
-        "y": 3856,
-        "w": 114,
-        "h": 80
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 114,
-        "h": 80
-      },
-      "sourceSize": {
-        "w": 114,
-        "h": 80
-      }
-    },
-    "ob_saco_malla__path31-5__path31-5": {
-      "frame": {
-        "x": 3974,
-        "y": 1146,
-        "w": 72,
-        "h": 102
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 72,
-        "h": 102
-      },
-      "sourceSize": {
-        "w": 72,
-        "h": 102
-      }
-    },
-    "ob_saco_malla__path28-4__path28-4": {
-      "frame": {
-        "x": 3976,
-        "y": 460,
-        "w": 90,
-        "h": 96
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 90,
-        "h": 96
-      },
-      "sourceSize": {
-        "w": 90,
-        "h": 96
-      }
-    },
-    "ob_saco_malla__sombra__path626": {
-      "frame": {
-        "x": 3974,
-        "y": 1284,
-        "w": 90,
-        "h": 80
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 90,
-        "h": 80
-      },
-      "sourceSize": {
-        "w": 90,
-        "h": 80
+        "w": 102,
+        "h": 98
       }
     }
   },
@@ -2267,37 +2187,6 @@
       ]
     },
     {
-      "label": "Casas",
-      "children": [
-        {
-          "label": "Casas__pajaro__g283",
-          "frame": "Casas__pajaro__g283",
-          "bounds": {
-            "x": 264,
-            "y": 1611,
-            "width": 114,
-            "height": 80
-          },
-          "hd": [
-            {
-              "key": "Casas__pajaro__g283__hd_0_0",
-              "file": "hd/Casas__pajaro__g283__hd_0_0.png",
-              "x": 0,
-              "y": 0,
-              "width": 114,
-              "height": 80,
-              "frame": {
-                "x": 4,
-                "y": 4,
-                "w": 285,
-                "h": 200
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
       "label": "Playa",
       "children": [
         {
@@ -2523,6 +2412,32 @@
     {
       "label": "Puerto",
       "children": [
+        {
+          "label": "Puerto__ob_cono__g1391",
+          "frame": "Puerto__ob_cono__g1391",
+          "bounds": {
+            "x": 3632,
+            "y": 1231,
+            "width": 102,
+            "height": 98
+          },
+          "hd": [
+            {
+              "key": "Puerto__ob_cono__g1391__hd_0_0",
+              "file": "hd/Puerto__ob_cono__g1391__hd_0_0.png",
+              "x": 0,
+              "y": 0,
+              "width": 102,
+              "height": 98,
+              "frame": {
+                "x": 4,
+                "y": 4,
+                "w": 255,
+                "h": 245
+              }
+            }
+          ]
+        },
         {
           "label": "Puerto__ob_cupula__g309-9",
           "frame": "Puerto__ob_cupula__g309-9",
@@ -2883,32 +2798,6 @@
                 "y": 4,
                 "w": 585,
                 "h": 580
-              }
-            }
-          ]
-        },
-        {
-          "label": "Puerto__ob_bolardo__g372-8-7",
-          "frame": "Puerto__ob_bolardo__g372-8-7",
-          "bounds": {
-            "x": 3720,
-            "y": 1053,
-            "width": 80,
-            "height": 116
-          },
-          "hd": [
-            {
-              "key": "Puerto__ob_bolardo__g372-8-7__hd_0_0",
-              "file": "hd/Puerto__ob_bolardo__g372-8-7__hd_0_0.png",
-              "x": 0,
-              "y": 0,
-              "width": 80,
-              "height": 116,
-              "frame": {
-                "x": 4,
-                "y": 4,
-                "w": 200,
-                "h": 290
               }
             }
           ]
@@ -3350,32 +3239,6 @@
               }
             }
           ]
-        },
-        {
-          "label": "Bosque__gaviota_pie__g279-3-9",
-          "frame": "Bosque__gaviota_pie__g279-3-9",
-          "bounds": {
-            "x": 6610,
-            "y": 617,
-            "width": 118,
-            "height": 90
-          },
-          "hd": [
-            {
-              "key": "Bosque__gaviota_pie__g279-3-9__hd_0_0",
-              "file": "hd/Bosque__gaviota_pie__g279-3-9__hd_0_0.png",
-              "x": 0,
-              "y": 0,
-              "width": 118,
-              "height": 90,
-              "frame": {
-                "x": 4,
-                "y": 4,
-                "w": 295,
-                "h": 225
-              }
-            }
-          ]
         }
       ]
     },
@@ -3494,116 +3357,54 @@
       ]
     },
     {
-      "label": "ob_saco_malla",
-      "children": [
+      "label": "ob_saco_malla__g32",
+      "frame": "ob_saco_malla__g32",
+      "bounds": {
+        "x": 4453,
+        "y": 1435,
+        "width": 134,
+        "height": 158
+      },
+      "hd": [
         {
-          "label": "ob_saco_malla__sombra__path626",
-          "frame": "ob_saco_malla__sombra__path626",
-          "bounds": {
-            "x": 4453,
-            "y": 1493,
-            "width": 90,
-            "height": 80
-          },
-          "hd": [
-            {
-              "key": "ob_saco_malla__sombra__path626__hd_0_0",
-              "file": "hd/ob_saco_malla__sombra__path626__hd_0_0.png",
-              "x": 0,
-              "y": 0,
-              "width": 90,
-              "height": 80,
-              "frame": {
-                "x": 4,
-                "y": 4,
-                "w": 225,
-                "h": 200
-              }
-            }
-          ]
-        },
-        {
-          "label": "ob_saco_malla__path28-4__path28-4",
-          "frame": "ob_saco_malla__path28-4__path28-4",
-          "bounds": {
-            "x": 4494,
-            "y": 1482,
-            "width": 90,
-            "height": 96
-          },
-          "hd": [
-            {
-              "key": "ob_saco_malla__path28-4__path28-4__hd_0_0",
-              "file": "hd/ob_saco_malla__path28-4__path28-4__hd_0_0.png",
-              "x": 0,
-              "y": 0,
-              "width": 90,
-              "height": 96,
-              "frame": {
-                "x": 4,
-                "y": 4,
-                "w": 225,
-                "h": 240
-              }
-            }
-          ]
-        },
-        {
-          "label": "ob_saco_malla__path31-5__path31-5",
-          "frame": "ob_saco_malla__path31-5__path31-5",
-          "bounds": {
-            "x": 4496,
-            "y": 1484,
-            "width": 72,
-            "height": 102
-          },
-          "hd": [
-            {
-              "key": "ob_saco_malla__path31-5__path31-5__hd_0_0",
-              "file": "hd/ob_saco_malla__path31-5__path31-5__hd_0_0.png",
-              "x": 0,
-              "y": 0,
-              "width": 72,
-              "height": 102,
-              "frame": {
-                "x": 4,
-                "y": 4,
-                "w": 180,
-                "h": 255
-              }
-            }
-          ]
+          "key": "ob_saco_malla__g32__hd_0_0",
+          "file": "hd/ob_saco_malla__g32__hd_0_0.png",
+          "x": 0,
+          "y": 0,
+          "width": 134,
+          "height": 158,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 335,
+            "h": 395
+          }
         }
       ]
     },
     {
-      "label": "ob_papelera",
-      "children": [
+      "label": "ob_papelera__g353",
+      "frame": "ob_papelera__g353",
+      "bounds": {
+        "x": 3208,
+        "y": 874,
+        "width": 130,
+        "height": 144
+      },
+      "hd": [
         {
-          "label": "ob_papelera__path1397__path1397",
-          "frame": "ob_papelera__path1397__path1397",
-          "bounds": {
-            "x": 3208,
-            "y": 927,
-            "width": 128,
-            "height": 84
-          },
-          "hd": [
-            {
-              "key": "ob_papelera__path1397__path1397__hd_0_0",
-              "file": "hd/ob_papelera__path1397__path1397__hd_0_0.png",
-              "x": 0,
-              "y": 0,
-              "width": 128,
-              "height": 84,
-              "frame": {
-                "x": 4,
-                "y": 4,
-                "w": 320,
-                "h": 210
-              }
-            }
-          ]
+          "key": "ob_papelera__g353__hd_0_0",
+          "file": "hd/ob_papelera__g353__hd_0_0.png",
+          "x": 0,
+          "y": 0,
+          "width": 130,
+          "height": 144,
+          "frame": {
+            "x": 4,
+            "y": 4,
+            "w": 325,
+            "h": 360
+          }
         }
       ]
     }
