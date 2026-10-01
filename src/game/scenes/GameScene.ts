@@ -377,8 +377,12 @@ export class GameScene extends Phaser.Scene
 
                     // Solo cuenta como toque si el puntero apenas se movió: arrastrar el mapa
                     // empezando sobre un objeto no debe pulsarlo (en el juego sería un error).
+                    // Además, el toque tiene que empezar y acabar en el canvas: Phaser escucha el mouseup en
+                    // window, así que sin esto un clic sobre un modal o la HUD llegaría al objeto de debajo.
                     spriteImage.on('pointerup', (pointer: Phaser.Input.Pointer) => {
-                        if (pointer.getDistance() < GAME_CONFIG.tapMaxMovePx) {
+                        const onCanvas = pointer.downElement === this.game.canvas && pointer.upElement === this.game.canvas;
+
+                        if (onCanvas && pointer.getDistance() < GAME_CONFIG.tapMaxMovePx) {
                             EventBus.emit('object-clicked', sprite.label);
                         }
                     });
