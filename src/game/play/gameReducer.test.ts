@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { GAME_CONFIG } from '../config.ts';
+import { ENTRIES, spriteCountForEntry } from '../content/catalog.ts';
 import {
     buildObjectives,
     companySummary,
@@ -48,8 +49,10 @@ describe('elección de objetivos', () => {
     });
 
     it('el total respeta el tope por ficha', () => {
-        expect(makeObjective('type', 'papeleira', ['papeleira']).total).toBe(GAME_CONFIG.maxPerTarget);
-        expect(makeObjective('type', 'contedor', ['contedor']).total).toBe(1);
+        ENTRIES.forEach((entry) => {
+            expect(makeObjective('type', entry.id, [entry.id]).total, entry.id)
+                .toBe(Math.min(spriteCountForEntry(entry), GAME_CONFIG.maxPerTarget));
+        });
     });
 
     it('start empieza el nivel 1 en modo xogo', () => {
@@ -77,19 +80,20 @@ describe('toques en modo xogo', () => {
     });
 
     it('con el tope cubierto, otra unidad de la misma ficha no hace nada', () => {
+        // Las boias llegan justo al tope; una 4.ª etiqueta inventada hace de unidad sobrante.
         const objectives = [
-            makeObjective('type', 'papeleira', ['papeleira']),
+            makeObjective('type', 'boia', ['boia']),
             makeObjective('type', 'contedor', ['contedor']),
         ];
         const full = run(
             playing(1, objectives),
-            tap(sprite('ob_papelera', 1)), close,
-            tap(sprite('ob_papelera', 2)), close,
-            tap(sprite('ob_papelera', 3)), close,
+            tap(sprite('ob_boya', 1)), close,
+            tap(sprite('ob_boya', 2)), close,
+            tap(sprite('ob_boya_amarilla', 3)), close,
         );
 
         expect(objectiveFound(full.objectives[0])).toBe(GAME_CONFIG.maxPerTarget);
-        expect(gameReducer(full, tap(sprite('ob_papelera', 4)))).toBe(full);
+        expect(gameReducer(full, tap(sprite('ob_boya', 4)))).toBe(full);
     });
 
     it('un acierto cuenta para todas las pistas que incluyen la ficha', () => {

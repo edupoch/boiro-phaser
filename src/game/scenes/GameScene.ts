@@ -1,6 +1,7 @@
 import * as Phaser from 'phaser';
 
 import { GAME_CONFIG } from '../config';
+import { spriteToken } from '../content/sprites';
 import { EventBus } from '../EventBus';
 import { HdChunk, LOD_DEBUG, SpriteLod } from '../SpriteLod';
 
@@ -64,6 +65,11 @@ export class GameScene extends Phaser.Scene
         EventBus.emit('game-reset');
 
         this.sound.add('praia', { loop: true, volume: 0.5 }).play();
+
+        // Efectos que pide la interfaz de React (clic de la HUD, acierto, error).
+        const playSfx = (key: string) => this.sound.play(key);
+        EventBus.on('play-sfx', playSfx);
+        this.events.once('shutdown', () => EventBus.off('play-sfx', playSfx));
 
         this.camera = this.cameras.main;
 
@@ -325,7 +331,7 @@ export class GameScene extends Phaser.Scene
 
                 this.spriteImageMap.set(sprite.label, spriteImage);
 
-                if (sprite.label.includes('_ob_')) {
+                if (spriteToken(sprite.label)) {
                     spriteImage.setInteractive({ useHandCursor: true });
                     // Solo cuenta como toque si el puntero apenas se movió: arrastrar el mapa
                     // empezando sobre un objeto no debe pulsarlo (en el juego sería un error).

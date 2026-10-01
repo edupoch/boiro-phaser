@@ -1,22 +1,21 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useReducer, useRef, useState } from 'react';
 import { IRefPhaserGame, PhaserGame } from './PhaserGame';
-import ObjectFoundModal from './components/ObjectFoundModal';
-import GameModal from './components/GameModal';
+import FichaModal from './components/FichaModal';
+import Hud, { type TabId } from './components/Hud';
 import { EventBus } from './game/EventBus';
-import {
-    createInitialGameSnapshot,
-    markFoundInSnapshot,
-    type GameStateSnapshot,
-} from './game/GameState';
+import { createInitialState, gameReducer, type Modal } from './game/play/gameReducer';
+import { newSeed } from './game/play/rng';
+
+const playSfx = (key: 'click' | 'success' | 'error') => EventBus.emit('play-sfx', key);
 
 function App()
 {
     //  References to the PhaserGame component (game and scene are exposed)
     const phaserRef = useRef<IRefPhaserGame | null>(null);
     const [isGameScene, setIsGameScene] = useState(false);
-    const [foundObjectName, setFoundObjectName] = useState('');
-    const [isObjectFoundModalOpen, setIsObjectFoundModalOpen] = useState(false);
-    const [gameSnapshot, setGameSnapshot] = useState<GameStateSnapshot>(() => createInitialGameSnapshot());
+    const [state, dispatch] = useReducer(gameReducer, undefined, () => createInitialState());
+    const [activeTab, setActiveTab] = useState<TabId>('inicio');
+    const previousModal = useRef<Modal | null>(null);
 
     // Event emitted from the PhaserGame component
     const currentScene = (scene: Phaser.Scene) => {
@@ -24,42 +23,76 @@ function App()
     }
 
     useEffect(() => {
-        const handleGameReset = () => {
-            setGameSnapshot(createInitialGameSnapshot());
-        };
+        const handleObjectClicked = (label: string) => dispatch({ type: 'tap', label });
+        const handleGameReset = () => dispatch({ type: 'idleReset' });
 
-        const handleObjectClicked = (targetKey: string) => {
-            setGameSnapshot((previousSnapshot) => {
-                const { snapshot, foundTarget } = markFoundInSnapshot(previousSnapshot, targetKey);
-
-                if (foundTarget) {
-                    setFoundObjectName(foundTarget.name);
-                    setIsObjectFoundModalOpen(true);
-                    EventBus.emit('object-found', foundTarget);
-                }
-
-                return snapshot;
-            });
-        };
-
-        EventBus.on('game-reset', handleGameReset);
         EventBus.on('object-clicked', handleObjectClicked);
+        EventBus.on('game-reset', handleGameReset);
 
         return () => {
-            EventBus.removeListener('game-reset', handleGameReset);
             EventBus.removeListener('object-clicked', handleObjectClicked);
+            EventBus.removeListener('game-reset', handleGameReset);
         };
     }, []);
+
+    // Los sonidos de acierto y error se derivan del modal que acaba de abrirse (el reducer no tiene efectos).
+    useEffect(() => {
+        const modal = state.modal;
+
+        if (modal && modal !== previousModal.current) {
+            if (modal.kind === 'won' || (modal.kind === 'ficha' && modal.variant !== 'explore')) {
+                playSfx('success');
+            } else if (modal.kind === 'wrong' || modal.kind === 'lost') {
+                playSfx('error');
+            }
+        }
+
+        previousModal.current = modal;
+    }, [state.modal]);
+
+    const startGame = () => {
+        dispatch({ type: 'start', seed: newSeed() });
+        setActiveTab('xogo');
+    };
+
+    const handleTabClick = (tab: TabId) => {
+        playSfx('click');
+
+        if (tab === 'xogo' && state.mode !== 'game') {
+            startGame();
+            return;
+        }
+
+        setActiveTab(tab);
+    };
+
+    const handleStart = () => {
+        playSfx('click');
+        startGame();
+    };
+
+    const handleNextLevel = () => {
+        dispatch({ type: 'nextLevel', seed: newSeed() });
+        setActiveTab('xogo');
+    };
+
+    const modal = state.modal;
 
     return (
         <div id="app">
             <PhaserGame ref={phaserRef} currentActiveScene={currentScene} />
-            <ObjectFoundModal
-                isOpen={isObjectFoundModalOpen}
-                objectName={foundObjectName}
-                onClose={() => setIsObjectFoundModalOpen(false)}
-            />
-            {isGameScene && <GameModal gameSnapshot={gameSnapshot} />}
+            {isGameScene && (
+                <Hud state={state} activeTab={activeTab} onTabClick={handleTabClick} onStart={handleStart} />
+            )}
+            {modal?.kind === 'ficha' && (
+                <FichaModal
+                    entryId={modal.entryId}
+                    variant={modal.variant}
+                    level={state.level}
+                    onContinue={() => dispatch({ type: 'closeModal' })}
+                    onNextLevel={handleNextLevel}
+                />
+            )}
         </div>
     )
 }

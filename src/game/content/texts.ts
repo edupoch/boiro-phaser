@@ -21,6 +21,9 @@ export const TEXTS = {
         intro: 'Podes explorar o escenario e clicar nos obxectos para aprender sobre eles sen límite. Esta información virache moi ben para os xogos ;)',
     },
     objectives: {
+        level1: 'Atopa estes obxectos!',
+        level2: 'Descifra as pistas e atopa os obxectos!',
+        level3: 'Atopa os obxectos fabricados por:',
         objects: (found: number, total: number) => `${found}/${total} obxectos`,
     },
     ficha: {
