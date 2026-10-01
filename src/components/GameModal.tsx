@@ -165,7 +165,7 @@ function GameModal({ gameSnapshot }: GameModalProps) {
               <h2 className="my-auto text-4xl leading-tight font-extrabold tracking-tight text-sky-500">Máis cerca<br />do que pensas</h2>
             </div>
             <div className="mt-4 flex flex-col gap-4">
-              <p className="text-sm leading-relaxed font-medium text-sky-500">Explora as nosas instalacións e navega polo noso ecosistema dixital. Selecciona un dos xogos no panel superior para comezar a interactuar co mapa.</p>
+              <p className="text-sm leading-relaxed font-medium text-sky-500">Explora as nosas instalacións e descubre o que fabrican as nosas empresas. Pulsa «Comecemos!» para xogar ou vai a Exploración para percorrer o mapa ao teu aire.</p>
               <div>
                 <div className="flex justify-end">
                   <button

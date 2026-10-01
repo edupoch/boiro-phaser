@@ -1,5 +1,6 @@
 import * as Phaser from 'phaser';
 
+import { GAME_CONFIG } from '../config';
 import { EventBus } from '../EventBus';
 import { HdChunk, LOD_DEBUG, SpriteLod } from '../SpriteLod';
 
@@ -326,8 +327,12 @@ export class GameScene extends Phaser.Scene
 
                 if (sprite.label.includes('_ob_')) {
                     spriteImage.setInteractive({ useHandCursor: true });
-                    spriteImage.on('pointerdown', () => {
-                        EventBus.emit('object-clicked', sprite.label);
+                    // Solo cuenta como toque si el puntero apenas se movió: arrastrar el mapa
+                    // empezando sobre un objeto no debe pulsarlo (en el juego sería un error).
+                    spriteImage.on('pointerup', (pointer: Phaser.Input.Pointer) => {
+                        if (pointer.getDistance() < GAME_CONFIG.tapMaxMovePx) {
+                            EventBus.emit('object-clicked', sprite.label);
+                        }
                     });
                     spriteImage.on('pointerover', () => {
 
