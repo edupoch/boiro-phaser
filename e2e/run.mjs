@@ -3,7 +3,8 @@
 //   1. Arranca el servidor de desarrollo:  npm run dev-nolog
 //   2. En otra terminal:                     npm run test:e2e [game|modes|settings|idle]
 //
-// Variables: E2E_URL (por defecto http://localhost:8080/) y CHROME_PATH (si no encuentra Chrome/Chromium).
+// Variables: E2E_URL (por defecto http://localhost:8080/), E2E_DPR (devicePixelRatio, por defecto 1)
+// y CHROME_PATH (si no encuentra Chrome/Chromium).
 // Las capturas quedan en e2e/screenshots/.
 import { createChecker, launch, openGame } from './helpers.mjs';
 import * as game from './game.mjs';

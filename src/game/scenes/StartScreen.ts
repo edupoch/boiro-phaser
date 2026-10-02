@@ -19,6 +19,9 @@ export class StartScreen extends Scene
 
         this.add.dom(centerX, centerY, startButtonElement)
             .setOrigin(0.5)
+            // El canvas va en píxeles físicos (ver renderScale.ts) y el contenedor DOM se reduce a tamaño
+            // CSS, así que se compensa aquí. Con zoom de cámara Phaser descoloca los elementos DOM.
+            .setScale(1 / this.scale.zoom)
             .setDepth(10);
 
 

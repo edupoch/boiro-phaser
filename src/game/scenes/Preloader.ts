@@ -13,8 +13,10 @@ export class Preloader extends Scene
         //  We loaded this image in our Boot Scene, so we can display it here
         //this.add.image(512, 384, 'background');
 
-        const centerX = this.scale.width / 2;
-        const centerY = this.scale.height / 2;
+        // El canvas va en píxeles físicos (ver renderScale.ts): con este zoom se maqueta en píxeles CSS.
+        this.cameras.main.setOrigin(0, 0).setZoom(1 / this.scale.zoom);
+        const centerX = this.scale.width * this.scale.zoom / 2;
+        const centerY = this.scale.height * this.scale.zoom / 2;
 
         this.add.text(centerX, centerY - 40, 'Cargando recursos...', {
             fontFamily: 'monospace',

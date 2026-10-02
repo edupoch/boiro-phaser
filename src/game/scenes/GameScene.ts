@@ -101,6 +101,9 @@ export class GameScene extends Phaser.Scene
             const sourceWidth = 6804;
             const sourceHeight = 3742.2;
 
+            // Las medidas de juego van en píxeles físicos (ver renderScale.ts): el zoom de la cámara
+            // es píxeles físicos por unidad del mundo, que es lo que decide la nitidez y el LOD.
+            const renderScale = 1 / this.scale.zoom;
             const sceneWidth = this.scale.width;
             const sceneHeight = this.scale.height;
 
@@ -112,7 +115,8 @@ export class GameScene extends Phaser.Scene
             const fitWidthZoom = sceneWidth / worldWidth;
             const fitHeightZoom = sceneHeight / worldHeight;
             const minZoom = Math.max(fitWidthZoom, fitHeightZoom);
-            const maxZoom = 2.5;
+            // 2.5 en píxeles CSS, para que el acercamiento máximo se vea igual en cualquier pantalla.
+            const maxZoom = 2.5 * renderScale;
             const fitWorldZoom = Math.min(fitWidthZoom, fitHeightZoom);
             const initialZoom = Phaser.Math.Clamp(fitWorldZoom, minZoom, maxZoom);
 
@@ -382,7 +386,7 @@ export class GameScene extends Phaser.Scene
                     spriteImage.on('pointerup', (pointer: Phaser.Input.Pointer) => {
                         const onCanvas = pointer.downElement === this.game.canvas && pointer.upElement === this.game.canvas;
 
-                        if (onCanvas && pointer.getDistance() < GAME_CONFIG.tapMaxMovePx) {
+                        if (onCanvas && pointer.getDistance() < GAME_CONFIG.tapMaxMovePx / this.scale.zoom) {
                             EventBus.emit('object-clicked', sprite.label);
                         }
                     });

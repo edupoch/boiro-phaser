@@ -32,7 +32,7 @@ export const launch = async () => {
         headless: true,
         // WebGL por software para que Phaser funcione sin GPU.
         args: ['--no-sandbox', '--enable-unsafe-swiftshader', '--use-angle=swiftshader', '--window-size=1600,900'],
-        defaultViewport: { width: 1600, height: 900 },
+        defaultViewport: { width: 1600, height: 900, deviceScaleFactor: Number(process.env.E2E_DPR ?? 1) },
     });
 };
 
@@ -158,9 +158,12 @@ export const findSprite = (page, kind, exclude = []) => page.evaluate(async (kin
     let screen = null;
 
     for (const zoom of [1, 1.6, 2.4]) {
-        camera.setZoom(Math.max(camera.zoom, zoom));
+        // El zoom de la cámara va en píxeles físicos (ver src/game/renderScale.ts); estos valores, en CSS.
+        camera.setZoom(Math.max(camera.zoom, zoom / scene.scale.zoom));
         camera.centerOn(pointX, pointY);
+        // worldView solo se actualiza al renderizar: con frames lentos (HD subiendo) 120 ms no bastan.
         await new Promise((resolve) => setTimeout(resolve, 120));
+        await new Promise((resolve) => scene.game.events.once('postrender', resolve));
         screen = {
             x: rect.left + (pointX - camera.worldView.x) * camera.zoom * (rect.width / scene.scale.width),
             y: rect.top + (pointY - camera.worldView.y) * camera.zoom * (rect.height / scene.scale.height),

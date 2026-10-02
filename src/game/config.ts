@@ -16,4 +16,7 @@ export const GAME_CONFIG = {
     idleWarningSeconds: 15,
     // Movimiento máximo del puntero (px) para que cuente como toque y no como arrastre.
     tapMaxMovePx: 10,
+    // Máximo de píxeles físicos por píxel CSS al dibujar (devicePixelRatio). Más nitidez en
+    // pantallas con escalado a cambio de más píxeles que pintar.
+    maxRenderScale: 2,
 } as const;

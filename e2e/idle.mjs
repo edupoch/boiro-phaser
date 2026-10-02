@@ -2,7 +2,8 @@
 import { SCREENSHOTS, clickTab, dialogText, findSprite, hudText, realClick, sleep, tapSprite } from './helpers.mjs';
 
 const IDLE = 3;
-const WARNING = 3;
+// Holgado: a E2E_DPR=2 la captura del aviso tarda ~4 s y se comería una cuenta atrás corta.
+const WARNING = 8;
 
 const camera = (page) => page.evaluate(() => {
     const main = window.__spriteLod.scene.cameras.main;
@@ -36,8 +37,10 @@ export const run = async (page, check) => {
     await page.screenshot({ path: `${SCREENSHOTS}idle-segues-ai.png` });
     check('aviso "Segues aí?" con cuenta atrás', /^Segues aí\? \/ Volvemos ao inicio en \d s \/ Sigo aquí$/.test(warning ?? ''), warning);
     await page.mouse.move(1010, 310);
-    await sleep(400);
-    check('la actividad cierra el aviso y conserva la partida', (await dialogText(page)) === null && (await hudText(page)).includes('Xogo 1/3'));
+    // Espera a que se cierre (con WebGL por software y dpr 2 un frame puede tardar más de 400 ms).
+    await page.waitForFunction(() => !document.querySelector('[role=dialog]'), { timeout: 2000 }).catch(() => {});
+    const afterActivity = { dialog: await dialogText(page), hud: await hudText(page) };
+    check('la actividad cierra el aviso y conserva la partida', afterActivity.dialog === null && afterActivity.hud.includes('Xogo 1/3'), JSON.stringify(afterActivity));
 
     await sleep((IDLE + WARNING + 1) * 1000);
     const home = await hudText(page);
