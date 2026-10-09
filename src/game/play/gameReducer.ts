@@ -31,7 +31,8 @@ export interface Objective {
 }
 
 export type Modal =
-    | { kind: 'ficha'; entryId: string; variant: 'game' | 'levelComplete' | 'explore' }
+    // `label` es el sprite pulsado, para mostrar su imagen en la ficha.
+    | { kind: 'ficha'; entryId: string; label: string; variant: 'game' | 'levelComplete' | 'explore' }
     | { kind: 'wrong'; attemptsLeft: number }
     | { kind: 'lost' }
     | { kind: 'won'; errors: number };
@@ -153,14 +154,14 @@ const tapInGame = (state: GameState, label: string): GameState => {
             };
 
             if (!objectives.every(isObjectiveDone)) {
-                return { ...next, modal: { kind: 'ficha', entryId: entry.id, variant: 'game' } };
+                return { ...next, modal: { kind: 'ficha', entryId: entry.id, label, variant: 'game' } };
             }
 
             if (state.level >= LEVEL_COUNT) {
                 return { ...next, status: 'won', modal: { kind: 'won', errors: state.errors } };
             }
 
-            return { ...next, status: 'levelComplete', modal: { kind: 'ficha', entryId: entry.id, variant: 'levelComplete' } };
+            return { ...next, status: 'levelComplete', modal: { kind: 'ficha', entryId: entry.id, label, variant: 'levelComplete' } };
         }
 
         // Es objetivo, pero ya se encontraron todas las unidades que se piden: no penaliza.
@@ -183,7 +184,7 @@ const tapInExplore = (state: GameState, label: string): GameState => {
     const token = spriteToken(label);
     const entry = token ? getEntryForToken(token) : undefined;
 
-    return entry ? { ...state, modal: { kind: 'ficha', entryId: entry.id, variant: 'explore' } } : state;
+    return entry ? { ...state, modal: { kind: 'ficha', entryId: entry.id, label, variant: 'explore' } } : state;
 };
 
 export const gameReducer = (state: GameState, action: GameAction): GameState => {

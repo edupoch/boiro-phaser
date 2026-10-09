@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useRef, useState } from 'react';
+import { useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import { IRefPhaserGame, PhaserGame } from './PhaserGame';
 import FichaModal from './components/FichaModal';
 import GameMessages from './components/GameMessages';
@@ -9,6 +9,7 @@ import { TEXTS } from './game/content/texts';
 import { EventBus } from './game/EventBus';
 import { createInitialState, gameReducer, type Modal } from './game/play/gameReducer';
 import { newSeed } from './game/play/rng';
+import { GameScene } from './game/scenes/GameScene';
 
 const playSfx = (key: 'click' | 'success' | 'error') => EventBus.emit('play-sfx', key);
 
@@ -125,6 +126,14 @@ function App()
     });
 
     const modal = state.modal;
+    const fichaLabel = modal?.kind === 'ficha' ? modal.label : null;
+
+    // Se saca del canvas una vez por ficha abierta, no en cada render.
+    const fichaImageUrl = useMemo(() => {
+        const scene = phaserRef.current?.scene;
+
+        return fichaLabel && scene instanceof GameScene ? scene.spriteImageUrl(fichaLabel) : null;
+    }, [fichaLabel]);
 
     return (
         <div id="app">
@@ -142,6 +151,7 @@ function App()
             {modal?.kind === 'ficha' && (
                 <FichaModal
                     entryId={modal.entryId}
+                    imageUrl={fichaImageUrl}
                     variant={modal.variant}
                     level={state.level}
                     onContinue={() => dispatch({ type: 'closeModal' })}

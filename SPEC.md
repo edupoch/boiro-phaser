@@ -68,7 +68,7 @@ Con "Non" se cierra el modal y no cambia nada.
 
 | Modal | Contenido | Botones |
 |---|---|---|
-| **Ficha** (xogo) | Titular propio de la ficha (si no tiene, "Atopáchelo!") · nombre en singular · "Sabías que..." · texto · "Fabricado por" y etiqueta de la empresa | "Continuar xogando" |
+| **Ficha** (xogo) | Titular propio de la ficha (si no tiene, "Atopáchelo!") · nombre en singular · texto · "Fabricado por" y etiqueta de la empresa · a la derecha, la imagen del sprite pulsado, tan grande como permita la altura del texto | "Continuar xogando" |
 | **Ficha de fin de nivel** | Igual, pero el titular es "Completaches o nivel!" | "Pasar ao nivel N" (empieza el nivel N y abre la pestaña Xogo) |
 | **Ficha** (exploración o `idle`) | Igual, pero sin titular | "Continuar explorando" |
 | **Incorrecto** | "Obxecto incorrecto!" · "Quédanche N intentos" ("Quédache 1 intento" si queda uno) | "Continuar xogando" |

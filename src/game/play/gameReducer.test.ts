@@ -70,7 +70,7 @@ describe('toques en modo xogo', () => {
 
         expect(objectiveFound(state.objectives[0])).toBe(1);
         expect(state.countedSprites).toEqual([sprite('ob_papelera', 1)]);
-        expect(state.modal).toEqual({ kind: 'ficha', entryId: 'papeleira', variant: 'game' });
+        expect(state.modal).toEqual({ kind: 'ficha', entryId: 'papeleira', label: sprite('ob_papelera', 1), variant: 'game' });
     });
 
     it('volver a pulsar el mismo sprite no hace nada', () => {
@@ -155,7 +155,7 @@ describe('niveles y final', () => {
         const state = run(playing(1, [makeObjective('type', 'contedor', ['contedor'])]), tap(sprite('ob_contenedor')));
 
         expect(state.status).toBe('levelComplete');
-        expect(state.modal).toEqual({ kind: 'ficha', entryId: 'contedor', variant: 'levelComplete' });
+        expect(state.modal).toEqual({ kind: 'ficha', entryId: 'contedor', label: sprite('ob_contenedor'), variant: 'levelComplete' });
         expect(gameReducer(state, close)).toBe(state);
     });
 
@@ -205,13 +205,13 @@ describe('modos', () => {
         const explore = createInitialState('explore');
 
         expect(gameReducer(explore, tap(sprite('ob_papelera'))).modal)
-            .toEqual({ kind: 'ficha', entryId: 'papeleira', variant: 'explore' });
+            .toEqual({ kind: 'ficha', entryId: 'papeleira', label: sprite('ob_papelera'), variant: 'explore' });
         expect(gameReducer(explore, tap(sprite('ob_faro')))).toBe(explore);
     });
 
     it('en idle se comporta como exploración', () => {
         expect(gameReducer(createInitialState('idle'), tap(sprite('ob_ancla'))).modal)
-            .toEqual({ kind: 'ficha', entryId: 'ancora', variant: 'explore' });
+            .toEqual({ kind: 'ficha', entryId: 'ancora', label: sprite('ob_ancla'), variant: 'explore' });
     });
 
     it('pasar a exploración, reiniciar y la inactividad borran la partida', () => {

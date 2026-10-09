@@ -525,6 +525,19 @@ export class GameScene extends Phaser.Scene
         this.decoys.forEach((decoy) => (enabled ? decoy.setInteractive() : decoy.disableInteractive()));
     }
 
+    // Imagen del sprite tal como se ve ahora (con la textura HD si SpriteLod la tiene puesta), para la ficha.
+    // Los objetos `ob_*` no son troceados, así que basta con la textura de la imagen.
+    spriteImageUrl (label: string): string | null
+    {
+        const object = this.spriteImageMap.get(label);
+
+        if (!(object instanceof Phaser.GameObjects.Image)) {
+            return null;
+        }
+
+        return this.textures.getBase64(object.texture.key, object.frame.name) || null;
+    }
+
     // Equivalente a setOrigin para imágenes y para los Container de sprites troceados
     // (en estos se desplazan los tiles, porque un Container gira y escala alrededor de su posición).
     setPivot (object: SpriteObject, originX: number, originY: number): void

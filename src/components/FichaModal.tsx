@@ -6,6 +6,8 @@ import ModalFrame from './ModalFrame';
 
 interface FichaModalProps {
   entryId: string;
+  // Imagen del sprite pulsado (null si no se pudo sacar del canvas).
+  imageUrl: string | null;
   variant: 'game' | 'levelComplete' | 'explore';
   // Nivel en el que está la jugadora (para "Pasar ao nivel N").
   level: number;
@@ -14,7 +16,7 @@ interface FichaModalProps {
 }
 
 // Ficha de objeto: la misma en el juego, al completar un nivel y en exploración.
-function FichaModal({ entryId, variant, level, onContinue, onNextLevel }: FichaModalProps) {
+function FichaModal({ entryId, imageUrl, variant, level, onContinue, onNextLevel }: FichaModalProps) {
   const entry = getEntry(entryId);
 
   if (!entry) {
@@ -30,15 +32,24 @@ function FichaModal({ entryId, variant, level, onContinue, onNextLevel }: FichaM
     : { label: variant === 'explore' ? TEXTS.ficha.continueExplore : TEXTS.ficha.continueGame, onClick: onContinue };
 
   return (
-    <ModalFrame labelledBy="ficha-title">
-      {headline && <p className="text-lg font-extrabold text-amber-500">{headline}</p>}
-      <h2 id="ficha-title" className="mt-1 text-3xl font-extrabold tracking-tight text-sky-600">{entry.name}</h2>
-      <p className="mt-4 text-sm font-bold tracking-wide text-sky-400 uppercase">{TEXTS.ficha.didYouKnow}</p>
-      <p className="mt-1 text-base leading-relaxed font-medium text-sky-900">{entry.text}</p>
-      <p className="mt-5 flex items-center gap-2 text-sm font-semibold text-sky-600">
-        {TEXTS.ficha.madeBy}
-        <CompanyChip company={entry.company} />
-      </p>
+    <ModalFrame labelledBy="ficha-title" wide={imageUrl !== null}>
+      <div className="flex gap-6">
+        <div className="min-w-0 flex-1">
+          {headline && <p className="text-lg font-extrabold text-amber-500">{headline}</p>}
+          <h2 id="ficha-title" className="mt-1 text-3xl font-extrabold tracking-tight text-sky-600">{entry.name}</h2>
+          <p className="mt-4 text-base leading-relaxed font-medium text-sky-900">{entry.text}</p>
+          <p className="mt-5 flex items-center gap-2 text-sm font-semibold text-sky-600">
+            {TEXTS.ficha.madeBy}
+            <CompanyChip company={entry.company} />
+          </p>
+        </div>
+        {imageUrl && (
+          // La imagen va en absoluto para que ocupe la altura del texto sin aumentarla.
+          <div className="relative w-56 shrink-0">
+            <img src={imageUrl} alt="" className="absolute inset-0 h-full w-full object-contain" />
+          </div>
+        )}
+      </div>
       <div className="mt-6 flex justify-end">
         <button
           type="button"

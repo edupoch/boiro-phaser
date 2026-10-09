@@ -23,7 +23,12 @@ export const run = async (page, check) => {
 
     const ficha = await tapSprite(page, await findSprite(page, 'entry'));
     await page.screenshot({ path: `${SCREENSHOTS}modes-ficha-exploracion.png` });
-    check('idle: ficha de exploración, sin titular', /^[^/]+ \/ SABÍAS QUE\.\.\. \/ .* \/ Fabricado por \/ .* \/ Continuar explorando$/.test(ficha ?? ''), ficha);
+    check('idle: ficha de exploración, sin titular', /^[^/]+ \/ .* \/ Fabricado por \/ .* \/ Continuar explorando$/.test(ficha ?? ''), ficha);
+    const image = await page.evaluate(() => {
+        const img = document.querySelector('[role=dialog] img');
+        return img ? { loaded: img.complete && img.naturalWidth > 0, height: img.getBoundingClientRect().height } : null;
+    });
+    check('idle: la ficha muestra la imagen del objeto', image?.loaded === true && image.height > 0, JSON.stringify(image));
     await pressDialogButton(page, 'Continuar explorando');
 
     await clickTab(page, 'Exploración');

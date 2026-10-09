@@ -29,7 +29,6 @@ export const TEXTS = {
     ficha: {
         defaultHeadline: 'Atopáchelo!',
         levelComplete: 'Completaches o nivel!',
-        didYouKnow: 'Sabías que...',
         madeBy: 'Fabricado por',
         continueGame: 'Continuar xogando',
         continueExplore: 'Continuar explorando',
