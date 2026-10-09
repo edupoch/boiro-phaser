@@ -32,6 +32,7 @@
   "dependencies": {
     "@fontsource/jetbrains-mono": "^5.2.8",
     "@fontsource/plus-jakarta-sans": "^5.2.8",
+    "canvas-confetti": "^1.9.4",
     "cheerio": "^1.2.0",
     "phaser": "4.0.0",
     "react": "^19.0.0",
@@ -41,6 +42,7 @@
   "devDependencies": {
     "@eslint/js": "^9.22.0",
     "@tailwindcss/vite": "^4.3.1",
+    "@types/canvas-confetti": "^1.9.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",

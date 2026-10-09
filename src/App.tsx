@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import { IRefPhaserGame, PhaserGame } from './PhaserGame';
 import FichaModal from './components/FichaModal';
+import { launchFireworks } from './components/fireworks';
 import GameMessages from './components/GameMessages';
 import Hud, { type TabId } from './components/Hud';
 import MessageModal from './components/MessageModal';
@@ -64,6 +65,11 @@ function App()
 
         previousModal.current = modal;
     }, [state.modal]);
+
+    // Fuegos artificiales al ganar; se cortan si el modal se cierra antes (o salta el reinicio por inactividad).
+    const won = state.modal?.kind === 'won';
+
+    useEffect(() => (won ? launchFireworks() : undefined), [won]);
 
     // Phaser activa los señuelos solo en el modo xogo.
     useEffect(() => {

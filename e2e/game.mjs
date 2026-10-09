@@ -75,11 +75,15 @@ export const run = async (page, check) => {
 
     const final = await playToEnd(page, check);
     await page.screenshot({ path: `${SCREENSHOTS}game-final.png` });
+    // canvas-confetti añade su propio canvas a <body> mientras dura el efecto.
+    const confettiCanvas = () => page.evaluate(() => [...document.querySelectorAll('body > canvas')].some((canvas) => canvas.style.zIndex === '1100'));
+    check('al ganar sale el confeti', await confettiCanvas());
     check('final con "1 erro" y el resumen por empresa',
         /^Completaches o xogo con 1 erro! \/ Xa sabes máis da nosa empresa ca nós :\) \/ (Rotogal|Egalsa|JJ Chicolino|Oziona) \//.test(final ?? ''), final);
 
     await pressDialogButton(page, 'Explorar o mapa');
     check('"Explorar o mapa" pasa a exploración', (await activeTab(page)) === 'Exploración' && (await dialogText(page)) === null);
+    check('al cerrar el final se quita el confeti', !(await confettiCanvas()));
 
     // Derrota: 5 señuelos seguidos.
     await realClick(page, '#hud nav button', 'Inicio');
