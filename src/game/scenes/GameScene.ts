@@ -538,6 +538,14 @@ export class GameScene extends Phaser.Scene
         return this.textures.getBase64(object.texture.key, object.frame.name) || null;
     }
 
+    // La misma imagen en HD, para sustituir a la anterior cuando esté lista (tarda algo más).
+    spriteHdImage (label: string): Promise<Blob | null>
+    {
+        const object = this.spriteImageMap.get(label);
+
+        return object && this.spriteLod ? this.spriteLod.loadHdImage(object) : Promise.resolve(null);
+    }
+
     // Equivalente a setOrigin para imágenes y para los Container de sprites troceados
     // (en estos se desplazan los tiles, porque un Container gira y escala alrededor de su posición).
     setPivot (object: SpriteObject, originX: number, originY: number): void

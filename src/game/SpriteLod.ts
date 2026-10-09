@@ -311,6 +311,46 @@ export class SpriteLod
         this.blobs.start();
     }
 
+    // PNG del sprite entero en HD, uniendo sus chunks en un canvas 2D (sin pasar por la GPU ni por el LRU).
+    // Los blobs suelen estar ya precargados; si no, se descargan. null si el sprite no tiene HD.
+    async loadHdImage (object: LodObject): Promise<Blob | null>
+    {
+        const entry = this.entries.find((candidate) => candidate.object === object);
+
+        if (!entry) {
+            return null;
+        }
+
+        const images = await Promise.all(entry.chunks.map(async (chunk) => {
+            const url = URL.createObjectURL(await this.blobs.load(chunk.key));
+            const image = new Image();
+            image.src = url;
+
+            try {
+                await image.decode();
+            } finally {
+                URL.revokeObjectURL(url);
+            }
+
+            return image;
+        }));
+
+        // Píxeles HD por unidad del mundo (hdScale), sacado del propio chunk.
+        const scale = entry.chunks[0].frame.w / entry.chunks[0].width;
+        const canvas = document.createElement('canvas');
+        canvas.width = Math.round(entry.bounds.width * scale);
+        canvas.height = Math.round(entry.bounds.height * scale);
+        const context = canvas.getContext('2d')!;
+
+        entry.chunks.forEach((chunk, index) => {
+            const { frame } = chunk;
+            context.drawImage(images[index], frame.x, frame.y, frame.w, frame.h,
+                chunk.x * scale, chunk.y * scale, chunk.width * scale, chunk.height * scale);
+        });
+
+        return new Promise((resolve) => canvas.toBlob(resolve, 'image/png'));
+    }
+
     update (time: number): void
     {
         const camera = this.scene.cameras.main;

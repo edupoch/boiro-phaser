@@ -134,11 +134,44 @@ function App()
     const modal = state.modal;
     const fichaLabel = modal?.kind === 'ficha' ? modal.label : null;
 
-    // Se saca del canvas una vez por ficha abierta, no en cada render.
+    // La imagen a 1× sale al momento, sacada del canvas una vez por ficha abierta (no en cada render).
     const fichaImageUrl = useMemo(() => {
         const scene = phaserRef.current?.scene;
 
         return fichaLabel && scene instanceof GameScene ? scene.spriteImageUrl(fichaLabel) : null;
+    }, [fichaLabel]);
+    // Y la sustituye la HD en cuanto está lista, para que se vea nítida con cualquier zoom.
+    const [fichaHd, setFichaHd] = useState<{ label: string; url: string } | null>(null);
+
+    useEffect(() => {
+        const scene = phaserRef.current?.scene;
+
+        if (!fichaLabel || !(scene instanceof GameScene)) {
+            return undefined;
+        }
+
+        let url: string | null = null;
+        let cancelled = false;
+
+        scene.spriteHdImage(fichaLabel).then(
+            (blob) => {
+                if (blob && !cancelled) {
+                    url = URL.createObjectURL(blob);
+                    setFichaHd({ label: fichaLabel, url });
+                }
+            },
+            // Sin HD se queda la imagen a 1×.
+            () => undefined,
+        );
+
+        return () => {
+            cancelled = true;
+
+            if (url) {
+                URL.revokeObjectURL(url);
+                setFichaHd(null);
+            }
+        };
     }, [fichaLabel]);
 
     return (
@@ -157,7 +190,7 @@ function App()
             {modal?.kind === 'ficha' && (
                 <FichaModal
                     entryId={modal.entryId}
-                    imageUrl={fichaImageUrl}
+                    imageUrl={fichaHd?.label === fichaLabel ? fichaHd.url : fichaImageUrl}
                     variant={modal.variant}
                     level={state.level}
                     onContinue={() => dispatch({ type: 'closeModal' })}

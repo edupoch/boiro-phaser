@@ -15,6 +15,24 @@ import {
 
 export const name = 'modos y pestañas';
 
+// Imagen de la ficha abierta, esperando a que la HD (un blob:) sustituya a la de 1×.
+const fichaImage = async (page) => {
+    await page.waitForFunction(() => document.querySelector('[role=dialog] img')?.src.startsWith('blob:'), { timeout: 30000 })
+        .catch(() => undefined);
+    await sleep(200);
+
+    return page.evaluate(() => {
+        const img = document.querySelector('[role=dialog] img');
+        return img ? {
+            hd: img.src.startsWith('blob:'),
+            loaded: img.complete && img.naturalWidth > 0,
+            naturalWidth: img.naturalWidth,
+            naturalHeight: img.naturalHeight,
+            height: Math.round(img.getBoundingClientRect().height),
+        } : null;
+    });
+};
+
 export const run = async (page, check) => {
     let decoys = await interactiveCount(page, 'decoy');
     const entries = await interactiveCount(page, 'entry');
@@ -22,13 +40,20 @@ export const run = async (page, check) => {
     check('idle: fichas activas', entries.enabled === entries.total, `${entries.enabled}/${entries.total}`);
 
     const ficha = await tapSprite(page, await findSprite(page, 'entry'));
-    await page.screenshot({ path: `${SCREENSHOTS}modes-ficha-exploracion.png` });
     check('idle: ficha de exploración, sin titular', /^[^/]+ \/ .* \/ Fabricado por \/ .* \/ Continuar explorando$/.test(ficha ?? ''), ficha);
-    const image = await page.evaluate(() => {
-        const img = document.querySelector('[role=dialog] img');
-        return img ? { loaded: img.complete && img.naturalWidth > 0, height: img.getBoundingClientRect().height } : null;
-    });
-    check('idle: la ficha muestra la imagen del objeto', image?.loaded === true && image.height > 0, JSON.stringify(image));
+    const image = await fichaImage(page);
+    await page.screenshot({ path: `${SCREENSHOTS}modes-ficha-exploracion.png` });
+    check('idle: la ficha muestra el objeto en HD', image?.hd && image.loaded && image.height > 0, JSON.stringify(image));
+    await pressDialogButton(page, 'Continuar explorando');
+
+    // El canódromo tiene la HD troceada en 6 chunks: la ficha los une en una sola imagen.
+    const notCanodromo = await page.evaluate(() =>
+        [...window.__spriteLod.scene.spriteImageMap.keys()].filter((label) => !label.includes('__ob_canodromo__')));
+    await tapSprite(page, await findSprite(page, 'entry', notCanodromo));
+    const canodromo = await fichaImage(page);
+    await page.screenshot({ path: `${SCREENSHOTS}modes-ficha-hd-troceada.png` });
+    check('idle: HD troceada unida a su tamaño (1074×530 a 2.5x)',
+        canodromo?.hd && canodromo.naturalWidth === 2685 && canodromo.naturalHeight === 1325, JSON.stringify(canodromo));
     await pressDialogButton(page, 'Continuar explorando');
 
     await clickTab(page, 'Exploración');
