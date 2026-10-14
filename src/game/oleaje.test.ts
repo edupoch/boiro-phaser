@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { OLEAJE, oleaje } from './oleaje.ts';
+import { OLEAJE, espuma, oleaje } from './oleaje.ts';
 
 const { PERIODO_MS, AMPLITUD } = OLEAJE;
 const muestras = (desde: number, hasta: number, paso = 37) => {
@@ -43,5 +43,20 @@ describe('oleaje', () => {
         const config = { ...OLEAJE, AMPLITUD: 0 };
 
         expect(oleaje(PERIODO_MS / 3, config)).toBe(1);
+    });
+});
+
+describe('espuma', () => {
+    it('repite la ola del agua un cuarto de ciclo después', () => {
+        expect(OLEAJE.RETRASO_MS).toBe(PERIODO_MS / 4);
+
+        for (const t of muestras(0, 2 * PERIODO_MS, 251)) {
+            expect(espuma(t)).toBe(oleaje(t - OLEAJE.RETRASO_MS));
+        }
+    });
+
+    it('sigue en reposo cuando el agua ya ha empezado a subir', () => {
+        expect(oleaje(PERIODO_MS / 8)).toBeGreaterThan(1);
+        expect(espuma(PERIODO_MS / 8)).toBeLessThan(oleaje(PERIODO_MS / 8));
     });
 });

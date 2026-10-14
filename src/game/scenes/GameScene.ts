@@ -5,7 +5,7 @@ import { GAME_CONFIG } from '../config';
 import { getEntryForToken } from '../content/catalog';
 import { spriteToken } from '../content/sprites';
 import { EventBus } from '../EventBus';
-import { OLEAJE, oleaje } from '../oleaje';
+import { OLEAJE, espuma, oleaje } from '../oleaje';
 import { HdChunk, LOD_DEBUG, SpriteLod } from '../SpriteLod';
 
 type SpriteBounds = {
@@ -58,7 +58,12 @@ export class GameScene extends Phaser.Scene
     // Avanza el zoom suavizado hacia su objetivo; lo define create() porque usa los límites de la cámara.
     private stepZoom: ((delta: number) => void) | null = null;
     // Capas que se escalan con el oleaje, con su escala en reposo (los Image no la tienen a 1).
-    private waveLayers: { object: SpriteObject; restScaleX: number; restScaleY: number }[] = [];
+    private waveLayers: {
+        object: SpriteObject;
+        restScaleX: number;
+        restScaleY: number;
+        scaleAt: (time: number) => number;
+    }[] = [];
 
     constructor ()
     {
@@ -449,9 +454,17 @@ export class GameScene extends Phaser.Scene
             sprites.forEach(renderSpriteNode);
             this.spriteLod?.startBackgroundDownload();
 
-            // El agua (`orilla`) y la espuma blanca que flota en ella (`hoyo_mar`) respiran desde el pivote.
+            // Respiran desde el pivote, cada una con su ola: el agua (`orilla`) con la espuma blanca que
+            // flota en ella (`hoyo_mar`), y detrás la espuma de la arena mojada (`mar`) con sus charcos
+            // (`hoyo_orilla`).
             this.waveLayers = [];
-            ['Fondo__orilla__use22', 'Fondo__hoyo_mar__g1924'].forEach((label) => {
+            const waveGroups: [string, (time: number) => number][] = [
+                ['Fondo__orilla__use22', oleaje],
+                ['Fondo__hoyo_mar__g1924', oleaje],
+                ['Fondo__mar__path135', espuma],
+                ['Fondo__hoyo_orilla__g1925', espuma],
+            ];
+            waveGroups.forEach(([label, scaleAt]) => {
                 const object = this.spriteImageMap.get(label);
                 if (!object) {
                     return;
@@ -463,8 +476,17 @@ export class GameScene extends Phaser.Scene
                 const top = object.y - displayHeight / 2;
                 this.setPivot(object, (pivotX - left) / displayWidth, (pivotY - top) / displayHeight);
                 object.setPosition(pivotX, pivotY);
-                this.waveLayers.push({ object, restScaleX: object.scaleX, restScaleY: object.scaleY });
+                this.waveLayers.push({ object, restScaleX: object.scaleX, restScaleY: object.scaleY, scaleAt });
             });
+
+            // Los charcos van encima de la espuma pero debajo del agua: cuando sube, los tapa en vez de
+            // dejar ver sus contornos sobre el azul. (Antes de que SpriteLod cree su Container HD,
+            // que se coloca justo detrás del objeto en la lista de dibujado.)
+            const water = this.spriteImageMap.get('Fondo__orilla__use22');
+            const puddles = this.spriteImageMap.get('Fondo__hoyo_orilla__g1925');
+            if (water && puddles) {
+                this.children.moveBelow(puddles, water);
+            }
 
             if (LOD_DEBUG) {
                 // Para ajustar el oleaje desde la consola sin recompilar: __oleaje.AMPLITUD = 0.015
@@ -596,8 +618,8 @@ export class GameScene extends Phaser.Scene
         // haría que el zoom tardase más de lo previsto.
         this.stepZoom?.(this.game.loop.rawDelta);
 
-        const waveScale = oleaje(time);
-        this.waveLayers.forEach(({ object, restScaleX, restScaleY }) => {
+        this.waveLayers.forEach(({ object, restScaleX, restScaleY, scaleAt }) => {
+            const waveScale = scaleAt(time);
             object.setScale(restScaleX * waveScale, restScaleY * waveScale);
         });
 

@@ -10,6 +10,9 @@ export const OLEAJE = {
     AMPLITUD: 0.015,
     // Parte del ciclo que dura la subida; el agua tarda más en retirarse.
     SUBIDA: 0.4,
+    // Retraso de la espuma respecto al agua (un cuarto del periodo): al retirarse el agua,
+    // la franja blanca de arena mojada se queda un momento antes de seguirla.
+    RETRASO_MS: 2000,
     // Justo debajo de la esquina donde la playa se junta con el muro (2426, 1185), en unidades del
     // mundo. Así esa esquina sube bajo el muro en vez de deslizarse por la diagonal hacia la arena,
     // que es lo que pasaba con un pivote sobre la propia diagonal.
@@ -29,3 +32,6 @@ export const oleaje = (t: number, config: OleajeConfig = OLEAJE): number => {
 
     return 1 + AMPLITUD * forma;
 };
+
+// Escala de la espuma: la misma ola que el agua, RETRASO_MS después.
+export const espuma = (t: number, config: OleajeConfig = OLEAJE): number => oleaje(t - config.RETRASO_MS, config);
