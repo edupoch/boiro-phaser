@@ -12,15 +12,17 @@
 ## Recommended Direction
 El agua (`orilla`) crece y encoge con una curva asimétrica: sube algo más rápido de lo que se retira y la amplitud varía un ±20 % en cada ciclo. La espuma (`mar`, junto con sus charcos) repite la misma ola un cuarto de ciclo después, así que al retirarse el agua queda un momento visible la franja de arena mojada.
 
-En vez de desplazar las capas, se **escalan** (siempre ≥ 1) con el pivote en (6815, 3680). Ese punto está sobre la diagonal del muelle, así que la diagonal se queda en su recta, el borde inferior queda siempre fuera del mundo y el izquierdo se va hacia fuera. Ningún borde se abre sin tocar el SVG.
+En vez de desplazar las capas, se **escalan** (siempre ≥ 1) desde un pivote dentro del agua, en (2426, 3500), justo debajo de la esquina donde la playa se junta con el muro. Todos los bordes se alejan del pivote: la orilla avanza hacia la arena, la diagonal del muelle se mete bajo el muro y los bordes inferior e izquierdo salen del mundo. Ningún borde se abre sin tocar el SVG.
+
+*La idea original ponía el pivote en (6815, 3680), sobre la diagonal. No abría rendijas, pero la punta del agua se deslizaba por la diagonal y su contorno asomaba sobre la arena pasada la esquina del muro (visto en la tarea 1).*
 
 Todo lo mueve un único reloj en `GameScene.update()`: `oleaje(t)` da la escala del agua y la espuma usa `oleaje(t − retraso)`. Así el desfase es exacto y la espuma sigue a cada ola concreta. Se descartan los tweens de Phaser porque, con la amplitud variable por ciclo, cada tween sortearía la suya y la espuma dejaría de seguir a su ola.
 
 ## Key Assumptions to Validate
-- [ ] Los chunks HD de `SpriteLod` siguen al Container escalado frame a frame (hasta ahora solo se ha visto con el muelle del hover) → hacer zoom al máximo sobre la orilla con el oleaje activo y comprobar que la HD y la 1× no se separan.
+- [ ] Los chunks HD de `SpriteLod` siguen al Container escalado frame a frame → hacer zoom al máximo sobre la orilla con el oleaje activo y comprobar que la HD y la 1× no se separan. *(En Chromium a zoom 2,5 se ven bien; falta comprobarlo en el Mac.)*
 - [ ] Hay una amplitud que se ve a zoom ~0,19 (20 unidades ≈ 4 px de pantalla) y no exagera a zoom 1 → probar escalas de 1,005, 1,01 y 1,015 en el Mac de referencia.
 - [ ] Que el azul pase por encima de la espuma en las zonas estrechas (hasta ~0,7× la amplitud con un cuarto de ciclo de retraso) queda bien → revisarlo a ojo en el pico de la ola.
-- [ ] Los bordes no se abren → recorrer la diagonal del muelle y los bordes del mundo en el pico; confirmar con números que el pivote también está sobre la diagonal de `mar`.
+- [x] Los bordes no se abren → comprobado en la tarea 1 con un 2,5 % en el muelle, el embarcadero, las rocas y la vista general.
 - [ ] No hay caída de fps en el Mac → comparar con y sin oleaje.
 
 ## MVP Scope

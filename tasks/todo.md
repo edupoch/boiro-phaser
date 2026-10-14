@@ -3,11 +3,11 @@
 Plan: `tasks/plan.md` · Idea: `docs/ideas/oleaje-orilla.md`
 
 ## Fase 1: El agua respira
-- [ ] T1: `oleaje(t)` con tests y escalado de `orilla` y `hoyo_mar` desde el pivote (6815, 3680), con `window.__oleaje` para ajustar (S)
+- [x] T1: `oleaje(t)` con tests y escalado de `orilla` y `hoyo_mar` desde el pivote, con `window.__oleaje` para ajustar (S). Pivote cambiado a (2426, 3500), dentro del agua: el de la diagonal hacía asomar la punta sobre la arena
 - [ ] **Checkpoint 1 (Mac)**: HD sincronizada, fps, amplitud elegida y revisión humana
 
 ## Fase 2: La espuma va detrás
-- [ ] T2: `mar` y `hoyo_orilla` con `oleaje(t − RETRASO_MS)`; comprobar antes que el borde de `mar` es colineal con el pivote (XS)
+- [ ] T2: `mar` y `hoyo_orilla` con `oleaje(t − RETRASO_MS)`; comprobar en el pico que la espuma no asoma por la esquina del muro (XS)
 
 ## Fase 3: Cada ola distinta
 - [ ] T3: Amplitud por ciclo con un hash determinista de `k`, ±20 %, con tests de continuidad (XS)

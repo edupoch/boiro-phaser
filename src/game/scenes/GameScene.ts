@@ -5,6 +5,7 @@ import { GAME_CONFIG } from '../config';
 import { getEntryForToken } from '../content/catalog';
 import { spriteToken } from '../content/sprites';
 import { EventBus } from '../EventBus';
+import { OLEAJE, oleaje } from '../oleaje';
 import { HdChunk, LOD_DEBUG, SpriteLod } from '../SpriteLod';
 
 type SpriteBounds = {
@@ -56,6 +57,8 @@ export class GameScene extends Phaser.Scene
     private spriteLod: SpriteLod | null = null;
     // Avanza el zoom suavizado hacia su objetivo; lo define create() porque usa los límites de la cámara.
     private stepZoom: ((delta: number) => void) | null = null;
+    // Capas que se escalan con el oleaje, con su escala en reposo (los Image no la tienen a 1).
+    private waveLayers: { object: SpriteObject; restScaleX: number; restScaleY: number }[] = [];
 
     constructor ()
     {
@@ -446,6 +449,28 @@ export class GameScene extends Phaser.Scene
             sprites.forEach(renderSpriteNode);
             this.spriteLod?.startBackgroundDownload();
 
+            // El agua (`orilla`) y la espuma blanca que flota en ella (`hoyo_mar`) respiran desde el pivote.
+            this.waveLayers = [];
+            ['Fondo__orilla__use22', 'Fondo__hoyo_mar__g1924'].forEach((label) => {
+                const object = this.spriteImageMap.get(label);
+                if (!object) {
+                    return;
+                }
+
+                const { x: pivotX, y: pivotY } = OLEAJE.PIVOTE;
+                const { displayWidth, displayHeight } = object;
+                const left = object.x - displayWidth / 2;
+                const top = object.y - displayHeight / 2;
+                this.setPivot(object, (pivotX - left) / displayWidth, (pivotY - top) / displayHeight);
+                object.setPosition(pivotX, pivotY);
+                this.waveLayers.push({ object, restScaleX: object.scaleX, restScaleY: object.scaleY });
+            });
+
+            if (LOD_DEBUG) {
+                // Para ajustar el oleaje desde la consola sin recompilar: __oleaje.AMPLITUD = 0.015
+                (window as unknown as { __oleaje?: typeof OLEAJE }).__oleaje = OLEAJE;
+            }
+
             this.animateElements([
                 '*barca*', 
                 '*velero*', 
@@ -570,6 +595,13 @@ export class GameScene extends Phaser.Scene
         // Tiempo real del frame: el delta de Phaser está suavizado y limitado, y en equipos lentos
         // haría que el zoom tardase más de lo previsto.
         this.stepZoom?.(this.game.loop.rawDelta);
+
+        const waveScale = oleaje(time);
+        this.waveLayers.forEach(({ object, restScaleX, restScaleY }) => {
+            object.setScale(restScaleX * waveScale, restScaleY * waveScale);
+        });
+
+        // Después del oleaje, para que los Container HD copien la escala de este mismo frame.
         this.spriteLod?.update(time);
     }
 

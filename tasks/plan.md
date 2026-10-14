@@ -8,7 +8,7 @@ El agua azul (`Fondo__orilla__use22`) crece y encoge con calma, con una curva as
 ## Architecture Decisions
 - **La curva es una función pura en `src/game/oleaje.ts`.** `oleaje(t)` devuelve la escala para el tiempo `t` en ms y se prueba con Vitest, como `gameReducer`. La forma base `w(fase)` vale 0 al principio y al final de cada ciclo, y la escala es `1 + A·w`. Así la escala nunca baja de 1, y multiplicar cada ciclo por una amplitud distinta (T3) no produce saltos.
 - **Un solo reloj en `GameScene.update()`, sin tweens.** El agua usa `oleaje(time)` y la espuma `oleaje(time − RETRASO)`. Con eso el desfase es exacto y, cuando la amplitud varíe por ciclo, la espuma repite la ola concreta del agua. Los tweens de Phaser no lo garantizan.
-- **Pivote fijo en coordenadas del mundo: (6815, 3680).** Es el vértice del path de `orilla` donde arranca la diagonal del muelle, que llega hasta (2426, 1185). Al escalar desde un punto de una recta, la recta se queda en su sitio. El borde inferior (y = 3742) queda fuera del mundo y el izquierdo (x ≈ 0) se va hacia fuera. Para cada objeto se calcula el origen normalizado `(pivote − bounds.xy) / bounds.wh`, se aplica con `setPivot` (vale para Image y para Container, y `SpriteLod.getOrigin` ya lo lee para los chunks HD) y se coloca el objeto en el pivote.
+- **Pivote fijo en coordenadas del mundo, dentro del agua: (2426, 3500).** Al escalar (≥ 1), todos los bordes se alejan del pivote: la orilla avanza hacia la arena casi en perpendicular, la diagonal del muelle se mete bajo el muro y los bordes inferior e izquierdo salen del mundo. *(Cambiado en T1: con el pivote previsto, (6815, 3680) sobre la diagonal, no se abrían rendijas, pero la punta del agua se deslizaba por la diagonal y su contorno asomaba sobre la arena pasada la esquina del muro. El pivote nuevo está justo debajo de esa esquina, que así sube bajo el muro.)* Para cada objeto se calcula el origen normalizado `(pivote − esquina) / tamaño`, se aplica con `setPivot` (vale para Image y para Container, y `SpriteLod.getOrigin` ya lo lee para los chunks HD) y se coloca el objeto en el pivote.
 - **Escala relativa a la de reposo.** Los `hoyo_*` son `Image` con `setDisplaySize`, así que su escala en reposo no es 1. Se guarda `scaleX/scaleY` en reposo y cada frame se aplica `reposo · s`. `SpriteLod.syncContainer` ya divide por `baseScaleX`, así que la HD sigue sola. Ninguna de las cuatro capas tiene HD de un solo chunk (que cambiaría la textura y la escala).
 - **Grupos de capas:** al **agua** van `orilla` y `hoyo_mar` (manchas blancas encima del agua). A la **espuma** van `mar` y `hoyo_orilla` (charcos azules dentro de la franja blanca).
 - **Ajuste en vivo.** Las constantes (`PERIODO_MS`, `AMPLITUD`, `RETRASO_MS`, `PIVOTE`) están en un objeto exportado de `oleaje.ts`, que se expone en `window.__oleaje` igual que `__spriteLod`. Así se pueden ajustar en el Mac sin recompilar.
@@ -63,7 +63,7 @@ Todo es secuencial: cada tarea se apoya en la curva y el bucle de la anterior.
 
 ## Task 2: La espuma repite la ola con retraso
 
-**Description:** Añadir el grupo espuma (`Fondo__mar__path135`, `Fondo__hoyo_orilla__g1925`) al mismo bucle con `oleaje(time − RETRASO_MS)`, con `RETRASO_MS` ≈ ¼ del periodo. Antes, comprobar con números, desde el path de `mar` en `escena.svg`, que su borde del muelle pasa por el pivote y es colineal con la diagonal de `orilla`. Si no es así, darle su propio pivote sobre su diagonal.
+**Description:** Añadir el grupo espuma (`Fondo__mar__path135`, `Fondo__hoyo_orilla__g1925`) al mismo bucle con `oleaje(time − RETRASO_MS)`, con `RETRASO_MS` ≈ ¼ del periodo. Con el pivote dentro del agua (ver Architecture Decisions) ya no hace falta que el borde de `mar` sea colineal con la diagonal, pero hay que comprobar en el pico que la espuma tampoco asoma por la esquina del muro.
 
 **Acceptance criteria:**
 - [ ] Al retirarse el agua, la franja blanca se ensancha y luego retrocede detrás del agua.
@@ -117,7 +117,7 @@ Todo es secuencial: cada tarea se apoya en la curva y el bucle de la anterior.
 | Risk | Impact | Mitigation |
 |------|--------|------------|
 | La HD no sigue al Container escalado, o se descoloca con un pivote fuera de `[0, 1]` | Alto | Va en T1 y se comprueba en el Checkpoint 1 antes de seguir. `syncContainer` ya copia la escala y `getOrigin` lee el pivote, pero nunca se ha probado con un origen > 1. |
-| El borde del muelle de `mar` no es colineal con el de `orilla` | Medio | Se comprueba con números al empezar T2. Si falla, `mar` tiene su propio pivote. |
+| La diagonal que se mete bajo el muro asoma donde el muro es más estrecho | Medio | Comprobado en T1 con un 2,5 % en el muelle, el embarcadero y las rocas: no asoma. Se vuelve a mirar con la espuma en T2. |
 | A zoom 0,21 no se nota nada y a zoom 2,5 se nota demasiado | Medio | Ajuste en vivo con `window.__oleaje`. Si no hay un término medio, se vuelve a la idea de la amplitud según el zoom (variación 6 de la idea). |
 | El escalado de 2 texturas de escena completa más sus chunks HD baja los fps en la HD 4000 | Bajo | Solo cambia la matriz de transformación, sin texturas nuevas. Se mide en el Checkpoint 1 comparando con `AMPLITUD = 0`. |
 | Una capa escalada tapa por un borde algo que antes se veía | Bajo | La escala va siempre hacia fuera y es pequeña (≤ 1,5 %). Se revisa en el pico de la ola. |
