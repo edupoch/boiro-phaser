@@ -1,6 +1,6 @@
 # Reducir la memoria de la base a 1×
 
-> Idea futura. Solo se aborda si el Checkpoint A de `tasks/plan.md` confirma que la memoria aprieta en el equipo de referencia.
+> Idea futura. Solo se aborda si el Checkpoint A de `tasks/archive/precarga-hd/plan.md` confirma que la memoria aprieta en el equipo de referencia.
 
 ## Problem Statement
 ¿Cómo podríamos reducir la VRAM que ocupan los atlas a 1× (siempre cargados) sin que el juego se vea peor, para dejar margen a la HD en equipos con memoria de vídeo compartida?

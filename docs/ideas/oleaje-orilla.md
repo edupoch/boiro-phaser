@@ -1,5 +1,7 @@
 # Oleaje en la orilla
 
+> **Implementado** el 2026-10-14 (`src/game/oleaje.ts` y `GameScene`). Plan archivado en `tasks/archive/oleaje-orilla/`. Valores finales: periodo de 8 s, subida en el 40 % del ciclo, amplitud de 0,015 (unas 30-40 unidades en la orilla), variación de ±20 % entre olas, retraso de la espuma de 2 s y pivote en (2426, 3500). Visto bueno en el Mac de referencia.
+
 ## Problem Statement
 ¿Cómo podríamos hacer que la orilla de Boiro respire como una playa de verdad, con calma, sin tocar el SVG y sin gastar VRAM en el equipo de referencia?
 
@@ -38,5 +40,6 @@ Todo lo mueve un único reloj en `GameScene.update()`: `oleaje(t)` da la escala 
 - **Tweens de Phaser:** no garantizan que la espuma siga a su propia ola cuando la amplitud varía.
 
 ## Open Questions
-- ¿`hoyo_mar` qué es y con qué capa va?
-- ¿Qué zoom tiene el kiosko en reposo? De eso depende la amplitud.
+- ~~¿`hoyo_mar` qué es y con qué capa va?~~ Son manchas blancas de espuma sobre el agua: van con `orilla`.
+- ~~¿Qué zoom tiene el kiosko en reposo?~~ El inicial, que cubre la pantalla. La amplitud se eligió para ese zoom en el Mac.
+- Falta verlo en el kiosko real.

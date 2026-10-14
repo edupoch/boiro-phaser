@@ -1,6 +1,6 @@
 # Todo: oleaje en la orilla
 
-Plan: `tasks/plan.md` · Idea: `docs/ideas/oleaje-orilla.md`
+Plan: `tasks/archive/oleaje-orilla/plan.md` · Idea: `docs/ideas/oleaje-orilla.md`
 
 ## Fase 1: El agua respira
 - [x] T1: `oleaje(t)` con tests y escalado de `orilla` y `hoyo_mar` desde el pivote, con `window.__oleaje` para ajustar (S). Pivote cambiado a (2426, 3500), dentro del agua: el de la diagonal hacía asomar la punta sobre la arena
@@ -11,4 +11,4 @@ Plan: `tasks/plan.md` · Idea: `docs/ideas/oleaje-orilla.md`
 
 ## Fase 3: Cada ola distinta
 - [x] T3: Amplitud por ciclo con un hash determinista de `k` (`createRng(k)()`), ±20 %, con tests de continuidad (XS)
-- [ ] **Checkpoint 2**: tests, build y e2e en verde; Mac (y kiosko); idea actualizada; revisión humana
+- [x] **Checkpoint 2**: tests, build y e2e en verde; Mac; idea actualizada; revisión humana. El kiosko queda pendiente

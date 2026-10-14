@@ -1,6 +1,6 @@
 # Todo: precarga y transición suave de la HD
 
-Plan: `tasks/plan.md` · Spec: `docs/ideas/precarga-hd.md`
+Plan: `tasks/archive/precarga-hd/plan.md` · Spec: `docs/ideas/precarga-hd.md`
 
 ## Fase 1: Medición
 - [x] T1: Métricas de latencia HD (red, subida, tiempo hasta HD completa, peor frame) y `__lodBench` en DEV (S)

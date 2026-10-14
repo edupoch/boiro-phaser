@@ -1,6 +1,6 @@
 # Todo: mecánicas de xogo
 
-Plan: `tasks/plan.md` · Spec: `SPEC.md` · Idea: `docs/ideas/mecanicas-xogo.md`
+Plan: `tasks/archive/mecanicas-xogo/plan.md` · Spec: `SPEC.md` · Idea: `docs/ideas/mecanicas-xogo.md`
 
 ## Fase 1: Cimientos
 - [x] T1: Catálogo, `GAME_CONFIG`, textos y Vitest, con test de integridad contra el atlas (M)

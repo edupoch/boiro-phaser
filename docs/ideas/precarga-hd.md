@@ -19,7 +19,7 @@ Cambiamos el objetivo de "que la HD ya esté siempre" (imposible sin tenerlo tod
 Primero se mide, porque qué pieza importa más depende de si domina la red o la CPU/GPU.
 
 ## Key Assumptions to Validate
-- [x] **Qué fase domina el retraso.** Depende del equipo. Con mala conexión domina la red (p95 de ~1 s por chunk con 4G). En el Mac, además de esperar, había tirones: frames de 350–650 ms por subidas en el hilo principal. Ver el Checkpoint A en `tasks/plan.md`.
+- [x] **Qué fase domina el retraso.** Depende del equipo. Con mala conexión domina la red (p95 de ~1 s por chunk con 4G). En el Mac, además de esperar, había tirones: frames de 350–650 ms por subidas en el hilo principal. Ver el Checkpoint A en `tasks/archive/precarga-hd/plan.md`.
 - [x] **La descarga en segundo plano no se nota al jugar.** Concurrencia 2, pausa con carga bajo demanda, 0 peticiones duplicadas y respeta Save-Data.
 - [x] **Con los blobs precargados, el tiempo hasta la HD baja.** La red por chunk pasa a ~2 ms. En el Mac gana ~300 ms en pádel y faro con su conexión, y más con conexiones peores.
 - [x] **El zoom suavizado deja margen suficiente**, pero solo si la intención nace desde el primer giro hacia dentro, también por debajo de 1,05. Con objetivo ≥ 1,05, el zoom logarítmico cruza el umbral ~15 ms después del clic. Ganancia en el Mac: faro −17 %, mar −7 %.
@@ -46,7 +46,7 @@ Primero se mide, porque qué pieza importa más depende de si domina la red o la
 - **Zoom suavizado**: aceptado. La rueda deja de ser instantánea y pasa a una interpolación de ~250 ms.
 - **Kiosko**: tiene conexión, así que la persistencia entre sesiones no es necesaria y los blobs en memoria bastan.
 - **Fundido: descartado (2026-09-29).** Se implementó para los sprites de varios chunks y funcionaba, pero aporta poco. En zonas semitransparentes, como las sombras, se ve raro, porque mientras dura se ven a la vez la HD y el 1× y la zona se oscurece. Se revirtió y la variante para sprites de un chunk se canceló.
-- **Añadido tras el Checkpoint A: subida sin tirones.** Se decodifica con `createImageBitmap` y hay un presupuesto de subida por frame, porque en el Mac de referencia había frames de 350–650 ms (ver `tasks/plan.md`).
+- **Añadido tras el Checkpoint A: subida sin tirones.** Se decodifica con `createImageBitmap` y hay un presupuesto de subida por frame, porque en el Mac de referencia había frames de 350–650 ms (ver `tasks/archive/precarga-hd/plan.md`).
 
 ## Resultado (2026-09-30)
 En el Mac de referencia (MacBook Pro de 2012, Firefox 156), comparado con la línea base:
