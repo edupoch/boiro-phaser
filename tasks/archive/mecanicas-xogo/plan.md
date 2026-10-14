@@ -189,7 +189,7 @@ T3 no depende de nada y puede hacerse en paralelo con T1 y T2. T7 solo necesita 
 ### Checkpoint 3: completo
 - [ ] Se cumplen todos los criterios de éxito de `SPEC.md`.
 - [ ] `npm test`, `tsc` y `build-nolog` en verde.
-- [ ] Prueba en el Mac de referencia (Firefox), para comprobar que los modales y la HUD no afectan al rendimiento del mapa. Si se puede, también en el kiosko.
+- [x] Prueba en el Mac de referencia (Firefox), para comprobar que los modales y la HUD no afectan al rendimiento del mapa. Si se puede, también en el kiosko. *(Probado en el Mac el 2026-10-14; el kiosko queda pendiente.)*
 - [ ] Se actualizan `SPEC.md` y `docs/ideas/mecanicas-xogo.md` con las decisiones que hayan cambiado.
 
 ## Risks and Mitigations
